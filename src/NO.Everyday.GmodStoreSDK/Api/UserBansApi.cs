@@ -31,8 +31,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20012</returns>
-        InlineResponse20012 UsersUserIdBansGet (string userId);
+        /// <returns>InlineResponse20013</returns>
+        InlineResponse20013 UsersUserIdBansGet (string userId);
 
         /// <summary>
         /// Fetch all active bans associated with this user
@@ -42,8 +42,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20012</returns>
-        ApiResponse<InlineResponse20012> UsersUserIdBansGetWithHttpInfo (string userId);
+        /// <returns>ApiResponse of InlineResponse20013</returns>
+        ApiResponse<InlineResponse20013> UsersUserIdBansGetWithHttpInfo (string userId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -54,8 +54,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20012</returns>
-        System.Threading.Tasks.Task<InlineResponse20012> UsersUserIdBansGetAsync (string userId);
+        /// <returns>Task of InlineResponse20013</returns>
+        System.Threading.Tasks.Task<InlineResponse20013> UsersUserIdBansGetAsync (string userId);
 
         /// <summary>
         /// Fetch all active bans associated with this user
@@ -65,8 +65,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20012)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20012>> UsersUserIdBansGetAsyncWithHttpInfo (string userId);
+        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> UsersUserIdBansGetAsyncWithHttpInfo (string userId);
         #endregion Asynchronous Operations
     }
 
@@ -183,10 +183,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20012</returns>
-        public InlineResponse20012 UsersUserIdBansGet (string userId)
+        /// <returns>InlineResponse20013</returns>
+        public InlineResponse20013 UsersUserIdBansGet (string userId)
         {
-             ApiResponse<InlineResponse20012> localVarResponse = UsersUserIdBansGetWithHttpInfo(userId);
+             ApiResponse<InlineResponse20013> localVarResponse = UsersUserIdBansGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -195,8 +195,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20012</returns>
-        public ApiResponse< InlineResponse20012 > UsersUserIdBansGetWithHttpInfo (string userId)
+        /// <returns>ApiResponse of InlineResponse20013</returns>
+        public ApiResponse< InlineResponse20013 > UsersUserIdBansGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -243,9 +243,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20012>(localVarStatusCode,
+            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20012) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20012)));
+                (InlineResponse20013) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
         }
 
         /// <summary>
@@ -253,10 +253,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20012</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20012> UsersUserIdBansGetAsync (string userId)
+        /// <returns>Task of InlineResponse20013</returns>
+        public async System.Threading.Tasks.Task<InlineResponse20013> UsersUserIdBansGetAsync (string userId)
         {
-             ApiResponse<InlineResponse20012> localVarResponse = await UsersUserIdBansGetAsyncWithHttpInfo(userId);
+             ApiResponse<InlineResponse20013> localVarResponse = await UsersUserIdBansGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -266,8 +266,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20012)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20012>> UsersUserIdBansGetAsyncWithHttpInfo (string userId)
+        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> UsersUserIdBansGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -314,9 +314,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20012>(localVarStatusCode,
+            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20012) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20012)));
+                (InlineResponse20013) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
         }
 
     }

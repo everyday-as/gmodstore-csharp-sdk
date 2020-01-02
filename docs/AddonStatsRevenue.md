@@ -1,0 +1,11 @@
+# NO.Everyday.GmodStoreSDK.Model.AddonStatsRevenue
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Current** | [**AddonStatsRevenueCurrent**](AddonStatsRevenueCurrent.md) |  | [optional] 
+**Previous** | [**AddonStatsRevenueCurrent**](AddonStatsRevenueCurrent.md) |  | [optional] 
+**Total** | [**Money**](Money.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -111,7 +111,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.AddonsAddonIdCouponsGet(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
         }
         /// <summary>
         /// Test AddonsAddonIdCouponsPost

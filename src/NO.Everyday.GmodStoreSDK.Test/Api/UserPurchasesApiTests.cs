@@ -72,7 +72,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //string userId = null;
             //List<string> with = null;
             //var response = instance.UsersUserIdPurchasesGet(userId, with);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
         }
     }
 

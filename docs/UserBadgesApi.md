@@ -74,7 +74,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="usersuseridbadgesget"></a>
 # **UsersUserIdBadgesGet**
-> InlineResponse20013 UsersUserIdBadgesGet (string userId)
+> InlineResponse20014 UsersUserIdBadgesGet (string userId)
 
 Fetch all the badges a user has
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // Fetch all the badges a user has
-                InlineResponse20013 result = apiInstance.UsersUserIdBadgesGet(userId);
+                InlineResponse20014 result = apiInstance.UsersUserIdBadgesGet(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 

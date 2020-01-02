@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Initializes a new instance of the <see cref="InlineResponse20012" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponse20012(List<Ban> data = default(List<Ban>))
+        public InlineResponse20012(List<Team> data = default(List<Team>))
         {
             this.Data = data;
         }
@@ -42,7 +42,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<Ban> Data { get; set; }
+        public List<Team> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

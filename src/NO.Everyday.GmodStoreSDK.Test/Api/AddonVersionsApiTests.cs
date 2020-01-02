@@ -72,7 +72,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.AddonsAddonIdVersionsGet(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
         }
         /// <summary>
         /// Test AddonsAddonIdVersionsPost
@@ -99,7 +99,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //long? addonId = null;
             //long? versionId = null;
             //var response = instance.AddonsAddonIdVersionsVersionIdDownloadGet(addonId, versionId);
-            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
+            //Assert.IsInstanceOf<InlineResponse2008> (response, "response is InlineResponse2008");
         }
         /// <summary>
         /// Test AddonsAddonIdVersionsVersionIdGet

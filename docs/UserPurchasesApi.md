@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="usersuseridpurchasesget"></a>
 # **UsersUserIdPurchasesGet**
-> InlineResponse2003 UsersUserIdPurchasesGet (string userId, List<string> with = null)
+> InlineResponse2004 UsersUserIdPurchasesGet (string userId, List<string> with = null)
 
 Fetch all purchases a user has made
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // Fetch all purchases a user has made
-                InlineResponse2003 result = apiInstance.UsersUserIdPurchasesGet(userId, with);
+                InlineResponse2004 result = apiInstance.UsersUserIdPurchasesGet(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

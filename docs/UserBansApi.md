@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="usersuseridbansget"></a>
 # **UsersUserIdBansGet**
-> InlineResponse20012 UsersUserIdBansGet (string userId)
+> InlineResponse20013 UsersUserIdBansGet (string userId)
 
 Fetch all active bans associated with this user
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Fetch all active bans associated with this user
-                InlineResponse20012 result = apiInstance.UsersUserIdBansGet(userId);
+                InlineResponse20013 result = apiInstance.UsersUserIdBansGet(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 

@@ -24,33 +24,41 @@ using SwaggerDateConverter = NO.Everyday.GmodStoreSDK.Client.SwaggerDateConverte
 namespace NO.Everyday.GmodStoreSDK.Model
 {
     /// <summary>
-    /// AddonPriceOriginal
+    /// AddonStatsRevenue
     /// </summary>
     [DataContract]
-        public partial class AddonPriceOriginal :  IEquatable<AddonPriceOriginal>, IValidatableObject
+        public partial class AddonStatsRevenue :  IEquatable<AddonStatsRevenue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AddonPriceOriginal" /> class.
+        /// Initializes a new instance of the <see cref="AddonStatsRevenue" /> class.
         /// </summary>
-        /// <param name="amount">amount.</param>
-        /// <param name="currency">currency.</param>
-        public AddonPriceOriginal(int? amount = default(int?), string currency = default(string))
+        /// <param name="current">current.</param>
+        /// <param name="previous">previous.</param>
+        /// <param name="total">total.</param>
+        public AddonStatsRevenue(AddonStatsRevenueCurrent current = default(AddonStatsRevenueCurrent), AddonStatsRevenueCurrent previous = default(AddonStatsRevenueCurrent), Money total = default(Money))
         {
-            this.Amount = amount;
-            this.Currency = currency;
+            this.Current = current;
+            this.Previous = previous;
+            this.Total = total;
         }
         
         /// <summary>
-        /// Gets or Sets Amount
+        /// Gets or Sets Current
         /// </summary>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
-        public int? Amount { get; set; }
+        [DataMember(Name="current", EmitDefaultValue=false)]
+        public AddonStatsRevenueCurrent Current { get; set; }
 
         /// <summary>
-        /// Gets or Sets Currency
+        /// Gets or Sets Previous
         /// </summary>
-        [DataMember(Name="currency", EmitDefaultValue=false)]
-        public string Currency { get; set; }
+        [DataMember(Name="previous", EmitDefaultValue=false)]
+        public AddonStatsRevenueCurrent Previous { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name="total", EmitDefaultValue=false)]
+        public Money Total { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,9 +67,10 @@ namespace NO.Everyday.GmodStoreSDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AddonPriceOriginal {\n");
-            sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("class AddonStatsRevenue {\n");
+            sb.Append("  Current: ").Append(Current).Append("\n");
+            sb.Append("  Previous: ").Append(Previous).Append("\n");
+            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,29 +91,34 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AddonPriceOriginal);
+            return this.Equals(input as AddonStatsRevenue);
         }
 
         /// <summary>
-        /// Returns true if AddonPriceOriginal instances are equal
+        /// Returns true if AddonStatsRevenue instances are equal
         /// </summary>
-        /// <param name="input">Instance of AddonPriceOriginal to be compared</param>
+        /// <param name="input">Instance of AddonStatsRevenue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AddonPriceOriginal input)
+        public bool Equals(AddonStatsRevenue input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Amount == input.Amount ||
-                    (this.Amount != null &&
-                    this.Amount.Equals(input.Amount))
+                    this.Current == input.Current ||
+                    (this.Current != null &&
+                    this.Current.Equals(input.Current))
                 ) && 
                 (
-                    this.Currency == input.Currency ||
-                    (this.Currency != null &&
-                    this.Currency.Equals(input.Currency))
+                    this.Previous == input.Previous ||
+                    (this.Previous != null &&
+                    this.Previous.Equals(input.Previous))
+                ) && 
+                (
+                    this.Total == input.Total ||
+                    (this.Total != null &&
+                    this.Total.Equals(input.Total))
                 );
         }
 
@@ -117,10 +131,12 @@ namespace NO.Everyday.GmodStoreSDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
-                if (this.Currency != null)
-                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.Current != null)
+                    hashCode = hashCode * 59 + this.Current.GetHashCode();
+                if (this.Previous != null)
+                    hashCode = hashCode * 59 + this.Previous.GetHashCode();
+                if (this.Total != null)
+                    hashCode = hashCode * 59 + this.Total.GetHashCode();
                 return hashCode;
             }
         }

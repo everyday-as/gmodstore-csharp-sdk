@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Initializes a new instance of the <see cref="InlineResponse2002" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponse2002(List<AddonCoupon> data = default(List<AddonCoupon>))
+        public InlineResponse2002(List<AddonStats> data = default(List<AddonStats>))
         {
             this.Data = data;
         }
@@ -42,7 +42,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<AddonCoupon> Data { get; set; }
+        public List<AddonStats> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

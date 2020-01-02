@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Initializes a new instance of the <see cref="InlineResponse2005" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponse2005(AddonReview data = default(AddonReview))
+        public InlineResponse2005(List<AddonReview> data = default(List<AddonReview>))
         {
             this.Data = data;
         }
@@ -42,7 +42,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public AddonReview Data { get; set; }
+        public List<AddonReview> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +89,9 @@ namespace NO.Everyday.GmodStoreSDK.Model
             return 
                 (
                     this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.Data != null &&
+                    input.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 

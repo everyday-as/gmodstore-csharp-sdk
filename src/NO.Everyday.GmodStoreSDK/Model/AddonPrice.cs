@@ -34,7 +34,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// </summary>
         /// <param name="original">original.</param>
         /// <param name="purchase">purchase.</param>
-        public AddonPrice(AddonPriceOriginal original = default(AddonPriceOriginal), AddonPriceOriginal purchase = default(AddonPriceOriginal))
+        public AddonPrice(Money original = default(Money), Money purchase = default(Money))
         {
             this.Original = original;
             this.Purchase = purchase;
@@ -44,13 +44,13 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Original
         /// </summary>
         [DataMember(Name="original", EmitDefaultValue=false)]
-        public AddonPriceOriginal Original { get; set; }
+        public Money Original { get; set; }
 
         /// <summary>
         /// Gets or Sets Purchase
         /// </summary>
         [DataMember(Name="purchase", EmitDefaultValue=false)]
-        public AddonPriceOriginal Purchase { get; set; }
+        public Money Purchase { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

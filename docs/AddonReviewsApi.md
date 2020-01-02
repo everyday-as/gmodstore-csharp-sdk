@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="addonsaddonidreviewsget"></a>
 # **AddonsAddonIdReviewsGet**
-> InlineResponse2004 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null)
+> InlineResponse2005 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null)
 
 Fetch all the reviews of an addon
 
@@ -39,7 +39,7 @@ namespace Example
             try
             {
                 // Fetch all the reviews of an addon
-                InlineResponse2004 result = apiInstance.AddonsAddonIdReviewsGet(addonId, with);
+                InlineResponse2005 result = apiInstance.AddonsAddonIdReviewsGet(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="addonsaddonidreviewsreviewidget"></a>
 # **AddonsAddonIdReviewsReviewIdGet**
-> InlineResponse2005 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null)
+> InlineResponse2006 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null)
 
 Fetch a review of an addon
 
@@ -105,7 +105,7 @@ namespace Example
             try
             {
                 // Fetch a review of an addon
-                InlineResponse2005 result = apiInstance.AddonsAddonIdReviewsReviewIdGet(addonId, reviewId, with);
+                InlineResponse2006 result = apiInstance.AddonsAddonIdReviewsReviewIdGet(addonId, reviewId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

@@ -32,8 +32,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null);
+        /// <returns>InlineResponse2005</returns>
+        InlineResponse2005 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the reviews of an addon
@@ -44,8 +44,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> AddonsAddonIdReviewsGetWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>ApiResponse of InlineResponse2005</returns>
+        ApiResponse<InlineResponse2005> AddonsAddonIdReviewsGetWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Fetch a review of an addon
         /// </summary>
@@ -56,8 +56,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>InlineResponse2006</returns>
+        InlineResponse2006 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null);
 
         /// <summary>
         /// Fetch a review of an addon
@@ -69,8 +69,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> AddonsAddonIdReviewsReviewIdGetWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>ApiResponse of InlineResponse2006</returns>
+        ApiResponse<InlineResponse2006> AddonsAddonIdReviewsReviewIdGetWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -82,8 +82,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> AddonsAddonIdReviewsGetAsync (long? addonId, List<string> with = null);
+        /// <returns>Task of InlineResponse2005</returns>
+        System.Threading.Tasks.Task<InlineResponse2005> AddonsAddonIdReviewsGetAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the reviews of an addon
@@ -94,8 +94,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> AddonsAddonIdReviewsGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> AddonsAddonIdReviewsGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Fetch a review of an addon
         /// </summary>
@@ -106,8 +106,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> AddonsAddonIdReviewsReviewIdGetAsync (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>Task of InlineResponse2006</returns>
+        System.Threading.Tasks.Task<InlineResponse2006> AddonsAddonIdReviewsReviewIdGetAsync (long? addonId, long? reviewId, List<string> with = null);
 
         /// <summary>
         /// Fetch a review of an addon
@@ -119,8 +119,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -238,170 +238,170 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2004> localVarResponse = AddonsAddonIdReviewsGetWithHttpInfo(addonId, with);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Fetch all the reviews of an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > AddonsAddonIdReviewsGetWithHttpInfo (long? addonId, List<string> with = null)
-        {
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonReviewsApi->AddonsAddonIdReviewsGet");
-
-            var localVarPath = "/addons/{addon_id}/reviews";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdReviewsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
-        }
-
-        /// <summary>
-        /// Fetch all the reviews of an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> AddonsAddonIdReviewsGetAsync (long? addonId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2004> localVarResponse = await AddonsAddonIdReviewsGetAsyncWithHttpInfo(addonId, with);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Fetch all the reviews of an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> AddonsAddonIdReviewsGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
-        {
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonReviewsApi->AddonsAddonIdReviewsGet");
-
-            var localVarPath = "/addons/{addon_id}/reviews";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdReviewsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
-        }
-
-        /// <summary>
-        /// Fetch a review of an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="reviewId">Id of the review</param>
-        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
         /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null)
+        public InlineResponse2005 AddonsAddonIdReviewsGet (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = AddonsAddonIdReviewsReviewIdGetWithHttpInfo(addonId, reviewId, with);
+             ApiResponse<InlineResponse2005> localVarResponse = AddonsAddonIdReviewsGetWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Fetch a review of an addon 
+        /// Fetch all the reviews of an addon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > AddonsAddonIdReviewsReviewIdGetWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
+        public ApiResponse< InlineResponse2005 > AddonsAddonIdReviewsGetWithHttpInfo (long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonReviewsApi->AddonsAddonIdReviewsGet");
+
+            var localVarPath = "/addons/{addon_id}/reviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddonsAddonIdReviewsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+        }
+
+        /// <summary>
+        /// Fetch all the reviews of an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
+        /// <returns>Task of InlineResponse2005</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2005> AddonsAddonIdReviewsGetAsync (long? addonId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2005> localVarResponse = await AddonsAddonIdReviewsGetAsyncWithHttpInfo(addonId, with);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch all the reviews of an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> AddonsAddonIdReviewsGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonReviewsApi->AddonsAddonIdReviewsGet");
+
+            var localVarPath = "/addons/{addon_id}/reviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddonsAddonIdReviewsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+        }
+
+        /// <summary>
+        /// Fetch a review of an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="reviewId">Id of the review</param>
+        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
+        /// <returns>InlineResponse2006</returns>
+        public InlineResponse2006 AddonsAddonIdReviewsReviewIdGet (long? addonId, long? reviewId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2006> localVarResponse = AddonsAddonIdReviewsReviewIdGetWithHttpInfo(addonId, reviewId, with);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch a review of an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="reviewId">Id of the review</param>
+        /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2006</returns>
+        public ApiResponse< InlineResponse2006 > AddonsAddonIdReviewsReviewIdGetWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -453,9 +453,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
         }
 
         /// <summary>
@@ -465,10 +465,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> AddonsAddonIdReviewsReviewIdGetAsync (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>Task of InlineResponse2006</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2006> AddonsAddonIdReviewsReviewIdGetAsync (long? addonId, long? reviewId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo(addonId, reviewId, with);
+             ApiResponse<InlineResponse2006> localVarResponse = await AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo(addonId, reviewId, with);
              return localVarResponse.Data;
 
         }
@@ -480,8 +480,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> AddonsAddonIdReviewsReviewIdGetAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -533,9 +533,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
         }
 
     }

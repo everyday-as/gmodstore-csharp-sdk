@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="addonsaddonidcouponsget"></a>
 # **AddonsAddonIdCouponsGet**
-> InlineResponse2002 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
+> InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
 
 Fetch all the coupons for an addon
 
@@ -242,7 +242,7 @@ namespace Example
             try
             {
                 // Fetch all the coupons for an addon
-                InlineResponse2002 result = apiInstance.AddonsAddonIdCouponsGet(addonId, with);
+                InlineResponse2003 result = apiInstance.AddonsAddonIdCouponsGet(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

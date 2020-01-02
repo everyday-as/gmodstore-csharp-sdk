@@ -35,7 +35,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// <param name="id">id (required).</param>
         /// <param name="price">price (required).</param>
         /// <param name="reversedAt">reversedAt.</param>
-        public OrderItem(Guid? id = default(Guid?), OrderItemPrice price = default(OrderItemPrice), DateTime? reversedAt = default(DateTime?))
+        public OrderItem(Guid? id = default(Guid?), Money price = default(Money), DateTime? reversedAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -68,7 +68,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
-        public OrderItemPrice Price { get; set; }
+        public Money Price { get; set; }
 
         /// <summary>
         /// Gets or Sets ReversedAt

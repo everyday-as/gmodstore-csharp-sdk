@@ -107,8 +107,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null);
+        /// <returns>InlineResponse2003</returns>
+        InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the coupons for an addon
@@ -119,8 +119,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>ApiResponse of InlineResponse2003</returns>
+        ApiResponse<InlineResponse2003> AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Create an addon coupon
         /// </summary>
@@ -232,8 +232,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null);
+        /// <returns>Task of InlineResponse2003</returns>
+        System.Threading.Tasks.Task<InlineResponse2003> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the coupons for an addon
@@ -244,8 +244,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Create an addon coupon
         /// </summary>
@@ -885,10 +885,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
+        /// <returns>InlineResponse2003</returns>
+        public InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = AddonsAddonIdCouponsGetWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2003> localVarResponse = AddonsAddonIdCouponsGetWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -898,8 +898,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>ApiResponse of InlineResponse2003</returns>
+        public ApiResponse< InlineResponse2003 > AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -947,9 +947,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (InlineResponse2003) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
         }
 
         /// <summary>
@@ -958,10 +958,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null)
+        /// <returns>Task of InlineResponse2003</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2003> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await AddonsAddonIdCouponsGetAsyncWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2003> localVarResponse = await AddonsAddonIdCouponsGetAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -972,8 +972,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -1021,9 +1021,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (InlineResponse2003) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
         }
 
         /// <summary>

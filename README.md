@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *AddonPurchasesApi* | [**AddonsAddonIdPurchasesUserIdPut**](docs/AddonPurchasesApi.md#addonsaddonidpurchasesuseridput) | **PUT** /addons/{addon_id}/purchases/{user_id} | Update a purchase for an addon
 *AddonReviewsApi* | [**AddonsAddonIdReviewsGet**](docs/AddonReviewsApi.md#addonsaddonidreviewsget) | **GET** /addons/{addon_id}/reviews | Fetch all the reviews of an addon
 *AddonReviewsApi* | [**AddonsAddonIdReviewsReviewIdGet**](docs/AddonReviewsApi.md#addonsaddonidreviewsreviewidget) | **GET** /addons/{addon_id}/reviews/{review_id} | Fetch a review of an addon
+*AddonStatsApi* | [**AddonsAddonIdStatsGet**](docs/AddonStatsApi.md#addonsaddonidstatsget) | **GET** /addons/{addon_id}/stats | Fetch all the stats for an addon
 *AddonVersionsApi* | [**AddonsAddonIdVersionsGet**](docs/AddonVersionsApi.md#addonsaddonidversionsget) | **GET** /addons/{addon_id}/versions | Fetch all the versions of an addon
 *AddonVersionsApi* | [**AddonsAddonIdVersionsPost**](docs/AddonVersionsApi.md#addonsaddonidversionspost) | **POST** /addons/{addon_id}/versions | Create a new version for an addon
 *AddonVersionsApi* | [**AddonsAddonIdVersionsVersionIdDownloadGet**](docs/AddonVersionsApi.md#addonsaddonidversionsversioniddownloadget) | **GET** /addons/{addon_id}/versions/{version_id}/download | Generate a download token for a specific version of an addon
@@ -137,9 +138,15 @@ Class | Method | HTTP request | Description
  - [Model.AddonDownload](docs/AddonDownload.md)
  - [Model.AddonImages](docs/AddonImages.md)
  - [Model.AddonPrice](docs/AddonPrice.md)
- - [Model.AddonPriceOriginal](docs/AddonPriceOriginal.md)
  - [Model.AddonPurchase](docs/AddonPurchase.md)
  - [Model.AddonReview](docs/AddonReview.md)
+ - [Model.AddonStats](docs/AddonStats.md)
+ - [Model.AddonStatsRevenue](docs/AddonStatsRevenue.md)
+ - [Model.AddonStatsRevenueCurrent](docs/AddonStatsRevenueCurrent.md)
+ - [Model.AddonStatsSales](docs/AddonStatsSales.md)
+ - [Model.AddonStatsSalesCurrent](docs/AddonStatsSalesCurrent.md)
+ - [Model.AddonStatsViews](docs/AddonStatsViews.md)
+ - [Model.AddonStatsViewsCurrent](docs/AddonStatsViewsCurrent.md)
  - [Model.AddonVersion](docs/AddonVersion.md)
  - [Model.Ban](docs/Ban.md)
  - [Model.Error](docs/Error.md)
@@ -149,6 +156,7 @@ Class | Method | HTTP request | Description
  - [Model.InlineResponse20011](docs/InlineResponse20011.md)
  - [Model.InlineResponse20012](docs/InlineResponse20012.md)
  - [Model.InlineResponse20013](docs/InlineResponse20013.md)
+ - [Model.InlineResponse20014](docs/InlineResponse20014.md)
  - [Model.InlineResponse2002](docs/InlineResponse2002.md)
  - [Model.InlineResponse2003](docs/InlineResponse2003.md)
  - [Model.InlineResponse2004](docs/InlineResponse2004.md)
@@ -162,8 +170,8 @@ Class | Method | HTTP request | Description
  - [Model.InlineResponse2012](docs/InlineResponse2012.md)
  - [Model.InlineResponse2013](docs/InlineResponse2013.md)
  - [Model.InlineResponseDefault](docs/InlineResponseDefault.md)
+ - [Model.Money](docs/Money.md)
  - [Model.OrderItem](docs/OrderItem.md)
- - [Model.OrderItemPrice](docs/OrderItemPrice.md)
  - [Model.PermissionGroup](docs/PermissionGroup.md)
  - [Model.Team](docs/Team.md)
  - [Model.TeamUser](docs/TeamUser.md)

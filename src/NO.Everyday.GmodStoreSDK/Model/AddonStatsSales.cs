@@ -24,33 +24,25 @@ using SwaggerDateConverter = NO.Everyday.GmodStoreSDK.Client.SwaggerDateConverte
 namespace NO.Everyday.GmodStoreSDK.Model
 {
     /// <summary>
-    /// OrderItemPrice
+    /// AddonStatsSales
     /// </summary>
     [DataContract]
-        public partial class OrderItemPrice :  IEquatable<OrderItemPrice>, IValidatableObject
+        public partial class AddonStatsSales :  IEquatable<AddonStatsSales>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderItemPrice" /> class.
+        /// Initializes a new instance of the <see cref="AddonStatsSales" /> class.
         /// </summary>
-        /// <param name="amount">amount.</param>
-        /// <param name="currency">currency.</param>
-        public OrderItemPrice(string amount = default(string), string currency = default(string))
+        /// <param name="current">current.</param>
+        public AddonStatsSales(AddonStatsSalesCurrent current = default(AddonStatsSalesCurrent))
         {
-            this.Amount = amount;
-            this.Currency = currency;
+            this.Current = current;
         }
         
         /// <summary>
-        /// Gets or Sets Amount
+        /// Gets or Sets Current
         /// </summary>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
-        public string Amount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name="currency", EmitDefaultValue=false)]
-        public string Currency { get; set; }
+        [DataMember(Name="current", EmitDefaultValue=false)]
+        public AddonStatsSalesCurrent Current { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,9 +51,8 @@ namespace NO.Everyday.GmodStoreSDK.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OrderItemPrice {\n");
-            sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("class AddonStatsSales {\n");
+            sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,29 +73,24 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OrderItemPrice);
+            return this.Equals(input as AddonStatsSales);
         }
 
         /// <summary>
-        /// Returns true if OrderItemPrice instances are equal
+        /// Returns true if AddonStatsSales instances are equal
         /// </summary>
-        /// <param name="input">Instance of OrderItemPrice to be compared</param>
+        /// <param name="input">Instance of AddonStatsSales to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrderItemPrice input)
+        public bool Equals(AddonStatsSales input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Amount == input.Amount ||
-                    (this.Amount != null &&
-                    this.Amount.Equals(input.Amount))
-                ) && 
-                (
-                    this.Currency == input.Currency ||
-                    (this.Currency != null &&
-                    this.Currency.Equals(input.Currency))
+                    this.Current == input.Current ||
+                    (this.Current != null &&
+                    this.Current.Equals(input.Current))
                 );
         }
 
@@ -117,10 +103,8 @@ namespace NO.Everyday.GmodStoreSDK.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
-                if (this.Currency != null)
-                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.Current != null)
+                    hashCode = hashCode * 59 + this.Current.GetHashCode();
                 return hashCode;
             }
         }

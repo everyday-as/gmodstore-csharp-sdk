@@ -1,10 +1,10 @@
-# NO.Everyday.GmodStoreSDK.Model.OrderItemPrice
+# NO.Everyday.GmodStoreSDK.Model.AddonStatsRevenueCurrent
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Amount** | **string** |  | [optional] 
-**Currency** | **string** |  | [optional] 
+**Day** | [**Money**](Money.md) |  | [optional] 
+**Month** | [**Money**](Money.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

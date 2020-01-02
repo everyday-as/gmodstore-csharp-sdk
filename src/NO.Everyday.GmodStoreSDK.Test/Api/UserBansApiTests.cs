@@ -71,7 +71,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //var response = instance.UsersUserIdBansGet(userId);
-            //Assert.IsInstanceOf<InlineResponse20012> (response, "response is InlineResponse20012");
+            //Assert.IsInstanceOf<InlineResponse20013> (response, "response is InlineResponse20013");
         }
     }
 

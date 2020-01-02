@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Initializes a new instance of the <see cref="InlineResponse2008" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponse2008(Team data = default(Team))
+        public InlineResponse2008(AddonDownload data = default(AddonDownload))
         {
             this.Data = data;
         }
@@ -42,7 +42,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Team Data { get; set; }
+        public AddonDownload Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

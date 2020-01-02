@@ -72,7 +72,7 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.AddonsAddonIdPurchasesGet(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
         }
         /// <summary>
         /// Test AddonsAddonIdPurchasesPost

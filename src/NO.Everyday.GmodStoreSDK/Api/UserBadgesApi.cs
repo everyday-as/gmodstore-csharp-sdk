@@ -54,8 +54,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20013</returns>
-        InlineResponse20013 UsersUserIdBadgesGet (string userId);
+        /// <returns>InlineResponse20014</returns>
+        InlineResponse20014 UsersUserIdBadgesGet (string userId);
 
         /// <summary>
         /// Fetch all the badges a user has
@@ -65,8 +65,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20013</returns>
-        ApiResponse<InlineResponse20013> UsersUserIdBadgesGetWithHttpInfo (string userId);
+        /// <returns>ApiResponse of InlineResponse20014</returns>
+        ApiResponse<InlineResponse20014> UsersUserIdBadgesGetWithHttpInfo (string userId);
         /// <summary>
         /// Give a user a badge
         /// </summary>
@@ -123,8 +123,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20013</returns>
-        System.Threading.Tasks.Task<InlineResponse20013> UsersUserIdBadgesGetAsync (string userId);
+        /// <returns>Task of InlineResponse20014</returns>
+        System.Threading.Tasks.Task<InlineResponse20014> UsersUserIdBadgesGetAsync (string userId);
 
         /// <summary>
         /// Fetch all the badges a user has
@@ -134,8 +134,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </remarks>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId);
+        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Give a user a badge
         /// </summary>
@@ -426,10 +426,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20013</returns>
-        public InlineResponse20013 UsersUserIdBadgesGet (string userId)
+        /// <returns>InlineResponse20014</returns>
+        public InlineResponse20014 UsersUserIdBadgesGet (string userId)
         {
-             ApiResponse<InlineResponse20013> localVarResponse = UsersUserIdBadgesGetWithHttpInfo(userId);
+             ApiResponse<InlineResponse20014> localVarResponse = UsersUserIdBadgesGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -438,8 +438,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20013</returns>
-        public ApiResponse< InlineResponse20013 > UsersUserIdBadgesGetWithHttpInfo (string userId)
+        /// <returns>ApiResponse of InlineResponse20014</returns>
+        public ApiResponse< InlineResponse20014 > UsersUserIdBadgesGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -486,9 +486,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
+            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20013) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
+                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
         }
 
         /// <summary>
@@ -496,10 +496,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20013</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20013> UsersUserIdBadgesGetAsync (string userId)
+        /// <returns>Task of InlineResponse20014</returns>
+        public async System.Threading.Tasks.Task<InlineResponse20014> UsersUserIdBadgesGetAsync (string userId)
         {
-             ApiResponse<InlineResponse20013> localVarResponse = await UsersUserIdBadgesGetAsyncWithHttpInfo(userId);
+             ApiResponse<InlineResponse20014> localVarResponse = await UsersUserIdBadgesGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -509,8 +509,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20013)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20013>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId)
+        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -557,9 +557,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20013>(localVarStatusCode,
+            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20013) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20013)));
+                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
         }
 
         /// <summary>

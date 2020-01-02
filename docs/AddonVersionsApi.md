@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="addonsaddonidversionsget"></a>
 # **AddonsAddonIdVersionsGet**
-> InlineResponse2006 AddonsAddonIdVersionsGet (long? addonId, List<string> with = null)
+> InlineResponse2007 AddonsAddonIdVersionsGet (long? addonId, List<string> with = null)
 
 Fetch all the versions of an addon
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Fetch all the versions of an addon
-                InlineResponse2006 result = apiInstance.AddonsAddonIdVersionsGet(addonId, with);
+                InlineResponse2007 result = apiInstance.AddonsAddonIdVersionsGet(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="addonsaddonidversionsversioniddownloadget"></a>
 # **AddonsAddonIdVersionsVersionIdDownloadGet**
-> InlineResponse2007 AddonsAddonIdVersionsVersionIdDownloadGet (long? addonId, long? versionId)
+> InlineResponse2008 AddonsAddonIdVersionsVersionIdDownloadGet (long? addonId, long? versionId)
 
 Generate a download token for a specific version of an addon
 
@@ -178,7 +178,7 @@ namespace Example
             try
             {
                 // Generate a download token for a specific version of an addon
-                InlineResponse2007 result = apiInstance.AddonsAddonIdVersionsVersionIdDownloadGet(addonId, versionId);
+                InlineResponse2008 result = apiInstance.AddonsAddonIdVersionsVersionIdDownloadGet(addonId, versionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="addonsaddonidpurchasesget"></a>
 # **AddonsAddonIdPurchasesGet**
-> InlineResponse2003 AddonsAddonIdPurchasesGet (long? addonId, List<string> with = null)
+> InlineResponse2004 AddonsAddonIdPurchasesGet (long? addonId, List<string> with = null)
 
 Fetch all purchases of an addon
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Fetch all purchases of an addon
-                InlineResponse2003 result = apiInstance.AddonsAddonIdPurchasesGet(addonId, with);
+                InlineResponse2004 result = apiInstance.AddonsAddonIdPurchasesGet(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

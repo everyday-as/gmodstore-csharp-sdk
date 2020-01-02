@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="usersmeget"></a>
 # **UsersMeGet**
-> InlineResponse20010 UsersMeGet (List<string> with = null)
+> InlineResponse20011 UsersMeGet (List<string> with = null)
 
 Fetches the current user (API Key Owner)
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // Fetches the current user (API Key Owner)
-                InlineResponse20010 result = apiInstance.UsersMeGet(with);
+                InlineResponse20011 result = apiInstance.UsersMeGet(with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="usersuseridget"></a>
 # **UsersUserIdGet**
-> InlineResponse20010 UsersUserIdGet (string userId, List<string> with = null)
+> InlineResponse20011 UsersUserIdGet (string userId, List<string> with = null)
 
 Fetch a single user
 
@@ -102,7 +102,7 @@ namespace Example
             try
             {
                 // Fetch a single user
-                InlineResponse20010 result = apiInstance.UsersUserIdGet(userId, with);
+                InlineResponse20011 result = apiInstance.UsersUserIdGet(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
