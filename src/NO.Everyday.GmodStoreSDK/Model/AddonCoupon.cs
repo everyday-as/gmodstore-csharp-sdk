@@ -40,7 +40,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="addon">addon.</param>
-        public AddonCoupon(int? id = default(int?), string code = default(string), decimal? percent = default(decimal?), int? maxUses = default(int?), DateTime? expiresAt = default(DateTime?), DateTime? createdAt = default(DateTime?), int? updatedAt = default(int?), Addon addon = default(Addon))
+        public AddonCoupon(int? id = default(int?), string code = default(string), decimal? percent = default(decimal?), int? maxUses = default(int?), DateTime? expiresAt = default(DateTime?), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?), Addon addon = default(Addon))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -148,7 +148,7 @@ namespace NO.Everyday.GmodStoreSDK.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public int? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Addon
