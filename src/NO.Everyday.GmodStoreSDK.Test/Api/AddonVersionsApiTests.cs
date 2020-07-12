@@ -84,9 +84,10 @@ namespace NO.Everyday.GmodStoreSDK.Test
             //string name = null;
             //string changelog = null;
             //byte[] _file = null;
+            //string releaseType = null;
             //long? addonId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdVersionsPost(name, changelog, _file, addonId, with);
+            //var response = instance.AddonsAddonIdVersionsPost(name, changelog, _file, releaseType, addonId, with);
             //Assert.IsInstanceOf<InlineResponse2012> (response, "response is InlineResponse2012");
         }
         /// <summary>
@@ -123,11 +124,11 @@ namespace NO.Everyday.GmodStoreSDK.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string changelog = null;
-            //byte[] _file = null;
+            //string releaseType = null;
             //long? addonId = null;
             //long? versionId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdVersionsVersionIdPut(name, changelog, _file, addonId, versionId, with);
+            //var response = instance.AddonsAddonIdVersionsVersionIdPut(name, changelog, releaseType, addonId, versionId, with);
             //Assert.IsInstanceOf<InlineResponse2012> (response, "response is InlineResponse2012");
         }
     }

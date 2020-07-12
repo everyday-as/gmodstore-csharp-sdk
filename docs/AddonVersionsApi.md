@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="addonsaddonidversionspost"></a>
 # **AddonsAddonIdVersionsPost**
-> InlineResponse2012 AddonsAddonIdVersionsPost (string name, string changelog, byte[] _file, long? addonId, List<string> with = null)
+> InlineResponse2012 AddonsAddonIdVersionsPost (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
 
 Create a new version for an addon
 
@@ -104,13 +104,14 @@ namespace Example
             var name = name_example;  // string | 
             var changelog = changelog_example;  // string | 
             var _file = _file_example;  // byte[] | 
+            var releaseType = releaseType_example;  // string | 
             var addonId = 789;  // long? | Id of the addon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
 
             try
             {
                 // Create a new version for an addon
-                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsPost(name, changelog, _file, addonId, with);
+                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsPost(name, changelog, _file, releaseType, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,6 +130,7 @@ Name | Type | Description  | Notes
  **name** | **string**|  | 
  **changelog** | **string**|  | 
  **_file** | **byte[]****byte[]**|  | 
+ **releaseType** | **string**|  | 
  **addonId** | **long?**| Id of the addon | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
 
@@ -280,7 +282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="addonsaddonidversionsversionidput"></a>
 # **AddonsAddonIdVersionsVersionIdPut**
-> InlineResponse2012 AddonsAddonIdVersionsVersionIdPut (string name, string changelog, byte[] _file, long? addonId, long? versionId, List<string> with = null)
+> InlineResponse2012 AddonsAddonIdVersionsVersionIdPut (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
 
 Update a version of an addon
 
@@ -306,7 +308,7 @@ namespace Example
             var apiInstance = new AddonVersionsApi();
             var name = name_example;  // string | 
             var changelog = changelog_example;  // string | 
-            var _file = _file_example;  // byte[] | 
+            var releaseType = releaseType_example;  // string | 
             var addonId = 789;  // long? | Id of the addon
             var versionId = 789;  // long? | Id of the version
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
@@ -314,7 +316,7 @@ namespace Example
             try
             {
                 // Update a version of an addon
-                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsVersionIdPut(name, changelog, _file, addonId, versionId, with);
+                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsVersionIdPut(name, changelog, releaseType, addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -332,7 +334,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | 
  **changelog** | **string**|  | 
- **_file** | **byte[]****byte[]**|  | 
+ **releaseType** | **string**|  | 
  **addonId** | **long?**| Id of the addon | 
  **versionId** | **long?**| Id of the version | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
