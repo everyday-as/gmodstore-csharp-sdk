@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuseraddons"></a>
 # **ListUserAddons**
-> InlineResponse200 ListUserAddons (string userId, List<string> with = null)
+> AddonListResponse ListUserAddons (string userId, List<string> with = null)
 
 Fetch all the addons authored / co-authored by a user
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Fetch all the addons authored / co-authored by a user
-                InlineResponse200 result = apiInstance.ListUserAddons(userId, with);
+                AddonListResponse result = apiInstance.ListUserAddons(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**AddonListResponse**](AddonListResponse.md)
 
 ### Authorization
 

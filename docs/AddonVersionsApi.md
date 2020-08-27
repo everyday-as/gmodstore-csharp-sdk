@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="createaddonversion"></a>
 # **CreateAddonVersion**
-> InlineResponse2012 CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+> AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
 
 Create a new version for an addon
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Create a new version for an addon
-                InlineResponse2012 result = apiInstance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
+                AddonVersionResponse result = apiInstance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**AddonVersionResponse**](AddonVersionResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="downloadaddonversion"></a>
 # **DownloadAddonVersion**
-> InlineResponse2008 DownloadAddonVersion (long? addonId, long? versionId)
+> AddonDownloadResponse DownloadAddonVersion (long? addonId, long? versionId)
 
 Generate a download token for a specific version of an addon
 
@@ -107,7 +107,7 @@ namespace Example
             try
             {
                 // Generate a download token for a specific version of an addon
-                InlineResponse2008 result = apiInstance.DownloadAddonVersion(addonId, versionId);
+                AddonDownloadResponse result = apiInstance.DownloadAddonVersion(addonId, versionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**AddonDownloadResponse**](AddonDownloadResponse.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getaddonversion"></a>
 # **GetAddonVersion**
-> InlineResponse2012 GetAddonVersion (long? addonId, long? versionId, List<string> with = null)
+> AddonVersionResponse GetAddonVersion (long? addonId, long? versionId, List<string> with = null)
 
 Fetch a specific version of an addon
 
@@ -169,7 +169,7 @@ namespace Example
             try
             {
                 // Fetch a specific version of an addon
-                InlineResponse2012 result = apiInstance.GetAddonVersion(addonId, versionId, with);
+                AddonVersionResponse result = apiInstance.GetAddonVersion(addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**AddonVersionResponse**](AddonVersionResponse.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listaddonversions"></a>
 # **ListAddonVersions**
-> InlineResponse2007 ListAddonVersions (long? addonId, List<string> with = null)
+> AddonVersionListResponse ListAddonVersions (long? addonId, List<string> with = null)
 
 Fetch all the versions of an addon
 
@@ -231,7 +231,7 @@ namespace Example
             try
             {
                 // Fetch all the versions of an addon
-                InlineResponse2007 result = apiInstance.ListAddonVersions(addonId, with);
+                AddonVersionListResponse result = apiInstance.ListAddonVersions(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**AddonVersionListResponse**](AddonVersionListResponse.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddonversion"></a>
 # **UpdateAddonVersion**
-> InlineResponse2012 UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+> AddonVersionResponse UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
 
 Update a version of an addon
 
@@ -296,7 +296,7 @@ namespace Example
             try
             {
                 // Update a version of an addon
-                InlineResponse2012 result = apiInstance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
+                AddonVersionResponse result = apiInstance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**AddonVersionResponse**](AddonVersionResponse.md)
 
 ### Authorization
 

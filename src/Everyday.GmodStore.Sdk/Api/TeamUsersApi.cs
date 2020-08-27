@@ -32,8 +32,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>InlineResponse20010</returns>
-        InlineResponse20010 ListTeamUsers (long? teamId, List<string> with = null);
+        /// <returns>TeamUserListResponse</returns>
+        TeamUserListResponse ListTeamUsers (long? teamId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the users in the given team
@@ -44,8 +44,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20010</returns>
-        ApiResponse<InlineResponse20010> ListTeamUsersWithHttpInfo (long? teamId, List<string> with = null);
+        /// <returns>ApiResponse of TeamUserListResponse</returns>
+        ApiResponse<TeamUserListResponse> ListTeamUsersWithHttpInfo (long? teamId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,8 +57,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>Task of InlineResponse20010</returns>
-        System.Threading.Tasks.Task<InlineResponse20010> ListTeamUsersAsync (long? teamId, List<string> with = null);
+        /// <returns>Task of TeamUserListResponse</returns>
+        System.Threading.Tasks.Task<TeamUserListResponse> ListTeamUsersAsync (long? teamId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the users in the given team
@@ -69,8 +69,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> ListTeamUsersAsyncWithHttpInfo (long? teamId, List<string> with = null);
+        /// <returns>Task of ApiResponse (TeamUserListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TeamUserListResponse>> ListTeamUsersAsyncWithHttpInfo (long? teamId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -188,10 +188,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>InlineResponse20010</returns>
-        public InlineResponse20010 ListTeamUsers (long? teamId, List<string> with = null)
+        /// <returns>TeamUserListResponse</returns>
+        public TeamUserListResponse ListTeamUsers (long? teamId, List<string> with = null)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = ListTeamUsersWithHttpInfo(teamId, with);
+             ApiResponse<TeamUserListResponse> localVarResponse = ListTeamUsersWithHttpInfo(teamId, with);
              return localVarResponse.Data;
         }
 
@@ -201,8 +201,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20010</returns>
-        public ApiResponse< InlineResponse20010 > ListTeamUsersWithHttpInfo (long? teamId, List<string> with = null)
+        /// <returns>ApiResponse of TeamUserListResponse</returns>
+        public ApiResponse< TeamUserListResponse > ListTeamUsersWithHttpInfo (long? teamId, List<string> with = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -246,9 +246,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20010>(localVarStatusCode,
+            return new ApiResponse<TeamUserListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20010) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20010)));
+                (TeamUserListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamUserListResponse)));
         }
 
         /// <summary>
@@ -257,10 +257,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>Task of InlineResponse20010</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20010> ListTeamUsersAsync (long? teamId, List<string> with = null)
+        /// <returns>Task of TeamUserListResponse</returns>
+        public async System.Threading.Tasks.Task<TeamUserListResponse> ListTeamUsersAsync (long? teamId, List<string> with = null)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = await ListTeamUsersAsyncWithHttpInfo(teamId, with);
+             ApiResponse<TeamUserListResponse> localVarResponse = await ListTeamUsersAsyncWithHttpInfo(teamId, with);
              return localVarResponse.Data;
 
         }
@@ -271,8 +271,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="with">The relations you want to fetch with the TeamUser schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> ListTeamUsersAsyncWithHttpInfo (long? teamId, List<string> with = null)
+        /// <returns>Task of ApiResponse (TeamUserListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TeamUserListResponse>> ListTeamUsersAsyncWithHttpInfo (long? teamId, List<string> with = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -316,9 +316,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20010>(localVarStatusCode,
+            return new ApiResponse<TeamUserListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20010) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20010)));
+                (TeamUserListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamUserListResponse)));
         }
 
     }

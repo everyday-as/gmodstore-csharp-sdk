@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="getteam"></a>
 # **GetTeam**
-> InlineResponse2009 GetTeam (long? teamId, List<string> with = null)
+> TeamResponse GetTeam (long? teamId, List<string> with = null)
 
 Fetch a single team
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Fetch a single team
-                InlineResponse2009 result = apiInstance.GetTeam(teamId, with);
+                TeamResponse result = apiInstance.GetTeam(teamId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**TeamResponse**](TeamResponse.md)
 
 ### Authorization
 

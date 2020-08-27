@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getselfuser"></a>
 # **GetSelfUser**
-> InlineResponse20011 GetSelfUser (List<string> with = null)
+> UserResponse GetSelfUser (List<string> with = null)
 
 Fetches the current user (API Key Owner)
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Fetches the current user (API Key Owner)
-                InlineResponse20011 result = apiInstance.GetSelfUser(with);
+                UserResponse result = apiInstance.GetSelfUser(with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**UserResponse**](UserResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getuser"></a>
 # **GetUser**
-> InlineResponse20011 GetUser (string userId, List<string> with = null)
+> UserResponse GetUser (string userId, List<string> with = null)
 
 Fetch a single user
 
@@ -94,7 +94,7 @@ namespace Example
             try
             {
                 // Fetch a single user
-                InlineResponse20011 result = apiInstance.GetUser(userId, with);
+                UserResponse result = apiInstance.GetUser(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**UserResponse**](UserResponse.md)
 
 ### Authorization
 

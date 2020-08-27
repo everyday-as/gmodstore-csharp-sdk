@@ -69,11 +69,11 @@ namespace Everyday.GmodStore.Sdk.Test
         public void CreateAddonPurchaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AddonPurchaseCreateBody body = null;
+            //NewAddonPurchase body = null;
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.CreateAddonPurchase(body, addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
+            //Assert.IsInstanceOf<AddonPurchaseResponse> (response, "response is AddonPurchaseResponse");
         }
         /// <summary>
         /// Test GetAddonPurchase
@@ -86,7 +86,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //string userId = null;
             //List<string> with = null;
             //var response = instance.GetAddonPurchase(addonId, userId, with);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
+            //Assert.IsInstanceOf<AddonPurchaseResponse> (response, "response is AddonPurchaseResponse");
         }
         /// <summary>
         /// Test ListAddonPurchases
@@ -98,7 +98,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.ListAddonPurchases(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
+            //Assert.IsInstanceOf<AddonPurchaseListResponse> (response, "response is AddonPurchaseListResponse");
         }
         /// <summary>
         /// Test UpdateAddonPurchase
@@ -107,12 +107,12 @@ namespace Everyday.GmodStore.Sdk.Test
         public void UpdateAddonPurchaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AddonPurchaseUpdateBody body = null;
+            //UpdateAddonPurchase body = null;
             //long? addonId = null;
             //string userId = null;
             //List<string> with = null;
             //var response = instance.UpdateAddonPurchase(body, addonId, userId, with);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
+            //Assert.IsInstanceOf<AddonPurchaseResponse> (response, "response is AddonPurchaseResponse");
         }
     }
 

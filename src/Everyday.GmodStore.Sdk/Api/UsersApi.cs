@@ -31,8 +31,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>InlineResponse20011</returns>
-        InlineResponse20011 GetSelfUser (List<string> with = null);
+        /// <returns>UserResponse</returns>
+        UserResponse GetSelfUser (List<string> with = null);
 
         /// <summary>
         /// Fetches the current user (API Key Owner)
@@ -42,8 +42,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        ApiResponse<InlineResponse20011> GetSelfUserWithHttpInfo (List<string> with = null);
+        /// <returns>ApiResponse of UserResponse</returns>
+        ApiResponse<UserResponse> GetSelfUserWithHttpInfo (List<string> with = null);
         /// <summary>
         /// Fetch a single user
         /// </summary>
@@ -53,8 +53,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>InlineResponse20011</returns>
-        InlineResponse20011 GetUser (string userId, List<string> with = null);
+        /// <returns>UserResponse</returns>
+        UserResponse GetUser (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single user
@@ -65,8 +65,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        ApiResponse<InlineResponse20011> GetUserWithHttpInfo (string userId, List<string> with = null);
+        /// <returns>ApiResponse of UserResponse</returns>
+        ApiResponse<UserResponse> GetUserWithHttpInfo (string userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -77,8 +77,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        System.Threading.Tasks.Task<InlineResponse20011> GetSelfUserAsync (List<string> with = null);
+        /// <returns>Task of UserResponse</returns>
+        System.Threading.Tasks.Task<UserResponse> GetSelfUserAsync (List<string> with = null);
 
         /// <summary>
         /// Fetches the current user (API Key Owner)
@@ -88,8 +88,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetSelfUserAsyncWithHttpInfo (List<string> with = null);
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetSelfUserAsyncWithHttpInfo (List<string> with = null);
         /// <summary>
         /// Fetch a single user
         /// </summary>
@@ -99,8 +99,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        System.Threading.Tasks.Task<InlineResponse20011> GetUserAsync (string userId, List<string> with = null);
+        /// <returns>Task of UserResponse</returns>
+        System.Threading.Tasks.Task<UserResponse> GetUserAsync (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single user
@@ -111,8 +111,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null);
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -229,10 +229,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>InlineResponse20011</returns>
-        public InlineResponse20011 GetSelfUser (List<string> with = null)
+        /// <returns>UserResponse</returns>
+        public UserResponse GetSelfUser (List<string> with = null)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = GetSelfUserWithHttpInfo(with);
+             ApiResponse<UserResponse> localVarResponse = GetSelfUserWithHttpInfo(with);
              return localVarResponse.Data;
         }
 
@@ -241,8 +241,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        public ApiResponse< InlineResponse20011 > GetSelfUserWithHttpInfo (List<string> with = null)
+        /// <returns>ApiResponse of UserResponse</returns>
+        public ApiResponse< UserResponse > GetSelfUserWithHttpInfo (List<string> with = null)
         {
 
             var localVarPath = "/users/me";
@@ -282,9 +282,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<UserResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (UserResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponse)));
         }
 
         /// <summary>
@@ -292,10 +292,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20011> GetSelfUserAsync (List<string> with = null)
+        /// <returns>Task of UserResponse</returns>
+        public async System.Threading.Tasks.Task<UserResponse> GetSelfUserAsync (List<string> with = null)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = await GetSelfUserAsyncWithHttpInfo(with);
+             ApiResponse<UserResponse> localVarResponse = await GetSelfUserAsyncWithHttpInfo(with);
              return localVarResponse.Data;
 
         }
@@ -305,8 +305,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetSelfUserAsyncWithHttpInfo (List<string> with = null)
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetSelfUserAsyncWithHttpInfo (List<string> with = null)
         {
 
             var localVarPath = "/users/me";
@@ -346,9 +346,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<UserResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (UserResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponse)));
         }
 
         /// <summary>
@@ -357,10 +357,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>InlineResponse20011</returns>
-        public InlineResponse20011 GetUser (string userId, List<string> with = null)
+        /// <returns>UserResponse</returns>
+        public UserResponse GetUser (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = GetUserWithHttpInfo(userId, with);
+             ApiResponse<UserResponse> localVarResponse = GetUserWithHttpInfo(userId, with);
              return localVarResponse.Data;
         }
 
@@ -370,8 +370,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse20011</returns>
-        public ApiResponse< InlineResponse20011 > GetUserWithHttpInfo (string userId, List<string> with = null)
+        /// <returns>ApiResponse of UserResponse</returns>
+        public ApiResponse< UserResponse > GetUserWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -415,9 +415,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<UserResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (UserResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponse)));
         }
 
         /// <summary>
@@ -426,10 +426,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of InlineResponse20011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20011> GetUserAsync (string userId, List<string> with = null)
+        /// <returns>Task of UserResponse</returns>
+        public async System.Threading.Tasks.Task<UserResponse> GetUserAsync (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse20011> localVarResponse = await GetUserAsyncWithHttpInfo(userId, with);
+             ApiResponse<UserResponse> localVarResponse = await GetUserAsyncWithHttpInfo(userId, with);
              return localVarResponse.Data;
 
         }
@@ -440,8 +440,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null)
+        /// <returns>Task of ApiResponse (UserResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -485,9 +485,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<UserResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (UserResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponse)));
         }
 
     }

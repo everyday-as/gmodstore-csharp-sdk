@@ -69,11 +69,11 @@ namespace Everyday.GmodStore.Sdk.Test
         public void CreateAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AddonCouponBody body = null;
+            //NewAddonCoupon body = null;
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.CreateAddonCoupon(body, addonId, with);
-            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
+            //Assert.IsInstanceOf<AddonCouponResponse> (response, "response is AddonCouponResponse");
         }
         /// <summary>
         /// Test DeleteAddonCoupon
@@ -98,7 +98,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? couponId = null;
             //List<string> with = null;
             //var response = instance.GetAddonCoupon(addonId, couponId, with);
-            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
+            //Assert.IsInstanceOf<AddonCouponResponse> (response, "response is AddonCouponResponse");
         }
         /// <summary>
         /// Test ListAddonCoupons
@@ -110,7 +110,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.ListAddonCoupons(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<AddonCouponListResponse> (response, "response is AddonCouponListResponse");
         }
         /// <summary>
         /// Test UpdateAddonCoupon
@@ -119,12 +119,12 @@ namespace Everyday.GmodStore.Sdk.Test
         public void UpdateAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AddonCouponBody body = null;
+            //UpdateAddonCoupon body = null;
             //long? addonId = null;
             //long? couponId = null;
             //List<string> with = null;
             //var response = instance.UpdateAddonCoupon(body, addonId, couponId, with);
-            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
+            //Assert.IsInstanceOf<AddonCouponResponse> (response, "response is AddonCouponResponse");
         }
     }
 

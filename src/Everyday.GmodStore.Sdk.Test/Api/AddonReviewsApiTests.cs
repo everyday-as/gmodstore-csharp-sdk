@@ -73,7 +73,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? reviewId = null;
             //List<string> with = null;
             //var response = instance.GetAddonReview(addonId, reviewId, with);
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //Assert.IsInstanceOf<AddonReviewResponse> (response, "response is AddonReviewResponse");
         }
         /// <summary>
         /// Test ListAddonReviews
@@ -85,7 +85,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.ListAddonReviews(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2005> (response, "response is InlineResponse2005");
+            //Assert.IsInstanceOf<AddonReviewListResponse> (response, "response is AddonReviewListResponse");
         }
     }
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getaddonreview"></a>
 # **GetAddonReview**
-> InlineResponse2006 GetAddonReview (long? addonId, long? reviewId, List<string> with = null)
+> AddonReviewResponse GetAddonReview (long? addonId, long? reviewId, List<string> with = null)
 
 Fetch a review of an addon
 
@@ -36,7 +36,7 @@ namespace Example
             try
             {
                 // Fetch a review of an addon
-                InlineResponse2006 result = apiInstance.GetAddonReview(addonId, reviewId, with);
+                AddonReviewResponse result = apiInstance.GetAddonReview(addonId, reviewId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**AddonReviewResponse**](AddonReviewResponse.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listaddonreviews"></a>
 # **ListAddonReviews**
-> InlineResponse2005 ListAddonReviews (long? addonId, List<string> with = null)
+> AddonReviewListResponse ListAddonReviews (long? addonId, List<string> with = null)
 
 Fetch all the reviews of an addon
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Fetch all the reviews of an addon
-                InlineResponse2005 result = apiInstance.ListAddonReviews(addonId, with);
+                AddonReviewListResponse result = apiInstance.ListAddonReviews(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**AddonReviewListResponse**](AddonReviewListResponse.md)
 
 ### Authorization
 

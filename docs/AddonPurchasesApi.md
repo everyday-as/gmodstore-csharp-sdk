@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="createaddonpurchase"></a>
 # **CreateAddonPurchase**
-> InlineResponse2011 CreateAddonPurchase (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+> AddonPurchaseResponse CreateAddonPurchase (NewAddonPurchase body, long? addonId, List<string> with = null)
 
 Create a purchase for an addon
 
@@ -31,14 +31,14 @@ namespace Example
         {
 
             var apiInstance = new AddonPurchasesApi();
-            var body = new AddonPurchaseCreateBody(); // AddonPurchaseCreateBody | 
+            var body = new NewAddonPurchase(); // NewAddonPurchase | 
             var addonId = 789;  // long? | Id of the addon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
 
             try
             {
                 // Create a purchase for an addon
-                InlineResponse2011 result = apiInstance.CreateAddonPurchase(body, addonId, with);
+                AddonPurchaseResponse result = apiInstance.CreateAddonPurchase(body, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,13 +54,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AddonPurchaseCreateBody**](AddonPurchaseCreateBody.md)|  | 
+ **body** | [**NewAddonPurchase**](NewAddonPurchase.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AddonPurchaseResponse**](AddonPurchaseResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getaddonpurchase"></a>
 # **GetAddonPurchase**
-> InlineResponse2011 GetAddonPurchase (long? addonId, string userId, List<string> with = null)
+> AddonPurchaseResponse GetAddonPurchase (long? addonId, string userId, List<string> with = null)
 
 Get a purchase of an addon by user
 
@@ -101,7 +101,7 @@ namespace Example
             try
             {
                 // Get a purchase of an addon by user
-                InlineResponse2011 result = apiInstance.GetAddonPurchase(addonId, userId, with);
+                AddonPurchaseResponse result = apiInstance.GetAddonPurchase(addonId, userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AddonPurchaseResponse**](AddonPurchaseResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listaddonpurchases"></a>
 # **ListAddonPurchases**
-> InlineResponse2004 ListAddonPurchases (long? addonId, List<string> with = null)
+> AddonPurchaseListResponse ListAddonPurchases (long? addonId, List<string> with = null)
 
 Fetch all purchases of an addon
 
@@ -163,7 +163,7 @@ namespace Example
             try
             {
                 // Fetch all purchases of an addon
-                InlineResponse2004 result = apiInstance.ListAddonPurchases(addonId, with);
+                AddonPurchaseListResponse result = apiInstance.ListAddonPurchases(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**AddonPurchaseListResponse**](AddonPurchaseListResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddonpurchase"></a>
 # **UpdateAddonPurchase**
-> InlineResponse2011 UpdateAddonPurchase (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
+> AddonPurchaseResponse UpdateAddonPurchase (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
 
 Update a purchase for an addon
 
@@ -218,7 +218,7 @@ namespace Example
         {
 
             var apiInstance = new AddonPurchasesApi();
-            var body = new AddonPurchaseUpdateBody(); // AddonPurchaseUpdateBody | 
+            var body = new UpdateAddonPurchase(); // UpdateAddonPurchase | 
             var addonId = 789;  // long? | Id of the addon
             var userId = userId_example;  // string | Id of the user
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
@@ -226,7 +226,7 @@ namespace Example
             try
             {
                 // Update a purchase for an addon
-                InlineResponse2011 result = apiInstance.UpdateAddonPurchase(body, addonId, userId, with);
+                AddonPurchaseResponse result = apiInstance.UpdateAddonPurchase(body, addonId, userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -242,14 +242,14 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AddonPurchaseUpdateBody**](AddonPurchaseUpdateBody.md)|  | 
+ **body** | [**UpdateAddonPurchase**](UpdateAddonPurchase.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **userId** | **string**| Id of the user | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AddonPurchaseResponse**](AddonPurchaseResponse.md)
 
 ### Authorization
 

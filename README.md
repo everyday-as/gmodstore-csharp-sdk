@@ -71,14 +71,14 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new AddonCouponBody(); // AddonCouponBody | 
+            var body = new NewAddonCoupon(); // NewAddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
 
             try
             {
                 // Create an addon coupon
-                InlineResponse201 result = apiInstance.CreateAddonCoupon(body, addonId, with);
+                AddonCouponResponse result = apiInstance.CreateAddonCoupon(body, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -133,14 +133,19 @@ Class | Method | HTTP request | Description
 
  - [Model.Addon](docs/Addon.md)
  - [Model.AddonCoupon](docs/AddonCoupon.md)
- - [Model.AddonCouponBody](docs/AddonCouponBody.md)
+ - [Model.AddonCouponListResponse](docs/AddonCouponListResponse.md)
+ - [Model.AddonCouponResponse](docs/AddonCouponResponse.md)
  - [Model.AddonDownload](docs/AddonDownload.md)
+ - [Model.AddonDownloadResponse](docs/AddonDownloadResponse.md)
  - [Model.AddonImages](docs/AddonImages.md)
+ - [Model.AddonListResponse](docs/AddonListResponse.md)
  - [Model.AddonPrice](docs/AddonPrice.md)
  - [Model.AddonPurchase](docs/AddonPurchase.md)
- - [Model.AddonPurchaseCreateBody](docs/AddonPurchaseCreateBody.md)
- - [Model.AddonPurchaseUpdateBody](docs/AddonPurchaseUpdateBody.md)
+ - [Model.AddonPurchaseListResponse](docs/AddonPurchaseListResponse.md)
+ - [Model.AddonPurchaseResponse](docs/AddonPurchaseResponse.md)
  - [Model.AddonReview](docs/AddonReview.md)
+ - [Model.AddonReviewListResponse](docs/AddonReviewListResponse.md)
+ - [Model.AddonReviewResponse](docs/AddonReviewResponse.md)
  - [Model.AddonStats](docs/AddonStats.md)
  - [Model.AddonStatsRevenue](docs/AddonStatsRevenue.md)
  - [Model.AddonStatsRevenueCurrent](docs/AddonStatsRevenueCurrent.md)
@@ -149,38 +154,35 @@ Class | Method | HTTP request | Description
  - [Model.AddonStatsViews](docs/AddonStatsViews.md)
  - [Model.AddonStatsViewsCurrent](docs/AddonStatsViewsCurrent.md)
  - [Model.AddonVersion](docs/AddonVersion.md)
- - [Model.AddonVersionCreateBody](docs/AddonVersionCreateBody.md)
- - [Model.AddonVersionUpdateBody](docs/AddonVersionUpdateBody.md)
- - [Model.BadgeCreateBody](docs/BadgeCreateBody.md)
+ - [Model.AddonVersionListResponse](docs/AddonVersionListResponse.md)
+ - [Model.AddonVersionResponse](docs/AddonVersionResponse.md)
+ - [Model.BadgeListResponse](docs/BadgeListResponse.md)
+ - [Model.BadgeResponse](docs/BadgeResponse.md)
  - [Model.Ban](docs/Ban.md)
+ - [Model.BanListResponse](docs/BanListResponse.md)
  - [Model.Error](docs/Error.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
  - [Model.InlineResponse2001](docs/InlineResponse2001.md)
- - [Model.InlineResponse20010](docs/InlineResponse20010.md)
- - [Model.InlineResponse20011](docs/InlineResponse20011.md)
- - [Model.InlineResponse20012](docs/InlineResponse20012.md)
- - [Model.InlineResponse20013](docs/InlineResponse20013.md)
- - [Model.InlineResponse20014](docs/InlineResponse20014.md)
  - [Model.InlineResponse2002](docs/InlineResponse2002.md)
- - [Model.InlineResponse2003](docs/InlineResponse2003.md)
- - [Model.InlineResponse2004](docs/InlineResponse2004.md)
- - [Model.InlineResponse2005](docs/InlineResponse2005.md)
- - [Model.InlineResponse2006](docs/InlineResponse2006.md)
- - [Model.InlineResponse2007](docs/InlineResponse2007.md)
- - [Model.InlineResponse2008](docs/InlineResponse2008.md)
- - [Model.InlineResponse2009](docs/InlineResponse2009.md)
- - [Model.InlineResponse201](docs/InlineResponse201.md)
- - [Model.InlineResponse2011](docs/InlineResponse2011.md)
- - [Model.InlineResponse2012](docs/InlineResponse2012.md)
- - [Model.InlineResponse2013](docs/InlineResponse2013.md)
  - [Model.InlineResponseDefault](docs/InlineResponseDefault.md)
  - [Model.Money](docs/Money.md)
+ - [Model.NewAddonCoupon](docs/NewAddonCoupon.md)
+ - [Model.NewAddonPurchase](docs/NewAddonPurchase.md)
+ - [Model.NewAddonVersion](docs/NewAddonVersion.md)
+ - [Model.NewUserBadge](docs/NewUserBadge.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.PermissionGroup](docs/PermissionGroup.md)
  - [Model.Team](docs/Team.md)
+ - [Model.TeamListResponse](docs/TeamListResponse.md)
+ - [Model.TeamResponse](docs/TeamResponse.md)
  - [Model.TeamUser](docs/TeamUser.md)
+ - [Model.TeamUserListResponse](docs/TeamUserListResponse.md)
+ - [Model.UpdateAddonCoupon](docs/UpdateAddonCoupon.md)
+ - [Model.UpdateAddonPurchase](docs/UpdateAddonPurchase.md)
+ - [Model.UpdateAddonVersion](docs/UpdateAddonVersion.md)
  - [Model.User](docs/User.md)
  - [Model.UserBadgeLegend](docs/UserBadgeLegend.md)
+ - [Model.UserResponse](docs/UserResponse.md)
 
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization

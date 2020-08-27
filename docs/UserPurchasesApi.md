@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserpurchases"></a>
 # **ListUserPurchases**
-> InlineResponse2004 ListUserPurchases (string userId, List<string> with = null)
+> AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null)
 
 Fetch all purchases a user has made
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Fetch all purchases a user has made
-                InlineResponse2004 result = apiInstance.ListUserPurchases(userId, with);
+                AddonPurchaseListResponse result = apiInstance.ListUserPurchases(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**AddonPurchaseListResponse**](AddonPurchaseListResponse.md)
 
 ### Authorization
 

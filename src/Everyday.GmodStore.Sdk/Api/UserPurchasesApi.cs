@@ -32,8 +32,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 ListUserPurchases (string userId, List<string> with = null);
+        /// <returns>AddonPurchaseListResponse</returns>
+        AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -44,8 +44,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> ListUserPurchasesWithHttpInfo (string userId, List<string> with = null);
+        /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
+        ApiResponse<AddonPurchaseListResponse> ListUserPurchasesWithHttpInfo (string userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,8 +57,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> ListUserPurchasesAsync (string userId, List<string> with = null);
+        /// <returns>Task of AddonPurchaseListResponse</returns>
+        System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -69,8 +69,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -188,10 +188,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 ListUserPurchases (string userId, List<string> with = null)
+        /// <returns>AddonPurchaseListResponse</returns>
+        public AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = ListUserPurchasesWithHttpInfo(userId, with);
+             ApiResponse<AddonPurchaseListResponse> localVarResponse = ListUserPurchasesWithHttpInfo(userId, with);
              return localVarResponse.Data;
         }
 
@@ -201,8 +201,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > ListUserPurchasesWithHttpInfo (string userId, List<string> with = null)
+        /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
+        public ApiResponse< AddonPurchaseListResponse > ListUserPurchasesWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -246,9 +246,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (AddonPurchaseListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseListResponse)));
         }
 
         /// <summary>
@@ -257,10 +257,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> ListUserPurchasesAsync (string userId, List<string> with = null)
+        /// <returns>Task of AddonPurchaseListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await ListUserPurchasesAsyncWithHttpInfo(userId, with);
+             ApiResponse<AddonPurchaseListResponse> localVarResponse = await ListUserPurchasesAsyncWithHttpInfo(userId, with);
              return localVarResponse.Data;
 
         }
@@ -271,8 +271,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -316,9 +316,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (AddonPurchaseListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseListResponse)));
         }
 
     }

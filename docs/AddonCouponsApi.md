@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="createaddoncoupon"></a>
 # **CreateAddonCoupon**
-> InlineResponse201 CreateAddonCoupon (AddonCouponBody body, long? addonId, List<string> with = null)
+> AddonCouponResponse CreateAddonCoupon (NewAddonCoupon body, long? addonId, List<string> with = null)
 
 Create an addon coupon
 
@@ -32,14 +32,14 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new AddonCouponBody(); // AddonCouponBody | 
+            var body = new NewAddonCoupon(); // NewAddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
 
             try
             {
                 // Create an addon coupon
-                InlineResponse201 result = apiInstance.CreateAddonCoupon(body, addonId, with);
+                AddonCouponResponse result = apiInstance.CreateAddonCoupon(body, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,13 +55,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AddonCouponBody**](AddonCouponBody.md)|  | 
+ **body** | [**NewAddonCoupon**](NewAddonCoupon.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**AddonCouponResponse**](AddonCouponResponse.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getaddoncoupon"></a>
 # **GetAddonCoupon**
-> InlineResponse201 GetAddonCoupon (long? addonId, long? couponId, List<string> with = null)
+> AddonCouponResponse GetAddonCoupon (long? addonId, long? couponId, List<string> with = null)
 
 Fetch an addon's coupon
 
@@ -162,7 +162,7 @@ namespace Example
             try
             {
                 // Fetch an addon's coupon
-                InlineResponse201 result = apiInstance.GetAddonCoupon(addonId, couponId, with);
+                AddonCouponResponse result = apiInstance.GetAddonCoupon(addonId, couponId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**AddonCouponResponse**](AddonCouponResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listaddoncoupons"></a>
 # **ListAddonCoupons**
-> InlineResponse2003 ListAddonCoupons (long? addonId, List<string> with = null)
+> AddonCouponListResponse ListAddonCoupons (long? addonId, List<string> with = null)
 
 Fetch all the coupons for an addon
 
@@ -224,7 +224,7 @@ namespace Example
             try
             {
                 // Fetch all the coupons for an addon
-                InlineResponse2003 result = apiInstance.ListAddonCoupons(addonId, with);
+                AddonCouponListResponse result = apiInstance.ListAddonCoupons(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**AddonCouponListResponse**](AddonCouponListResponse.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddoncoupon"></a>
 # **UpdateAddonCoupon**
-> InlineResponse201 UpdateAddonCoupon (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
+> AddonCouponResponse UpdateAddonCoupon (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
 
 Update an addon's coupon
 
@@ -279,7 +279,7 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new AddonCouponBody(); // AddonCouponBody | 
+            var body = new UpdateAddonCoupon(); // UpdateAddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
             var couponId = 789;  // long? | Id of the coupon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
@@ -287,7 +287,7 @@ namespace Example
             try
             {
                 // Update an addon's coupon
-                InlineResponse201 result = apiInstance.UpdateAddonCoupon(body, addonId, couponId, with);
+                AddonCouponResponse result = apiInstance.UpdateAddonCoupon(body, addonId, couponId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -303,14 +303,14 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AddonCouponBody**](AddonCouponBody.md)|  | 
+ **body** | [**UpdateAddonCoupon**](UpdateAddonCoupon.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **couponId** | **long?**| Id of the coupon | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**AddonCouponResponse**](AddonCouponResponse.md)
 
 ### Authorization
 

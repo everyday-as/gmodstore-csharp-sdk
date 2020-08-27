@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserbans"></a>
 # **ListUserBans**
-> InlineResponse20013 ListUserBans (string userId)
+> BanListResponse ListUserBans (string userId)
 
 Fetch all active bans associated with this user
 
@@ -33,7 +33,7 @@ namespace Example
             try
             {
                 // Fetch all active bans associated with this user
-                InlineResponse20013 result = apiInstance.ListUserBans(userId);
+                BanListResponse result = apiInstance.ListUserBans(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**BanListResponse**](BanListResponse.md)
 
 ### Authorization
 

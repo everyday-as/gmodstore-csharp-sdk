@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserteams"></a>
 # **ListUserTeams**
-> InlineResponse20012 ListUserTeams (string userId, List<string> with = null)
+> TeamListResponse ListUserTeams (string userId, List<string> with = null)
 
 Fetch all the teams of a user
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Fetch all the teams of a user
-                InlineResponse20012 result = apiInstance.ListUserTeams(userId, with);
+                TeamListResponse result = apiInstance.ListUserTeams(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**TeamListResponse**](TeamListResponse.md)
 
 ### Authorization
 

@@ -69,10 +69,10 @@ namespace Everyday.GmodStore.Sdk.Test
         public void CreateUserBadgeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //BadgeCreateBody body = null;
+            //NewUserBadge body = null;
             //string userId = null;
             //var response = instance.CreateUserBadge(body, userId);
-            //Assert.IsInstanceOf<InlineResponse2013> (response, "response is InlineResponse2013");
+            //Assert.IsInstanceOf<BadgeResponse> (response, "response is BadgeResponse");
         }
         /// <summary>
         /// Test DeleteUserBadge
@@ -95,7 +95,7 @@ namespace Everyday.GmodStore.Sdk.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //var response = instance.ListUserBadges(userId);
-            //Assert.IsInstanceOf<InlineResponse20014> (response, "response is InlineResponse20014");
+            //Assert.IsInstanceOf<BadgeListResponse> (response, "response is BadgeListResponse");
         }
     }
 

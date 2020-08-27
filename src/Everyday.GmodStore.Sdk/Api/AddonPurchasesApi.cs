@@ -33,8 +33,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 CreateAddonPurchase (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <returns>AddonPurchaseResponse</returns>
+        AddonPurchaseResponse CreateAddonPurchase (NewAddonPurchase body, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create a purchase for an addon
@@ -46,8 +46,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> CreateAddonPurchaseWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        ApiResponse<AddonPurchaseResponse> CreateAddonPurchaseWithHttpInfo (NewAddonPurchase body, long? addonId, List<string> with = null);
         /// <summary>
         /// Get a purchase of an addon by user
         /// </summary>
@@ -58,8 +58,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 GetAddonPurchase (long? addonId, string userId, List<string> with = null);
+        /// <returns>AddonPurchaseResponse</returns>
+        AddonPurchaseResponse GetAddonPurchase (long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Get a purchase of an addon by user
@@ -71,8 +71,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null);
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        ApiResponse<AddonPurchaseResponse> GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null);
         /// <summary>
         /// Fetch all purchases of an addon
         /// </summary>
@@ -82,8 +82,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 ListAddonPurchases (long? addonId, List<string> with = null);
+        /// <returns>AddonPurchaseListResponse</returns>
+        AddonPurchaseListResponse ListAddonPurchases (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases of an addon
@@ -94,8 +94,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
+        ApiResponse<AddonPurchaseListResponse> ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Update a purchase for an addon
         /// </summary>
@@ -107,8 +107,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 UpdateAddonPurchase (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
+        /// <returns>AddonPurchaseResponse</returns>
+        AddonPurchaseResponse UpdateAddonPurchase (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Update a purchase for an addon
@@ -121,8 +121,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> UpdateAddonPurchaseWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        ApiResponse<AddonPurchaseResponse> UpdateAddonPurchaseWithHttpInfo (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -135,8 +135,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> CreateAddonPurchaseAsync (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        System.Threading.Tasks.Task<AddonPurchaseResponse> CreateAddonPurchaseAsync (NewAddonPurchase body, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create a purchase for an addon
@@ -148,8 +148,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> CreateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> CreateAddonPurchaseAsyncWithHttpInfo (NewAddonPurchase body, long? addonId, List<string> with = null);
         /// <summary>
         /// Get a purchase of an addon by user
         /// </summary>
@@ -160,8 +160,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null);
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        System.Threading.Tasks.Task<AddonPurchaseResponse> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Get a purchase of an addon by user
@@ -173,8 +173,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null);
         /// <summary>
         /// Fetch all purchases of an addon
         /// </summary>
@@ -184,8 +184,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> ListAddonPurchasesAsync (long? addonId, List<string> with = null);
+        /// <returns>Task of AddonPurchaseListResponse</returns>
+        System.Threading.Tasks.Task<AddonPurchaseListResponse> ListAddonPurchasesAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases of an addon
@@ -196,8 +196,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Update a purchase for an addon
         /// </summary>
@@ -209,8 +209,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> UpdateAddonPurchaseAsync (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        System.Threading.Tasks.Task<AddonPurchaseResponse> UpdateAddonPurchaseAsync (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Update a purchase for an addon
@@ -223,8 +223,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> UpdateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> UpdateAddonPurchaseAsyncWithHttpInfo (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -343,10 +343,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 CreateAddonPurchase (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        /// <returns>AddonPurchaseResponse</returns>
+        public AddonPurchaseResponse CreateAddonPurchase (NewAddonPurchase body, long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = CreateAddonPurchaseWithHttpInfo(body, addonId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = CreateAddonPurchaseWithHttpInfo(body, addonId, with);
              return localVarResponse.Data;
         }
 
@@ -357,8 +357,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > CreateAddonPurchaseWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        public ApiResponse< AddonPurchaseResponse > CreateAddonPurchaseWithHttpInfo (NewAddonPurchase body, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -414,9 +414,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
         /// <summary>
@@ -426,10 +426,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> CreateAddonPurchaseAsync (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        public async System.Threading.Tasks.Task<AddonPurchaseResponse> CreateAddonPurchaseAsync (NewAddonPurchase body, long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await CreateAddonPurchaseAsyncWithHttpInfo(body, addonId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = await CreateAddonPurchaseAsyncWithHttpInfo(body, addonId, with);
              return localVarResponse.Data;
 
         }
@@ -441,8 +441,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> CreateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> CreateAddonPurchaseAsyncWithHttpInfo (NewAddonPurchase body, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -498,9 +498,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
         /// <summary>
@@ -510,10 +510,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 GetAddonPurchase (long? addonId, string userId, List<string> with = null)
+        /// <returns>AddonPurchaseResponse</returns>
+        public AddonPurchaseResponse GetAddonPurchase (long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = GetAddonPurchaseWithHttpInfo(addonId, userId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = GetAddonPurchaseWithHttpInfo(addonId, userId, with);
              return localVarResponse.Data;
         }
 
@@ -524,8 +524,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null)
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        public ApiResponse< AddonPurchaseResponse > GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -573,9 +573,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
         /// <summary>
@@ -585,10 +585,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null)
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        public async System.Threading.Tasks.Task<AddonPurchaseResponse> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await GetAddonPurchaseAsyncWithHttpInfo(addonId, userId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = await GetAddonPurchaseAsyncWithHttpInfo(addonId, userId, with);
              return localVarResponse.Data;
 
         }
@@ -600,8 +600,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -649,9 +649,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
         /// <summary>
@@ -660,10 +660,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 ListAddonPurchases (long? addonId, List<string> with = null)
+        /// <returns>AddonPurchaseListResponse</returns>
+        public AddonPurchaseListResponse ListAddonPurchases (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = ListAddonPurchasesWithHttpInfo(addonId, with);
+             ApiResponse<AddonPurchaseListResponse> localVarResponse = ListAddonPurchasesWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -673,8 +673,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
+        public ApiResponse< AddonPurchaseListResponse > ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -718,9 +718,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (AddonPurchaseListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseListResponse)));
         }
 
         /// <summary>
@@ -729,10 +729,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> ListAddonPurchasesAsync (long? addonId, List<string> with = null)
+        /// <returns>Task of AddonPurchaseListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonPurchaseListResponse> ListAddonPurchasesAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await ListAddonPurchasesAsyncWithHttpInfo(addonId, with);
+             ApiResponse<AddonPurchaseListResponse> localVarResponse = await ListAddonPurchasesAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -743,8 +743,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -788,9 +788,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2004) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (AddonPurchaseListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseListResponse)));
         }
 
         /// <summary>
@@ -801,10 +801,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 UpdateAddonPurchase (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
+        /// <returns>AddonPurchaseResponse</returns>
+        public AddonPurchaseResponse UpdateAddonPurchase (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = UpdateAddonPurchaseWithHttpInfo(body, addonId, userId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = UpdateAddonPurchaseWithHttpInfo(body, addonId, userId, with);
              return localVarResponse.Data;
         }
 
@@ -816,8 +816,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > UpdateAddonPurchaseWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
+        /// <returns>ApiResponse of AddonPurchaseResponse</returns>
+        public ApiResponse< AddonPurchaseResponse > UpdateAddonPurchaseWithHttpInfo (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -877,9 +877,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
         /// <summary>
@@ -890,10 +890,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> UpdateAddonPurchaseAsync (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
+        /// <returns>Task of AddonPurchaseResponse</returns>
+        public async System.Threading.Tasks.Task<AddonPurchaseResponse> UpdateAddonPurchaseAsync (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await UpdateAddonPurchaseAsyncWithHttpInfo(body, addonId, userId, with);
+             ApiResponse<AddonPurchaseResponse> localVarResponse = await UpdateAddonPurchaseAsyncWithHttpInfo(body, addonId, userId, with);
              return localVarResponse.Data;
 
         }
@@ -906,8 +906,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> UpdateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonPurchaseResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseResponse>> UpdateAddonPurchaseAsyncWithHttpInfo (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -967,9 +967,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+            return new ApiResponse<AddonPurchaseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+                (AddonPurchaseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonPurchaseResponse)));
         }
 
     }

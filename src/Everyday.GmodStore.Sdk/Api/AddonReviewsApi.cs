@@ -33,8 +33,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 GetAddonReview (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>AddonReviewResponse</returns>
+        AddonReviewResponse GetAddonReview (long? addonId, long? reviewId, List<string> with = null);
 
         /// <summary>
         /// Fetch a review of an addon
@@ -46,8 +46,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> GetAddonReviewWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>ApiResponse of AddonReviewResponse</returns>
+        ApiResponse<AddonReviewResponse> GetAddonReviewWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
         /// <summary>
         /// Fetch all the reviews of an addon
         /// </summary>
@@ -57,8 +57,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 ListAddonReviews (long? addonId, List<string> with = null);
+        /// <returns>AddonReviewListResponse</returns>
+        AddonReviewListResponse ListAddonReviews (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the reviews of an addon
@@ -69,8 +69,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> ListAddonReviewsWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>ApiResponse of AddonReviewListResponse</returns>
+        ApiResponse<AddonReviewListResponse> ListAddonReviewsWithHttpInfo (long? addonId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -83,8 +83,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> GetAddonReviewAsync (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>Task of AddonReviewResponse</returns>
+        System.Threading.Tasks.Task<AddonReviewResponse> GetAddonReviewAsync (long? addonId, long? reviewId, List<string> with = null);
 
         /// <summary>
         /// Fetch a review of an addon
@@ -96,8 +96,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> GetAddonReviewAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonReviewResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonReviewResponse>> GetAddonReviewAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null);
         /// <summary>
         /// Fetch all the reviews of an addon
         /// </summary>
@@ -107,8 +107,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> ListAddonReviewsAsync (long? addonId, List<string> with = null);
+        /// <returns>Task of AddonReviewListResponse</returns>
+        System.Threading.Tasks.Task<AddonReviewListResponse> ListAddonReviewsAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the reviews of an addon
@@ -119,8 +119,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ListAddonReviewsAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        /// <returns>Task of ApiResponse (AddonReviewListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonReviewListResponse>> ListAddonReviewsAsyncWithHttpInfo (long? addonId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -239,10 +239,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 GetAddonReview (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>AddonReviewResponse</returns>
+        public AddonReviewResponse GetAddonReview (long? addonId, long? reviewId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = GetAddonReviewWithHttpInfo(addonId, reviewId, with);
+             ApiResponse<AddonReviewResponse> localVarResponse = GetAddonReviewWithHttpInfo(addonId, reviewId, with);
              return localVarResponse.Data;
         }
 
@@ -253,8 +253,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > GetAddonReviewWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>ApiResponse of AddonReviewResponse</returns>
+        public ApiResponse< AddonReviewResponse > GetAddonReviewWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -302,9 +302,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<AddonReviewResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (AddonReviewResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonReviewResponse)));
         }
 
         /// <summary>
@@ -314,10 +314,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> GetAddonReviewAsync (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>Task of AddonReviewResponse</returns>
+        public async System.Threading.Tasks.Task<AddonReviewResponse> GetAddonReviewAsync (long? addonId, long? reviewId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await GetAddonReviewAsyncWithHttpInfo(addonId, reviewId, with);
+             ApiResponse<AddonReviewResponse> localVarResponse = await GetAddonReviewAsyncWithHttpInfo(addonId, reviewId, with);
              return localVarResponse.Data;
 
         }
@@ -329,8 +329,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="reviewId">Id of the review</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> GetAddonReviewAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonReviewResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonReviewResponse>> GetAddonReviewAsyncWithHttpInfo (long? addonId, long? reviewId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -378,9 +378,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<AddonReviewResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (AddonReviewResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonReviewResponse)));
         }
 
         /// <summary>
@@ -389,10 +389,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 ListAddonReviews (long? addonId, List<string> with = null)
+        /// <returns>AddonReviewListResponse</returns>
+        public AddonReviewListResponse ListAddonReviews (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = ListAddonReviewsWithHttpInfo(addonId, with);
+             ApiResponse<AddonReviewListResponse> localVarResponse = ListAddonReviewsWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -402,8 +402,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > ListAddonReviewsWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>ApiResponse of AddonReviewListResponse</returns>
+        public ApiResponse< AddonReviewListResponse > ListAddonReviewsWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -447,9 +447,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<AddonReviewListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (AddonReviewListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonReviewListResponse)));
         }
 
         /// <summary>
@@ -458,10 +458,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> ListAddonReviewsAsync (long? addonId, List<string> with = null)
+        /// <returns>Task of AddonReviewListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonReviewListResponse> ListAddonReviewsAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await ListAddonReviewsAsyncWithHttpInfo(addonId, with);
+             ApiResponse<AddonReviewListResponse> localVarResponse = await ListAddonReviewsAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -472,8 +472,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonReview schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ListAddonReviewsAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        /// <returns>Task of ApiResponse (AddonReviewListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonReviewListResponse>> ListAddonReviewsAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -517,9 +517,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<AddonReviewListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (AddonReviewListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonReviewListResponse)));
         }
 
     }

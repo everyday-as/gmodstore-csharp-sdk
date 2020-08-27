@@ -71,7 +71,7 @@ namespace Everyday.GmodStore.Sdk.Test
             // TODO uncomment below to test the method and replace null with proper value
             //List<string> with = null;
             //var response = instance.GetSelfUser(with);
-            //Assert.IsInstanceOf<InlineResponse20011> (response, "response is InlineResponse20011");
+            //Assert.IsInstanceOf<UserResponse> (response, "response is UserResponse");
         }
         /// <summary>
         /// Test GetUser
@@ -83,7 +83,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //string userId = null;
             //List<string> with = null;
             //var response = instance.GetUser(userId, with);
-            //Assert.IsInstanceOf<InlineResponse20011> (response, "response is InlineResponse20011");
+            //Assert.IsInstanceOf<UserResponse> (response, "response is UserResponse");
         }
     }
 

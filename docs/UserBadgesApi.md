@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="createuserbadge"></a>
 # **CreateUserBadge**
-> InlineResponse2013 CreateUserBadge (BadgeCreateBody body, string userId)
+> BadgeResponse CreateUserBadge (NewUserBadge body, string userId)
 
 Give a user a badge
 
@@ -30,13 +30,13 @@ namespace Example
         {
 
             var apiInstance = new UserBadgesApi();
-            var body = new BadgeCreateBody(); // BadgeCreateBody | 
+            var body = new NewUserBadge(); // NewUserBadge | 
             var userId = userId_example;  // string | Id of the user
 
             try
             {
                 // Give a user a badge
-                InlineResponse2013 result = apiInstance.CreateUserBadge(body, userId);
+                BadgeResponse result = apiInstance.CreateUserBadge(body, userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,12 +52,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BadgeCreateBody**](BadgeCreateBody.md)|  | 
+ **body** | [**NewUserBadge**](NewUserBadge.md)|  | 
  **userId** | **string**| Id of the user | 
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**BadgeResponse**](BadgeResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listuserbadges"></a>
 # **ListUserBadges**
-> InlineResponse20014 ListUserBadges (string userId)
+> BadgeListResponse ListUserBadges (string userId)
 
 Fetch all the badges a user has
 
@@ -156,7 +156,7 @@ namespace Example
             try
             {
                 // Fetch all the badges a user has
-                InlineResponse20014 result = apiInstance.ListUserBadges(userId);
+                BadgeListResponse result = apiInstance.ListUserBadges(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**BadgeListResponse**](BadgeListResponse.md)
 
 ### Authorization
 

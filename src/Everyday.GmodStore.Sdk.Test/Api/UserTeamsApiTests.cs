@@ -72,7 +72,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //string userId = null;
             //List<string> with = null;
             //var response = instance.ListUserTeams(userId, with);
-            //Assert.IsInstanceOf<InlineResponse20012> (response, "response is InlineResponse20012");
+            //Assert.IsInstanceOf<TeamListResponse> (response, "response is TeamListResponse");
         }
     }
 

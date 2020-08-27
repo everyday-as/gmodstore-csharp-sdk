@@ -76,7 +76,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2012> (response, "response is InlineResponse2012");
+            //Assert.IsInstanceOf<AddonVersionResponse> (response, "response is AddonVersionResponse");
         }
         /// <summary>
         /// Test DownloadAddonVersion
@@ -88,7 +88,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //long? versionId = null;
             //var response = instance.DownloadAddonVersion(addonId, versionId);
-            //Assert.IsInstanceOf<InlineResponse2008> (response, "response is InlineResponse2008");
+            //Assert.IsInstanceOf<AddonDownloadResponse> (response, "response is AddonDownloadResponse");
         }
         /// <summary>
         /// Test GetAddonVersion
@@ -101,7 +101,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? versionId = null;
             //List<string> with = null;
             //var response = instance.GetAddonVersion(addonId, versionId, with);
-            //Assert.IsInstanceOf<InlineResponse2012> (response, "response is InlineResponse2012");
+            //Assert.IsInstanceOf<AddonVersionResponse> (response, "response is AddonVersionResponse");
         }
         /// <summary>
         /// Test ListAddonVersions
@@ -113,7 +113,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.ListAddonVersions(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
+            //Assert.IsInstanceOf<AddonVersionListResponse> (response, "response is AddonVersionListResponse");
         }
         /// <summary>
         /// Test UpdateAddonVersion
@@ -129,7 +129,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? versionId = null;
             //List<string> with = null;
             //var response = instance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
-            //Assert.IsInstanceOf<InlineResponse2012> (response, "response is InlineResponse2012");
+            //Assert.IsInstanceOf<AddonVersionResponse> (response, "response is AddonVersionResponse");
         }
     }
 
