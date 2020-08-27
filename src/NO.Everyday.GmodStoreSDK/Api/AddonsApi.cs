@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 AddonsAddonIdGet (long? addonId, List<string> with = null);
+        InlineResponse2001 GetAddon (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single addon
@@ -45,7 +45,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> AddonsAddonIdGetWithHttpInfo (long? addonId, List<string> with = null);
+        ApiResponse<InlineResponse2001> GetAddonWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Fetch all the addons that you have access to
         /// </summary>
@@ -55,7 +55,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>InlineResponse200</returns>
-        InlineResponse200 AddonsGet (List<string> with = null);
+        InlineResponse200 ListSelfAddons (List<string> with = null);
 
         /// <summary>
         /// Fetch all the addons that you have access to
@@ -66,7 +66,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> AddonsGetWithHttpInfo (List<string> with = null);
+        ApiResponse<InlineResponse200> ListSelfAddonsWithHttpInfo (List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -79,7 +79,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> AddonsAddonIdGetAsync (long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse2001> GetAddonAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single addon
@@ -91,7 +91,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> AddonsAddonIdGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> GetAddonAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Fetch all the addons that you have access to
         /// </summary>
@@ -101,7 +101,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> AddonsGetAsync (List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse200> ListSelfAddonsAsync (List<string> with = null);
 
         /// <summary>
         /// Fetch all the addons that you have access to
@@ -112,7 +112,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> AddonsGetAsyncWithHttpInfo (List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -231,9 +231,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 AddonsAddonIdGet (long? addonId, List<string> with = null)
+        public InlineResponse2001 GetAddon (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = AddonsAddonIdGetWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2001> localVarResponse = GetAddonWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -244,11 +244,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > AddonsAddonIdGetWithHttpInfo (long? addonId, List<string> with = null)
+        public ApiResponse< InlineResponse2001 > GetAddonWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonsApi->AddonsAddonIdGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonsApi->GetAddon");
 
             var localVarPath = "/addons/{addon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -273,11 +273,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -288,7 +284,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -304,9 +300,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> AddonsAddonIdGetAsync (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse2001> GetAddonAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await AddonsAddonIdGetAsyncWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2001> localVarResponse = await GetAddonAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -318,11 +314,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> AddonsAddonIdGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> GetAddonAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonsApi->AddonsAddonIdGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonsApi->GetAddon");
 
             var localVarPath = "/addons/{addon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -347,11 +343,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -362,7 +354,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -377,9 +369,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>InlineResponse200</returns>
-        public InlineResponse200 AddonsGet (List<string> with = null)
+        public InlineResponse200 ListSelfAddons (List<string> with = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = AddonsGetWithHttpInfo(with);
+             ApiResponse<InlineResponse200> localVarResponse = ListSelfAddonsWithHttpInfo(with);
              return localVarResponse.Data;
         }
 
@@ -389,7 +381,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > AddonsGetWithHttpInfo (List<string> with = null)
+        public ApiResponse< InlineResponse200 > ListSelfAddonsWithHttpInfo (List<string> with = null)
         {
 
             var localVarPath = "/addons";
@@ -414,11 +406,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -429,7 +417,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListSelfAddons", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -444,9 +432,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> AddonsGetAsync (List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse200> ListSelfAddonsAsync (List<string> with = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = await AddonsGetAsyncWithHttpInfo(with);
+             ApiResponse<InlineResponse200> localVarResponse = await ListSelfAddonsAsyncWithHttpInfo(with);
              return localVarResponse.Data;
 
         }
@@ -457,7 +445,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the Addon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> AddonsGetAsyncWithHttpInfo (List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = null)
         {
 
             var localVarPath = "/addons";
@@ -482,11 +470,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -497,7 +481,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListSelfAddons", localVarResponse);
                 if (exception != null) throw exception;
             }
 

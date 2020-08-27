@@ -4,12 +4,12 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersMeGet**](UsersApi.md#usersmeget) | **GET** /users/me | Fetches the current user (API Key Owner)
-[**UsersUserIdGet**](UsersApi.md#usersuseridget) | **GET** /users/{user_id} | Fetch a single user
+[**GetSelfUser**](UsersApi.md#getselfuser) | **GET** /users/me | Fetches the current user (API Key Owner)
+[**GetUser**](UsersApi.md#getuser) | **GET** /users/{user_id} | Fetch a single user
 
-<a name="usersmeget"></a>
-# **UsersMeGet**
-> InlineResponse20011 UsersMeGet (List<string> with = null)
+<a name="getselfuser"></a>
+# **GetSelfUser**
+> InlineResponse20011 GetSelfUser (List<string> with = null)
 
 Fetches the current user (API Key Owner)
 
@@ -23,14 +23,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersMeGetExample
+    public class GetSelfUserExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UsersApi();
             var with = new List<string>(); // List<string> | The relations you want to fetch with the User schema (optional) 
@@ -38,12 +34,12 @@ namespace Example
             try
             {
                 // Fetches the current user (API Key Owner)
-                InlineResponse20011 result = apiInstance.UsersMeGet(with);
+                InlineResponse20011 result = apiInstance.GetSelfUser(with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.UsersMeGet: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetSelfUser: " + e.Message );
             }
         }
     }
@@ -62,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -70,9 +66,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="usersuseridget"></a>
-# **UsersUserIdGet**
-> InlineResponse20011 UsersUserIdGet (string userId, List<string> with = null)
+<a name="getuser"></a>
+# **GetUser**
+> InlineResponse20011 GetUser (string userId, List<string> with = null)
 
 Fetch a single user
 
@@ -86,14 +82,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersUserIdGetExample
+    public class GetUserExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | Id of the user
@@ -102,12 +94,12 @@ namespace Example
             try
             {
                 // Fetch a single user
-                InlineResponse20011 result = apiInstance.UsersUserIdGet(userId, with);
+                InlineResponse20011 result = apiInstance.GetUser(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.UsersUserIdGet: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUser: " + e.Message );
             }
         }
     }
@@ -127,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

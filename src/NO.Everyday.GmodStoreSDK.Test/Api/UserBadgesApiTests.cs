@@ -63,39 +63,39 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test UsersUserIdBadgesBadgeIdDelete
+        /// Test CreateUserBadge
         /// </summary>
         [Test]
-        public void UsersUserIdBadgesBadgeIdDeleteTest()
+        public void CreateUserBadgeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //BadgeCreateBody body = null;
+            //string userId = null;
+            //var response = instance.CreateUserBadge(body, userId);
+            //Assert.IsInstanceOf<InlineResponse2013> (response, "response is InlineResponse2013");
+        }
+        /// <summary>
+        /// Test DeleteUserBadge
+        /// </summary>
+        [Test]
+        public void DeleteUserBadgeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //long? badgeId = null;
-            //instance.UsersUserIdBadgesBadgeIdDelete(userId, badgeId);
+            //instance.DeleteUserBadge(userId, badgeId);
             
         }
         /// <summary>
-        /// Test UsersUserIdBadgesGet
+        /// Test ListUserBadges
         /// </summary>
         [Test]
-        public void UsersUserIdBadgesGetTest()
+        public void ListUserBadgesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
-            //var response = instance.UsersUserIdBadgesGet(userId);
+            //var response = instance.ListUserBadges(userId);
             //Assert.IsInstanceOf<InlineResponse20014> (response, "response is InlineResponse20014");
-        }
-        /// <summary>
-        /// Test UsersUserIdBadgesPost
-        /// </summary>
-        [Test]
-        public void UsersUserIdBadgesPostTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Object body = null;
-            //string userId = null;
-            //var response = instance.UsersUserIdBadgesPost(body, userId);
-            //Assert.IsInstanceOf<InlineResponse2013> (response, "response is InlineResponse2013");
         }
     }
 

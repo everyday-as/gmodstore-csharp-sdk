@@ -4,11 +4,11 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersUserIdPurchasesGet**](UserPurchasesApi.md#usersuseridpurchasesget) | **GET** /users/{user_id}/purchases | Fetch all purchases a user has made
+[**ListUserPurchases**](UserPurchasesApi.md#listuserpurchases) | **GET** /users/{user_id}/purchases | Fetch all purchases a user has made
 
-<a name="usersuseridpurchasesget"></a>
-# **UsersUserIdPurchasesGet**
-> InlineResponse2004 UsersUserIdPurchasesGet (string userId, List<string> with = null)
+<a name="listuserpurchases"></a>
+# **ListUserPurchases**
+> InlineResponse2004 ListUserPurchases (string userId, List<string> with = null)
 
 Fetch all purchases a user has made
 
@@ -22,14 +22,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersUserIdPurchasesGetExample
+    public class ListUserPurchasesExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UserPurchasesApi();
             var userId = userId_example;  // string | Id of the user
@@ -38,12 +34,12 @@ namespace Example
             try
             {
                 // Fetch all purchases a user has made
-                InlineResponse2004 result = apiInstance.UsersUserIdPurchasesGet(userId, with);
+                InlineResponse2004 result = apiInstance.ListUserPurchases(userId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserPurchasesApi.UsersUserIdPurchasesGet: " + e.Message );
+                Debug.Print("Exception when calling UserPurchasesApi.ListUserPurchases: " + e.Message );
             }
         }
     }
@@ -63,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

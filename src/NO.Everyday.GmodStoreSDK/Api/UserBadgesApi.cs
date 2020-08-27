@@ -24,50 +24,6 @@ namespace NO.Everyday.GmodStoreSDK.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Destroy a users&#x27;s badge
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns></returns>
-        void UsersUserIdBadgesBadgeIdDelete (string userId, long? badgeId);
-
-        /// <summary>
-        /// Destroy a users&#x27;s badge
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UsersUserIdBadgesBadgeIdDeleteWithHttpInfo (string userId, long? badgeId);
-        /// <summary>
-        /// Fetch all the badges a user has
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20014</returns>
-        InlineResponse20014 UsersUserIdBadgesGet (string userId);
-
-        /// <summary>
-        /// Fetch all the badges a user has
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20014</returns>
-        ApiResponse<InlineResponse20014> UsersUserIdBadgesGetWithHttpInfo (string userId);
-        /// <summary>
         /// Give a user a badge
         /// </summary>
         /// <remarks>
@@ -77,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>InlineResponse2013</returns>
-        InlineResponse2013 UsersUserIdBadgesPost (Object body, string userId);
+        InlineResponse2013 CreateUserBadge (BadgeCreateBody body, string userId);
 
         /// <summary>
         /// Give a user a badge
@@ -89,53 +45,53 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of InlineResponse2013</returns>
-        ApiResponse<InlineResponse2013> UsersUserIdBadgesPostWithHttpInfo (Object body, string userId);
+        ApiResponse<InlineResponse2013> CreateUserBadgeWithHttpInfo (BadgeCreateBody body, string userId);
+        /// <summary>
+        /// Destroy a users&#x27;s badge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns></returns>
+        void DeleteUserBadge (string userId, long? badgeId);
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUserBadgeWithHttpInfo (string userId, long? badgeId);
+        /// <summary>
+        /// Fetch all the badges a user has
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>InlineResponse20014</returns>
+        InlineResponse20014 ListUserBadges (string userId);
+
+        /// <summary>
+        /// Fetch all the badges a user has
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>ApiResponse of InlineResponse20014</returns>
+        ApiResponse<InlineResponse20014> ListUserBadgesWithHttpInfo (string userId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
-        /// <summary>
-        /// Destroy a users&#x27;s badge
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UsersUserIdBadgesBadgeIdDeleteAsync (string userId, long? badgeId);
-
-        /// <summary>
-        /// Destroy a users&#x27;s badge
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UsersUserIdBadgesBadgeIdDeleteAsyncWithHttpInfo (string userId, long? badgeId);
-        /// <summary>
-        /// Fetch all the badges a user has
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20014</returns>
-        System.Threading.Tasks.Task<InlineResponse20014> UsersUserIdBadgesGetAsync (string userId);
-
-        /// <summary>
-        /// Fetch all the badges a user has
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Give a user a badge
         /// </summary>
@@ -146,7 +102,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of InlineResponse2013</returns>
-        System.Threading.Tasks.Task<InlineResponse2013> UsersUserIdBadgesPostAsync (Object body, string userId);
+        System.Threading.Tasks.Task<InlineResponse2013> CreateUserBadgeAsync (BadgeCreateBody body, string userId);
 
         /// <summary>
         /// Give a user a badge
@@ -158,7 +114,51 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (InlineResponse2013)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2013>> UsersUserIdBadgesPostAsyncWithHttpInfo (Object body, string userId);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2013>> CreateUserBadgeAsyncWithHttpInfo (BadgeCreateBody body, string userId);
+        /// <summary>
+        /// Destroy a users&#x27;s badge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUserBadgeAsync (string userId, long? badgeId);
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (string userId, long? badgeId);
+        /// <summary>
+        /// Fetch all the badges a user has
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>Task of InlineResponse20014</returns>
+        System.Threading.Tasks.Task<InlineResponse20014> ListUserBadgesAsync (string userId);
+
+        /// <summary>
+        /// Fetch all the badges a user has
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> ListUserBadgesAsyncWithHttpInfo (string userId);
         #endregion Asynchronous Operations
     }
 
@@ -271,307 +271,15 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
-        /// Destroy a users&#x27;s badge 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns></returns>
-        public void UsersUserIdBadgesBadgeIdDelete (string userId, long? badgeId)
-        {
-             UsersUserIdBadgesBadgeIdDeleteWithHttpInfo(userId, badgeId);
-        }
-
-        /// <summary>
-        /// Destroy a users&#x27;s badge 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UsersUserIdBadgesBadgeIdDeleteWithHttpInfo (string userId, long? badgeId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesBadgeIdDelete");
-            // verify the required parameter 'badgeId' is set
-            if (badgeId == null)
-                throw new ApiException(400, "Missing required parameter 'badgeId' when calling UserBadgesApi->UsersUserIdBadgesBadgeIdDelete");
-
-            var localVarPath = "/users/{user_id}/badges/{badge_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (badgeId != null) localVarPathParams.Add("badge_id", this.Configuration.ApiClient.ParameterToString(badgeId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesBadgeIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Destroy a users&#x27;s badge 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UsersUserIdBadgesBadgeIdDeleteAsync (string userId, long? badgeId)
-        {
-             await UsersUserIdBadgesBadgeIdDeleteAsyncWithHttpInfo(userId, badgeId);
-
-        }
-
-        /// <summary>
-        /// Destroy a users&#x27;s badge 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="badgeId">Id of the badge</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UsersUserIdBadgesBadgeIdDeleteAsyncWithHttpInfo (string userId, long? badgeId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesBadgeIdDelete");
-            // verify the required parameter 'badgeId' is set
-            if (badgeId == null)
-                throw new ApiException(400, "Missing required parameter 'badgeId' when calling UserBadgesApi->UsersUserIdBadgesBadgeIdDelete");
-
-            var localVarPath = "/users/{user_id}/badges/{badge_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (badgeId != null) localVarPathParams.Add("badge_id", this.Configuration.ApiClient.ParameterToString(badgeId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesBadgeIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Fetch all the badges a user has 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>InlineResponse20014</returns>
-        public InlineResponse20014 UsersUserIdBadgesGet (string userId)
-        {
-             ApiResponse<InlineResponse20014> localVarResponse = UsersUserIdBadgesGetWithHttpInfo(userId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Fetch all the badges a user has 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>ApiResponse of InlineResponse20014</returns>
-        public ApiResponse< InlineResponse20014 > UsersUserIdBadgesGetWithHttpInfo (string userId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesGet");
-
-            var localVarPath = "/users/{user_id}/badges";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
-        }
-
-        /// <summary>
-        /// Fetch all the badges a user has 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>Task of InlineResponse20014</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20014> UsersUserIdBadgesGetAsync (string userId)
-        {
-             ApiResponse<InlineResponse20014> localVarResponse = await UsersUserIdBadgesGetAsyncWithHttpInfo(userId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Fetch all the badges a user has 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> UsersUserIdBadgesGetAsyncWithHttpInfo (string userId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesGet");
-
-            var localVarPath = "/users/{user_id}/badges";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
-        }
-
-        /// <summary>
         /// Give a user a badge 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>InlineResponse2013</returns>
-        public InlineResponse2013 UsersUserIdBadgesPost (Object body, string userId)
+        public InlineResponse2013 CreateUserBadge (BadgeCreateBody body, string userId)
         {
-             ApiResponse<InlineResponse2013> localVarResponse = UsersUserIdBadgesPostWithHttpInfo(body, userId);
+             ApiResponse<InlineResponse2013> localVarResponse = CreateUserBadgeWithHttpInfo(body, userId);
              return localVarResponse.Data;
         }
 
@@ -582,14 +290,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of InlineResponse2013</returns>
-        public ApiResponse< InlineResponse2013 > UsersUserIdBadgesPostWithHttpInfo (Object body, string userId)
+        public ApiResponse< InlineResponse2013 > CreateUserBadgeWithHttpInfo (BadgeCreateBody body, string userId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling UserBadgesApi->UsersUserIdBadgesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserBadgesApi->CreateUserBadge");
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->CreateUserBadge");
 
             var localVarPath = "/users/{user_id}/badges";
             var localVarPathParams = new Dictionary<String, String>();
@@ -622,11 +330,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -637,7 +341,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateUserBadge", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -653,9 +357,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of InlineResponse2013</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2013> UsersUserIdBadgesPostAsync (Object body, string userId)
+        public async System.Threading.Tasks.Task<InlineResponse2013> CreateUserBadgeAsync (BadgeCreateBody body, string userId)
         {
-             ApiResponse<InlineResponse2013> localVarResponse = await UsersUserIdBadgesPostAsyncWithHttpInfo(body, userId);
+             ApiResponse<InlineResponse2013> localVarResponse = await CreateUserBadgeAsyncWithHttpInfo(body, userId);
              return localVarResponse.Data;
 
         }
@@ -667,14 +371,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (InlineResponse2013)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2013>> UsersUserIdBadgesPostAsyncWithHttpInfo (Object body, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2013>> CreateUserBadgeAsyncWithHttpInfo (BadgeCreateBody body, string userId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling UserBadgesApi->UsersUserIdBadgesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserBadgesApi->CreateUserBadge");
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->UsersUserIdBadgesPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->CreateUserBadge");
 
             var localVarPath = "/users/{user_id}/badges";
             var localVarPathParams = new Dictionary<String, String>();
@@ -707,11 +411,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -722,13 +422,289 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsersUserIdBadgesPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateUserBadge", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<InlineResponse2013>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (InlineResponse2013) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2013)));
+        }
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns></returns>
+        public void DeleteUserBadge (string userId, long? badgeId)
+        {
+             DeleteUserBadgeWithHttpInfo(userId, badgeId);
+        }
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteUserBadgeWithHttpInfo (string userId, long? badgeId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->DeleteUserBadge");
+            // verify the required parameter 'badgeId' is set
+            if (badgeId == null)
+                throw new ApiException(400, "Missing required parameter 'badgeId' when calling UserBadgesApi->DeleteUserBadge");
+
+            var localVarPath = "/users/{user_id}/badges/{badge_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (badgeId != null) localVarPathParams.Add("badge_id", this.Configuration.ApiClient.ParameterToString(badgeId)); // path parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteUserBadge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteUserBadgeAsync (string userId, long? badgeId)
+        {
+             await DeleteUserBadgeAsyncWithHttpInfo(userId, badgeId);
+
+        }
+
+        /// <summary>
+        /// Destroy a users&#x27;s badge 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="badgeId">Id of the badge</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (string userId, long? badgeId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->DeleteUserBadge");
+            // verify the required parameter 'badgeId' is set
+            if (badgeId == null)
+                throw new ApiException(400, "Missing required parameter 'badgeId' when calling UserBadgesApi->DeleteUserBadge");
+
+            var localVarPath = "/users/{user_id}/badges/{badge_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (badgeId != null) localVarPathParams.Add("badge_id", this.Configuration.ApiClient.ParameterToString(badgeId)); // path parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteUserBadge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Fetch all the badges a user has 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>InlineResponse20014</returns>
+        public InlineResponse20014 ListUserBadges (string userId)
+        {
+             ApiResponse<InlineResponse20014> localVarResponse = ListUserBadgesWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch all the badges a user has 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>ApiResponse of InlineResponse20014</returns>
+        public ApiResponse< InlineResponse20014 > ListUserBadgesWithHttpInfo (string userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->ListUserBadges");
+
+            var localVarPath = "/users/{user_id}/badges";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListUserBadges", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
+        }
+
+        /// <summary>
+        /// Fetch all the badges a user has 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>Task of InlineResponse20014</returns>
+        public async System.Threading.Tasks.Task<InlineResponse20014> ListUserBadgesAsync (string userId)
+        {
+             ApiResponse<InlineResponse20014> localVarResponse = await ListUserBadgesAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch all the badges a user has 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <returns>Task of ApiResponse (InlineResponse20014)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20014>> ListUserBadgesAsyncWithHttpInfo (string userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserBadgesApi->ListUserBadges");
+
+            var localVarPath = "/users/{user_id}/badges";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListUserBadges", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse20014>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse20014) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20014)));
         }
 
     }

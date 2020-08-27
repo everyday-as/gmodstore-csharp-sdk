@@ -4,13 +4,74 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersUserIdBadgesBadgeIdDelete**](UserBadgesApi.md#usersuseridbadgesbadgeiddelete) | **DELETE** /users/{user_id}/badges/{badge_id} | Destroy a users&#x27;s badge
-[**UsersUserIdBadgesGet**](UserBadgesApi.md#usersuseridbadgesget) | **GET** /users/{user_id}/badges | Fetch all the badges a user has
-[**UsersUserIdBadgesPost**](UserBadgesApi.md#usersuseridbadgespost) | **POST** /users/{user_id}/badges | Give a user a badge
+[**CreateUserBadge**](UserBadgesApi.md#createuserbadge) | **POST** /users/{user_id}/badges | Give a user a badge
+[**DeleteUserBadge**](UserBadgesApi.md#deleteuserbadge) | **DELETE** /users/{user_id}/badges/{badge_id} | Destroy a users&#x27;s badge
+[**ListUserBadges**](UserBadgesApi.md#listuserbadges) | **GET** /users/{user_id}/badges | Fetch all the badges a user has
 
-<a name="usersuseridbadgesbadgeiddelete"></a>
-# **UsersUserIdBadgesBadgeIdDelete**
-> void UsersUserIdBadgesBadgeIdDelete (string userId, long? badgeId)
+<a name="createuserbadge"></a>
+# **CreateUserBadge**
+> InlineResponse2013 CreateUserBadge (BadgeCreateBody body, string userId)
+
+Give a user a badge
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NO.Everyday.GmodStoreSDK.Api;
+using NO.Everyday.GmodStoreSDK.Client;
+using NO.Everyday.GmodStoreSDK.Model;
+
+namespace Example
+{
+    public class CreateUserBadgeExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new UserBadgesApi();
+            var body = new BadgeCreateBody(); // BadgeCreateBody | 
+            var userId = userId_example;  // string | Id of the user
+
+            try
+            {
+                // Give a user a badge
+                InlineResponse2013 result = apiInstance.CreateUserBadge(body, userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserBadgesApi.CreateUserBadge: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BadgeCreateBody**](BadgeCreateBody.md)|  | 
+ **userId** | **string**| Id of the user | 
+
+### Return type
+
+[**InlineResponse2013**](InlineResponse2013.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="deleteuserbadge"></a>
+# **DeleteUserBadge**
+> void DeleteUserBadge (string userId, long? badgeId)
 
 Destroy a users's badge
 
@@ -24,14 +85,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersUserIdBadgesBadgeIdDeleteExample
+    public class DeleteUserBadgeExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UserBadgesApi();
             var userId = userId_example;  // string | Id of the user
@@ -40,11 +97,11 @@ namespace Example
             try
             {
                 // Destroy a users's badge
-                apiInstance.UsersUserIdBadgesBadgeIdDelete(userId, badgeId);
+                apiInstance.DeleteUserBadge(userId, badgeId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserBadgesApi.UsersUserIdBadgesBadgeIdDelete: " + e.Message );
+                Debug.Print("Exception when calling UserBadgesApi.DeleteUserBadge: " + e.Message );
             }
         }
     }
@@ -64,7 +121,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,9 +129,9 @@ void (empty response body)
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="usersuseridbadgesget"></a>
-# **UsersUserIdBadgesGet**
-> InlineResponse20014 UsersUserIdBadgesGet (string userId)
+<a name="listuserbadges"></a>
+# **ListUserBadges**
+> InlineResponse20014 ListUserBadges (string userId)
 
 Fetch all the badges a user has
 
@@ -88,14 +145,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersUserIdBadgesGetExample
+    public class ListUserBadgesExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UserBadgesApi();
             var userId = userId_example;  // string | Id of the user
@@ -103,12 +156,12 @@ namespace Example
             try
             {
                 // Fetch all the badges a user has
-                InlineResponse20014 result = apiInstance.UsersUserIdBadgesGet(userId);
+                InlineResponse20014 result = apiInstance.ListUserBadges(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserBadgesApi.UsersUserIdBadgesGet: " + e.Message );
+                Debug.Print("Exception when calling UserBadgesApi.ListUserBadges: " + e.Message );
             }
         }
     }
@@ -127,76 +180,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="usersuseridbadgespost"></a>
-# **UsersUserIdBadgesPost**
-> InlineResponse2013 UsersUserIdBadgesPost (Object body, string userId)
-
-Give a user a badge
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
-
-namespace Example
-{
-    public class UsersUserIdBadgesPostExample
-    {
-        public void main()
-        {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new UserBadgesApi();
-            var body = new Object(); // Object | 
-            var userId = userId_example;  // string | Id of the user
-
-            try
-            {
-                // Give a user a badge
-                InlineResponse2013 result = apiInstance.UsersUserIdBadgesPost(body, userId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UserBadgesApi.UsersUserIdBadgesPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
- **userId** | **string**| Id of the user | 
-
-### Return type
-
-[**InlineResponse2013**](InlineResponse2013.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

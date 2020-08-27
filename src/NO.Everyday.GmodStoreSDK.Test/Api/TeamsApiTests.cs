@@ -63,15 +63,15 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test TeamsTeamIdGet
+        /// Test GetTeam
         /// </summary>
         [Test]
-        public void TeamsTeamIdGetTest()
+        public void GetTeamTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? teamId = null;
             //List<string> with = null;
-            //var response = instance.TeamsTeamIdGet(teamId, with);
+            //var response = instance.GetTeam(teamId, with);
             //Assert.IsInstanceOf<InlineResponse2009> (response, "response is InlineResponse2009");
         }
     }

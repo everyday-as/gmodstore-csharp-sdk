@@ -24,6 +24,56 @@ namespace NO.Everyday.GmodStoreSDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create a purchase for an addon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        InlineResponse2011 CreateAddonPurchase (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+
+        /// <summary>
+        /// Create a purchase for an addon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        ApiResponse<InlineResponse2011> CreateAddonPurchaseWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <summary>
+        /// Get a purchase of an addon by user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        InlineResponse2011 GetAddonPurchase (long? addonId, string userId, List<string> with = null);
+
+        /// <summary>
+        /// Get a purchase of an addon by user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        ApiResponse<InlineResponse2011> GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null);
+        /// <summary>
         /// Fetch all purchases of an addon
         /// </summary>
         /// <remarks>
@@ -33,7 +83,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 AddonsAddonIdPurchasesGet (long? addonId, List<string> with = null);
+        InlineResponse2004 ListAddonPurchases (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases of an addon
@@ -45,57 +95,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> AddonsAddonIdPurchasesGetWithHttpInfo (long? addonId, List<string> with = null);
-        /// <summary>
-        /// Create a purchase for an addon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 AddonsAddonIdPurchasesPost (Object body, long? addonId, List<string> with = null);
-
-        /// <summary>
-        /// Create a purchase for an addon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> AddonsAddonIdPurchasesPostWithHttpInfo (Object body, long? addonId, List<string> with = null);
-        /// <summary>
-        /// Get a purchase of an addon by user
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 AddonsAddonIdPurchasesUserIdGet (long? addonId, string userId, List<string> with = null);
-
-        /// <summary>
-        /// Get a purchase of an addon by user
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> AddonsAddonIdPurchasesUserIdGetWithHttpInfo (long? addonId, string userId, List<string> with = null);
+        ApiResponse<InlineResponse2004> ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Update a purchase for an addon
         /// </summary>
@@ -108,7 +108,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 AddonsAddonIdPurchasesUserIdPut (Object body, long? addonId, string userId, List<string> with = null);
+        InlineResponse2011 UpdateAddonPurchase (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Update a purchase for an addon
@@ -122,9 +122,59 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> AddonsAddonIdPurchasesUserIdPutWithHttpInfo (Object body, long? addonId, string userId, List<string> with = null);
+        ApiResponse<InlineResponse2011> UpdateAddonPurchaseWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Create a purchase for an addon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        System.Threading.Tasks.Task<InlineResponse2011> CreateAddonPurchaseAsync (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+
+        /// <summary>
+        /// Create a purchase for an addon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> CreateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null);
+        /// <summary>
+        /// Get a purchase of an addon by user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        System.Threading.Tasks.Task<InlineResponse2011> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null);
+
+        /// <summary>
+        /// Get a purchase of an addon by user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null);
         /// <summary>
         /// Fetch all purchases of an addon
         /// </summary>
@@ -135,7 +185,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> AddonsAddonIdPurchasesGetAsync (long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse2004> ListAddonPurchasesAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases of an addon
@@ -147,57 +197,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> AddonsAddonIdPurchasesGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
-        /// <summary>
-        /// Create a purchase for an addon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesPostAsync (Object body, long? addonId, List<string> with = null);
-
-        /// <summary>
-        /// Create a purchase for an addon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesPostAsyncWithHttpInfo (Object body, long? addonId, List<string> with = null);
-        /// <summary>
-        /// Get a purchase of an addon by user
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesUserIdGetAsync (long? addonId, string userId, List<string> with = null);
-
-        /// <summary>
-        /// Get a purchase of an addon by user
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesUserIdGetAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
         /// Update a purchase for an addon
         /// </summary>
@@ -210,7 +210,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesUserIdPutAsync (Object body, long? addonId, string userId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse2011> UpdateAddonPurchaseAsync (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
 
         /// <summary>
         /// Update a purchase for an addon
@@ -224,7 +224,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesUserIdPutAsyncWithHttpInfo (Object body, long? addonId, string userId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> UpdateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -337,15 +337,333 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
+        /// Create a purchase for an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        public InlineResponse2011 CreateAddonPurchase (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2011> localVarResponse = CreateAddonPurchaseWithHttpInfo(body, addonId, with);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a purchase for an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        public ApiResponse< InlineResponse2011 > CreateAddonPurchaseWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->CreateAddonPurchase");
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->CreateAddonPurchase");
+
+            var localVarPath = "/addons/{addon_id}/purchases";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAddonPurchase", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+        }
+
+        /// <summary>
+        /// Create a purchase for an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2011> CreateAddonPurchaseAsync (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2011> localVarResponse = await CreateAddonPurchaseAsyncWithHttpInfo(body, addonId, with);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a purchase for an addon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> CreateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseCreateBody body, long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->CreateAddonPurchase");
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->CreateAddonPurchase");
+
+            var localVarPath = "/addons/{addon_id}/purchases";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAddonPurchase", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+        }
+
+        /// <summary>
+        /// Get a purchase of an addon by user 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        public InlineResponse2011 GetAddonPurchase (long? addonId, string userId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2011> localVarResponse = GetAddonPurchaseWithHttpInfo(addonId, userId, with);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a purchase of an addon by user 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        public ApiResponse< InlineResponse2011 > GetAddonPurchaseWithHttpInfo (long? addonId, string userId, List<string> with = null)
+        {
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->GetAddonPurchase");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->GetAddonPurchase");
+
+            var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAddonPurchase", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+        }
+
+        /// <summary>
+        /// Get a purchase of an addon by user 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2011> GetAddonPurchaseAsync (long? addonId, string userId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse2011> localVarResponse = await GetAddonPurchaseAsyncWithHttpInfo(addonId, userId, with);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a purchase of an addon by user 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetAddonPurchaseAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null)
+        {
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->GetAddonPurchase");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->GetAddonPurchase");
+
+            var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAddonPurchase", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
+        }
+
+        /// <summary>
         /// Fetch all purchases of an addon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 AddonsAddonIdPurchasesGet (long? addonId, List<string> with = null)
+        public InlineResponse2004 ListAddonPurchases (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = AddonsAddonIdPurchasesGetWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2004> localVarResponse = ListAddonPurchasesWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -356,11 +674,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > AddonsAddonIdPurchasesGetWithHttpInfo (long? addonId, List<string> with = null)
+        public ApiResponse< InlineResponse2004 > ListAddonPurchasesWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->ListAddonPurchases");
 
             var localVarPath = "/addons/{addon_id}/purchases";
             var localVarPathParams = new Dictionary<String, String>();
@@ -385,11 +703,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -400,7 +714,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListAddonPurchases", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -416,9 +730,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> AddonsAddonIdPurchasesGetAsync (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse2004> ListAddonPurchasesAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await AddonsAddonIdPurchasesGetAsyncWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2004> localVarResponse = await ListAddonPurchasesAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -430,11 +744,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> AddonsAddonIdPurchasesGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListAddonPurchasesAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->ListAddonPurchases");
 
             var localVarPath = "/addons/{addon_id}/purchases";
             var localVarPathParams = new Dictionary<String, String>();
@@ -459,11 +773,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -474,7 +784,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListAddonPurchases", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -484,340 +794,6 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
-        /// Create a purchase for an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 AddonsAddonIdPurchasesPost (Object body, long? addonId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = AddonsAddonIdPurchasesPostWithHttpInfo(body, addonId, with);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a purchase for an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > AddonsAddonIdPurchasesPostWithHttpInfo (Object body, long? addonId, List<string> with = null)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->AddonsAddonIdPurchasesPost");
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesPost");
-
-            var localVarPath = "/addons/{addon_id}/purchases";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
-        /// Create a purchase for an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesPostAsync (Object body, long? addonId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = await AddonsAddonIdPurchasesPostAsyncWithHttpInfo(body, addonId, with);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create a purchase for an addon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesPostAsyncWithHttpInfo (Object body, long? addonId, List<string> with = null)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->AddonsAddonIdPurchasesPost");
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesPost");
-
-            var localVarPath = "/addons/{addon_id}/purchases";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
-        /// Get a purchase of an addon by user 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 AddonsAddonIdPurchasesUserIdGet (long? addonId, string userId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = AddonsAddonIdPurchasesUserIdGetWithHttpInfo(addonId, userId, with);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a purchase of an addon by user 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > AddonsAddonIdPurchasesUserIdGetWithHttpInfo (long? addonId, string userId, List<string> with = null)
-        {
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdGet");
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdGet");
-
-            var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesUserIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
-        /// Get a purchase of an addon by user 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesUserIdGetAsync (long? addonId, string userId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = await AddonsAddonIdPurchasesUserIdGetAsyncWithHttpInfo(addonId, userId, with);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a purchase of an addon by user 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesUserIdGetAsyncWithHttpInfo (long? addonId, string userId, List<string> with = null)
-        {
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdGet");
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdGet");
-
-            var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesUserIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
         /// Update a purchase for an addon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -826,9 +802,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 AddonsAddonIdPurchasesUserIdPut (Object body, long? addonId, string userId, List<string> with = null)
+        public InlineResponse2011 UpdateAddonPurchase (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = AddonsAddonIdPurchasesUserIdPutWithHttpInfo(body, addonId, userId, with);
+             ApiResponse<InlineResponse2011> localVarResponse = UpdateAddonPurchaseWithHttpInfo(body, addonId, userId, with);
              return localVarResponse.Data;
         }
 
@@ -841,17 +817,17 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > AddonsAddonIdPurchasesUserIdPutWithHttpInfo (Object body, long? addonId, string userId, List<string> with = null)
+        public ApiResponse< InlineResponse2011 > UpdateAddonPurchaseWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->UpdateAddonPurchase");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->UpdateAddonPurchase");
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->UpdateAddonPurchase");
 
             var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -886,11 +862,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -901,7 +873,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesUserIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateAddonPurchase", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -919,9 +891,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> AddonsAddonIdPurchasesUserIdPutAsync (Object body, long? addonId, string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse2011> UpdateAddonPurchaseAsync (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await AddonsAddonIdPurchasesUserIdPutAsyncWithHttpInfo(body, addonId, userId, with);
+             ApiResponse<InlineResponse2011> localVarResponse = await UpdateAddonPurchaseAsyncWithHttpInfo(body, addonId, userId, with);
              return localVarResponse.Data;
 
         }
@@ -935,17 +907,17 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddonsAddonIdPurchasesUserIdPutAsyncWithHttpInfo (Object body, long? addonId, string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> UpdateAddonPurchaseAsyncWithHttpInfo (AddonPurchaseUpdateBody body, long? addonId, string userId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonPurchasesApi->UpdateAddonPurchase");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonPurchasesApi->UpdateAddonPurchase");
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->AddonsAddonIdPurchasesUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddonPurchasesApi->UpdateAddonPurchase");
 
             var localVarPath = "/addons/{addon_id}/purchases/{user_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -980,11 +952,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -995,7 +963,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdPurchasesUserIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateAddonPurchase", localVarResponse);
                 if (exception != null) throw exception;
             }
 

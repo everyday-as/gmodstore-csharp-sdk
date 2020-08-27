@@ -4,11 +4,11 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddonsAddonIdStatsGet**](AddonStatsApi.md#addonsaddonidstatsget) | **GET** /addons/{addon_id}/stats | Fetch all the stats for an addon
+[**GetAddonStats**](AddonStatsApi.md#getaddonstats) | **GET** /addons/{addon_id}/stats | Fetch all the stats for an addon
 
-<a name="addonsaddonidstatsget"></a>
-# **AddonsAddonIdStatsGet**
-> InlineResponse2002 AddonsAddonIdStatsGet (long? addonId)
+<a name="getaddonstats"></a>
+# **GetAddonStats**
+> InlineResponse2002 GetAddonStats (long? addonId)
 
 Fetch all the stats for an addon
 
@@ -22,14 +22,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdStatsGetExample
+    public class GetAddonStatsExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonStatsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -37,12 +33,12 @@ namespace Example
             try
             {
                 // Fetch all the stats for an addon
-                InlineResponse2002 result = apiInstance.AddonsAddonIdStatsGet(addonId);
+                InlineResponse2002 result = apiInstance.GetAddonStats(addonId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonStatsApi.AddonsAddonIdStatsGet: " + e.Message );
+                Debug.Print("Exception when calling AddonStatsApi.GetAddonStats: " + e.Message );
             }
         }
     }
@@ -61,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

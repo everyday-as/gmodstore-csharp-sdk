@@ -4,11 +4,11 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersUserIdBansGet**](UserBansApi.md#usersuseridbansget) | **GET** /users/{user_id}/bans | Fetch all active bans associated with this user
+[**ListUserBans**](UserBansApi.md#listuserbans) | **GET** /users/{user_id}/bans | Fetch all active bans associated with this user
 
-<a name="usersuseridbansget"></a>
-# **UsersUserIdBansGet**
-> InlineResponse20013 UsersUserIdBansGet (string userId)
+<a name="listuserbans"></a>
+# **ListUserBans**
+> InlineResponse20013 ListUserBans (string userId)
 
 Fetch all active bans associated with this user
 
@@ -22,14 +22,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class UsersUserIdBansGetExample
+    public class ListUserBansExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new UserBansApi();
             var userId = userId_example;  // string | Id of the user
@@ -37,12 +33,12 @@ namespace Example
             try
             {
                 // Fetch all active bans associated with this user
-                InlineResponse20013 result = apiInstance.UsersUserIdBansGet(userId);
+                InlineResponse20013 result = apiInstance.ListUserBans(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserBansApi.UsersUserIdBansGet: " + e.Message );
+                Debug.Print("Exception when calling UserBansApi.ListUserBans: " + e.Message );
             }
         }
     }
@@ -61,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

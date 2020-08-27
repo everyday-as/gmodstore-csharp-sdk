@@ -4,15 +4,78 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddonsAddonIdCouponsCouponIdDelete**](AddonCouponsApi.md#addonsaddonidcouponscouponiddelete) | **DELETE** /addons/{addon_id}/coupons/{coupon_id} | Destroy an addon&#x27;s coupon
-[**AddonsAddonIdCouponsCouponIdGet**](AddonCouponsApi.md#addonsaddonidcouponscouponidget) | **GET** /addons/{addon_id}/coupons/{coupon_id} | Fetch an addon&#x27;s coupon
-[**AddonsAddonIdCouponsCouponIdPut**](AddonCouponsApi.md#addonsaddonidcouponscouponidput) | **PUT** /addons/{addon_id}/coupons/{coupon_id} | Update an addon&#x27;s coupon
-[**AddonsAddonIdCouponsGet**](AddonCouponsApi.md#addonsaddonidcouponsget) | **GET** /addons/{addon_id}/coupons | Fetch all the coupons for an addon
-[**AddonsAddonIdCouponsPost**](AddonCouponsApi.md#addonsaddonidcouponspost) | **POST** /addons/{addon_id}/coupons | Create an addon coupon
+[**CreateAddonCoupon**](AddonCouponsApi.md#createaddoncoupon) | **POST** /addons/{addon_id}/coupons | Create an addon coupon
+[**DeleteAddonCoupon**](AddonCouponsApi.md#deleteaddoncoupon) | **DELETE** /addons/{addon_id}/coupons/{coupon_id} | Destroy an addon&#x27;s coupon
+[**GetAddonCoupon**](AddonCouponsApi.md#getaddoncoupon) | **GET** /addons/{addon_id}/coupons/{coupon_id} | Fetch an addon&#x27;s coupon
+[**ListAddonCoupons**](AddonCouponsApi.md#listaddoncoupons) | **GET** /addons/{addon_id}/coupons | Fetch all the coupons for an addon
+[**UpdateAddonCoupon**](AddonCouponsApi.md#updateaddoncoupon) | **PUT** /addons/{addon_id}/coupons/{coupon_id} | Update an addon&#x27;s coupon
 
-<a name="addonsaddonidcouponscouponiddelete"></a>
-# **AddonsAddonIdCouponsCouponIdDelete**
-> void AddonsAddonIdCouponsCouponIdDelete (long? addonId, long? couponId)
+<a name="createaddoncoupon"></a>
+# **CreateAddonCoupon**
+> InlineResponse201 CreateAddonCoupon (AddonCouponBody body, long? addonId, List<string> with = null)
+
+Create an addon coupon
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NO.Everyday.GmodStoreSDK.Api;
+using NO.Everyday.GmodStoreSDK.Client;
+using NO.Everyday.GmodStoreSDK.Model;
+
+namespace Example
+{
+    public class CreateAddonCouponExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new AddonCouponsApi();
+            var body = new AddonCouponBody(); // AddonCouponBody | 
+            var addonId = 789;  // long? | Id of the addon
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+
+            try
+            {
+                // Create an addon coupon
+                InlineResponse201 result = apiInstance.CreateAddonCoupon(body, addonId, with);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddonCouponsApi.CreateAddonCoupon: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AddonCouponBody**](AddonCouponBody.md)|  | 
+ **addonId** | **long?**| Id of the addon | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
+
+### Return type
+
+[**InlineResponse201**](InlineResponse201.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="deleteaddoncoupon"></a>
+# **DeleteAddonCoupon**
+> void DeleteAddonCoupon (long? addonId, long? couponId)
 
 Destroy an addon's coupon
 
@@ -26,14 +89,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdCouponsCouponIdDeleteExample
+    public class DeleteAddonCouponExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonCouponsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -42,11 +101,11 @@ namespace Example
             try
             {
                 // Destroy an addon's coupon
-                apiInstance.AddonsAddonIdCouponsCouponIdDelete(addonId, couponId);
+                apiInstance.DeleteAddonCoupon(addonId, couponId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonCouponsApi.AddonsAddonIdCouponsCouponIdDelete: " + e.Message );
+                Debug.Print("Exception when calling AddonCouponsApi.DeleteAddonCoupon: " + e.Message );
             }
         }
     }
@@ -66,7 +125,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -74,9 +133,9 @@ void (empty response body)
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidcouponscouponidget"></a>
-# **AddonsAddonIdCouponsCouponIdGet**
-> InlineResponse201 AddonsAddonIdCouponsCouponIdGet (long? addonId, long? couponId, List<string> with = null)
+<a name="getaddoncoupon"></a>
+# **GetAddonCoupon**
+> InlineResponse201 GetAddonCoupon (long? addonId, long? couponId, List<string> with = null)
 
 Fetch an addon's coupon
 
@@ -90,14 +149,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdCouponsCouponIdGetExample
+    public class GetAddonCouponExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonCouponsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -107,12 +162,12 @@ namespace Example
             try
             {
                 // Fetch an addon's coupon
-                InlineResponse201 result = apiInstance.AddonsAddonIdCouponsCouponIdGet(addonId, couponId, with);
+                InlineResponse201 result = apiInstance.GetAddonCoupon(addonId, couponId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonCouponsApi.AddonsAddonIdCouponsCouponIdGet: " + e.Message );
+                Debug.Print("Exception when calling AddonCouponsApi.GetAddonCoupon: " + e.Message );
             }
         }
     }
@@ -133,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -141,78 +196,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidcouponscouponidput"></a>
-# **AddonsAddonIdCouponsCouponIdPut**
-> InlineResponse201 AddonsAddonIdCouponsCouponIdPut (Object body, long? addonId, long? couponId, List<string> with = null)
-
-Update an addon's coupon
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
-
-namespace Example
-{
-    public class AddonsAddonIdCouponsCouponIdPutExample
-    {
-        public void main()
-        {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new AddonCouponsApi();
-            var body = new Object(); // Object | 
-            var addonId = 789;  // long? | Id of the addon
-            var couponId = 789;  // long? | Id of the coupon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
-
-            try
-            {
-                // Update an addon's coupon
-                InlineResponse201 result = apiInstance.AddonsAddonIdCouponsCouponIdPut(body, addonId, couponId, with);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AddonCouponsApi.AddonsAddonIdCouponsCouponIdPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
- **addonId** | **long?**| Id of the addon | 
- **couponId** | **long?**| Id of the coupon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
-
-### Return type
-
-[**InlineResponse201**](InlineResponse201.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidcouponsget"></a>
-# **AddonsAddonIdCouponsGet**
-> InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
+<a name="listaddoncoupons"></a>
+# **ListAddonCoupons**
+> InlineResponse2003 ListAddonCoupons (long? addonId, List<string> with = null)
 
 Fetch all the coupons for an addon
 
@@ -226,14 +212,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdCouponsGetExample
+    public class ListAddonCouponsExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonCouponsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -242,12 +224,12 @@ namespace Example
             try
             {
                 // Fetch all the coupons for an addon
-                InlineResponse2003 result = apiInstance.AddonsAddonIdCouponsGet(addonId, with);
+                InlineResponse2003 result = apiInstance.ListAddonCoupons(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonCouponsApi.AddonsAddonIdCouponsGet: " + e.Message );
+                Debug.Print("Exception when calling AddonCouponsApi.ListAddonCoupons: " + e.Message );
             }
         }
     }
@@ -267,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -275,11 +257,11 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidcouponspost"></a>
-# **AddonsAddonIdCouponsPost**
-> InlineResponse201 AddonsAddonIdCouponsPost (Object body, long? addonId, List<string> with = null)
+<a name="updateaddoncoupon"></a>
+# **UpdateAddonCoupon**
+> InlineResponse201 UpdateAddonCoupon (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
 
-Create an addon coupon
+Update an addon's coupon
 
 ### Example
 ```csharp
@@ -291,29 +273,26 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdCouponsPostExample
+    public class UpdateAddonCouponExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonCouponsApi();
-            var body = new Object(); // Object | 
+            var body = new AddonCouponBody(); // AddonCouponBody | 
             var addonId = 789;  // long? | Id of the addon
+            var couponId = 789;  // long? | Id of the coupon
             var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
 
             try
             {
-                // Create an addon coupon
-                InlineResponse201 result = apiInstance.AddonsAddonIdCouponsPost(body, addonId, with);
+                // Update an addon's coupon
+                InlineResponse201 result = apiInstance.UpdateAddonCoupon(body, addonId, couponId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonCouponsApi.AddonsAddonIdCouponsPost: " + e.Message );
+                Debug.Print("Exception when calling AddonCouponsApi.UpdateAddonCoupon: " + e.Message );
             }
         }
     }
@@ -324,8 +303,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Object**](Object.md)|  | 
+ **body** | [**AddonCouponBody**](AddonCouponBody.md)|  | 
  **addonId** | **long?**| Id of the addon | 
+ **couponId** | **long?**| Id of the coupon | 
  **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
 
 ### Return type
@@ -334,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

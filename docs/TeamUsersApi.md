@@ -4,11 +4,11 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TeamsTeamIdUsersGet**](TeamUsersApi.md#teamsteamidusersget) | **GET** /teams/{team_id}/users | Fetch all the users in the given team
+[**ListTeamUsers**](TeamUsersApi.md#listteamusers) | **GET** /teams/{team_id}/users | Fetch all the users in the given team
 
-<a name="teamsteamidusersget"></a>
-# **TeamsTeamIdUsersGet**
-> InlineResponse20010 TeamsTeamIdUsersGet (long? teamId, List<string> with = null)
+<a name="listteamusers"></a>
+# **ListTeamUsers**
+> InlineResponse20010 ListTeamUsers (long? teamId, List<string> with = null)
 
 Fetch all the users in the given team
 
@@ -22,14 +22,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class TeamsTeamIdUsersGetExample
+    public class ListTeamUsersExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new TeamUsersApi();
             var teamId = 789;  // long? | Id of the team
@@ -38,12 +34,12 @@ namespace Example
             try
             {
                 // Fetch all the users in the given team
-                InlineResponse20010 result = apiInstance.TeamsTeamIdUsersGet(teamId, with);
+                InlineResponse20010 result = apiInstance.ListTeamUsers(teamId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeamUsersApi.TeamsTeamIdUsersGet: " + e.Message );
+                Debug.Print("Exception when calling TeamUsersApi.ListTeamUsers: " + e.Message );
             }
         }
     }
@@ -63,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

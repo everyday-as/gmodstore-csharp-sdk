@@ -63,67 +63,67 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test AddonsAddonIdCouponsCouponIdDelete
+        /// Test CreateAddonCoupon
         /// </summary>
         [Test]
-        public void AddonsAddonIdCouponsCouponIdDeleteTest()
+        public void CreateAddonCouponTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AddonCouponBody body = null;
+            //long? addonId = null;
+            //List<string> with = null;
+            //var response = instance.CreateAddonCoupon(body, addonId, with);
+            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
+        }
+        /// <summary>
+        /// Test DeleteAddonCoupon
+        /// </summary>
+        [Test]
+        public void DeleteAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //long? couponId = null;
-            //instance.AddonsAddonIdCouponsCouponIdDelete(addonId, couponId);
+            //instance.DeleteAddonCoupon(addonId, couponId);
             
         }
         /// <summary>
-        /// Test AddonsAddonIdCouponsCouponIdGet
+        /// Test GetAddonCoupon
         /// </summary>
         [Test]
-        public void AddonsAddonIdCouponsCouponIdGetTest()
+        public void GetAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //long? couponId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdCouponsCouponIdGet(addonId, couponId, with);
+            //var response = instance.GetAddonCoupon(addonId, couponId, with);
             //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
         /// <summary>
-        /// Test AddonsAddonIdCouponsCouponIdPut
+        /// Test ListAddonCoupons
         /// </summary>
         [Test]
-        public void AddonsAddonIdCouponsCouponIdPutTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Object body = null;
-            //long? addonId = null;
-            //long? couponId = null;
-            //List<string> with = null;
-            //var response = instance.AddonsAddonIdCouponsCouponIdPut(body, addonId, couponId, with);
-            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
-        }
-        /// <summary>
-        /// Test AddonsAddonIdCouponsGet
-        /// </summary>
-        [Test]
-        public void AddonsAddonIdCouponsGetTest()
+        public void ListAddonCouponsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdCouponsGet(addonId, with);
+            //var response = instance.ListAddonCoupons(addonId, with);
             //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
         }
         /// <summary>
-        /// Test AddonsAddonIdCouponsPost
+        /// Test UpdateAddonCoupon
         /// </summary>
         [Test]
-        public void AddonsAddonIdCouponsPostTest()
+        public void UpdateAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Object body = null;
+            //AddonCouponBody body = null;
             //long? addonId = null;
+            //long? couponId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdCouponsPost(body, addonId, with);
+            //var response = instance.UpdateAddonCoupon(body, addonId, couponId, with);
             //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
     }

@@ -63,14 +63,14 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test AddonsAddonIdStatsGet
+        /// Test GetAddonStats
         /// </summary>
         [Test]
-        public void AddonsAddonIdStatsGetTest()
+        public void GetAddonStatsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
-            //var response = instance.AddonsAddonIdStatsGet(addonId);
+            //var response = instance.GetAddonStats(addonId);
             //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
         }
     }

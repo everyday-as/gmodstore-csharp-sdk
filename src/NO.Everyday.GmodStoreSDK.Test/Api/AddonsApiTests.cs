@@ -63,26 +63,26 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test AddonsAddonIdGet
+        /// Test GetAddon
         /// </summary>
         [Test]
-        public void AddonsAddonIdGetTest()
+        public void GetAddonTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdGet(addonId, with);
+            //var response = instance.GetAddon(addonId, with);
             //Assert.IsInstanceOf<InlineResponse2001> (response, "response is InlineResponse2001");
         }
         /// <summary>
-        /// Test AddonsGet
+        /// Test ListSelfAddons
         /// </summary>
         [Test]
-        public void AddonsGetTest()
+        public void ListSelfAddonsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //List<string> with = null;
-            //var response = instance.AddonsGet(with);
+            //var response = instance.ListSelfAddons(with);
             //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
         }
     }

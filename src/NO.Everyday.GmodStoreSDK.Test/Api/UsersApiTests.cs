@@ -63,26 +63,26 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test UsersMeGet
+        /// Test GetSelfUser
         /// </summary>
         [Test]
-        public void UsersMeGetTest()
+        public void GetSelfUserTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //List<string> with = null;
-            //var response = instance.UsersMeGet(with);
+            //var response = instance.GetSelfUser(with);
             //Assert.IsInstanceOf<InlineResponse20011> (response, "response is InlineResponse20011");
         }
         /// <summary>
-        /// Test UsersUserIdGet
+        /// Test GetUser
         /// </summary>
         [Test]
-        public void UsersUserIdGetTest()
+        public void GetUserTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //List<string> with = null;
-            //var response = instance.UsersUserIdGet(userId, with);
+            //var response = instance.GetUser(userId, with);
             //Assert.IsInstanceOf<InlineResponse20011> (response, "response is InlineResponse20011");
         }
     }

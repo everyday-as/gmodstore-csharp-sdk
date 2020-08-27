@@ -33,7 +33,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 UsersUserIdPurchasesGet (string userId, List<string> with = null);
+        InlineResponse2004 ListUserPurchases (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -45,7 +45,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> UsersUserIdPurchasesGetWithHttpInfo (string userId, List<string> with = null);
+        ApiResponse<InlineResponse2004> ListUserPurchasesWithHttpInfo (string userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,7 +58,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> UsersUserIdPurchasesGetAsync (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse2004> ListUserPurchasesAsync (string userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -70,7 +70,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> UsersUserIdPurchasesGetAsyncWithHttpInfo (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -189,9 +189,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 UsersUserIdPurchasesGet (string userId, List<string> with = null)
+        public InlineResponse2004 ListUserPurchases (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = UsersUserIdPurchasesGetWithHttpInfo(userId, with);
+             ApiResponse<InlineResponse2004> localVarResponse = ListUserPurchasesWithHttpInfo(userId, with);
              return localVarResponse.Data;
         }
 
@@ -202,11 +202,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > UsersUserIdPurchasesGetWithHttpInfo (string userId, List<string> with = null)
+        public ApiResponse< InlineResponse2004 > ListUserPurchasesWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserPurchasesApi->UsersUserIdPurchasesGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserPurchasesApi->ListUserPurchases");
 
             var localVarPath = "/users/{user_id}/purchases";
             var localVarPathParams = new Dictionary<String, String>();
@@ -231,11 +231,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -246,7 +242,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsersUserIdPurchasesGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListUserPurchases", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -262,9 +258,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> UsersUserIdPurchasesGetAsync (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse2004> ListUserPurchasesAsync (string userId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await UsersUserIdPurchasesGetAsyncWithHttpInfo(userId, with);
+             ApiResponse<InlineResponse2004> localVarResponse = await ListUserPurchasesAsyncWithHttpInfo(userId, with);
              return localVarResponse.Data;
 
         }
@@ -276,11 +272,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> UsersUserIdPurchasesGetAsyncWithHttpInfo (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UserPurchasesApi->UsersUserIdPurchasesGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserPurchasesApi->ListUserPurchases");
 
             var localVarPath = "/users/{user_id}/purchases";
             var localVarPathParams = new Dictionary<String, String>();
@@ -305,11 +301,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (userId != null) localVarPathParams.Add("user_id", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -320,7 +312,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UsersUserIdPurchasesGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListUserPurchases", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TeamsTeamIdGet**](TeamsApi.md#teamsteamidget) | **GET** /teams/{team_id} | Fetch a single team
+[**GetTeam**](TeamsApi.md#getteam) | **GET** /teams/{team_id} | Fetch a single team
 
-<a name="teamsteamidget"></a>
-# **TeamsTeamIdGet**
-> InlineResponse2009 TeamsTeamIdGet (long? teamId, List<string> with = null)
+<a name="getteam"></a>
+# **GetTeam**
+> InlineResponse2009 GetTeam (long? teamId, List<string> with = null)
 
 Fetch a single team
 
@@ -22,14 +22,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class TeamsTeamIdGetExample
+    public class GetTeamExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new TeamsApi();
             var teamId = 789;  // long? | Id of the team
@@ -38,12 +34,12 @@ namespace Example
             try
             {
                 // Fetch a single team
-                InlineResponse2009 result = apiInstance.TeamsTeamIdGet(teamId, with);
+                InlineResponse2009 result = apiInstance.GetTeam(teamId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeamsApi.TeamsTeamIdGet: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.GetTeam: " + e.Message );
             }
         }
     }
@@ -63,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

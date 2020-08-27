@@ -4,12 +4,12 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddonsAddonIdGet**](AddonsApi.md#addonsaddonidget) | **GET** /addons/{addon_id} | Fetch a single addon
-[**AddonsGet**](AddonsApi.md#addonsget) | **GET** /addons | Fetch all the addons that you have access to
+[**GetAddon**](AddonsApi.md#getaddon) | **GET** /addons/{addon_id} | Fetch a single addon
+[**ListSelfAddons**](AddonsApi.md#listselfaddons) | **GET** /addons | Fetch all the addons that you have access to
 
-<a name="addonsaddonidget"></a>
-# **AddonsAddonIdGet**
-> InlineResponse2001 AddonsAddonIdGet (long? addonId, List<string> with = null)
+<a name="getaddon"></a>
+# **GetAddon**
+> InlineResponse2001 GetAddon (long? addonId, List<string> with = null)
 
 Fetch a single addon
 
@@ -23,14 +23,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdGetExample
+    public class GetAddonExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -39,12 +35,12 @@ namespace Example
             try
             {
                 // Fetch a single addon
-                InlineResponse2001 result = apiInstance.AddonsAddonIdGet(addonId, with);
+                InlineResponse2001 result = apiInstance.GetAddon(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonsApi.AddonsAddonIdGet: " + e.Message );
+                Debug.Print("Exception when calling AddonsApi.GetAddon: " + e.Message );
             }
         }
     }
@@ -64,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,9 +68,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsget"></a>
-# **AddonsGet**
-> InlineResponse200 AddonsGet (List<string> with = null)
+<a name="listselfaddons"></a>
+# **ListSelfAddons**
+> InlineResponse200 ListSelfAddons (List<string> with = null)
 
 Fetch all the addons that you have access to
 
@@ -88,14 +84,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsGetExample
+    public class ListSelfAddonsExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonsApi();
             var with = new List<string>(); // List<string> | The relations you want to fetch with the Addon schema (optional) 
@@ -103,12 +95,12 @@ namespace Example
             try
             {
                 // Fetch all the addons that you have access to
-                InlineResponse200 result = apiInstance.AddonsGet(with);
+                InlineResponse200 result = apiInstance.ListSelfAddons(with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonsApi.AddonsGet: " + e.Message );
+                Debug.Print("Exception when calling AddonsApi.ListSelfAddons: " + e.Message );
             }
         }
     }
@@ -127,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

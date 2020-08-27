@@ -63,29 +63,29 @@ namespace NO.Everyday.GmodStoreSDK.Test
         }
 
         /// <summary>
-        /// Test AddonsAddonIdReviewsGet
+        /// Test GetAddonReview
         /// </summary>
         [Test]
-        public void AddonsAddonIdReviewsGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? addonId = null;
-            //List<string> with = null;
-            //var response = instance.AddonsAddonIdReviewsGet(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2005> (response, "response is InlineResponse2005");
-        }
-        /// <summary>
-        /// Test AddonsAddonIdReviewsReviewIdGet
-        /// </summary>
-        [Test]
-        public void AddonsAddonIdReviewsReviewIdGetTest()
+        public void GetAddonReviewTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //long? reviewId = null;
             //List<string> with = null;
-            //var response = instance.AddonsAddonIdReviewsReviewIdGet(addonId, reviewId, with);
+            //var response = instance.GetAddonReview(addonId, reviewId, with);
             //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+        }
+        /// <summary>
+        /// Test ListAddonReviews
+        /// </summary>
+        [Test]
+        public void ListAddonReviewsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? addonId = null;
+            //List<string> with = null;
+            //var response = instance.ListAddonReviews(addonId, with);
+            //Assert.IsInstanceOf<InlineResponse2005> (response, "response is InlineResponse2005");
         }
     }
 

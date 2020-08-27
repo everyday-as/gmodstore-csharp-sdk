@@ -32,7 +32,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 AddonsAddonIdStatsGet (long? addonId);
+        InlineResponse2002 GetAddonStats (long? addonId);
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -43,7 +43,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> AddonsAddonIdStatsGetWithHttpInfo (long? addonId);
+        ApiResponse<InlineResponse2002> GetAddonStatsWithHttpInfo (long? addonId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,7 +55,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> AddonsAddonIdStatsGetAsync (long? addonId);
+        System.Threading.Tasks.Task<InlineResponse2002> GetAddonStatsAsync (long? addonId);
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -66,7 +66,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> AddonsAddonIdStatsGetAsyncWithHttpInfo (long? addonId);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> GetAddonStatsAsyncWithHttpInfo (long? addonId);
         #endregion Asynchronous Operations
     }
 
@@ -184,9 +184,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 AddonsAddonIdStatsGet (long? addonId)
+        public InlineResponse2002 GetAddonStats (long? addonId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = AddonsAddonIdStatsGetWithHttpInfo(addonId);
+             ApiResponse<InlineResponse2002> localVarResponse = GetAddonStatsWithHttpInfo(addonId);
              return localVarResponse.Data;
         }
 
@@ -196,11 +196,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > AddonsAddonIdStatsGetWithHttpInfo (long? addonId)
+        public ApiResponse< InlineResponse2002 > GetAddonStatsWithHttpInfo (long? addonId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonStatsApi->AddonsAddonIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonStatsApi->GetAddonStats");
 
             var localVarPath = "/addons/{addon_id}/stats";
             var localVarPathParams = new Dictionary<String, String>();
@@ -224,11 +224,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -239,7 +235,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdStatsGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddonStats", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -254,9 +250,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> AddonsAddonIdStatsGetAsync (long? addonId)
+        public async System.Threading.Tasks.Task<InlineResponse2002> GetAddonStatsAsync (long? addonId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await AddonsAddonIdStatsGetAsyncWithHttpInfo(addonId);
+             ApiResponse<InlineResponse2002> localVarResponse = await GetAddonStatsAsyncWithHttpInfo(addonId);
              return localVarResponse.Data;
 
         }
@@ -267,11 +263,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> AddonsAddonIdStatsGetAsyncWithHttpInfo (long? addonId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> GetAddonStatsAsyncWithHttpInfo (long? addonId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonStatsApi->AddonsAddonIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonStatsApi->GetAddonStats");
 
             var localVarPath = "/addons/{addon_id}/stats";
             var localVarPathParams = new Dictionary<String, String>();
@@ -295,11 +291,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -310,7 +302,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdStatsGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddonStats", localVarResponse);
                 if (exception != null) throw exception;
             }
 

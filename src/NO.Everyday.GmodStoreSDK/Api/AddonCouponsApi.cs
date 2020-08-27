@@ -24,6 +24,31 @@ namespace NO.Everyday.GmodStoreSDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create an addon coupon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 CreateAddonCoupon (AddonCouponBody body, long? addonId, List<string> with = null);
+
+        /// <summary>
+        /// Create an addon coupon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> CreateAddonCouponWithHttpInfo (AddonCouponBody body, long? addonId, List<string> with = null);
+        /// <summary>
         /// Destroy an addon&#x27;s coupon
         /// </summary>
         /// <remarks>
@@ -33,7 +58,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns></returns>
-        void AddonsAddonIdCouponsCouponIdDelete (long? addonId, long? couponId);
+        void DeleteAddonCoupon (long? addonId, long? couponId);
 
         /// <summary>
         /// Destroy an addon&#x27;s coupon
@@ -45,7 +70,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddonsAddonIdCouponsCouponIdDeleteWithHttpInfo (long? addonId, long? couponId);
+        ApiResponse<Object> DeleteAddonCouponWithHttpInfo (long? addonId, long? couponId);
         /// <summary>
         /// Fetch an addon&#x27;s coupon
         /// </summary>
@@ -57,7 +82,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>InlineResponse201</returns>
-        InlineResponse201 AddonsAddonIdCouponsCouponIdGet (long? addonId, long? couponId, List<string> with = null);
+        InlineResponse201 GetAddonCoupon (long? addonId, long? couponId, List<string> with = null);
 
         /// <summary>
         /// Fetch an addon&#x27;s coupon
@@ -70,34 +95,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> AddonsAddonIdCouponsCouponIdGetWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
-        /// <summary>
-        /// Update an addon&#x27;s coupon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 AddonsAddonIdCouponsCouponIdPut (Object body, long? addonId, long? couponId, List<string> with = null);
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> AddonsAddonIdCouponsCouponIdPutWithHttpInfo (Object body, long? addonId, long? couponId, List<string> with = null);
+        ApiResponse<InlineResponse201> GetAddonCouponWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
         /// <summary>
         /// Fetch all the coupons for an addon
         /// </summary>
@@ -108,7 +106,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null);
+        InlineResponse2003 ListAddonCoupons (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the coupons for an addon
@@ -120,7 +118,36 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null);
+        ApiResponse<InlineResponse2003> ListAddonCouponsWithHttpInfo (long? addonId, List<string> with = null);
+        /// <summary>
+        /// Update an addon&#x27;s coupon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 UpdateAddonCoupon (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null);
+
+        /// <summary>
+        /// Update an addon&#x27;s coupon
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> UpdateAddonCouponWithHttpInfo (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
         /// <summary>
         /// Create an addon coupon
         /// </summary>
@@ -131,8 +158,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 AddonsAddonIdCouponsPost (Object body, long? addonId, List<string> with = null);
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> CreateAddonCouponAsync (AddonCouponBody body, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create an addon coupon
@@ -144,10 +171,8 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> AddonsAddonIdCouponsPostWithHttpInfo (Object body, long? addonId, List<string> with = null);
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateAddonCouponAsyncWithHttpInfo (AddonCouponBody body, long? addonId, List<string> with = null);
         /// <summary>
         /// Destroy an addon&#x27;s coupon
         /// </summary>
@@ -158,7 +183,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddonsAddonIdCouponsCouponIdDeleteAsync (long? addonId, long? couponId);
+        System.Threading.Tasks.Task DeleteAddonCouponAsync (long? addonId, long? couponId);
 
         /// <summary>
         /// Destroy an addon&#x27;s coupon
@@ -170,7 +195,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddonsAddonIdCouponsCouponIdDeleteAsyncWithHttpInfo (long? addonId, long? couponId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId);
         /// <summary>
         /// Fetch an addon&#x27;s coupon
         /// </summary>
@@ -182,7 +207,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsCouponIdGetAsync (long? addonId, long? couponId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse201> GetAddonCouponAsync (long? addonId, long? couponId, List<string> with = null);
 
         /// <summary>
         /// Fetch an addon&#x27;s coupon
@@ -195,34 +220,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsCouponIdGetAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
-        /// <summary>
-        /// Update an addon&#x27;s coupon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsCouponIdPutAsync (Object body, long? addonId, long? couponId, List<string> with = null);
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsCouponIdPutAsyncWithHttpInfo (Object body, long? addonId, long? couponId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
         /// <summary>
         /// Fetch all the coupons for an addon
         /// </summary>
@@ -233,7 +231,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse2003> ListAddonCouponsAsync (long? addonId, List<string> with = null);
 
         /// <summary>
         /// Fetch all the coupons for an addon
@@ -245,9 +243,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListAddonCouponsAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
-        /// Create an addon coupon
+        /// Update an addon&#x27;s coupon
         /// </summary>
         /// <remarks>
         /// 
@@ -255,12 +253,13 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsPostAsync (Object body, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<InlineResponse201> UpdateAddonCouponAsync (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null);
 
         /// <summary>
-        /// Create an addon coupon
+        /// Update an addon&#x27;s coupon
         /// </summary>
         /// <remarks>
         /// 
@@ -268,9 +267,10 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsPostAsyncWithHttpInfo (Object body, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> UpdateAddonCouponAsyncWithHttpInfo (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -383,15 +383,182 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
+        /// Create an addon coupon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 CreateAddonCoupon (AddonCouponBody body, long? addonId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = CreateAddonCouponWithHttpInfo(body, addonId, with);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an addon coupon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > CreateAddonCouponWithHttpInfo (AddonCouponBody body, long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->CreateAddonCoupon");
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->CreateAddonCoupon");
+
+            var localVarPath = "/addons/{addon_id}/coupons";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAddonCoupon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse201) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Create an addon coupon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> CreateAddonCouponAsync (AddonCouponBody body, long? addonId, List<string> with = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = await CreateAddonCouponAsyncWithHttpInfo(body, addonId, with);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an addon coupon 
+        /// </summary>
+        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="addonId">Id of the addon</param>
+        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateAddonCouponAsyncWithHttpInfo (AddonCouponBody body, long? addonId, List<string> with = null)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->CreateAddonCoupon");
+            // verify the required parameter 'addonId' is set
+            if (addonId == null)
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->CreateAddonCoupon");
+
+            var localVarPath = "/addons/{addon_id}/coupons";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (bearerAuth) required
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAddonCoupon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (InlineResponse201) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
         /// Destroy an addon&#x27;s coupon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns></returns>
-        public void AddonsAddonIdCouponsCouponIdDelete (long? addonId, long? couponId)
+        public void DeleteAddonCoupon (long? addonId, long? couponId)
         {
-             AddonsAddonIdCouponsCouponIdDeleteWithHttpInfo(addonId, couponId);
+             DeleteAddonCouponWithHttpInfo(addonId, couponId);
         }
 
         /// <summary>
@@ -401,14 +568,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AddonsAddonIdCouponsCouponIdDeleteWithHttpInfo (long? addonId, long? couponId)
+        public ApiResponse<Object> DeleteAddonCouponWithHttpInfo (long? addonId, long? couponId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdDelete");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->DeleteAddonCoupon");
             // verify the required parameter 'couponId' is set
             if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdDelete");
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->DeleteAddonCoupon");
 
             var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -433,11 +600,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -448,7 +611,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -464,9 +627,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddonsAddonIdCouponsCouponIdDeleteAsync (long? addonId, long? couponId)
+        public async System.Threading.Tasks.Task DeleteAddonCouponAsync (long? addonId, long? couponId)
         {
-             await AddonsAddonIdCouponsCouponIdDeleteAsyncWithHttpInfo(addonId, couponId);
+             await DeleteAddonCouponAsyncWithHttpInfo(addonId, couponId);
 
         }
 
@@ -477,14 +640,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddonsAddonIdCouponsCouponIdDeleteAsyncWithHttpInfo (long? addonId, long? couponId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdDelete");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->DeleteAddonCoupon");
             // verify the required parameter 'couponId' is set
             if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdDelete");
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->DeleteAddonCoupon");
 
             var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -509,11 +672,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -524,7 +683,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -541,9 +700,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>InlineResponse201</returns>
-        public InlineResponse201 AddonsAddonIdCouponsCouponIdGet (long? addonId, long? couponId, List<string> with = null)
+        public InlineResponse201 GetAddonCoupon (long? addonId, long? couponId, List<string> with = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = AddonsAddonIdCouponsCouponIdGetWithHttpInfo(addonId, couponId, with);
+             ApiResponse<InlineResponse201> localVarResponse = GetAddonCouponWithHttpInfo(addonId, couponId, with);
              return localVarResponse.Data;
         }
 
@@ -555,14 +714,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > AddonsAddonIdCouponsCouponIdGetWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
+        public ApiResponse< InlineResponse201 > GetAddonCouponWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->GetAddonCoupon");
             // verify the required parameter 'couponId' is set
             if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdGet");
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->GetAddonCoupon");
 
             var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -588,11 +747,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -603,7 +758,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -620,9 +775,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsCouponIdGetAsync (long? addonId, long? couponId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse201> GetAddonCouponAsync (long? addonId, long? couponId, List<string> with = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await AddonsAddonIdCouponsCouponIdGetAsyncWithHttpInfo(addonId, couponId, with);
+             ApiResponse<InlineResponse201> localVarResponse = await GetAddonCouponAsyncWithHttpInfo(addonId, couponId, with);
              return localVarResponse.Data;
 
         }
@@ -635,14 +790,14 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsCouponIdGetAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->GetAddonCoupon");
             // verify the required parameter 'couponId' is set
             if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdGet");
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->GetAddonCoupon");
 
             var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -668,11 +823,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -683,194 +834,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse201) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 AddonsAddonIdCouponsCouponIdPut (Object body, long? addonId, long? couponId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = AddonsAddonIdCouponsCouponIdPutWithHttpInfo(body, addonId, couponId, with);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > AddonsAddonIdCouponsCouponIdPutWithHttpInfo (Object body, long? addonId, long? couponId, List<string> with = null)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-            // verify the required parameter 'couponId' is set
-            if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-
-            var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse201) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsCouponIdPutAsync (Object body, long? addonId, long? couponId, List<string> with = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = await AddonsAddonIdCouponsCouponIdPutAsyncWithHttpInfo(body, addonId, couponId, with);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Update an addon&#x27;s coupon 
-        /// </summary>
-        /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="addonId">Id of the addon</param>
-        /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsCouponIdPutAsyncWithHttpInfo (Object body, long? addonId, long? couponId, List<string> with = null)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-            // verify the required parameter 'addonId' is set
-            if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-            // verify the required parameter 'couponId' is set
-            if (couponId == null)
-                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->AddonsAddonIdCouponsCouponIdPut");
-
-            var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
-            if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
-            if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsCouponIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("GetAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -886,9 +850,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 AddonsAddonIdCouponsGet (long? addonId, List<string> with = null)
+        public InlineResponse2003 ListAddonCoupons (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = AddonsAddonIdCouponsGetWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2003> localVarResponse = ListAddonCouponsWithHttpInfo(addonId, with);
              return localVarResponse.Data;
         }
 
@@ -899,11 +863,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > AddonsAddonIdCouponsGetWithHttpInfo (long? addonId, List<string> with = null)
+        public ApiResponse< InlineResponse2003 > ListAddonCouponsWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->ListAddonCoupons");
 
             var localVarPath = "/addons/{addon_id}/coupons";
             var localVarPathParams = new Dictionary<String, String>();
@@ -928,11 +892,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -943,7 +903,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListAddonCoupons", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -959,9 +919,9 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> AddonsAddonIdCouponsGetAsync (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse2003> ListAddonCouponsAsync (long? addonId, List<string> with = null)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await AddonsAddonIdCouponsGetAsyncWithHttpInfo(addonId, with);
+             ApiResponse<InlineResponse2003> localVarResponse = await ListAddonCouponsAsyncWithHttpInfo(addonId, with);
              return localVarResponse.Data;
 
         }
@@ -973,11 +933,11 @@ namespace NO.Everyday.GmodStoreSDK.Api
         /// <param name="addonId">Id of the addon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> AddonsAddonIdCouponsGetAsyncWithHttpInfo (long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListAddonCouponsAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsGet");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->ListAddonCoupons");
 
             var localVarPath = "/addons/{addon_id}/coupons";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1002,11 +962,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1017,7 +973,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListAddonCoupons", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1027,37 +983,42 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
-        /// Create an addon coupon 
+        /// Update an addon&#x27;s coupon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>InlineResponse201</returns>
-        public InlineResponse201 AddonsAddonIdCouponsPost (Object body, long? addonId, List<string> with = null)
+        public InlineResponse201 UpdateAddonCoupon (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = AddonsAddonIdCouponsPostWithHttpInfo(body, addonId, with);
+             ApiResponse<InlineResponse201> localVarResponse = UpdateAddonCouponWithHttpInfo(body, addonId, couponId, with);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create an addon coupon 
+        /// Update an addon&#x27;s coupon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > AddonsAddonIdCouponsPostWithHttpInfo (Object body, long? addonId, List<string> with = null)
+        public ApiResponse< InlineResponse201 > UpdateAddonCouponWithHttpInfo (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->AddonsAddonIdCouponsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->UpdateAddonCoupon");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsPost");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->UpdateAddonCoupon");
+            // verify the required parameter 'couponId' is set
+            if (couponId == null)
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->UpdateAddonCoupon");
 
-            var localVarPath = "/addons/{addon_id}/coupons";
+            var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1080,6 +1041,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
@@ -1089,22 +1051,18 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsPost", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1114,38 +1072,43 @@ namespace NO.Everyday.GmodStoreSDK.Api
         }
 
         /// <summary>
-        /// Create an addon coupon 
+        /// Update an addon&#x27;s coupon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> AddonsAddonIdCouponsPostAsync (Object body, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<InlineResponse201> UpdateAddonCouponAsync (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await AddonsAddonIdCouponsPostAsyncWithHttpInfo(body, addonId, with);
+             ApiResponse<InlineResponse201> localVarResponse = await UpdateAddonCouponAsyncWithHttpInfo(body, addonId, couponId, with);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create an addon coupon 
+        /// Update an addon&#x27;s coupon 
         /// </summary>
         /// <exception cref="NO.Everyday.GmodStoreSDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
+        /// <param name="couponId">Id of the coupon</param>
         /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> AddonsAddonIdCouponsPostAsyncWithHttpInfo (Object body, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> UpdateAddonCouponAsyncWithHttpInfo (AddonCouponBody body, long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->AddonsAddonIdCouponsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AddonCouponsApi->UpdateAddonCoupon");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
-                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->AddonsAddonIdCouponsPost");
+                throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonCouponsApi->UpdateAddonCoupon");
+            // verify the required parameter 'couponId' is set
+            if (couponId == null)
+                throw new ApiException(400, "Missing required parameter 'couponId' when calling AddonCouponsApi->UpdateAddonCoupon");
 
-            var localVarPath = "/addons/{addon_id}/coupons";
+            var localVarPath = "/addons/{addon_id}/coupons/{coupon_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1168,6 +1131,7 @@ namespace NO.Everyday.GmodStoreSDK.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
+            if (couponId != null) localVarPathParams.Add("coupon_id", this.Configuration.ApiClient.ParameterToString(couponId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
@@ -1177,22 +1141,18 @@ namespace NO.Everyday.GmodStoreSDK.Api
             {
                 localVarPostBody = body; // byte array
             }
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
+            // authentication (bearerAuth) required
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AddonsAddonIdCouponsPost", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateAddonCoupon", localVarResponse);
                 if (exception != null) throw exception;
             }
 

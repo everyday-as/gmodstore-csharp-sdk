@@ -4,80 +4,15 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddonsAddonIdVersionsGet**](AddonVersionsApi.md#addonsaddonidversionsget) | **GET** /addons/{addon_id}/versions | Fetch all the versions of an addon
-[**AddonsAddonIdVersionsPost**](AddonVersionsApi.md#addonsaddonidversionspost) | **POST** /addons/{addon_id}/versions | Create a new version for an addon
-[**AddonsAddonIdVersionsVersionIdDownloadGet**](AddonVersionsApi.md#addonsaddonidversionsversioniddownloadget) | **GET** /addons/{addon_id}/versions/{version_id}/download | Generate a download token for a specific version of an addon
-[**AddonsAddonIdVersionsVersionIdGet**](AddonVersionsApi.md#addonsaddonidversionsversionidget) | **GET** /addons/{addon_id}/versions/{version_id} | Fetch a specific version of an addon
-[**AddonsAddonIdVersionsVersionIdPut**](AddonVersionsApi.md#addonsaddonidversionsversionidput) | **PUT** /addons/{addon_id}/versions/{version_id} | Update a version of an addon
+[**CreateAddonVersion**](AddonVersionsApi.md#createaddonversion) | **POST** /addons/{addon_id}/versions | Create a new version for an addon
+[**DownloadAddonVersion**](AddonVersionsApi.md#downloadaddonversion) | **GET** /addons/{addon_id}/versions/{version_id}/download | Generate a download token for a specific version of an addon
+[**GetAddonVersion**](AddonVersionsApi.md#getaddonversion) | **GET** /addons/{addon_id}/versions/{version_id} | Fetch a specific version of an addon
+[**ListAddonVersions**](AddonVersionsApi.md#listaddonversions) | **GET** /addons/{addon_id}/versions | Fetch all the versions of an addon
+[**UpdateAddonVersion**](AddonVersionsApi.md#updateaddonversion) | **PUT** /addons/{addon_id}/versions/{version_id} | Update a version of an addon
 
-<a name="addonsaddonidversionsget"></a>
-# **AddonsAddonIdVersionsGet**
-> InlineResponse2007 AddonsAddonIdVersionsGet (long? addonId, List<string> with = null)
-
-Fetch all the versions of an addon
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
-
-namespace Example
-{
-    public class AddonsAddonIdVersionsGetExample
-    {
-        public void main()
-        {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new AddonVersionsApi();
-            var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
-
-            try
-            {
-                // Fetch all the versions of an addon
-                InlineResponse2007 result = apiInstance.AddonsAddonIdVersionsGet(addonId, with);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AddonVersionsApi.AddonsAddonIdVersionsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
-
-### Return type
-
-[**InlineResponse2007**](InlineResponse2007.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidversionspost"></a>
-# **AddonsAddonIdVersionsPost**
-> InlineResponse2012 AddonsAddonIdVersionsPost (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+<a name="createaddonversion"></a>
+# **CreateAddonVersion**
+> InlineResponse2012 CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
 
 Create a new version for an addon
 
@@ -91,14 +26,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdVersionsPostExample
+    public class CreateAddonVersionExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonVersionsApi();
             var name = name_example;  // string | 
@@ -111,12 +42,12 @@ namespace Example
             try
             {
                 // Create a new version for an addon
-                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsPost(name, changelog, _file, releaseType, addonId, with);
+                InlineResponse2012 result = apiInstance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonVersionsApi.AddonsAddonIdVersionsPost: " + e.Message );
+                Debug.Print("Exception when calling AddonVersionsApi.CreateAddonVersion: " + e.Message );
             }
         }
     }
@@ -140,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -148,9 +79,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidversionsversioniddownloadget"></a>
-# **AddonsAddonIdVersionsVersionIdDownloadGet**
-> InlineResponse2008 AddonsAddonIdVersionsVersionIdDownloadGet (long? addonId, long? versionId)
+<a name="downloadaddonversion"></a>
+# **DownloadAddonVersion**
+> InlineResponse2008 DownloadAddonVersion (long? addonId, long? versionId)
 
 Generate a download token for a specific version of an addon
 
@@ -164,14 +95,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdVersionsVersionIdDownloadGetExample
+    public class DownloadAddonVersionExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonVersionsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -180,12 +107,12 @@ namespace Example
             try
             {
                 // Generate a download token for a specific version of an addon
-                InlineResponse2008 result = apiInstance.AddonsAddonIdVersionsVersionIdDownloadGet(addonId, versionId);
+                InlineResponse2008 result = apiInstance.DownloadAddonVersion(addonId, versionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonVersionsApi.AddonsAddonIdVersionsVersionIdDownloadGet: " + e.Message );
+                Debug.Print("Exception when calling AddonVersionsApi.DownloadAddonVersion: " + e.Message );
             }
         }
     }
@@ -205,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -213,9 +140,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidversionsversionidget"></a>
-# **AddonsAddonIdVersionsVersionIdGet**
-> InlineResponse2012 AddonsAddonIdVersionsVersionIdGet (long? addonId, long? versionId, List<string> with = null)
+<a name="getaddonversion"></a>
+# **GetAddonVersion**
+> InlineResponse2012 GetAddonVersion (long? addonId, long? versionId, List<string> with = null)
 
 Fetch a specific version of an addon
 
@@ -229,14 +156,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdVersionsVersionIdGetExample
+    public class GetAddonVersionExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonVersionsApi();
             var addonId = 789;  // long? | Id of the addon
@@ -246,12 +169,12 @@ namespace Example
             try
             {
                 // Fetch a specific version of an addon
-                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsVersionIdGet(addonId, versionId, with);
+                InlineResponse2012 result = apiInstance.GetAddonVersion(addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonVersionsApi.AddonsAddonIdVersionsVersionIdGet: " + e.Message );
+                Debug.Print("Exception when calling AddonVersionsApi.GetAddonVersion: " + e.Message );
             }
         }
     }
@@ -272,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -280,9 +203,70 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="addonsaddonidversionsversionidput"></a>
-# **AddonsAddonIdVersionsVersionIdPut**
-> InlineResponse2012 AddonsAddonIdVersionsVersionIdPut (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+<a name="listaddonversions"></a>
+# **ListAddonVersions**
+> InlineResponse2007 ListAddonVersions (long? addonId, List<string> with = null)
+
+Fetch all the versions of an addon
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NO.Everyday.GmodStoreSDK.Api;
+using NO.Everyday.GmodStoreSDK.Client;
+using NO.Everyday.GmodStoreSDK.Model;
+
+namespace Example
+{
+    public class ListAddonVersionsExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new AddonVersionsApi();
+            var addonId = 789;  // long? | Id of the addon
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
+
+            try
+            {
+                // Fetch all the versions of an addon
+                InlineResponse2007 result = apiInstance.ListAddonVersions(addonId, with);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddonVersionsApi.ListAddonVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addonId** | **long?**| Id of the addon | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
+
+### Return type
+
+[**InlineResponse2007**](InlineResponse2007.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="updateaddonversion"></a>
+# **UpdateAddonVersion**
+> InlineResponse2012 UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
 
 Update a version of an addon
 
@@ -296,14 +280,10 @@ using NO.Everyday.GmodStoreSDK.Model;
 
 namespace Example
 {
-    public class AddonsAddonIdVersionsVersionIdPutExample
+    public class UpdateAddonVersionExample
     {
         public void main()
         {
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AddonVersionsApi();
             var name = name_example;  // string | 
@@ -316,12 +296,12 @@ namespace Example
             try
             {
                 // Update a version of an addon
-                InlineResponse2012 result = apiInstance.AddonsAddonIdVersionsVersionIdPut(name, changelog, releaseType, addonId, versionId, with);
+                InlineResponse2012 result = apiInstance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddonVersionsApi.AddonsAddonIdVersionsVersionIdPut: " + e.Message );
+                Debug.Print("Exception when calling AddonVersionsApi.UpdateAddonVersion: " + e.Message );
             }
         }
     }
@@ -345,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
