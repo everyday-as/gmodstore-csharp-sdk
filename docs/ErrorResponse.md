@@ -1,4 +1,4 @@
-# Everyday.GmodStore.Sdk.Model.InlineResponseDefault
+# Everyday.GmodStore.Sdk.Model.ErrorResponse
 ## Properties
 
 Name | Type | Description | Notes

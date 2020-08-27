@@ -163,7 +163,7 @@ Class | Method | HTTP request | Description
  - [Model.Ban](docs/Ban.md)
  - [Model.BanListResponse](docs/BanListResponse.md)
  - [Model.Error](docs/Error.md)
- - [Model.InlineResponseDefault](docs/InlineResponseDefault.md)
+ - [Model.ErrorResponse](docs/ErrorResponse.md)
  - [Model.Money](docs/Money.md)
  - [Model.NewAddonCoupon](docs/NewAddonCoupon.md)
  - [Model.NewAddonPurchase](docs/NewAddonPurchase.md)

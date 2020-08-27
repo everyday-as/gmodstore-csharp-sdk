@@ -24,16 +24,16 @@ using SwaggerDateConverter = Everyday.GmodStore.Sdk.Client.SwaggerDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// InlineResponseDefault
+    /// ErrorResponse
     /// </summary>
     [DataContract]
-        public partial class InlineResponseDefault :  IEquatable<InlineResponseDefault>, IValidatableObject
+        public partial class ErrorResponse :  IEquatable<ErrorResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="InlineResponseDefault" /> class.
+        /// Initializes a new instance of the <see cref="ErrorResponse" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponseDefault(Error data = default(Error))
+        public ErrorResponse(Error data = default(Error))
         {
             this.Data = data;
         }
@@ -51,7 +51,7 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class InlineResponseDefault {\n");
+            sb.Append("class ErrorResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -73,15 +73,15 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as InlineResponseDefault);
+            return this.Equals(input as ErrorResponse);
         }
 
         /// <summary>
-        /// Returns true if InlineResponseDefault instances are equal
+        /// Returns true if ErrorResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of InlineResponseDefault to be compared</param>
+        /// <param name="input">Instance of ErrorResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(InlineResponseDefault input)
+        public bool Equals(ErrorResponse input)
         {
             if (input == null)
                 return false;
