@@ -24,16 +24,16 @@ using SwaggerDateConverter = Everyday.GmodStore.Sdk.Client.SwaggerDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// InlineResponse2001
+    /// AddonStatsListResponse
     /// </summary>
     [DataContract]
-        public partial class InlineResponse2001 :  IEquatable<InlineResponse2001>, IValidatableObject
+        public partial class AddonStatsListResponse :  IEquatable<AddonStatsListResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="InlineResponse2001" /> class.
+        /// Initializes a new instance of the <see cref="AddonStatsListResponse" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public InlineResponse2001(Addon data = default(Addon))
+        public AddonStatsListResponse(List<AddonStats> data = default(List<AddonStats>))
         {
             this.Data = data;
         }
@@ -42,7 +42,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Addon Data { get; set; }
+        public List<AddonStats> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,7 +51,7 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class InlineResponse2001 {\n");
+            sb.Append("class AddonStatsListResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -73,15 +73,15 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as InlineResponse2001);
+            return this.Equals(input as AddonStatsListResponse);
         }
 
         /// <summary>
-        /// Returns true if InlineResponse2001 instances are equal
+        /// Returns true if AddonStatsListResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of InlineResponse2001 to be compared</param>
+        /// <param name="input">Instance of AddonStatsListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(InlineResponse2001 input)
+        public bool Equals(AddonStatsListResponse input)
         {
             if (input == null)
                 return false;
@@ -89,8 +89,9 @@ namespace Everyday.GmodStore.Sdk.Model
             return 
                 (
                     this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.Data != null &&
+                    input.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 

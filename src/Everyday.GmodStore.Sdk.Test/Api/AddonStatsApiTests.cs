@@ -71,7 +71,7 @@ namespace Everyday.GmodStore.Sdk.Test
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
             //var response = instance.GetAddonStats(addonId);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<AddonStatsListResponse> (response, "response is AddonStatsListResponse");
         }
     }
 

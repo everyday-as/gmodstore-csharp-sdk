@@ -1,9 +1,9 @@
-# Everyday.GmodStore.Sdk.Model.InlineResponse2002
+# Everyday.GmodStore.Sdk.Model.AddonResponse
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | [**List&lt;AddonStats&gt;**](AddonStats.md) |  | [optional] 
+**Data** | [**Addon**](Addon.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

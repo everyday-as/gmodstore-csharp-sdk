@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getaddon"></a>
 # **GetAddon**
-> InlineResponse2001 GetAddon (long? addonId, List<string> with = null)
+> AddonResponse GetAddon (long? addonId, List<string> with = null)
 
 Fetch a single addon
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Fetch a single addon
-                InlineResponse2001 result = apiInstance.GetAddon(addonId, with);
+                AddonResponse result = apiInstance.GetAddon(addonId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**AddonResponse**](AddonResponse.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listselfaddons"></a>
 # **ListSelfAddons**
-> InlineResponse200 ListSelfAddons (List<string> with = null)
+> AddonListResponse ListSelfAddons (List<string> with = null)
 
 Fetch all the addons that you have access to
 
@@ -95,7 +95,7 @@ namespace Example
             try
             {
                 // Fetch all the addons that you have access to
-                InlineResponse200 result = apiInstance.ListSelfAddons(with);
+                AddonListResponse result = apiInstance.ListSelfAddons(with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**AddonListResponse**](AddonListResponse.md)
 
 ### Authorization
 

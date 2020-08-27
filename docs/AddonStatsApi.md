@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="getaddonstats"></a>
 # **GetAddonStats**
-> InlineResponse2002 GetAddonStats (long? addonId)
+> AddonStatsListResponse GetAddonStats (long? addonId)
 
 Fetch all the stats for an addon
 
@@ -33,7 +33,7 @@ namespace Example
             try
             {
                 // Fetch all the stats for an addon
-                InlineResponse2002 result = apiInstance.GetAddonStats(addonId);
+                AddonStatsListResponse result = apiInstance.GetAddonStats(addonId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**AddonStatsListResponse**](AddonStatsListResponse.md)
 
 ### Authorization
 

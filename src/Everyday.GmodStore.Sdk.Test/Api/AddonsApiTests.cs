@@ -72,7 +72,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.GetAddon(addonId, with);
-            //Assert.IsInstanceOf<InlineResponse2001> (response, "response is InlineResponse2001");
+            //Assert.IsInstanceOf<AddonResponse> (response, "response is AddonResponse");
         }
         /// <summary>
         /// Test ListSelfAddons
@@ -83,7 +83,7 @@ namespace Everyday.GmodStore.Sdk.Test
             // TODO uncomment below to test the method and replace null with proper value
             //List<string> with = null;
             //var response = instance.ListSelfAddons(with);
-            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
+            //Assert.IsInstanceOf<AddonListResponse> (response, "response is AddonListResponse");
         }
     }
 

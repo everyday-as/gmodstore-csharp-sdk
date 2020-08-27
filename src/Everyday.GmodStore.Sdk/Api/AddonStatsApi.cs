@@ -31,8 +31,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 GetAddonStats (long? addonId);
+        /// <returns>AddonStatsListResponse</returns>
+        AddonStatsListResponse GetAddonStats (long? addonId);
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -42,8 +42,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> GetAddonStatsWithHttpInfo (long? addonId);
+        /// <returns>ApiResponse of AddonStatsListResponse</returns>
+        ApiResponse<AddonStatsListResponse> GetAddonStatsWithHttpInfo (long? addonId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -54,8 +54,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> GetAddonStatsAsync (long? addonId);
+        /// <returns>Task of AddonStatsListResponse</returns>
+        System.Threading.Tasks.Task<AddonStatsListResponse> GetAddonStatsAsync (long? addonId);
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -65,8 +65,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> GetAddonStatsAsyncWithHttpInfo (long? addonId);
+        /// <returns>Task of ApiResponse (AddonStatsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonStatsListResponse>> GetAddonStatsAsyncWithHttpInfo (long? addonId);
         #endregion Asynchronous Operations
     }
 
@@ -183,10 +183,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 GetAddonStats (long? addonId)
+        /// <returns>AddonStatsListResponse</returns>
+        public AddonStatsListResponse GetAddonStats (long? addonId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = GetAddonStatsWithHttpInfo(addonId);
+             ApiResponse<AddonStatsListResponse> localVarResponse = GetAddonStatsWithHttpInfo(addonId);
              return localVarResponse.Data;
         }
 
@@ -195,8 +195,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > GetAddonStatsWithHttpInfo (long? addonId)
+        /// <returns>ApiResponse of AddonStatsListResponse</returns>
+        public ApiResponse< AddonStatsListResponse > GetAddonStatsWithHttpInfo (long? addonId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -239,9 +239,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<AddonStatsListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (AddonStatsListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonStatsListResponse)));
         }
 
         /// <summary>
@@ -249,10 +249,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> GetAddonStatsAsync (long? addonId)
+        /// <returns>Task of AddonStatsListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonStatsListResponse> GetAddonStatsAsync (long? addonId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await GetAddonStatsAsyncWithHttpInfo(addonId);
+             ApiResponse<AddonStatsListResponse> localVarResponse = await GetAddonStatsAsyncWithHttpInfo(addonId);
              return localVarResponse.Data;
 
         }
@@ -262,8 +262,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> GetAddonStatsAsyncWithHttpInfo (long? addonId)
+        /// <returns>Task of ApiResponse (AddonStatsListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddonStatsListResponse>> GetAddonStatsAsyncWithHttpInfo (long? addonId)
         {
             // verify the required parameter 'addonId' is set
             if (addonId == null)
@@ -306,9 +306,9 @@ namespace Everyday.GmodStore.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<AddonStatsListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (AddonStatsListResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddonStatsListResponse)));
         }
 
     }
