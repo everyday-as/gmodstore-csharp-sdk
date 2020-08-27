@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.TeamUser
+# Everyday.GmodStore.Sdk.Model.TeamUser
 ## Properties
 
 Name | Type | Description | Notes

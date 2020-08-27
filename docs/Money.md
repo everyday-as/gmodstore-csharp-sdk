@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.Money
+# Everyday.GmodStore.Sdk.Model.Money
 ## Properties
 
 Name | Type | Description | Notes

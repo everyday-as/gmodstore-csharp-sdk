@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Api.AddonVersionsApi
+# Everyday.GmodStore.Sdk.Api.AddonVersionsApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
@@ -20,9 +20,9 @@ Create a new version for an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -89,9 +89,9 @@ Generate a download token for a specific version of an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -150,9 +150,9 @@ Fetch a specific version of an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -213,9 +213,9 @@ Fetch all the versions of an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -274,9 +274,9 @@ Update a version of an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

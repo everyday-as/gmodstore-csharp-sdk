@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.InlineResponse200
+# Everyday.GmodStore.Sdk.Model.InlineResponse200
 ## Properties
 
 Name | Type | Description | Notes

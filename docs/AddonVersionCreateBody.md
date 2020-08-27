@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.AddonVersionCreateBody
+# Everyday.GmodStore.Sdk.Model.AddonVersionCreateBody
 ## Properties
 
 Name | Type | Description | Notes

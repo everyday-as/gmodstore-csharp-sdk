@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.AddonCouponBody
+# Everyday.GmodStore.Sdk.Model.AddonCouponBody
 ## Properties
 
 Name | Type | Description | Notes

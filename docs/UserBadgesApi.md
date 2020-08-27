@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Api.UserBadgesApi
+# Everyday.GmodStore.Sdk.Api.UserBadgesApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
@@ -18,9 +18,9 @@ Give a user a badge
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -79,9 +79,9 @@ Destroy a users's badge
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -139,9 +139,9 @@ Fetch all the badges a user has
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

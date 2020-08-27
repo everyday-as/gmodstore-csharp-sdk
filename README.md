@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK - the C# library for the GmodStore
+# Everyday.GmodStore.Sdk - the C# library for the GmodStore
 
 Welcome to the Gmodstore API! You can use our API to access Gmodstore API endpoints, which can be used interact with Gmodstore programmatically.
 
@@ -36,9 +36,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 ```
 <a name="packaging"></a>
 ## Packaging
@@ -48,7 +48,7 @@ A `.nuspec` is included with the project. You can follow the Nuget quickstart to
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out NO.Everyday.GmodStoreSDK.csproj
+nuget pack -Build -OutputDirectory out Everyday.GmodStore.Sdk.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
@@ -59,9 +59,9 @@ Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-p
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

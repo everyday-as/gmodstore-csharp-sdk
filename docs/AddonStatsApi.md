@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Api.AddonStatsApi
+# Everyday.GmodStore.Sdk.Api.AddonStatsApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
@@ -16,9 +16,9 @@ Fetch all the stats for an addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

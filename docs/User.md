@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.User
+# Everyday.GmodStore.Sdk.Model.User
 ## Properties
 
 Name | Type | Description | Notes

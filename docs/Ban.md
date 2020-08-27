@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.Ban
+# Everyday.GmodStore.Sdk.Model.Ban
 ## Properties
 
 Name | Type | Description | Notes

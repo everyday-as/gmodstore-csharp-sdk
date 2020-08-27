@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.AddonImages
+# Everyday.GmodStore.Sdk.Model.AddonImages
 ## Properties
 
 Name | Type | Description | Notes

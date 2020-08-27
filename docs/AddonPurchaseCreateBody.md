@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.AddonPurchaseCreateBody
+# Everyday.GmodStore.Sdk.Model.AddonPurchaseCreateBody
 ## Properties
 
 Name | Type | Description | Notes

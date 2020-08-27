@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Api.UsersApi
+# Everyday.GmodStore.Sdk.Api.UsersApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
@@ -17,9 +17,9 @@ Fetches the current user (API Key Owner)
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -76,9 +76,9 @@ Fetch a single user
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Api.AddonsApi
+# Everyday.GmodStore.Sdk.Api.AddonsApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
@@ -17,9 +17,9 @@ Fetch a single addon
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
@@ -78,9 +78,9 @@ Fetch all the addons that you have access to
 ```csharp
 using System;
 using System.Diagnostics;
-using NO.Everyday.GmodStoreSDK.Api;
-using NO.Everyday.GmodStoreSDK.Client;
-using NO.Everyday.GmodStoreSDK.Model;
+using Everyday.GmodStore.Sdk.Api;
+using Everyday.GmodStore.Sdk.Client;
+using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {

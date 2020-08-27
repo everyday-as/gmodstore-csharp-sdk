@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.PermissionGroup
+# Everyday.GmodStore.Sdk.Model.PermissionGroup
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.BadgeCreateBody
+# Everyday.GmodStore.Sdk.Model.BadgeCreateBody
 ## Properties
 
 Name | Type | Description | Notes

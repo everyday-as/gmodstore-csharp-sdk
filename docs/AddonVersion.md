@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.AddonVersion
+# Everyday.GmodStore.Sdk.Model.AddonVersion
 ## Properties
 
 Name | Type | Description | Notes

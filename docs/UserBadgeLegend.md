@@ -1,4 +1,4 @@
-# NO.Everyday.GmodStoreSDK.Model.UserBadgeLegend
+# Everyday.GmodStore.Sdk.Model.UserBadgeLegend
 ## Properties
 
 Name | Type | Description | Notes
