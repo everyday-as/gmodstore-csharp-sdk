@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | [optional] 
-**Active** | **bool?** |  | [optional] 
+**Id** | **int** |  | [optional] 
+**Active** | **bool** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **ShortDescription** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Requirements** | **List&lt;string&gt;** |  | [optional] 
 **Price** | [**AddonPrice**](AddonPrice.md) |  | [optional] 
 **Images** | [**AddonImages**](AddonImages.md) |  | [optional] 
-**Slug** | **string** |  | [optional] 
-**Route** | **string** |  | [optional] 
-**CreatedAt** | **DateTime?** |  | [optional] 
-**UpdatedAt** | **DateTime?** |  | [optional] 
+**Slug** | **string** |  | [optional] [readonly] 
+**Route** | **string** |  | [optional] [readonly] 
+**CreatedAt** | **DateTime** |  | [optional] [readonly] 
+**UpdatedAt** | **DateTime** |  | [optional] [readonly] 
 **LatestVersion** | [**AddonVersion**](AddonVersion.md) |  | [optional] 
 **Team** | [**Team**](Team.md) |  | [optional] 
 

@@ -10,15 +10,16 @@ Method | HTTP request | Description
 [**ListAddonVersions**](AddonVersionsApi.md#listaddonversions) | **GET** /addons/{addon_id}/versions | Fetch all the versions of an addon
 [**UpdateAddonVersion**](AddonVersionsApi.md#updateaddonversion) | **PUT** /addons/{addon_id}/versions/{version_id} | Update a version of an addon
 
+
 <a name="createaddonversion"></a>
 # **CreateAddonVersion**
-> AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
+> AddonVersionResponse CreateAddonVersion (long addonId, NewAddonVersion newAddonVersion, List<string> with = null)
 
 Create a new version for an addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -28,26 +29,29 @@ namespace Example
 {
     public class CreateAddonVersionExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonVersionsApi();
-            var name = name_example;  // string | 
-            var changelog = changelog_example;  // string | 
-            var _file = _file_example;  // byte[] | 
-            var releaseType = new AddonVersionReleaseType(); // AddonVersionReleaseType | 
-            var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var apiInstance = new AddonVersionsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var newAddonVersion = new NewAddonVersion(); // NewAddonVersion | 
+            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
                 // Create a new version for an addon
-                AddonVersionResponse result = apiInstance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
+                AddonVersionResponse result = apiInstance.CreateAddonVersion(addonId, newAddonVersion, with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonVersionsApi.CreateAddonVersion: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -58,12 +62,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**|  | 
- **changelog** | **string**|  | 
- **_file** | **byte[]****byte[]**|  | 
- **releaseType** | [**AddonVersionReleaseType**](AddonVersionReleaseType.md)|  | 
- **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **addonId** | **long**| Id of the addon | 
+ **newAddonVersion** | [**NewAddonVersion**](NewAddonVersion.md)|  | 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -78,16 +79,24 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="downloadaddonversion"></a>
 # **DownloadAddonVersion**
-> AddonDownloadResponse DownloadAddonVersion (long? addonId, long? versionId)
+> AddonDownloadResponse DownloadAddonVersion (long addonId, long versionId)
 
 Generate a download token for a specific version of an addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -97,12 +106,16 @@ namespace Example
 {
     public class DownloadAddonVersionExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonVersionsApi();
-            var addonId = 789;  // long? | Id of the addon
-            var versionId = 789;  // long? | Id of the version
+            var apiInstance = new AddonVersionsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var versionId = 789;  // long | Id of the version
 
             try
             {
@@ -110,9 +123,11 @@ namespace Example
                 AddonDownloadResponse result = apiInstance.DownloadAddonVersion(addonId, versionId);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonVersionsApi.DownloadAddonVersion: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -123,8 +138,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addonId** | **long?**| Id of the addon | 
- **versionId** | **long?**| Id of the version | 
+ **addonId** | **long**| Id of the addon | 
+ **versionId** | **long**| Id of the version | 
 
 ### Return type
 
@@ -139,16 +154,24 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getaddonversion"></a>
 # **GetAddonVersion**
-> AddonVersionResponse GetAddonVersion (long? addonId, long? versionId, List<string> with = null)
+> AddonVersionResponse GetAddonVersion (long addonId, long versionId, List<string> with = null)
 
 Fetch a specific version of an addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -158,13 +181,17 @@ namespace Example
 {
     public class GetAddonVersionExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonVersionsApi();
-            var addonId = 789;  // long? | Id of the addon
-            var versionId = 789;  // long? | Id of the version
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var apiInstance = new AddonVersionsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var versionId = 789;  // long | Id of the version
+            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -172,9 +199,11 @@ namespace Example
                 AddonVersionResponse result = apiInstance.GetAddonVersion(addonId, versionId, with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonVersionsApi.GetAddonVersion: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -185,9 +214,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addonId** | **long?**| Id of the addon | 
- **versionId** | **long?**| Id of the version | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **addonId** | **long**| Id of the addon | 
+ **versionId** | **long**| Id of the version | 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -202,16 +231,24 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listaddonversions"></a>
 # **ListAddonVersions**
-> AddonVersionListResponse ListAddonVersions (long? addonId, List<string> with = null)
+> AddonVersionListResponse ListAddonVersions (long addonId, List<string> with = null)
 
 Fetch all the versions of an addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -221,12 +258,16 @@ namespace Example
 {
     public class ListAddonVersionsExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonVersionsApi();
-            var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var apiInstance = new AddonVersionsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -234,9 +275,11 @@ namespace Example
                 AddonVersionListResponse result = apiInstance.ListAddonVersions(addonId, with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonVersionsApi.ListAddonVersions: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -247,8 +290,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **addonId** | **long**| Id of the addon | 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -263,16 +306,24 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updateaddonversion"></a>
 # **UpdateAddonVersion**
-> AddonVersionResponse UpdateAddonVersion (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
+> AddonVersionResponse UpdateAddonVersion (long addonId, long versionId, AddonVersion addonVersion, List<string> with = null)
 
 Update a version of an addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -282,32 +333,30 @@ namespace Example
 {
     public class UpdateAddonVersionExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonVersionsApi();
-            var id = 56;  // int? | 
-            var name = name_example;  // string | 
-            var changelog = changelog_example;  // string | 
-            var fileHash = fileHash_example;  // string | 
-            var fileSize = 56;  // int? | 
-            var releaseType = new AddonVersionReleaseType(); // AddonVersionReleaseType | 
-            var createdAt = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var updatedAt = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var addon = new Addon(); // Addon | 
-            var addonId = 789;  // long? | Id of the addon
-            var versionId = 789;  // long? | Id of the version
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var apiInstance = new AddonVersionsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var versionId = 789;  // long | Id of the version
+            var addonVersion = new AddonVersion(); // AddonVersion | 
+            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
                 // Update a version of an addon
-                AddonVersionResponse result = apiInstance.UpdateAddonVersion(id, name, changelog, fileHash, fileSize, releaseType, createdAt, updatedAt, addon, addonId, versionId, with);
+                AddonVersionResponse result = apiInstance.UpdateAddonVersion(addonId, versionId, addonVersion, with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonVersionsApi.UpdateAddonVersion: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -318,18 +367,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
- **name** | **string**|  | 
- **changelog** | **string**|  | 
- **fileHash** | **string**|  | 
- **fileSize** | **int?**|  | 
- **releaseType** | [**AddonVersionReleaseType**](AddonVersionReleaseType.md)|  | 
- **createdAt** | **DateTime?**|  | 
- **updatedAt** | **DateTime?**|  | 
- **addon** | [**Addon**](Addon.md)|  | 
- **addonId** | **long?**| Id of the addon | 
- **versionId** | **long?**| Id of the version | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **addonId** | **long**| Id of the addon | 
+ **versionId** | **long**| Id of the version | 
+ **addonVersion** | [**AddonVersion**](AddonVersion.md)|  | 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -344,4 +385,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

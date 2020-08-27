@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Revoked** | **bool?** |  | 
-**CreatedAt** | **DateTime?** |  | [optional] 
-**UpdatedAt** | **int?** |  | [optional] 
+**Revoked** | **bool** |  | 
+**CreatedAt** | **DateTime** |  | [optional] [readonly] 
+**UpdatedAt** | **int** |  | [optional] [readonly] 
 **Addon** | [**Addon**](Addon.md) |  | [optional] 
 **OrderItem** | [**OrderItem**](OrderItem.md) |  | [optional] 
 **User** | [**User**](User.md) |  | [optional] 

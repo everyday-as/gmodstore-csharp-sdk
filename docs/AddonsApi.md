@@ -7,15 +7,16 @@ Method | HTTP request | Description
 [**GetAddon**](AddonsApi.md#getaddon) | **GET** /addons/{addon_id} | Fetch a single addon
 [**ListSelfAddons**](AddonsApi.md#listselfaddons) | **GET** /addons | Fetch all the addons that you have access to
 
+
 <a name="getaddon"></a>
 # **GetAddon**
-> AddonResponse GetAddon (long? addonId, List<string> with = null)
+> AddonResponse GetAddon (long addonId, List<string> with = null)
 
 Fetch a single addon
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -25,12 +26,16 @@ namespace Example
 {
     public class GetAddonExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonsApi();
-            var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
+            var apiInstance = new AddonsApi(config);
+            var addonId = 789;  // long | Id of the addon
+            var with = with_example;  // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -38,9 +43,11 @@ namespace Example
                 AddonResponse result = apiInstance.GetAddon(addonId, with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonsApi.GetAddon: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -51,8 +58,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
+ **addonId** | **long**| Id of the addon | 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 
@@ -67,7 +74,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listselfaddons"></a>
 # **ListSelfAddons**
 > AddonListResponse ListSelfAddons (List<string> with = null)
@@ -76,7 +91,7 @@ Fetch all the addons that you have access to
 
 ### Example
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Everyday.GmodStore.Sdk.Api;
 using Everyday.GmodStore.Sdk.Client;
@@ -86,11 +101,15 @@ namespace Example
 {
     public class ListSelfAddonsExample
     {
-        public void main()
+        public static void Main()
         {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new AddonsApi();
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
+            var apiInstance = new AddonsApi(config);
+            var with = with_example;  // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -98,9 +117,11 @@ namespace Example
                 AddonListResponse result = apiInstance.ListSelfAddons(with);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException  e)
             {
                 Debug.Print("Exception when calling AddonsApi.ListSelfAddons: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -111,7 +132,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 
@@ -126,4 +147,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
