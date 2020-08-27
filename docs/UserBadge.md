@@ -1,9 +1,9 @@
-# Everyday.GmodStore.Sdk.Model.BanListResponse
+# Everyday.GmodStore.Sdk.Model.UserBadge
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | [**List&lt;Ban&gt;**](Ban.md) |  | [optional] 
+**Badge** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

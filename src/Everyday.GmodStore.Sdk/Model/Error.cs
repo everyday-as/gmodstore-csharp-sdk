@@ -32,18 +32,10 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Error" /> class.
         /// </summary>
-        /// <param name="message">message (required).</param>
+        /// <param name="message">message.</param>
         public Error(string message = default(string))
         {
-            // to ensure "message" is required (not null)
-            if (message == null)
-            {
-                throw new InvalidDataException("message is a required property for Error and cannot be null");
-            }
-            else
-            {
-                this.Message = message;
-            }
+            this.Message = message;
         }
         
         /// <summary>

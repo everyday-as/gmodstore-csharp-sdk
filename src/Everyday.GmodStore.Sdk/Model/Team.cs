@@ -32,49 +32,17 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Team" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
+        /// <param name="createdAt">createdAt.</param>
+        /// <param name="updatedAt">updatedAt.</param>
         /// <param name="primaryAuthor">primaryAuthor.</param>
         public Team(int? id = default(int?), string name = default(string), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?), TeamUser primaryAuthor = default(TeamUser))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for Team and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for Team and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            // to ensure "createdAt" is required (not null)
-            if (createdAt == null)
-            {
-                throw new InvalidDataException("createdAt is a required property for Team and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = createdAt;
-            }
-            // to ensure "updatedAt" is required (not null)
-            if (updatedAt == null)
-            {
-                throw new InvalidDataException("updatedAt is a required property for Team and cannot be null");
-            }
-            else
-            {
-                this.UpdatedAt = updatedAt;
-            }
+            this.Id = id;
+            this.Name = name;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.PrimaryAuthor = primaryAuthor;
         }
         

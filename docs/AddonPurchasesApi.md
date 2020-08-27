@@ -33,7 +33,7 @@ namespace Example
             var apiInstance = new AddonPurchasesApi();
             var body = new NewAddonPurchase(); // NewAddonPurchase | 
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**NewAddonPurchase**](NewAddonPurchase.md)|  | 
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getaddonpurchase"></a>
 # **GetAddonPurchase**
-> AddonPurchaseResponse GetAddonPurchase (long? addonId, string userId, List<string> with = null)
+> AddonPurchaseResponse GetAddonPurchase (long? addonId, long? userId, List<string> with = null)
 
 Get a purchase of an addon by user
 
@@ -95,8 +95,8 @@ namespace Example
 
             var apiInstance = new AddonPurchasesApi();
             var addonId = 789;  // long? | Id of the addon
-            var userId = userId_example;  // string | Id of the user
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
+            var userId = 789;  // long? | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -118,8 +118,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
- **userId** | **string**| Id of the user | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
+ **userId** | **long?**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -158,7 +158,7 @@ namespace Example
 
             var apiInstance = new AddonPurchasesApi();
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -180,7 +180,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddonpurchase"></a>
 # **UpdateAddonPurchase**
-> AddonPurchaseResponse UpdateAddonPurchase (UpdateAddonPurchase body, long? addonId, string userId, List<string> with = null)
+> AddonPurchaseResponse UpdateAddonPurchase (AddonPurchase body, long? addonId, long? userId, List<string> with = null)
 
 Update a purchase for an addon
 
@@ -218,10 +218,10 @@ namespace Example
         {
 
             var apiInstance = new AddonPurchasesApi();
-            var body = new UpdateAddonPurchase(); // UpdateAddonPurchase | 
+            var body = new AddonPurchase(); // AddonPurchase | 
             var addonId = 789;  // long? | Id of the addon
-            var userId = userId_example;  // string | Id of the user
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
+            var userId = 789;  // long? | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -242,10 +242,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateAddonPurchase**](UpdateAddonPurchase.md)|  | 
+ **body** | [**AddonPurchase**](AddonPurchase.md)|  | 
  **addonId** | **long?**| Id of the addon | 
- **userId** | **string**| Id of the user | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
+ **userId** | **long?**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 

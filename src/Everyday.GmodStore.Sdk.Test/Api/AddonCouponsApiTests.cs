@@ -69,7 +69,7 @@ namespace Everyday.GmodStore.Sdk.Test
         public void CreateAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //NewAddonCoupon body = null;
+            //AddonCoupon body = null;
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.CreateAddonCoupon(body, addonId, with);
@@ -119,7 +119,7 @@ namespace Everyday.GmodStore.Sdk.Test
         public void UpdateAddonCouponTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UpdateAddonCoupon body = null;
+            //AddonCoupon body = null;
             //long? addonId = null;
             //long? couponId = null;
             //List<string> with = null;

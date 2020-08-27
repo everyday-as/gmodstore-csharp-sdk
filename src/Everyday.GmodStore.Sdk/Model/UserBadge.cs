@@ -24,25 +24,33 @@ using SwaggerDateConverter = Everyday.GmodStore.Sdk.Client.SwaggerDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// BanListResponse
+    /// UserBadge
     /// </summary>
     [DataContract]
-        public partial class BanListResponse :  IEquatable<BanListResponse>, IValidatableObject
+        public partial class UserBadge :  IEquatable<UserBadge>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BanListResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserBadge" /> class.
         /// </summary>
-        /// <param name="data">data.</param>
-        public BanListResponse(List<Ban> data = default(List<Ban>))
+        /// <param name="badge">badge (required).</param>
+        public UserBadge(string badge = default(string))
         {
-            this.Data = data;
+            // to ensure "badge" is required (not null)
+            if (badge == null)
+            {
+                throw new InvalidDataException("badge is a required property for UserBadge and cannot be null");
+            }
+            else
+            {
+                this.Badge = badge;
+            }
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Gets or Sets Badge
         /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<Ban> Data { get; set; }
+        [DataMember(Name="badge", EmitDefaultValue=false)]
+        public string Badge { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,8 +59,8 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BanListResponse {\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("class UserBadge {\n");
+            sb.Append("  Badge: ").Append(Badge).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,25 +81,24 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BanListResponse);
+            return this.Equals(input as UserBadge);
         }
 
         /// <summary>
-        /// Returns true if BanListResponse instances are equal
+        /// Returns true if UserBadge instances are equal
         /// </summary>
-        /// <param name="input">Instance of BanListResponse to be compared</param>
+        /// <param name="input">Instance of UserBadge to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BanListResponse input)
+        public bool Equals(UserBadge input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Data == input.Data ||
-                    this.Data != null &&
-                    input.Data != null &&
-                    this.Data.SequenceEqual(input.Data)
+                    this.Badge == input.Badge ||
+                    (this.Badge != null &&
+                    this.Badge.Equals(input.Badge))
                 );
         }
 
@@ -104,8 +111,8 @@ namespace Everyday.GmodStore.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                if (this.Badge != null)
+                    hashCode = hashCode * 59 + this.Badge.GetHashCode();
                 return hashCode;
             }
         }

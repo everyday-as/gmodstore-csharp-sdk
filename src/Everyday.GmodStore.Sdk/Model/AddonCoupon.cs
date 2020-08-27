@@ -32,25 +32,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddonCoupon" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
         /// <param name="code">code (required).</param>
         /// <param name="percent">percent (required).</param>
         /// <param name="maxUses">maxUses (required).</param>
-        /// <param name="expiresAt">expiresAt (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
+        /// <param name="expiresAt">A future date less than 2 weeks from today (required).</param>
         /// <param name="addon">addon.</param>
-        public AddonCoupon(int? id = default(int?), string code = default(string), decimal? percent = default(decimal?), int? maxUses = default(int?), DateTime? expiresAt = default(DateTime?), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?), Addon addon = default(Addon))
+        public AddonCoupon(string code = default(string), decimal? percent = default(decimal?), int? maxUses = default(int?), DateTime? expiresAt = default(DateTime?), Addon addon = default(Addon))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for AddonCoupon and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
             // to ensure "code" is required (not null)
             if (code == null)
             {
@@ -87,24 +75,6 @@ namespace Everyday.GmodStore.Sdk.Model
             {
                 this.ExpiresAt = expiresAt;
             }
-            // to ensure "createdAt" is required (not null)
-            if (createdAt == null)
-            {
-                throw new InvalidDataException("createdAt is a required property for AddonCoupon and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = createdAt;
-            }
-            // to ensure "updatedAt" is required (not null)
-            if (updatedAt == null)
-            {
-                throw new InvalidDataException("updatedAt is a required property for AddonCoupon and cannot be null");
-            }
-            else
-            {
-                this.UpdatedAt = updatedAt;
-            }
             this.Addon = addon;
         }
         
@@ -112,7 +82,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
+        public int? Id { get; private set; }
 
         /// <summary>
         /// Gets or Sets Code
@@ -133,8 +103,9 @@ namespace Everyday.GmodStore.Sdk.Model
         public int? MaxUses { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExpiresAt
+        /// A future date less than 2 weeks from today
         /// </summary>
+        /// <value>A future date less than 2 weeks from today</value>
         [DataMember(Name="expires_at", EmitDefaultValue=false)]
         public DateTime? ExpiresAt { get; set; }
 
@@ -142,13 +113,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets Addon

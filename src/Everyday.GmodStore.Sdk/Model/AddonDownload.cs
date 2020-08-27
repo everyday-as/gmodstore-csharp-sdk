@@ -32,18 +32,10 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddonDownload" /> class.
         /// </summary>
-        /// <param name="url">url (required).</param>
+        /// <param name="url">url.</param>
         public AddonDownload(string url = default(string))
         {
-            // to ensure "url" is required (not null)
-            if (url == null)
-            {
-                throw new InvalidDataException("url is a required property for AddonDownload and cannot be null");
-            }
-            else
-            {
-                this.Url = url;
-            }
+            this.Url = url;
         }
         
         /// <summary>

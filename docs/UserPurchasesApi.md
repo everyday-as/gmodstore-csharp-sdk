@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserpurchases"></a>
 # **ListUserPurchases**
-> AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null)
+> AddonPurchaseListResponse ListUserPurchases (long? userId, List<string> with = null)
 
 Fetch all purchases a user has made
 
@@ -28,8 +28,8 @@ namespace Example
         {
 
             var apiInstance = new UserPurchasesApi();
-            var userId = userId_example;  // string | Id of the user
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonPurchase schema (optional) 
+            var userId = 789;  // long? | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -50,8 +50,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonPurchase schema | [optional] 
+ **userId** | **long?**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 

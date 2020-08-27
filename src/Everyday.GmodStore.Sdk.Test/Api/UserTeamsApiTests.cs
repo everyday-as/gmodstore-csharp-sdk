@@ -69,7 +69,7 @@ namespace Everyday.GmodStore.Sdk.Test
         public void ListUserTeamsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userId = null;
+            //long? userId = null;
             //List<string> with = null;
             //var response = instance.ListUserTeams(userId, with);
             //Assert.IsInstanceOf<TeamListResponse> (response, "response is TeamListResponse");

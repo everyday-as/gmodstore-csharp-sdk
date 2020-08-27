@@ -71,9 +71,9 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new NewAddonCoupon(); // NewAddonCoupon | 
+            var body = new AddonCoupon(); // AddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -157,18 +157,15 @@ Class | Method | HTTP request | Description
  - [Model.AddonStatsViewsCurrent](docs/AddonStatsViewsCurrent.md)
  - [Model.AddonVersion](docs/AddonVersion.md)
  - [Model.AddonVersionListResponse](docs/AddonVersionListResponse.md)
+ - [Model.AddonVersionReleaseType](docs/AddonVersionReleaseType.md)
  - [Model.AddonVersionResponse](docs/AddonVersionResponse.md)
  - [Model.BadgeListResponse](docs/BadgeListResponse.md)
  - [Model.BadgeResponse](docs/BadgeResponse.md)
- - [Model.Ban](docs/Ban.md)
- - [Model.BanListResponse](docs/BanListResponse.md)
  - [Model.Error](docs/Error.md)
  - [Model.ErrorResponse](docs/ErrorResponse.md)
  - [Model.Money](docs/Money.md)
- - [Model.NewAddonCoupon](docs/NewAddonCoupon.md)
  - [Model.NewAddonPurchase](docs/NewAddonPurchase.md)
  - [Model.NewAddonVersion](docs/NewAddonVersion.md)
- - [Model.NewUserBadge](docs/NewUserBadge.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.PermissionGroup](docs/PermissionGroup.md)
  - [Model.Team](docs/Team.md)
@@ -176,11 +173,12 @@ Class | Method | HTTP request | Description
  - [Model.TeamResponse](docs/TeamResponse.md)
  - [Model.TeamUser](docs/TeamUser.md)
  - [Model.TeamUserListResponse](docs/TeamUserListResponse.md)
- - [Model.UpdateAddonCoupon](docs/UpdateAddonCoupon.md)
- - [Model.UpdateAddonPurchase](docs/UpdateAddonPurchase.md)
- - [Model.UpdateAddonVersion](docs/UpdateAddonVersion.md)
  - [Model.User](docs/User.md)
+ - [Model.UserBadge](docs/UserBadge.md)
  - [Model.UserBadgeLegend](docs/UserBadgeLegend.md)
+ - [Model.UserBan](docs/UserBan.md)
+ - [Model.UserBanListResponse](docs/UserBanListResponse.md)
+ - [Model.UserBanProperties](docs/UserBanProperties.md)
  - [Model.UserResponse](docs/UserResponse.md)
 
 <a name="documentation-for-authorization"></a>

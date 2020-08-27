@@ -24,33 +24,25 @@ using SwaggerDateConverter = Everyday.GmodStore.Sdk.Client.SwaggerDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// UpdateAddonPurchase
+    /// UserBanListResponse
     /// </summary>
     [DataContract]
-        public partial class UpdateAddonPurchase :  IEquatable<UpdateAddonPurchase>, IValidatableObject
+        public partial class UserBanListResponse :  IEquatable<UserBanListResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateAddonPurchase" /> class.
+        /// Initializes a new instance of the <see cref="UserBanListResponse" /> class.
         /// </summary>
-        /// <param name="revoked">revoked (required).</param>
-        public UpdateAddonPurchase(bool? revoked = default(bool?))
+        /// <param name="data">data.</param>
+        public UserBanListResponse(List<UserBan> data = default(List<UserBan>))
         {
-            // to ensure "revoked" is required (not null)
-            if (revoked == null)
-            {
-                throw new InvalidDataException("revoked is a required property for UpdateAddonPurchase and cannot be null");
-            }
-            else
-            {
-                this.Revoked = revoked;
-            }
+            this.Data = data;
         }
         
         /// <summary>
-        /// Gets or Sets Revoked
+        /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name="revoked", EmitDefaultValue=false)]
-        public bool? Revoked { get; set; }
+        [DataMember(Name="data", EmitDefaultValue=false)]
+        public List<UserBan> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,8 +51,8 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UpdateAddonPurchase {\n");
-            sb.Append("  Revoked: ").Append(Revoked).Append("\n");
+            sb.Append("class UserBanListResponse {\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -81,24 +73,25 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as UpdateAddonPurchase);
+            return this.Equals(input as UserBanListResponse);
         }
 
         /// <summary>
-        /// Returns true if UpdateAddonPurchase instances are equal
+        /// Returns true if UserBanListResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of UpdateAddonPurchase to be compared</param>
+        /// <param name="input">Instance of UserBanListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UpdateAddonPurchase input)
+        public bool Equals(UserBanListResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Revoked == input.Revoked ||
-                    (this.Revoked != null &&
-                    this.Revoked.Equals(input.Revoked))
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    input.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -111,8 +104,8 @@ namespace Everyday.GmodStore.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Revoked != null)
-                    hashCode = hashCode * 59 + this.Revoked.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

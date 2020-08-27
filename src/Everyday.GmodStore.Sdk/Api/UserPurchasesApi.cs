@@ -31,9 +31,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>AddonPurchaseListResponse</returns>
-        AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null);
+        AddonPurchaseListResponse ListUserPurchases (long? userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -43,9 +43,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
-        ApiResponse<AddonPurchaseListResponse> ListUserPurchasesWithHttpInfo (string userId, List<string> with = null);
+        ApiResponse<AddonPurchaseListResponse> ListUserPurchasesWithHttpInfo (long? userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -56,9 +56,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>Task of AddonPurchaseListResponse</returns>
-        System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (long? userId, List<string> with = null);
 
         /// <summary>
         /// Fetch all purchases a user has made
@@ -68,9 +68,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (long? userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -187,9 +187,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>AddonPurchaseListResponse</returns>
-        public AddonPurchaseListResponse ListUserPurchases (string userId, List<string> with = null)
+        public AddonPurchaseListResponse ListUserPurchases (long? userId, List<string> with = null)
         {
              ApiResponse<AddonPurchaseListResponse> localVarResponse = ListUserPurchasesWithHttpInfo(userId, with);
              return localVarResponse.Data;
@@ -200,9 +200,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonPurchaseListResponse</returns>
-        public ApiResponse< AddonPurchaseListResponse > ListUserPurchasesWithHttpInfo (string userId, List<string> with = null)
+        public ApiResponse< AddonPurchaseListResponse > ListUserPurchasesWithHttpInfo (long? userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -256,9 +256,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>Task of AddonPurchaseListResponse</returns>
-        public async System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<AddonPurchaseListResponse> ListUserPurchasesAsync (long? userId, List<string> with = null)
         {
              ApiResponse<AddonPurchaseListResponse> localVarResponse = await ListUserPurchasesAsyncWithHttpInfo(userId, with);
              return localVarResponse.Data;
@@ -270,9 +270,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the AddonPurchase schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonPurchase&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonPurchaseListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddonPurchaseListResponse>> ListUserPurchasesAsyncWithHttpInfo (long? userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

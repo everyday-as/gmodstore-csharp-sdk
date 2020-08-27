@@ -24,34 +24,18 @@ using SwaggerDateConverter = Everyday.GmodStore.Sdk.Client.SwaggerDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// NewUserBadge
+    /// UserBanProperties
     /// </summary>
     [DataContract]
-        public partial class NewUserBadge :  IEquatable<NewUserBadge>, IValidatableObject
+        public partial class UserBanProperties : List<string>,  IEquatable<UserBanProperties>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NewUserBadge" /> class.
+        /// Initializes a new instance of the <see cref="UserBanProperties" /> class.
         /// </summary>
-        /// <param name="badge">badge (required).</param>
-        public NewUserBadge(string badge = default(string))
+        public UserBanProperties() : base()
         {
-            // to ensure "badge" is required (not null)
-            if (badge == null)
-            {
-                throw new InvalidDataException("badge is a required property for NewUserBadge and cannot be null");
-            }
-            else
-            {
-                this.Badge = badge;
-            }
         }
         
-        /// <summary>
-        /// Gets or Sets Badge
-        /// </summary>
-        [DataMember(Name="badge", EmitDefaultValue=false)]
-        public string Badge { get; set; }
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -59,8 +43,8 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class NewUserBadge {\n");
-            sb.Append("  Badge: ").Append(Badge).Append("\n");
+            sb.Append("class UserBanProperties {\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -69,7 +53,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -81,25 +65,20 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as NewUserBadge);
+            return this.Equals(input as UserBanProperties);
         }
 
         /// <summary>
-        /// Returns true if NewUserBadge instances are equal
+        /// Returns true if UserBanProperties instances are equal
         /// </summary>
-        /// <param name="input">Instance of NewUserBadge to be compared</param>
+        /// <param name="input">Instance of UserBanProperties to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(NewUserBadge input)
+        public bool Equals(UserBanProperties input)
         {
             if (input == null)
                 return false;
 
-            return 
-                (
-                    this.Badge == input.Badge ||
-                    (this.Badge != null &&
-                    this.Badge.Equals(input.Badge))
-                );
+            return base.Equals(input);
         }
 
         /// <summary>
@@ -110,9 +89,7 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Badge != null)
-                    hashCode = hashCode * 59 + this.Badge.GetHashCode();
+                int hashCode = base.GetHashCode();
                 return hashCode;
             }
         }

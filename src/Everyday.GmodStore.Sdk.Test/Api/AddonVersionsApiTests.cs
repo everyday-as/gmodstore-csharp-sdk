@@ -72,7 +72,7 @@ namespace Everyday.GmodStore.Sdk.Test
             //string name = null;
             //string changelog = null;
             //byte[] _file = null;
-            //string releaseType = null;
+            //AddonVersionReleaseType releaseType = null;
             //long? addonId = null;
             //List<string> with = null;
             //var response = instance.CreateAddonVersion(name, changelog, _file, releaseType, addonId, with);
@@ -122,13 +122,19 @@ namespace Everyday.GmodStore.Sdk.Test
         public void UpdateAddonVersionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
             //string name = null;
             //string changelog = null;
-            //string releaseType = null;
+            //string fileHash = null;
+            //int? fileSize = null;
+            //AddonVersionReleaseType releaseType = null;
+            //DateTime? createdAt = null;
+            //DateTime? updatedAt = null;
+            //Addon addon = null;
             //long? addonId = null;
             //long? versionId = null;
             //List<string> with = null;
-            //var response = instance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
+            //var response = instance.UpdateAddonVersion(id, name, changelog, fileHash, fileSize, releaseType, createdAt, updatedAt, addon, addonId, versionId, with);
             //Assert.IsInstanceOf<AddonVersionResponse> (response, "response is AddonVersionResponse");
         }
     }

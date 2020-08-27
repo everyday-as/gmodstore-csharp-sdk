@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Revoked** | **bool?** |  | 
-**CreatedAt** | **DateTime?** |  | 
-**UpdatedAt** | **int?** |  | 
+**CreatedAt** | **DateTime?** |  | [optional] 
+**UpdatedAt** | **int?** |  | [optional] 
 **Addon** | [**Addon**](Addon.md) |  | [optional] 
 **OrderItem** | [**OrderItem**](OrderItem.md) |  | [optional] 
 **User** | [**User**](User.md) |  | [optional] 

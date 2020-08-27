@@ -32,39 +32,15 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserBadgeLegend" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="description">description (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
+        /// <param name="description">description.</param>
         /// <param name="ext">ext.</param>
         public UserBadgeLegend(string id = default(string), string name = default(string), string description = default(string), string ext = default(string))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for UserBadgeLegend and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for UserBadgeLegend and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            // to ensure "description" is required (not null)
-            if (description == null)
-            {
-                throw new InvalidDataException("description is a required property for UserBadgeLegend and cannot be null");
-            }
-            else
-            {
-                this.Description = description;
-            }
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
             this.Ext = ext;
         }
         

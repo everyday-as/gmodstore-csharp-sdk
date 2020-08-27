@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="createaddonversion"></a>
 # **CreateAddonVersion**
-> AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+> AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
 
 Create a new version for an addon
 
@@ -35,9 +35,9 @@ namespace Example
             var name = name_example;  // string | 
             var changelog = changelog_example;  // string | 
             var _file = _file_example;  // byte[] | 
-            var releaseType = releaseType_example;  // string | 
+            var releaseType = new AddonVersionReleaseType(); // AddonVersionReleaseType | 
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  **name** | **string**|  | 
  **changelog** | **string**|  | 
  **_file** | **byte[]****byte[]**|  | 
- **releaseType** | **string**|  | 
+ **releaseType** | [**AddonVersionReleaseType**](AddonVersionReleaseType.md)|  | 
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -164,7 +164,7 @@ namespace Example
             var apiInstance = new AddonVersionsApi();
             var addonId = 789;  // long? | Id of the addon
             var versionId = 789;  // long? | Id of the version
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
  **versionId** | **long?**| Id of the version | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -226,7 +226,7 @@ namespace Example
 
             var apiInstance = new AddonVersionsApi();
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -248,7 +248,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddonversion"></a>
 # **UpdateAddonVersion**
-> AddonVersionResponse UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+> AddonVersionResponse UpdateAddonVersion (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
 
 Update a version of an addon
 
@@ -286,17 +286,23 @@ namespace Example
         {
 
             var apiInstance = new AddonVersionsApi();
+            var id = 56;  // int? | 
             var name = name_example;  // string | 
             var changelog = changelog_example;  // string | 
-            var releaseType = releaseType_example;  // string | 
+            var fileHash = fileHash_example;  // string | 
+            var fileSize = 56;  // int? | 
+            var releaseType = new AddonVersionReleaseType(); // AddonVersionReleaseType | 
+            var createdAt = 2013-10-20T19:20:30+01:00;  // DateTime? | 
+            var updatedAt = 2013-10-20T19:20:30+01:00;  // DateTime? | 
+            var addon = new Addon(); // Addon | 
             var addonId = 789;  // long? | Id of the addon
             var versionId = 789;  // long? | Id of the version
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonVersion schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
                 // Update a version of an addon
-                AddonVersionResponse result = apiInstance.UpdateAddonVersion(name, changelog, releaseType, addonId, versionId, with);
+                AddonVersionResponse result = apiInstance.UpdateAddonVersion(id, name, changelog, fileHash, fileSize, releaseType, createdAt, updatedAt, addon, addonId, versionId, with);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -312,12 +318,18 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int?**|  | 
  **name** | **string**|  | 
  **changelog** | **string**|  | 
- **releaseType** | **string**|  | 
+ **fileHash** | **string**|  | 
+ **fileSize** | **int?**|  | 
+ **releaseType** | [**AddonVersionReleaseType**](AddonVersionReleaseType.md)|  | 
+ **createdAt** | **DateTime?**|  | 
+ **updatedAt** | **DateTime?**|  | 
+ **addon** | [**Addon**](Addon.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **versionId** | **long?**| Id of the version | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonVersion schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 

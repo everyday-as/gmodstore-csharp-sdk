@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="createuserbadge"></a>
 # **CreateUserBadge**
-> BadgeResponse CreateUserBadge (NewUserBadge body, string userId)
+> BadgeResponse CreateUserBadge (UserBadge body, long? userId)
 
 Give a user a badge
 
@@ -30,8 +30,8 @@ namespace Example
         {
 
             var apiInstance = new UserBadgesApi();
-            var body = new NewUserBadge(); // NewUserBadge | 
-            var userId = userId_example;  // string | Id of the user
+            var body = new UserBadge(); // UserBadge | 
+            var userId = 789;  // long? | Id of the user
 
             try
             {
@@ -52,8 +52,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**NewUserBadge**](NewUserBadge.md)|  | 
- **userId** | **string**| Id of the user | 
+ **body** | [**UserBadge**](UserBadge.md)|  | 
+ **userId** | **long?**| Id of the user | 
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="deleteuserbadge"></a>
 # **DeleteUserBadge**
-> void DeleteUserBadge (string userId, long? badgeId)
+> void DeleteUserBadge (long? userId, long? badgeId)
 
 Destroy a users's badge
 
@@ -91,7 +91,7 @@ namespace Example
         {
 
             var apiInstance = new UserBadgesApi();
-            var userId = userId_example;  // string | Id of the user
+            var userId = 789;  // long? | Id of the user
             var badgeId = 789;  // long? | Id of the badge
 
             try
@@ -112,7 +112,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
+ **userId** | **long?**| Id of the user | 
  **badgeId** | **long?**| Id of the badge | 
 
 ### Return type
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="listuserbadges"></a>
 # **ListUserBadges**
-> BadgeListResponse ListUserBadges (string userId)
+> BadgeListResponse ListUserBadges (long? userId)
 
 Fetch all the badges a user has
 
@@ -151,7 +151,7 @@ namespace Example
         {
 
             var apiInstance = new UserBadgesApi();
-            var userId = userId_example;  // string | Id of the user
+            var userId = 789;  // long? | Id of the user
 
             try
             {
@@ -172,7 +172,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
+ **userId** | **long?**| Id of the user | 
 
 ### Return type
 

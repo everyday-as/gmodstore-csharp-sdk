@@ -32,60 +32,20 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddonReview" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="title">title (required).</param>
-        /// <param name="version">version (required).</param>
-        /// <param name="body">body (required).</param>
-        /// <param name="rating">rating (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="title">title.</param>
+        /// <param name="version">version.</param>
+        /// <param name="body">body.</param>
+        /// <param name="rating">rating.</param>
         /// <param name="addon">addon.</param>
         /// <param name="author">author.</param>
         public AddonReview(int? id = default(int?), string title = default(string), string version = default(string), string body = default(string), decimal? rating = default(decimal?), Addon addon = default(Addon), User author = default(User))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for AddonReview and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "title" is required (not null)
-            if (title == null)
-            {
-                throw new InvalidDataException("title is a required property for AddonReview and cannot be null");
-            }
-            else
-            {
-                this.Title = title;
-            }
-            // to ensure "version" is required (not null)
-            if (version == null)
-            {
-                throw new InvalidDataException("version is a required property for AddonReview and cannot be null");
-            }
-            else
-            {
-                this.Version = version;
-            }
-            // to ensure "body" is required (not null)
-            if (body == null)
-            {
-                throw new InvalidDataException("body is a required property for AddonReview and cannot be null");
-            }
-            else
-            {
-                this.Body = body;
-            }
-            // to ensure "rating" is required (not null)
-            if (rating == null)
-            {
-                throw new InvalidDataException("rating is a required property for AddonReview and cannot be null");
-            }
-            else
-            {
-                this.Rating = rating;
-            }
+            this.Id = id;
+            this.Title = title;
+            this.Version = version;
+            this.Body = body;
+            this.Rating = rating;
             this.Addon = addon;
             this.Author = author;
         }

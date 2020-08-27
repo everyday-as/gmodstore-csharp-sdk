@@ -32,9 +32,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
-        AddonCouponResponse CreateAddonCoupon (NewAddonCoupon body, long? addonId, List<string> with = null);
+        AddonCouponResponse CreateAddonCoupon (AddonCoupon body, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create an addon coupon
@@ -45,9 +45,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
-        ApiResponse<AddonCouponResponse> CreateAddonCouponWithHttpInfo (NewAddonCoupon body, long? addonId, List<string> with = null);
+        ApiResponse<AddonCouponResponse> CreateAddonCouponWithHttpInfo (AddonCoupon body, long? addonId, List<string> with = null);
         /// <summary>
         /// Destroy an addon&#x27;s coupon
         /// </summary>
@@ -80,7 +80,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
         AddonCouponResponse GetAddonCoupon (long? addonId, long? couponId, List<string> with = null);
 
@@ -93,7 +93,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
         ApiResponse<AddonCouponResponse> GetAddonCouponWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
         /// <summary>
@@ -104,7 +104,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponListResponse</returns>
         AddonCouponListResponse ListAddonCoupons (long? addonId, List<string> with = null);
 
@@ -116,7 +116,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponListResponse</returns>
         ApiResponse<AddonCouponListResponse> ListAddonCouponsWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
@@ -129,9 +129,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
-        AddonCouponResponse UpdateAddonCoupon (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null);
+        AddonCouponResponse UpdateAddonCoupon (AddonCoupon body, long? addonId, long? couponId, List<string> with = null);
 
         /// <summary>
         /// Update an addon&#x27;s coupon
@@ -143,9 +143,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
-        ApiResponse<AddonCouponResponse> UpdateAddonCouponWithHttpInfo (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null);
+        ApiResponse<AddonCouponResponse> UpdateAddonCouponWithHttpInfo (AddonCoupon body, long? addonId, long? couponId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -157,9 +157,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
-        System.Threading.Tasks.Task<AddonCouponResponse> CreateAddonCouponAsync (NewAddonCoupon body, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<AddonCouponResponse> CreateAddonCouponAsync (AddonCoupon body, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create an addon coupon
@@ -170,9 +170,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> CreateAddonCouponAsyncWithHttpInfo (NewAddonCoupon body, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> CreateAddonCouponAsyncWithHttpInfo (AddonCoupon body, long? addonId, List<string> with = null);
         /// <summary>
         /// Destroy an addon&#x27;s coupon
         /// </summary>
@@ -205,7 +205,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
         System.Threading.Tasks.Task<AddonCouponResponse> GetAddonCouponAsync (long? addonId, long? couponId, List<string> with = null);
 
@@ -218,7 +218,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> GetAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null);
         /// <summary>
@@ -229,7 +229,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponListResponse</returns>
         System.Threading.Tasks.Task<AddonCouponListResponse> ListAddonCouponsAsync (long? addonId, List<string> with = null);
 
@@ -241,7 +241,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddonCouponListResponse>> ListAddonCouponsAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
@@ -254,9 +254,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
-        System.Threading.Tasks.Task<AddonCouponResponse> UpdateAddonCouponAsync (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null);
+        System.Threading.Tasks.Task<AddonCouponResponse> UpdateAddonCouponAsync (AddonCoupon body, long? addonId, long? couponId, List<string> with = null);
 
         /// <summary>
         /// Update an addon&#x27;s coupon
@@ -268,9 +268,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> UpdateAddonCouponAsyncWithHttpInfo (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> UpdateAddonCouponAsyncWithHttpInfo (AddonCoupon body, long? addonId, long? couponId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -388,9 +388,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
-        public AddonCouponResponse CreateAddonCoupon (NewAddonCoupon body, long? addonId, List<string> with = null)
+        public AddonCouponResponse CreateAddonCoupon (AddonCoupon body, long? addonId, List<string> with = null)
         {
              ApiResponse<AddonCouponResponse> localVarResponse = CreateAddonCouponWithHttpInfo(body, addonId, with);
              return localVarResponse.Data;
@@ -402,9 +402,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
-        public ApiResponse< AddonCouponResponse > CreateAddonCouponWithHttpInfo (NewAddonCoupon body, long? addonId, List<string> with = null)
+        public ApiResponse< AddonCouponResponse > CreateAddonCouponWithHttpInfo (AddonCoupon body, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -471,9 +471,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
-        public async System.Threading.Tasks.Task<AddonCouponResponse> CreateAddonCouponAsync (NewAddonCoupon body, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<AddonCouponResponse> CreateAddonCouponAsync (AddonCoupon body, long? addonId, List<string> with = null)
         {
              ApiResponse<AddonCouponResponse> localVarResponse = await CreateAddonCouponAsyncWithHttpInfo(body, addonId, with);
              return localVarResponse.Data;
@@ -486,9 +486,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> CreateAddonCouponAsyncWithHttpInfo (NewAddonCoupon body, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> CreateAddonCouponAsyncWithHttpInfo (AddonCoupon body, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -698,7 +698,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
         public AddonCouponResponse GetAddonCoupon (long? addonId, long? couponId, List<string> with = null)
         {
@@ -712,7 +712,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
         public ApiResponse< AddonCouponResponse > GetAddonCouponWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
         {
@@ -773,7 +773,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
         public async System.Threading.Tasks.Task<AddonCouponResponse> GetAddonCouponAsync (long? addonId, long? couponId, List<string> with = null)
         {
@@ -788,7 +788,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> GetAddonCouponAsyncWithHttpInfo (long? addonId, long? couponId, List<string> with = null)
         {
@@ -848,7 +848,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponListResponse</returns>
         public AddonCouponListResponse ListAddonCoupons (long? addonId, List<string> with = null)
         {
@@ -861,7 +861,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponListResponse</returns>
         public ApiResponse< AddonCouponListResponse > ListAddonCouponsWithHttpInfo (long? addonId, List<string> with = null)
         {
@@ -917,7 +917,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponListResponse</returns>
         public async System.Threading.Tasks.Task<AddonCouponListResponse> ListAddonCouponsAsync (long? addonId, List<string> with = null)
         {
@@ -931,7 +931,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AddonCouponListResponse>> ListAddonCouponsAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
@@ -989,9 +989,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>AddonCouponResponse</returns>
-        public AddonCouponResponse UpdateAddonCoupon (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
+        public AddonCouponResponse UpdateAddonCoupon (AddonCoupon body, long? addonId, long? couponId, List<string> with = null)
         {
              ApiResponse<AddonCouponResponse> localVarResponse = UpdateAddonCouponWithHttpInfo(body, addonId, couponId, with);
              return localVarResponse.Data;
@@ -1004,9 +1004,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonCouponResponse</returns>
-        public ApiResponse< AddonCouponResponse > UpdateAddonCouponWithHttpInfo (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
+        public ApiResponse< AddonCouponResponse > UpdateAddonCouponWithHttpInfo (AddonCoupon body, long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1078,9 +1078,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of AddonCouponResponse</returns>
-        public async System.Threading.Tasks.Task<AddonCouponResponse> UpdateAddonCouponAsync (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
+        public async System.Threading.Tasks.Task<AddonCouponResponse> UpdateAddonCouponAsync (AddonCoupon body, long? addonId, long? couponId, List<string> with = null)
         {
              ApiResponse<AddonCouponResponse> localVarResponse = await UpdateAddonCouponAsyncWithHttpInfo(body, addonId, couponId, with);
              return localVarResponse.Data;
@@ -1094,9 +1094,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="couponId">Id of the coupon</param>
-        /// <param name="with">The relations you want to fetch with the AddonCoupon schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonCoupon&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonCouponResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> UpdateAddonCouponAsyncWithHttpInfo (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddonCouponResponse>> UpdateAddonCouponAsyncWithHttpInfo (AddonCoupon body, long? addonId, long? couponId, List<string> with = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)

@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
-**Active** | **bool?** |  | 
-**Name** | **string** |  | 
-**ShortDescription** | **string** |  | 
-**Description** | **string** |  | 
-**Requirements** | **List&lt;string&gt;** |  | 
-**Price** | [**AddonPrice**](AddonPrice.md) |  | 
-**Images** | [**AddonImages**](AddonImages.md) |  | 
-**Slug** | **string** |  | 
-**Route** | **string** |  | 
-**CreatedAt** | **DateTime?** |  | 
-**UpdatedAt** | **DateTime?** |  | 
+**Id** | **int?** |  | [optional] 
+**Active** | **bool?** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**ShortDescription** | **string** |  | [optional] 
+**Description** | **string** |  | [optional] 
+**Requirements** | **List&lt;string&gt;** |  | [optional] 
+**Price** | [**AddonPrice**](AddonPrice.md) |  | [optional] 
+**Images** | [**AddonImages**](AddonImages.md) |  | [optional] 
+**Slug** | **string** |  | [optional] 
+**Route** | **string** |  | [optional] 
+**CreatedAt** | **DateTime?** |  | [optional] 
+**UpdatedAt** | **DateTime?** |  | [optional] 
 **LatestVersion** | [**AddonVersion**](AddonVersion.md) |  | [optional] 
 **Team** | [**Team**](Team.md) |  | [optional] 
 

@@ -29,7 +29,7 @@ namespace Example
 
             var apiInstance = new TeamUsersApi();
             var teamId = 789;  // long? | Id of the team
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the TeamUser schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `TeamUser` (optional) 
 
             try
             {
@@ -51,7 +51,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **long?**| Id of the team | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the TeamUser schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;TeamUser&#x60; | [optional] 
 
 ### Return type
 

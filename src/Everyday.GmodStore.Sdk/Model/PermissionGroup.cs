@@ -32,38 +32,14 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionGroup" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="title">title (required).</param>
-        /// <param name="displayOrder">displayOrder (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="title">title.</param>
+        /// <param name="displayOrder">displayOrder.</param>
         public PermissionGroup(int? id = default(int?), string title = default(string), int? displayOrder = default(int?))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for PermissionGroup and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "title" is required (not null)
-            if (title == null)
-            {
-                throw new InvalidDataException("title is a required property for PermissionGroup and cannot be null");
-            }
-            else
-            {
-                this.Title = title;
-            }
-            // to ensure "displayOrder" is required (not null)
-            if (displayOrder == null)
-            {
-                throw new InvalidDataException("displayOrder is a required property for PermissionGroup and cannot be null");
-            }
-            else
-            {
-                this.DisplayOrder = displayOrder;
-            }
+            this.Id = id;
+            this.Title = title;
+            this.DisplayOrder = displayOrder;
         }
         
         /// <summary>

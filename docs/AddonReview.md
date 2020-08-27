@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
-**Title** | **string** |  | 
-**Version** | **string** |  | 
-**Body** | **string** |  | 
-**Rating** | [**decimal?**](BigDecimal.md) |  | 
+**Id** | **int?** |  | [optional] 
+**Title** | **string** |  | [optional] 
+**Version** | **string** |  | [optional] 
+**Body** | **string** |  | [optional] 
+**Rating** | [**decimal?**](BigDecimal.md) |  | [optional] 
 **Addon** | [**Addon**](Addon.md) |  | [optional] 
 **Author** | [**User**](User.md) |  | [optional] 
 

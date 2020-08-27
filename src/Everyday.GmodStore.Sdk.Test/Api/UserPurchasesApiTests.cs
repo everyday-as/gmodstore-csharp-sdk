@@ -69,7 +69,7 @@ namespace Everyday.GmodStore.Sdk.Test
         public void ListUserPurchasesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userId = null;
+            //long? userId = null;
             //List<string> with = null;
             //var response = instance.ListUserPurchases(userId, with);
             //Assert.IsInstanceOf<AddonPurchaseListResponse> (response, "response is AddonPurchaseListResponse");

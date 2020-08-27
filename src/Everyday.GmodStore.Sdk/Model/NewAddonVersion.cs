@@ -30,51 +30,18 @@ namespace Everyday.GmodStore.Sdk.Model
         public partial class NewAddonVersion :  IEquatable<NewAddonVersion>, IValidatableObject
     {
         /// <summary>
-        /// This can be a value of stable, beta, alpha, private or demo 
+        /// Gets or Sets ReleaseType
         /// </summary>
-        /// <value>This can be a value of stable, beta, alpha, private or demo </value>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum ReleaseTypeEnum
-        {
-            /// <summary>
-            /// Enum Stable for value: stable
-            /// </summary>
-            [EnumMember(Value = "stable")]
-            Stable = 0,
-            /// <summary>
-            /// Enum Beta for value: beta
-            /// </summary>
-            [EnumMember(Value = "beta")]
-            Beta = 1,
-            /// <summary>
-            /// Enum Alpha for value: alpha
-            /// </summary>
-            [EnumMember(Value = "alpha")]
-            Alpha = 2,
-            /// <summary>
-            /// Enum Private for value: private
-            /// </summary>
-            [EnumMember(Value = "private")]
-            Private = 3,
-            /// <summary>
-            /// Enum Demo for value: demo
-            /// </summary>
-            [EnumMember(Value = "demo")]
-            Demo = 4        }
-        /// <summary>
-        /// This can be a value of stable, beta, alpha, private or demo 
-        /// </summary>
-        /// <value>This can be a value of stable, beta, alpha, private or demo </value>
         [DataMember(Name="release_type", EmitDefaultValue=false)]
-        public ReleaseTypeEnum? ReleaseType { get; set; }
+        public AddonVersionReleaseType? ReleaseType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="NewAddonVersion" /> class.
         /// </summary>
         /// <param name="name">name (required).</param>
-        /// <param name="changelog">You can pass in markdown here  (required).</param>
+        /// <param name="changelog">You can pass in markdown here (required).</param>
         /// <param name="_file">_file (required).</param>
-        /// <param name="releaseType">This can be a value of stable, beta, alpha, private or demo .</param>
-        public NewAddonVersion(string name = default(string), string changelog = default(string), byte[] _file = default(byte[]), ReleaseTypeEnum? releaseType = default(ReleaseTypeEnum?))
+        /// <param name="releaseType">releaseType.</param>
+        public NewAddonVersion(string name = default(string), string changelog = default(string), byte[] _file = default(byte[]), AddonVersionReleaseType? releaseType = default(AddonVersionReleaseType?))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -113,9 +80,9 @@ namespace Everyday.GmodStore.Sdk.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// You can pass in markdown here 
+        /// You can pass in markdown here
         /// </summary>
-        /// <value>You can pass in markdown here </value>
+        /// <value>You can pass in markdown here</value>
         [DataMember(Name="changelog", EmitDefaultValue=false)]
         public string Changelog { get; set; }
 

@@ -33,7 +33,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>BadgeResponse</returns>
-        BadgeResponse CreateUserBadge (NewUserBadge body, string userId);
+        BadgeResponse CreateUserBadge (UserBadge body, long? userId);
 
         /// <summary>
         /// Give a user a badge
@@ -45,7 +45,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of BadgeResponse</returns>
-        ApiResponse<BadgeResponse> CreateUserBadgeWithHttpInfo (NewUserBadge body, string userId);
+        ApiResponse<BadgeResponse> CreateUserBadgeWithHttpInfo (UserBadge body, long? userId);
         /// <summary>
         /// Destroy a users&#x27;s badge
         /// </summary>
@@ -56,7 +56,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns></returns>
-        void DeleteUserBadge (string userId, long? badgeId);
+        void DeleteUserBadge (long? userId, long? badgeId);
 
         /// <summary>
         /// Destroy a users&#x27;s badge
@@ -68,7 +68,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUserBadgeWithHttpInfo (string userId, long? badgeId);
+        ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long? userId, long? badgeId);
         /// <summary>
         /// Fetch all the badges a user has
         /// </summary>
@@ -78,7 +78,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>BadgeListResponse</returns>
-        BadgeListResponse ListUserBadges (string userId);
+        BadgeListResponse ListUserBadges (long? userId);
 
         /// <summary>
         /// Fetch all the badges a user has
@@ -89,7 +89,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of BadgeListResponse</returns>
-        ApiResponse<BadgeListResponse> ListUserBadgesWithHttpInfo (string userId);
+        ApiResponse<BadgeListResponse> ListUserBadgesWithHttpInfo (long? userId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -102,7 +102,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of BadgeResponse</returns>
-        System.Threading.Tasks.Task<BadgeResponse> CreateUserBadgeAsync (NewUserBadge body, string userId);
+        System.Threading.Tasks.Task<BadgeResponse> CreateUserBadgeAsync (UserBadge body, long? userId);
 
         /// <summary>
         /// Give a user a badge
@@ -114,7 +114,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (BadgeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BadgeResponse>> CreateUserBadgeAsyncWithHttpInfo (NewUserBadge body, string userId);
+        System.Threading.Tasks.Task<ApiResponse<BadgeResponse>> CreateUserBadgeAsyncWithHttpInfo (UserBadge body, long? userId);
         /// <summary>
         /// Destroy a users&#x27;s badge
         /// </summary>
@@ -125,7 +125,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUserBadgeAsync (string userId, long? badgeId);
+        System.Threading.Tasks.Task DeleteUserBadgeAsync (long? userId, long? badgeId);
 
         /// <summary>
         /// Destroy a users&#x27;s badge
@@ -137,7 +137,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (string userId, long? badgeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long? userId, long? badgeId);
         /// <summary>
         /// Fetch all the badges a user has
         /// </summary>
@@ -147,7 +147,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of BadgeListResponse</returns>
-        System.Threading.Tasks.Task<BadgeListResponse> ListUserBadgesAsync (string userId);
+        System.Threading.Tasks.Task<BadgeListResponse> ListUserBadgesAsync (long? userId);
 
         /// <summary>
         /// Fetch all the badges a user has
@@ -158,7 +158,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (BadgeListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BadgeListResponse>> ListUserBadgesAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<BadgeListResponse>> ListUserBadgesAsyncWithHttpInfo (long? userId);
         #endregion Asynchronous Operations
     }
 
@@ -277,7 +277,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>BadgeResponse</returns>
-        public BadgeResponse CreateUserBadge (NewUserBadge body, string userId)
+        public BadgeResponse CreateUserBadge (UserBadge body, long? userId)
         {
              ApiResponse<BadgeResponse> localVarResponse = CreateUserBadgeWithHttpInfo(body, userId);
              return localVarResponse.Data;
@@ -290,7 +290,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of BadgeResponse</returns>
-        public ApiResponse< BadgeResponse > CreateUserBadgeWithHttpInfo (NewUserBadge body, string userId)
+        public ApiResponse< BadgeResponse > CreateUserBadgeWithHttpInfo (UserBadge body, long? userId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -357,7 +357,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of BadgeResponse</returns>
-        public async System.Threading.Tasks.Task<BadgeResponse> CreateUserBadgeAsync (NewUserBadge body, string userId)
+        public async System.Threading.Tasks.Task<BadgeResponse> CreateUserBadgeAsync (UserBadge body, long? userId)
         {
              ApiResponse<BadgeResponse> localVarResponse = await CreateUserBadgeAsyncWithHttpInfo(body, userId);
              return localVarResponse.Data;
@@ -371,7 +371,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="body"></param>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (BadgeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BadgeResponse>> CreateUserBadgeAsyncWithHttpInfo (NewUserBadge body, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<BadgeResponse>> CreateUserBadgeAsyncWithHttpInfo (UserBadge body, long? userId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -438,7 +438,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns></returns>
-        public void DeleteUserBadge (string userId, long? badgeId)
+        public void DeleteUserBadge (long? userId, long? badgeId)
         {
              DeleteUserBadgeWithHttpInfo(userId, badgeId);
         }
@@ -450,7 +450,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteUserBadgeWithHttpInfo (string userId, long? badgeId)
+        public ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long? userId, long? badgeId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -509,7 +509,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUserBadgeAsync (string userId, long? badgeId)
+        public async System.Threading.Tasks.Task DeleteUserBadgeAsync (long? userId, long? badgeId)
         {
              await DeleteUserBadgeAsyncWithHttpInfo(userId, badgeId);
 
@@ -522,7 +522,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (string userId, long? badgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long? userId, long? badgeId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -580,7 +580,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>BadgeListResponse</returns>
-        public BadgeListResponse ListUserBadges (string userId)
+        public BadgeListResponse ListUserBadges (long? userId)
         {
              ApiResponse<BadgeListResponse> localVarResponse = ListUserBadgesWithHttpInfo(userId);
              return localVarResponse.Data;
@@ -592,7 +592,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>ApiResponse of BadgeListResponse</returns>
-        public ApiResponse< BadgeListResponse > ListUserBadgesWithHttpInfo (string userId)
+        public ApiResponse< BadgeListResponse > ListUserBadgesWithHttpInfo (long? userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -646,7 +646,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of BadgeListResponse</returns>
-        public async System.Threading.Tasks.Task<BadgeListResponse> ListUserBadgesAsync (string userId)
+        public async System.Threading.Tasks.Task<BadgeListResponse> ListUserBadgesAsync (long? userId)
         {
              ApiResponse<BadgeListResponse> localVarResponse = await ListUserBadgesAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
@@ -659,7 +659,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <returns>Task of ApiResponse (BadgeListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BadgeListResponse>> ListUserBadgesAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<BadgeListResponse>> ListUserBadgesAsyncWithHttpInfo (long? userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

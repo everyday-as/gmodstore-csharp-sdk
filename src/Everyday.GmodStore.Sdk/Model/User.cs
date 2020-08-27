@@ -30,129 +30,23 @@ namespace Everyday.GmodStore.Sdk.Model
         public partial class User :  IEquatable<User>, IValidatableObject
     {
         /// <summary>
-        /// Defines BanProperties
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum BanPropertiesEnum
-        {
-            /// <summary>
-            /// Enum Everything for value: everything
-            /// </summary>
-            [EnumMember(Value = "everything")]
-            Everything = 0,
-            /// <summary>
-            /// Enum AddonCreate for value: addon.create
-            /// </summary>
-            [EnumMember(Value = "addon.create")]
-            AddonCreate = 1,
-            /// <summary>
-            /// Enum AddonPurchase for value: addon.purchase
-            /// </summary>
-            [EnumMember(Value = "addon.purchase")]
-            AddonPurchase = 2,
-            /// <summary>
-            /// Enum AddonDownload for value: addon.download
-            /// </summary>
-            [EnumMember(Value = "addon.download")]
-            AddonDownload = 3,
-            /// <summary>
-            /// Enum AddonReview for value: addon.review
-            /// </summary>
-            [EnumMember(Value = "addon.review")]
-            AddonReview = 4,
-            /// <summary>
-            /// Enum AddonComment for value: addon.comment
-            /// </summary>
-            [EnumMember(Value = "addon.comment")]
-            AddonComment = 5,
-            /// <summary>
-            /// Enum JobCreate for value: job.create
-            /// </summary>
-            [EnumMember(Value = "job.create")]
-            JobCreate = 6,
-            /// <summary>
-            /// Enum JobApply for value: job.apply
-            /// </summary>
-            [EnumMember(Value = "job.apply")]
-            JobApply = 7,
-            /// <summary>
-            /// Enum JobReview for value: job.review
-            /// </summary>
-            [EnumMember(Value = "job.review")]
-            JobReview = 8,
-            /// <summary>
-            /// Enum JobComment for value: job.comment
-            /// </summary>
-            [EnumMember(Value = "job.comment")]
-            JobComment = 9,
-            /// <summary>
-            /// Enum BanAppeal for value: ban.appeal
-            /// </summary>
-            [EnumMember(Value = "ban.appeal")]
-            BanAppeal = 10        }
-        /// <summary>
-        /// Gets or Sets BanProperties
-        /// </summary>
-        [DataMember(Name="ban_properties", EmitDefaultValue=false)]
-        public List<BanPropertiesEnum> BanProperties { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="avatar">avatar (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
+        /// <param name="avatar">avatar.</param>
         /// <param name="countryCode">countryCode.</param>
-        /// <param name="slug">slug (required).</param>
-        /// <param name="banProperties">banProperties (required).</param>
+        /// <param name="slug">slug.</param>
+        /// <param name="banProperties">banProperties.</param>
         /// <param name="group">group.</param>
-        public User(string id = default(string), string name = default(string), string avatar = default(string), string countryCode = default(string), string slug = default(string), List<BanPropertiesEnum> banProperties = default(List<BanPropertiesEnum>), PermissionGroup group = default(PermissionGroup))
+        public User(long? id = default(long?), string name = default(string), string avatar = default(string), string countryCode = default(string), string slug = default(string), UserBanProperties banProperties = default(UserBanProperties), PermissionGroup group = default(PermissionGroup))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for User and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for User and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            // to ensure "avatar" is required (not null)
-            if (avatar == null)
-            {
-                throw new InvalidDataException("avatar is a required property for User and cannot be null");
-            }
-            else
-            {
-                this.Avatar = avatar;
-            }
-            // to ensure "slug" is required (not null)
-            if (slug == null)
-            {
-                throw new InvalidDataException("slug is a required property for User and cannot be null");
-            }
-            else
-            {
-                this.Slug = slug;
-            }
-            // to ensure "banProperties" is required (not null)
-            if (banProperties == null)
-            {
-                throw new InvalidDataException("banProperties is a required property for User and cannot be null");
-            }
-            else
-            {
-                this.BanProperties = banProperties;
-            }
+            this.Id = id;
+            this.Name = name;
+            this.Avatar = avatar;
             this.CountryCode = countryCode;
+            this.Slug = slug;
+            this.BanProperties = banProperties;
             this.Group = group;
         }
         
@@ -160,7 +54,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public long? Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -186,6 +80,11 @@ namespace Everyday.GmodStore.Sdk.Model
         [DataMember(Name="slug", EmitDefaultValue=false)]
         public string Slug { get; set; }
 
+        /// <summary>
+        /// Gets or Sets BanProperties
+        /// </summary>
+        [DataMember(Name="ban_properties", EmitDefaultValue=false)]
+        public UserBanProperties BanProperties { get; set; }
 
         /// <summary>
         /// Gets or Sets Group
@@ -269,9 +168,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 ) && 
                 (
                     this.BanProperties == input.BanProperties ||
-                    this.BanProperties != null &&
-                    input.BanProperties != null &&
-                    this.BanProperties.SequenceEqual(input.BanProperties)
+                    (this.BanProperties != null &&
+                    this.BanProperties.Equals(input.BanProperties))
                 ) && 
                 (
                     this.Group == input.Group ||

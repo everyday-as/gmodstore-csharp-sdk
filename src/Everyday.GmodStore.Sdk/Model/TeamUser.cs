@@ -32,29 +32,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamUser" /> class.
         /// </summary>
-        /// <param name="teamId">teamId (required).</param>
-        /// <param name="primary">primary (required).</param>
+        /// <param name="teamId">teamId.</param>
+        /// <param name="primary">primary.</param>
         /// <param name="user">user.</param>
         public TeamUser(int? teamId = default(int?), bool? primary = default(bool?), User user = default(User))
         {
-            // to ensure "teamId" is required (not null)
-            if (teamId == null)
-            {
-                throw new InvalidDataException("teamId is a required property for TeamUser and cannot be null");
-            }
-            else
-            {
-                this.TeamId = teamId;
-            }
-            // to ensure "primary" is required (not null)
-            if (primary == null)
-            {
-                throw new InvalidDataException("primary is a required property for TeamUser and cannot be null");
-            }
-            else
-            {
-                this.Primary = primary;
-            }
+            this.TeamId = teamId;
+            this.Primary = primary;
             this.User = user;
         }
         

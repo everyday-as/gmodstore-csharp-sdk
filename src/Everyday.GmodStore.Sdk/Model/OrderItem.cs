@@ -32,29 +32,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderItem" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="price">price (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="price">price.</param>
         /// <param name="reversedAt">reversedAt.</param>
         public OrderItem(Guid? id = default(Guid?), Money price = default(Money), DateTime? reversedAt = default(DateTime?))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for OrderItem and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "price" is required (not null)
-            if (price == null)
-            {
-                throw new InvalidDataException("price is a required property for OrderItem and cannot be null");
-            }
-            else
-            {
-                this.Price = price;
-            }
+            this.Id = id;
+            this.Price = price;
             this.ReversedAt = reversedAt;
         }
         

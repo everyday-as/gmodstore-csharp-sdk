@@ -30,7 +30,7 @@ namespace Example
 
             var apiInstance = new AddonsApi();
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the Addon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -52,7 +52,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the Addon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 
@@ -90,7 +90,7 @@ namespace Example
         {
 
             var apiInstance = new AddonsApi();
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the Addon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -111,7 +111,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the Addon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 

@@ -35,9 +35,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
-        AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null);
+        AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create a new version for an addon
@@ -51,9 +51,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
-        ApiResponse<AddonVersionResponse> CreateAddonVersionWithHttpInfo (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null);
+        ApiResponse<AddonVersionResponse> CreateAddonVersionWithHttpInfo (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null);
         /// <summary>
         /// Generate a download token for a specific version of an addon
         /// </summary>
@@ -86,7 +86,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
         AddonVersionResponse GetAddonVersion (long? addonId, long? versionId, List<string> with = null);
 
@@ -99,7 +99,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
         ApiResponse<AddonVersionResponse> GetAddonVersionWithHttpInfo (long? addonId, long? versionId, List<string> with = null);
         /// <summary>
@@ -110,7 +110,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionListResponse</returns>
         AddonVersionListResponse ListAddonVersions (long? addonId, List<string> with = null);
 
@@ -122,7 +122,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionListResponse</returns>
         ApiResponse<AddonVersionListResponse> ListAddonVersionsWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
@@ -132,14 +132,20 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
-        AddonVersionResponse UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null);
+        AddonVersionResponse UpdateAddonVersion (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null);
 
         /// <summary>
         /// Update a version of an addon
@@ -148,14 +154,20 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
-        ApiResponse<AddonVersionResponse> UpdateAddonVersionWithHttpInfo (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null);
+        ApiResponse<AddonVersionResponse> UpdateAddonVersionWithHttpInfo (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -170,9 +182,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
-        System.Threading.Tasks.Task<AddonVersionResponse> CreateAddonVersionAsync (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<AddonVersionResponse> CreateAddonVersionAsync (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null);
 
         /// <summary>
         /// Create a new version for an addon
@@ -186,9 +198,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> CreateAddonVersionAsyncWithHttpInfo (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> CreateAddonVersionAsyncWithHttpInfo (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null);
         /// <summary>
         /// Generate a download token for a specific version of an addon
         /// </summary>
@@ -221,7 +233,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
         System.Threading.Tasks.Task<AddonVersionResponse> GetAddonVersionAsync (long? addonId, long? versionId, List<string> with = null);
 
@@ -234,7 +246,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> GetAddonVersionAsyncWithHttpInfo (long? addonId, long? versionId, List<string> with = null);
         /// <summary>
@@ -245,7 +257,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionListResponse</returns>
         System.Threading.Tasks.Task<AddonVersionListResponse> ListAddonVersionsAsync (long? addonId, List<string> with = null);
 
@@ -257,7 +269,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddonVersionListResponse>> ListAddonVersionsAsyncWithHttpInfo (long? addonId, List<string> with = null);
         /// <summary>
@@ -267,14 +279,20 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
-        System.Threading.Tasks.Task<AddonVersionResponse> UpdateAddonVersionAsync (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null);
+        System.Threading.Tasks.Task<AddonVersionResponse> UpdateAddonVersionAsync (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null);
 
         /// <summary>
         /// Update a version of an addon
@@ -283,14 +301,20 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> UpdateAddonVersionAsyncWithHttpInfo (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> UpdateAddonVersionAsyncWithHttpInfo (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -411,9 +435,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
-        public AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+        public AddonVersionResponse CreateAddonVersion (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
         {
              ApiResponse<AddonVersionResponse> localVarResponse = CreateAddonVersionWithHttpInfo(name, changelog, _file, releaseType, addonId, with);
              return localVarResponse.Data;
@@ -428,9 +452,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
-        public ApiResponse< AddonVersionResponse > CreateAddonVersionWithHttpInfo (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+        public ApiResponse< AddonVersionResponse > CreateAddonVersionWithHttpInfo (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -505,9 +529,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
-        public async System.Threading.Tasks.Task<AddonVersionResponse> CreateAddonVersionAsync (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<AddonVersionResponse> CreateAddonVersionAsync (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
         {
              ApiResponse<AddonVersionResponse> localVarResponse = await CreateAddonVersionAsyncWithHttpInfo(name, changelog, _file, releaseType, addonId, with);
              return localVarResponse.Data;
@@ -523,9 +547,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="_file"></param>
         /// <param name="releaseType"></param>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> CreateAddonVersionAsyncWithHttpInfo (string name, string changelog, byte[] _file, string releaseType, long? addonId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> CreateAddonVersionAsyncWithHttpInfo (string name, string changelog, byte[] _file, AddonVersionReleaseType releaseType, long? addonId, List<string> with = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -742,7 +766,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
         public AddonVersionResponse GetAddonVersion (long? addonId, long? versionId, List<string> with = null)
         {
@@ -756,7 +780,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
         public ApiResponse< AddonVersionResponse > GetAddonVersionWithHttpInfo (long? addonId, long? versionId, List<string> with = null)
         {
@@ -817,7 +841,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
         public async System.Threading.Tasks.Task<AddonVersionResponse> GetAddonVersionAsync (long? addonId, long? versionId, List<string> with = null)
         {
@@ -832,7 +856,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> GetAddonVersionAsyncWithHttpInfo (long? addonId, long? versionId, List<string> with = null)
         {
@@ -892,7 +916,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionListResponse</returns>
         public AddonVersionListResponse ListAddonVersions (long? addonId, List<string> with = null)
         {
@@ -905,7 +929,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionListResponse</returns>
         public ApiResponse< AddonVersionListResponse > ListAddonVersionsWithHttpInfo (long? addonId, List<string> with = null)
         {
@@ -961,7 +985,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionListResponse</returns>
         public async System.Threading.Tasks.Task<AddonVersionListResponse> ListAddonVersionsAsync (long? addonId, List<string> with = null)
         {
@@ -975,7 +999,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionListResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AddonVersionListResponse>> ListAddonVersionsAsyncWithHttpInfo (long? addonId, List<string> with = null)
         {
@@ -1030,16 +1054,22 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Update a version of an addon 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>AddonVersionResponse</returns>
-        public AddonVersionResponse UpdateAddonVersion (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+        public AddonVersionResponse UpdateAddonVersion (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
         {
-             ApiResponse<AddonVersionResponse> localVarResponse = UpdateAddonVersionWithHttpInfo(name, changelog, releaseType, addonId, versionId, with);
+             ApiResponse<AddonVersionResponse> localVarResponse = UpdateAddonVersionWithHttpInfo(id, name, changelog, fileHash, fileSize, releaseType, createdAt, updatedAt, addon, addonId, versionId, with);
              return localVarResponse.Data;
         }
 
@@ -1047,24 +1077,48 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Update a version of an addon 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonVersionResponse</returns>
-        public ApiResponse< AddonVersionResponse > UpdateAddonVersionWithHttpInfo (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+        public ApiResponse< AddonVersionResponse > UpdateAddonVersionWithHttpInfo (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'changelog' is set
             if (changelog == null)
                 throw new ApiException(400, "Missing required parameter 'changelog' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'fileHash' is set
+            if (fileHash == null)
+                throw new ApiException(400, "Missing required parameter 'fileHash' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'fileSize' is set
+            if (fileSize == null)
+                throw new ApiException(400, "Missing required parameter 'fileSize' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'releaseType' is set
             if (releaseType == null)
                 throw new ApiException(400, "Missing required parameter 'releaseType' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'createdAt' is set
+            if (createdAt == null)
+                throw new ApiException(400, "Missing required parameter 'createdAt' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'updatedAt' is set
+            if (updatedAt == null)
+                throw new ApiException(400, "Missing required parameter 'updatedAt' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'addon' is set
+            if (addon == null)
+                throw new ApiException(400, "Missing required parameter 'addon' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
                 throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonVersionsApi->UpdateAddonVersion");
@@ -1097,9 +1151,15 @@ namespace Everyday.GmodStore.Sdk.Api
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (versionId != null) localVarPathParams.Add("version_id", this.Configuration.ApiClient.ParameterToString(versionId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (id != null) localVarFormParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // form parameter
             if (name != null) localVarFormParams.Add("name", this.Configuration.ApiClient.ParameterToString(name)); // form parameter
             if (changelog != null) localVarFormParams.Add("changelog", this.Configuration.ApiClient.ParameterToString(changelog)); // form parameter
+            if (fileHash != null) localVarFormParams.Add("file_hash", this.Configuration.ApiClient.ParameterToString(fileHash)); // form parameter
+            if (fileSize != null) localVarFormParams.Add("file_size", this.Configuration.ApiClient.ParameterToString(fileSize)); // form parameter
             if (releaseType != null) localVarFormParams.Add("release_type", this.Configuration.ApiClient.ParameterToString(releaseType)); // form parameter
+            if (createdAt != null) localVarFormParams.Add("created_at", this.Configuration.ApiClient.ParameterToString(createdAt)); // form parameter
+            if (updatedAt != null) localVarFormParams.Add("updated_at", this.Configuration.ApiClient.ParameterToString(updatedAt)); // form parameter
+            if (addon != null) localVarFormParams.Add("addon", this.Configuration.ApiClient.ParameterToString(addon)); // form parameter
             // authentication (bearerAuth) required
 
             // make the HTTP request
@@ -1124,16 +1184,22 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Update a version of an addon 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of AddonVersionResponse</returns>
-        public async System.Threading.Tasks.Task<AddonVersionResponse> UpdateAddonVersionAsync (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+        public async System.Threading.Tasks.Task<AddonVersionResponse> UpdateAddonVersionAsync (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
         {
-             ApiResponse<AddonVersionResponse> localVarResponse = await UpdateAddonVersionAsyncWithHttpInfo(name, changelog, releaseType, addonId, versionId, with);
+             ApiResponse<AddonVersionResponse> localVarResponse = await UpdateAddonVersionAsyncWithHttpInfo(id, name, changelog, fileHash, fileSize, releaseType, createdAt, updatedAt, addon, addonId, versionId, with);
              return localVarResponse.Data;
 
         }
@@ -1142,24 +1208,48 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Update a version of an addon 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="changelog"></param>
+        /// <param name="fileHash"></param>
+        /// <param name="fileSize"></param>
         /// <param name="releaseType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="addon"></param>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="versionId">Id of the version</param>
-        /// <param name="with">The relations you want to fetch with the AddonVersion schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;AddonVersion&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonVersionResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> UpdateAddonVersionAsyncWithHttpInfo (string name, string changelog, string releaseType, long? addonId, long? versionId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddonVersionResponse>> UpdateAddonVersionAsyncWithHttpInfo (int? id, string name, string changelog, string fileHash, int? fileSize, AddonVersionReleaseType releaseType, DateTime? createdAt, DateTime? updatedAt, Addon addon, long? addonId, long? versionId, List<string> with = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'changelog' is set
             if (changelog == null)
                 throw new ApiException(400, "Missing required parameter 'changelog' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'fileHash' is set
+            if (fileHash == null)
+                throw new ApiException(400, "Missing required parameter 'fileHash' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'fileSize' is set
+            if (fileSize == null)
+                throw new ApiException(400, "Missing required parameter 'fileSize' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'releaseType' is set
             if (releaseType == null)
                 throw new ApiException(400, "Missing required parameter 'releaseType' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'createdAt' is set
+            if (createdAt == null)
+                throw new ApiException(400, "Missing required parameter 'createdAt' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'updatedAt' is set
+            if (updatedAt == null)
+                throw new ApiException(400, "Missing required parameter 'updatedAt' when calling AddonVersionsApi->UpdateAddonVersion");
+            // verify the required parameter 'addon' is set
+            if (addon == null)
+                throw new ApiException(400, "Missing required parameter 'addon' when calling AddonVersionsApi->UpdateAddonVersion");
             // verify the required parameter 'addonId' is set
             if (addonId == null)
                 throw new ApiException(400, "Missing required parameter 'addonId' when calling AddonVersionsApi->UpdateAddonVersion");
@@ -1192,9 +1282,15 @@ namespace Everyday.GmodStore.Sdk.Api
             if (addonId != null) localVarPathParams.Add("addon_id", this.Configuration.ApiClient.ParameterToString(addonId)); // path parameter
             if (versionId != null) localVarPathParams.Add("version_id", this.Configuration.ApiClient.ParameterToString(versionId)); // path parameter
             if (with != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("csv", "with", with)); // query parameter
+            if (id != null) localVarFormParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // form parameter
             if (name != null) localVarFormParams.Add("name", this.Configuration.ApiClient.ParameterToString(name)); // form parameter
             if (changelog != null) localVarFormParams.Add("changelog", this.Configuration.ApiClient.ParameterToString(changelog)); // form parameter
+            if (fileHash != null) localVarFormParams.Add("file_hash", this.Configuration.ApiClient.ParameterToString(fileHash)); // form parameter
+            if (fileSize != null) localVarFormParams.Add("file_size", this.Configuration.ApiClient.ParameterToString(fileSize)); // form parameter
             if (releaseType != null) localVarFormParams.Add("release_type", this.Configuration.ApiClient.ParameterToString(releaseType)); // form parameter
+            if (createdAt != null) localVarFormParams.Add("created_at", this.Configuration.ApiClient.ParameterToString(createdAt)); // form parameter
+            if (updatedAt != null) localVarFormParams.Add("updated_at", this.Configuration.ApiClient.ParameterToString(updatedAt)); // form parameter
+            if (addon != null) localVarFormParams.Add("addon", this.Configuration.ApiClient.ParameterToString(addon)); // form parameter
             // authentication (bearerAuth) required
 
             // make the HTTP request

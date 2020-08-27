@@ -80,7 +80,7 @@ namespace Everyday.GmodStore.Sdk.Test
         public void GetUserTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userId = null;
+            //long? userId = null;
             //List<string> with = null;
             //var response = instance.GetUser(userId, with);
             //Assert.IsInstanceOf<UserResponse> (response, "response is UserResponse");

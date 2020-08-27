@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserteams"></a>
 # **ListUserTeams**
-> TeamListResponse ListUserTeams (string userId, List<string> with = null)
+> TeamListResponse ListUserTeams (long? userId, List<string> with = null)
 
 Fetch all the teams of a user
 
@@ -28,8 +28,8 @@ namespace Example
         {
 
             var apiInstance = new UserTeamsApi();
-            var userId = userId_example;  // string | Id of the user
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the Team schema (optional) 
+            var userId = 789;  // long? | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Team` (optional) 
 
             try
             {
@@ -50,8 +50,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the Team schema | [optional] 
+ **userId** | **long?**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Team&#x60; | [optional] 
 
 ### Return type
 

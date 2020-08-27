@@ -33,12 +33,10 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Initializes a new instance of the <see cref="AddonPurchase" /> class.
         /// </summary>
         /// <param name="revoked">revoked (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="addon">addon.</param>
         /// <param name="orderItem">orderItem.</param>
         /// <param name="user">user.</param>
-        public AddonPurchase(bool? revoked = default(bool?), DateTime? createdAt = default(DateTime?), int? updatedAt = default(int?), Addon addon = default(Addon), OrderItem orderItem = default(OrderItem), User user = default(User))
+        public AddonPurchase(bool? revoked = default(bool?), Addon addon = default(Addon), OrderItem orderItem = default(OrderItem), User user = default(User))
         {
             // to ensure "revoked" is required (not null)
             if (revoked == null)
@@ -48,24 +46,6 @@ namespace Everyday.GmodStore.Sdk.Model
             else
             {
                 this.Revoked = revoked;
-            }
-            // to ensure "createdAt" is required (not null)
-            if (createdAt == null)
-            {
-                throw new InvalidDataException("createdAt is a required property for AddonPurchase and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = createdAt;
-            }
-            // to ensure "updatedAt" is required (not null)
-            if (updatedAt == null)
-            {
-                throw new InvalidDataException("updatedAt is a required property for AddonPurchase and cannot be null");
-            }
-            else
-            {
-                this.UpdatedAt = updatedAt;
             }
             this.Addon = addon;
             this.OrderItem = orderItem;
@@ -82,13 +62,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public int? UpdatedAt { get; set; }
+        public int? UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets Addon

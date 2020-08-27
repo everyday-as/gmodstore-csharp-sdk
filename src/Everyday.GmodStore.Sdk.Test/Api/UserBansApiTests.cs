@@ -69,9 +69,9 @@ namespace Everyday.GmodStore.Sdk.Test
         public void ListUserBansTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userId = null;
+            //long? userId = null;
             //var response = instance.ListUserBans(userId);
-            //Assert.IsInstanceOf<BanListResponse> (response, "response is BanListResponse");
+            //Assert.IsInstanceOf<UserBanListResponse> (response, "response is UserBanListResponse");
         }
     }
 

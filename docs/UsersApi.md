@@ -29,7 +29,7 @@ namespace Example
         {
 
             var apiInstance = new UsersApi();
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the User schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `User` (optional) 
 
             try
             {
@@ -50,7 +50,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the User schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;User&#x60; | [optional] 
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getuser"></a>
 # **GetUser**
-> UserResponse GetUser (string userId, List<string> with = null)
+> UserResponse GetUser (long? userId, List<string> with = null)
 
 Fetch a single user
 
@@ -88,8 +88,8 @@ namespace Example
         {
 
             var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | Id of the user
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the User schema (optional) 
+            var userId = 789;  // long? | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `User` (optional) 
 
             try
             {
@@ -110,8 +110,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the User schema | [optional] 
+ **userId** | **long?**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;User&#x60; | [optional] 
 
 ### Return type
 

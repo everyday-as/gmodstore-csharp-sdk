@@ -30,7 +30,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>UserResponse</returns>
         UserResponse GetSelfUser (List<string> with = null);
 
@@ -41,7 +41,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>ApiResponse of UserResponse</returns>
         ApiResponse<UserResponse> GetSelfUserWithHttpInfo (List<string> with = null);
         /// <summary>
@@ -52,9 +52,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>UserResponse</returns>
-        UserResponse GetUser (string userId, List<string> with = null);
+        UserResponse GetUser (long? userId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single user
@@ -64,9 +64,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>ApiResponse of UserResponse</returns>
-        ApiResponse<UserResponse> GetUserWithHttpInfo (string userId, List<string> with = null);
+        ApiResponse<UserResponse> GetUserWithHttpInfo (long? userId, List<string> with = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -76,7 +76,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of UserResponse</returns>
         System.Threading.Tasks.Task<UserResponse> GetSelfUserAsync (List<string> with = null);
 
@@ -87,7 +87,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetSelfUserAsyncWithHttpInfo (List<string> with = null);
         /// <summary>
@@ -98,9 +98,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of UserResponse</returns>
-        System.Threading.Tasks.Task<UserResponse> GetUserAsync (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<UserResponse> GetUserAsync (long? userId, List<string> with = null);
 
         /// <summary>
         /// Fetch a single user
@@ -110,9 +110,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null);
+        System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (long? userId, List<string> with = null);
         #endregion Asynchronous Operations
     }
 
@@ -228,7 +228,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Fetches the current user (API Key Owner) 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>UserResponse</returns>
         public UserResponse GetSelfUser (List<string> with = null)
         {
@@ -240,7 +240,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Fetches the current user (API Key Owner) 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>ApiResponse of UserResponse</returns>
         public ApiResponse< UserResponse > GetSelfUserWithHttpInfo (List<string> with = null)
         {
@@ -291,7 +291,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Fetches the current user (API Key Owner) 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of UserResponse</returns>
         public async System.Threading.Tasks.Task<UserResponse> GetSelfUserAsync (List<string> with = null)
         {
@@ -304,7 +304,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Fetches the current user (API Key Owner) 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetSelfUserAsyncWithHttpInfo (List<string> with = null)
         {
@@ -356,9 +356,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>UserResponse</returns>
-        public UserResponse GetUser (string userId, List<string> with = null)
+        public UserResponse GetUser (long? userId, List<string> with = null)
         {
              ApiResponse<UserResponse> localVarResponse = GetUserWithHttpInfo(userId, with);
              return localVarResponse.Data;
@@ -369,9 +369,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>ApiResponse of UserResponse</returns>
-        public ApiResponse< UserResponse > GetUserWithHttpInfo (string userId, List<string> with = null)
+        public ApiResponse< UserResponse > GetUserWithHttpInfo (long? userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -425,9 +425,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of UserResponse</returns>
-        public async System.Threading.Tasks.Task<UserResponse> GetUserAsync (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<UserResponse> GetUserAsync (long? userId, List<string> with = null)
         {
              ApiResponse<UserResponse> localVarResponse = await GetUserAsyncWithHttpInfo(userId, with);
              return localVarResponse.Data;
@@ -439,9 +439,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the User schema (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (UserResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (string userId, List<string> with = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponse>> GetUserAsyncWithHttpInfo (long? userId, List<string> with = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

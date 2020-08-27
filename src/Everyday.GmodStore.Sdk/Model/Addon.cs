@@ -32,130 +32,26 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Addon" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="active">active (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="shortDescription">shortDescription (required).</param>
-        /// <param name="description">description (required).</param>
-        /// <param name="requirements">requirements (required).</param>
-        /// <param name="price">price (required).</param>
-        /// <param name="images">images (required).</param>
-        /// <param name="slug">slug (required).</param>
-        /// <param name="route">route (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
+        /// <param name="id">id.</param>
+        /// <param name="active">active.</param>
+        /// <param name="name">name.</param>
+        /// <param name="shortDescription">shortDescription.</param>
+        /// <param name="description">description.</param>
+        /// <param name="requirements">requirements.</param>
+        /// <param name="price">price.</param>
+        /// <param name="images">images.</param>
         /// <param name="latestVersion">latestVersion.</param>
         /// <param name="team">team.</param>
-        public Addon(int? id = default(int?), bool? active = default(bool?), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), string slug = default(string), string route = default(string), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team))
+        public Addon(int? id = default(int?), bool? active = default(bool?), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-            // to ensure "active" is required (not null)
-            if (active == null)
-            {
-                throw new InvalidDataException("active is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Active = active;
-            }
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            // to ensure "shortDescription" is required (not null)
-            if (shortDescription == null)
-            {
-                throw new InvalidDataException("shortDescription is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.ShortDescription = shortDescription;
-            }
-            // to ensure "description" is required (not null)
-            if (description == null)
-            {
-                throw new InvalidDataException("description is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Description = description;
-            }
-            // to ensure "requirements" is required (not null)
-            if (requirements == null)
-            {
-                throw new InvalidDataException("requirements is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Requirements = requirements;
-            }
-            // to ensure "price" is required (not null)
-            if (price == null)
-            {
-                throw new InvalidDataException("price is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Price = price;
-            }
-            // to ensure "images" is required (not null)
-            if (images == null)
-            {
-                throw new InvalidDataException("images is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Images = images;
-            }
-            // to ensure "slug" is required (not null)
-            if (slug == null)
-            {
-                throw new InvalidDataException("slug is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Slug = slug;
-            }
-            // to ensure "route" is required (not null)
-            if (route == null)
-            {
-                throw new InvalidDataException("route is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.Route = route;
-            }
-            // to ensure "createdAt" is required (not null)
-            if (createdAt == null)
-            {
-                throw new InvalidDataException("createdAt is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = createdAt;
-            }
-            // to ensure "updatedAt" is required (not null)
-            if (updatedAt == null)
-            {
-                throw new InvalidDataException("updatedAt is a required property for Addon and cannot be null");
-            }
-            else
-            {
-                this.UpdatedAt = updatedAt;
-            }
+            this.Id = id;
+            this.Active = active;
+            this.Name = name;
+            this.ShortDescription = shortDescription;
+            this.Description = description;
+            this.Requirements = requirements;
+            this.Price = price;
+            this.Images = images;
             this.LatestVersion = latestVersion;
             this.Team = team;
         }
@@ -212,25 +108,25 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Slug
         /// </summary>
         [DataMember(Name="slug", EmitDefaultValue=false)]
-        public string Slug { get; set; }
+        public string Slug { get; private set; }
 
         /// <summary>
         /// Gets or Sets Route
         /// </summary>
         [DataMember(Name="route", EmitDefaultValue=false)]
-        public string Route { get; set; }
+        public string Route { get; private set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets LatestVersion

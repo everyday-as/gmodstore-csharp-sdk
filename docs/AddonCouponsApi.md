@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="createaddoncoupon"></a>
 # **CreateAddonCoupon**
-> AddonCouponResponse CreateAddonCoupon (NewAddonCoupon body, long? addonId, List<string> with = null)
+> AddonCouponResponse CreateAddonCoupon (AddonCoupon body, long? addonId, List<string> with = null)
 
 Create an addon coupon
 
@@ -32,9 +32,9 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new NewAddonCoupon(); // NewAddonCoupon | 
+            var body = new AddonCoupon(); // AddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -55,9 +55,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**NewAddonCoupon**](NewAddonCoupon.md)|  | 
+ **body** | [**AddonCoupon**](AddonCoupon.md)|  | 
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -157,7 +157,7 @@ namespace Example
             var apiInstance = new AddonCouponsApi();
             var addonId = 789;  // long? | Id of the addon
             var couponId = 789;  // long? | Id of the coupon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
  **couponId** | **long?**| Id of the coupon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -219,7 +219,7 @@ namespace Example
 
             var apiInstance = new AddonCouponsApi();
             var addonId = 789;  // long? | Id of the addon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -241,7 +241,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long?**| Id of the addon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="updateaddoncoupon"></a>
 # **UpdateAddonCoupon**
-> AddonCouponResponse UpdateAddonCoupon (UpdateAddonCoupon body, long? addonId, long? couponId, List<string> with = null)
+> AddonCouponResponse UpdateAddonCoupon (AddonCoupon body, long? addonId, long? couponId, List<string> with = null)
 
 Update an addon's coupon
 
@@ -279,10 +279,10 @@ namespace Example
         {
 
             var apiInstance = new AddonCouponsApi();
-            var body = new UpdateAddonCoupon(); // UpdateAddonCoupon | 
+            var body = new AddonCoupon(); // AddonCoupon | 
             var addonId = 789;  // long? | Id of the addon
             var couponId = 789;  // long? | Id of the coupon
-            var with = new List<string>(); // List<string> | The relations you want to fetch with the AddonCoupon schema (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -303,10 +303,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateAddonCoupon**](UpdateAddonCoupon.md)|  | 
+ **body** | [**AddonCoupon**](AddonCoupon.md)|  | 
  **addonId** | **long?**| Id of the addon | 
  **couponId** | **long?**| Id of the coupon | 
- **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the AddonCoupon schema | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 

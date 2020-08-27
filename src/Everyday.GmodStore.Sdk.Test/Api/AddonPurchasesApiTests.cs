@@ -83,7 +83,7 @@ namespace Everyday.GmodStore.Sdk.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? addonId = null;
-            //string userId = null;
+            //long? userId = null;
             //List<string> with = null;
             //var response = instance.GetAddonPurchase(addonId, userId, with);
             //Assert.IsInstanceOf<AddonPurchaseResponse> (response, "response is AddonPurchaseResponse");
@@ -107,9 +107,9 @@ namespace Everyday.GmodStore.Sdk.Test
         public void UpdateAddonPurchaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UpdateAddonPurchase body = null;
+            //AddonPurchase body = null;
             //long? addonId = null;
-            //string userId = null;
+            //long? userId = null;
             //List<string> with = null;
             //var response = instance.UpdateAddonPurchase(body, addonId, userId, with);
             //Assert.IsInstanceOf<AddonPurchaseResponse> (response, "response is AddonPurchaseResponse");

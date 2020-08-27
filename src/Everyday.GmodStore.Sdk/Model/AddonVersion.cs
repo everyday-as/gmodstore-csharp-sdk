@@ -30,59 +30,19 @@ namespace Everyday.GmodStore.Sdk.Model
         public partial class AddonVersion :  IEquatable<AddonVersion>, IValidatableObject
     {
         /// <summary>
-        /// Defines ReleaseType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum ReleaseTypeEnum
-        {
-            /// <summary>
-            /// Enum Stable for value: stable
-            /// </summary>
-            [EnumMember(Value = "stable")]
-            Stable = 0,
-            /// <summary>
-            /// Enum Beta for value: beta
-            /// </summary>
-            [EnumMember(Value = "beta")]
-            Beta = 1,
-            /// <summary>
-            /// Enum Alpha for value: alpha
-            /// </summary>
-            [EnumMember(Value = "alpha")]
-            Alpha = 2,
-            /// <summary>
-            /// Enum Private for value: private
-            /// </summary>
-            [EnumMember(Value = "private")]
-            Private = 3        }
-        /// <summary>
         /// Gets or Sets ReleaseType
         /// </summary>
         [DataMember(Name="release_type", EmitDefaultValue=false)]
-        public ReleaseTypeEnum? ReleaseType { get; set; }
+        public AddonVersionReleaseType? ReleaseType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AddonVersion" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
         /// <param name="name">name (required).</param>
-        /// <param name="changelog">changelog (required).</param>
-        /// <param name="fileHash">fileHash (required).</param>
-        /// <param name="fileSize">fileSize (required).</param>
+        /// <param name="changelog">You can pass in markdown here (required).</param>
         /// <param name="releaseType">releaseType.</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="addon">addon.</param>
-        public AddonVersion(int? id = default(int?), string name = default(string), string changelog = default(string), string fileHash = default(string), int? fileSize = default(int?), ReleaseTypeEnum? releaseType = default(ReleaseTypeEnum?), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?), Addon addon = default(Addon))
+        public AddonVersion(string name = default(string), string changelog = default(string), AddonVersionReleaseType? releaseType = default(AddonVersionReleaseType?), Addon addon = default(Addon))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for AddonVersion and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
             // to ensure "name" is required (not null)
             if (name == null)
             {
@@ -101,42 +61,6 @@ namespace Everyday.GmodStore.Sdk.Model
             {
                 this.Changelog = changelog;
             }
-            // to ensure "fileHash" is required (not null)
-            if (fileHash == null)
-            {
-                throw new InvalidDataException("fileHash is a required property for AddonVersion and cannot be null");
-            }
-            else
-            {
-                this.FileHash = fileHash;
-            }
-            // to ensure "fileSize" is required (not null)
-            if (fileSize == null)
-            {
-                throw new InvalidDataException("fileSize is a required property for AddonVersion and cannot be null");
-            }
-            else
-            {
-                this.FileSize = fileSize;
-            }
-            // to ensure "createdAt" is required (not null)
-            if (createdAt == null)
-            {
-                throw new InvalidDataException("createdAt is a required property for AddonVersion and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = createdAt;
-            }
-            // to ensure "updatedAt" is required (not null)
-            if (updatedAt == null)
-            {
-                throw new InvalidDataException("updatedAt is a required property for AddonVersion and cannot be null");
-            }
-            else
-            {
-                this.UpdatedAt = updatedAt;
-            }
             this.ReleaseType = releaseType;
             this.Addon = addon;
         }
@@ -145,7 +69,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
+        public int? Id { get; private set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -154,8 +78,9 @@ namespace Everyday.GmodStore.Sdk.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Changelog
+        /// You can pass in markdown here
         /// </summary>
+        /// <value>You can pass in markdown here</value>
         [DataMember(Name="changelog", EmitDefaultValue=false)]
         public string Changelog { get; set; }
 
@@ -163,26 +88,26 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets FileHash
         /// </summary>
         [DataMember(Name="file_hash", EmitDefaultValue=false)]
-        public string FileHash { get; set; }
+        public string FileHash { get; private set; }
 
         /// <summary>
         /// Gets or Sets FileSize
         /// </summary>
         [DataMember(Name="file_size", EmitDefaultValue=false)]
-        public int? FileSize { get; set; }
+        public int? FileSize { get; private set; }
 
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets Addon

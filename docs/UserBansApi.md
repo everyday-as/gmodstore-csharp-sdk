@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="listuserbans"></a>
 # **ListUserBans**
-> BanListResponse ListUserBans (string userId)
+> UserBanListResponse ListUserBans (long? userId)
 
 Fetch all active bans associated with this user
 
@@ -28,12 +28,12 @@ namespace Example
         {
 
             var apiInstance = new UserBansApi();
-            var userId = userId_example;  // string | Id of the user
+            var userId = 789;  // long? | Id of the user
 
             try
             {
                 // Fetch all active bans associated with this user
-                BanListResponse result = apiInstance.ListUserBans(userId);
+                UserBanListResponse result = apiInstance.ListUserBans(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -49,11 +49,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string**| Id of the user | 
+ **userId** | **long?**| Id of the user | 
 
 ### Return type
 
-[**BanListResponse**](BanListResponse.md)
+[**UserBanListResponse**](UserBanListResponse.md)
 
 ### Authorization
 

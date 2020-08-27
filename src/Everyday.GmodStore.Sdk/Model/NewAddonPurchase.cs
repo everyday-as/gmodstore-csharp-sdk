@@ -33,7 +33,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Initializes a new instance of the <see cref="NewAddonPurchase" /> class.
         /// </summary>
         /// <param name="userId">userId (required).</param>
-        public NewAddonPurchase(string userId = default(string))
+        public NewAddonPurchase(long? userId = default(long?))
         {
             // to ensure "userId" is required (not null)
             if (userId == null)
@@ -50,7 +50,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="user_id", EmitDefaultValue=false)]
-        public string UserId { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
