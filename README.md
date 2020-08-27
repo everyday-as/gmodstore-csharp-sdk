@@ -185,13 +185,6 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-<a name="ApiKeyAuth"></a>
-### ApiKeyAuth
-
-- **Type**: API key
-- **API key parameter name**: Authorization
-- **Location**: HTTP header
-
 <a name="bearerAuth"></a>
 ### bearerAuth
 
