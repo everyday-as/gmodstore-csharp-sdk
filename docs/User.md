@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **Avatar** | **string** |  | [optional] 
 **CountryCode** | **string** |  | [optional] 
 **Slug** | **string** |  | [optional] 
+**Reputation** | **long?** |  | [optional] 
+**TeamReputation** | **long?** |  | [optional] 
 **BanProperties** | [**UserBanProperties**](UserBanProperties.md) |  | [optional] 
 **Group** | [**PermissionGroup**](PermissionGroup.md) |  | [optional] 
 

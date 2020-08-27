@@ -106,6 +106,22 @@ namespace Everyday.GmodStore.Sdk.Test
             // TODO unit test for the property 'Slug'
         }
         /// <summary>
+        /// Test the property 'Reputation'
+        /// </summary>
+        [Test]
+        public void ReputationTest()
+        {
+            // TODO unit test for the property 'Reputation'
+        }
+        /// <summary>
+        /// Test the property 'TeamReputation'
+        /// </summary>
+        [Test]
+        public void TeamReputationTest()
+        {
+            // TODO unit test for the property 'TeamReputation'
+        }
+        /// <summary>
         /// Test the property 'BanProperties'
         /// </summary>
         [Test]

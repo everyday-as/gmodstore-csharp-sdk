@@ -37,15 +37,19 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="avatar">avatar.</param>
         /// <param name="countryCode">countryCode.</param>
         /// <param name="slug">slug.</param>
+        /// <param name="reputation">reputation.</param>
+        /// <param name="teamReputation">teamReputation.</param>
         /// <param name="banProperties">banProperties.</param>
         /// <param name="group">group.</param>
-        public User(long? id = default(long?), string name = default(string), string avatar = default(string), string countryCode = default(string), string slug = default(string), UserBanProperties banProperties = default(UserBanProperties), PermissionGroup group = default(PermissionGroup))
+        public User(long? id = default(long?), string name = default(string), string avatar = default(string), string countryCode = default(string), string slug = default(string), long? reputation = default(long?), long? teamReputation = default(long?), UserBanProperties banProperties = default(UserBanProperties), PermissionGroup group = default(PermissionGroup))
         {
             this.Id = id;
             this.Name = name;
             this.Avatar = avatar;
             this.CountryCode = countryCode;
             this.Slug = slug;
+            this.Reputation = reputation;
+            this.TeamReputation = teamReputation;
             this.BanProperties = banProperties;
             this.Group = group;
         }
@@ -81,6 +85,18 @@ namespace Everyday.GmodStore.Sdk.Model
         public string Slug { get; set; }
 
         /// <summary>
+        /// Gets or Sets Reputation
+        /// </summary>
+        [DataMember(Name="reputation", EmitDefaultValue=false)]
+        public long? Reputation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TeamReputation
+        /// </summary>
+        [DataMember(Name="team_reputation", EmitDefaultValue=false)]
+        public long? TeamReputation { get; set; }
+
+        /// <summary>
         /// Gets or Sets BanProperties
         /// </summary>
         [DataMember(Name="ban_properties", EmitDefaultValue=false)]
@@ -105,6 +121,8 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("  Avatar: ").Append(Avatar).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  Slug: ").Append(Slug).Append("\n");
+            sb.Append("  Reputation: ").Append(Reputation).Append("\n");
+            sb.Append("  TeamReputation: ").Append(TeamReputation).Append("\n");
             sb.Append("  BanProperties: ").Append(BanProperties).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("}\n");
@@ -167,6 +185,16 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Slug.Equals(input.Slug))
                 ) && 
                 (
+                    this.Reputation == input.Reputation ||
+                    (this.Reputation != null &&
+                    this.Reputation.Equals(input.Reputation))
+                ) && 
+                (
+                    this.TeamReputation == input.TeamReputation ||
+                    (this.TeamReputation != null &&
+                    this.TeamReputation.Equals(input.TeamReputation))
+                ) && 
+                (
                     this.BanProperties == input.BanProperties ||
                     (this.BanProperties != null &&
                     this.BanProperties.Equals(input.BanProperties))
@@ -197,6 +225,10 @@ namespace Everyday.GmodStore.Sdk.Model
                     hashCode = hashCode * 59 + this.CountryCode.GetHashCode();
                 if (this.Slug != null)
                     hashCode = hashCode * 59 + this.Slug.GetHashCode();
+                if (this.Reputation != null)
+                    hashCode = hashCode * 59 + this.Reputation.GetHashCode();
+                if (this.TeamReputation != null)
+                    hashCode = hashCode * 59 + this.TeamReputation.GetHashCode();
                 if (this.BanProperties != null)
                     hashCode = hashCode * 59 + this.BanProperties.GetHashCode();
                 if (this.Group != null)
