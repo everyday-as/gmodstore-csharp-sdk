@@ -1,7 +1,7 @@
 /*
- * GmodStore
+ * GmodStore API
  *
- * Welcome to the GmodStore API! You can use our API to access Gmodstore API endpoints, which can be used interact with Gmodstore programmatically.
+ * Welcome to the GmodStore API! You can use our API to access GmodStore API endpoints, which can be used interact with GmodStore programmatically.
  *
  * The version of the OpenAPI document: 1.0.1
  *

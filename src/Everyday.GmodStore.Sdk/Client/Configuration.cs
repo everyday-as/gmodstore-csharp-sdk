@@ -1,7 +1,7 @@
 /*
- * GmodStore
+ * GmodStore API
  *
- * Welcome to the GmodStore API! You can use our API to access Gmodstore API endpoints, which can be used interact with Gmodstore programmatically.
+ * Welcome to the GmodStore API! You can use our API to access GmodStore API endpoints, which can be used interact with GmodStore programmatically.
  *
  * The version of the OpenAPI document: 1.0.1
  *
@@ -31,7 +31,7 @@ public class Configuration : IReadableConfiguration
 /// Version of the package.
 /// </summary>
 /// <value>Version of the package.</value>
-public const string Version = "1.0.0";
+public const string Version = "1.0.1";
 
 /// <summary>
 /// Identifier for ISO 8601 DateTime Format
@@ -96,7 +96,7 @@ private string _tempFolderPath = Path.GetTempPath();
 [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
 public Configuration()
 {
-	UserAgent = "OpenAPI-Generator/1.0.0/csharp";
+	UserAgent = "OpenAPI-Generator/1.0.1/csharp";
 	BasePath = "https://api.gmodstore.com/v2";
 	DefaultHeaders = new ConcurrentDictionary<string, string>();
 	ApiKey = new ConcurrentDictionary<string, string>();
@@ -365,7 +365,7 @@ public static String ToDebugReport()
 	String report = "C# SDK (Everyday.GmodStore.Sdk) Debug Report:\n";
 	report += "    OS: " + System.Runtime.InteropServices.RuntimeInformation.OSDescription + "\n";
 	report += "    Version of the API: 1.0.1\n";
-	report += "    SDK Package Version: 1.0.0\n";
+	report += "    SDK Package Version: 1.0.1\n";
 
 	return report;
 }
