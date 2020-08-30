@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *AddonVersionsApi* | [**UpdateAddonVersion**](docs/AddonVersionsApi.md#updateaddonversion) | **PUT** /addons/{addon_id}/versions/{version_id} | Update a version of an addon
 *AddonsApi* | [**GetAddon**](docs/AddonsApi.md#getaddon) | **GET** /addons/{addon_id} | Fetch a single addon
 *AddonsApi* | [**ListSelfAddons**](docs/AddonsApi.md#listselfaddons) | **GET** /addons | Fetch all the addons that you have access to
+*PermissionGroupsApi* | [**GetPermissionGroups**](docs/PermissionGroupsApi.md#getpermissiongroups) | **GET** /permission-groups | Fetches all available permission groups
 *TeamUsersApi* | [**ListTeamUsers**](docs/TeamUsersApi.md#listteamusers) | **GET** /teams/{team_id}/users | Fetch all the users in the given team
 *TeamsApi* | [**GetTeam**](docs/TeamsApi.md#getteam) | **GET** /teams/{team_id} | Fetch a single team
 *UserAddonsApi* | [**ListUserAddons**](docs/UserAddonsApi.md#listuseraddons) | **GET** /users/{user_id}/addons | Fetch all the addons authored / co-authored by a user
@@ -167,6 +168,7 @@ Class | Method | HTTP request | Description
  - [Model.NewAddonVersion](docs/NewAddonVersion.md)
  - [Model.OrderItem](docs/OrderItem.md)
  - [Model.PermissionGroup](docs/PermissionGroup.md)
+ - [Model.PermissionGroupListResponse](docs/PermissionGroupListResponse.md)
  - [Model.Team](docs/Team.md)
  - [Model.TeamListResponse](docs/TeamListResponse.md)
  - [Model.TeamResponse](docs/TeamResponse.md)
