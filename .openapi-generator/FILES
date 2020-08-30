@@ -66,9 +66,7 @@ docs/UserResponse.md
 docs/UserTeamsApi.md
 docs/UsersApi.md
 git_push.sh
-src/Everyday.GmodStore.Sdk.Test/Api/PermissionGroupsApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Everyday.GmodStore.Sdk.Test.csproj
-src/Everyday.GmodStore.Sdk.Test/Model/PermissionGroupListResponseTests.cs
 src/Everyday.GmodStore.Sdk/Api/AddonCouponsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonPurchasesApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonReviewsApi.cs

@@ -4,12 +4,12 @@ All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetPermissionGroups**](PermissionGroupsApi.md#getpermissiongroups) | **GET** /permission-groups | Fetches all available permission groups
+[**ListPermissionGroups**](PermissionGroupsApi.md#listpermissiongroups) | **GET** /permission-groups | Fetches all available permission groups
 
 
-<a name="getpermissiongroups"></a>
-# **GetPermissionGroups**
-> PermissionGroupListResponse GetPermissionGroups ()
+<a name="listpermissiongroups"></a>
+# **ListPermissionGroups**
+> PermissionGroupListResponse ListPermissionGroups ()
 
 Fetches all available permission groups
 
@@ -23,7 +23,7 @@ using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
-    public class GetPermissionGroupsExample
+    public class ListPermissionGroupsExample
     {
         public static void Main()
         {
@@ -37,12 +37,12 @@ namespace Example
             try
             {
                 // Fetches all available permission groups
-                PermissionGroupListResponse result = apiInstance.GetPermissionGroups();
+                PermissionGroupListResponse result = apiInstance.ListPermissionGroups();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PermissionGroupsApi.GetPermissionGroups: " + e.Message );
+                Debug.Print("Exception when calling PermissionGroupsApi.ListPermissionGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

@@ -35,7 +35,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PermissionGroupListResponse</returns>
-        PermissionGroupListResponse GetPermissionGroups ();
+        PermissionGroupListResponse ListPermissionGroups ();
 
         /// <summary>
         /// Fetches all available permission groups
@@ -45,7 +45,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PermissionGroupListResponse</returns>
-        ApiResponse<PermissionGroupListResponse> GetPermissionGroupsWithHttpInfo ();
+        ApiResponse<PermissionGroupListResponse> ListPermissionGroupsWithHttpInfo ();
         #endregion Synchronous Operations
     }
 
@@ -63,7 +63,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PermissionGroupListResponse</returns>
-        System.Threading.Tasks.Task<PermissionGroupListResponse> GetPermissionGroupsAsync ();
+        System.Threading.Tasks.Task<PermissionGroupListResponse> ListPermissionGroupsAsync ();
 
         /// <summary>
         /// Fetches all available permission groups
@@ -73,7 +73,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PermissionGroupListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PermissionGroupListResponse>> GetPermissionGroupsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<PermissionGroupListResponse>> ListPermissionGroupsAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -199,9 +199,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PermissionGroupListResponse</returns>
-        public PermissionGroupListResponse GetPermissionGroups ()
+        public PermissionGroupListResponse ListPermissionGroups ()
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse> localVarResponse = GetPermissionGroupsWithHttpInfo();
+             Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse> localVarResponse = ListPermissionGroupsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -210,7 +210,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PermissionGroupListResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse< PermissionGroupListResponse > GetPermissionGroupsWithHttpInfo ()
+        public Everyday.GmodStore.Sdk.Client.ApiResponse< PermissionGroupListResponse > ListPermissionGroupsWithHttpInfo ()
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -241,7 +241,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPermissionGroups", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPermissionGroups", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -253,9 +253,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PermissionGroupListResponse</returns>
-        public async System.Threading.Tasks.Task<PermissionGroupListResponse> GetPermissionGroupsAsync ()
+        public async System.Threading.Tasks.Task<PermissionGroupListResponse> ListPermissionGroupsAsync ()
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse> localVarResponse = await GetPermissionGroupsAsyncWithHttpInfo();
+             Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse> localVarResponse = await ListPermissionGroupsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -265,7 +265,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PermissionGroupListResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse>> GetPermissionGroupsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<PermissionGroupListResponse>> ListPermissionGroupsAsyncWithHttpInfo ()
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -298,7 +298,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPermissionGroups", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPermissionGroups", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
