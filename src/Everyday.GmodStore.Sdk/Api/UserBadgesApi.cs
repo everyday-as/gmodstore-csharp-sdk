@@ -60,7 +60,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns></returns>
-        void DeleteUserBadge (long userId, long badgeId);
+        void DeleteUserBadge (long userId, int badgeId);
 
         /// <summary>
         /// Destroy a users&#39;s badge
@@ -72,7 +72,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long userId, long badgeId);
+        ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long userId, int badgeId);
         /// <summary>
         /// Fetch all the badges a user has
         /// </summary>
@@ -136,7 +136,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUserBadgeAsync (long userId, long badgeId);
+        System.Threading.Tasks.Task DeleteUserBadgeAsync (long userId, int badgeId);
 
         /// <summary>
         /// Destroy a users&#39;s badge
@@ -148,7 +148,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long userId, long badgeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long userId, int badgeId);
         /// <summary>
         /// Fetch all the badges a user has
         /// </summary>
@@ -430,7 +430,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns></returns>
-        public void DeleteUserBadge (long userId, long badgeId)
+        public void DeleteUserBadge (long userId, int badgeId)
         {
              DeleteUserBadgeWithHttpInfo(userId, badgeId);
         }
@@ -442,7 +442,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long userId, long badgeId)
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<Object> DeleteUserBadgeWithHttpInfo (long userId, int badgeId)
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -489,7 +489,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUserBadgeAsync (long userId, long badgeId)
+        public async System.Threading.Tasks.Task DeleteUserBadgeAsync (long userId, int badgeId)
         {
              await DeleteUserBadgeAsyncWithHttpInfo(userId, badgeId);
 
@@ -502,7 +502,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="badgeId">Id of the badge</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long userId, long badgeId)
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<Object>> DeleteUserBadgeAsyncWithHttpInfo (long userId, int badgeId)
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();

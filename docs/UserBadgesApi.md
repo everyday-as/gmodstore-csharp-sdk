@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteuserbadge"></a>
 # **DeleteUserBadge**
-> void DeleteUserBadge (long userId, long badgeId)
+> void DeleteUserBadge (long userId, int badgeId)
 
 Destroy a users's badge
 
@@ -111,7 +111,7 @@ namespace Example
 
             var apiInstance = new UserBadgesApi(config);
             var userId = 789;  // long | Id of the user
-            var badgeId = 789;  // long | Id of the badge
+            var badgeId = 56;  // int | Id of the badge
 
             try
             {
@@ -134,7 +134,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **long**| Id of the user | 
- **badgeId** | **long**| Id of the badge | 
+ **badgeId** | **int**| Id of the badge | 
 
 ### Return type
 
