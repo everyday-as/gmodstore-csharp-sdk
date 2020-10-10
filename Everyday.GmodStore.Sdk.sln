@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everyday.GmodStore.Sdk", "src\Everyday.GmodStore.Sdk\Everyday.GmodStore.Sdk.csproj", "{02F18A53-635E-4B5C-9BBF-CD9937DC905B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everyday.GmodStore.Sdk", "src\Everyday.GmodStore.Sdk\Everyday.GmodStore.Sdk.csproj", "{8293BFC0-5538-4FE5-B0BD-99CA5AA13972}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everyday.GmodStore.Sdk.Test", "src\Everyday.GmodStore.Sdk.Test\Everyday.GmodStore.Sdk.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02F18A53-635E-4B5C-9BBF-CD9937DC905B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02F18A53-635E-4B5C-9BBF-CD9937DC905B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02F18A53-635E-4B5C-9BBF-CD9937DC905B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02F18A53-635E-4B5C-9BBF-CD9937DC905B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8293BFC0-5538-4FE5-B0BD-99CA5AA13972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8293BFC0-5538-4FE5-B0BD-99CA5AA13972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8293BFC0-5538-4FE5-B0BD-99CA5AA13972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8293BFC0-5538-4FE5-B0BD-99CA5AA13972}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
