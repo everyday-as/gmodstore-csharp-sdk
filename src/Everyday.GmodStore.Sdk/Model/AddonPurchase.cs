@@ -67,7 +67,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public int UpdatedAt { get; private set; }
+        public DateTime UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets Addon
@@ -146,7 +146,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 ) && 
                 (
                     this.UpdatedAt == input.UpdatedAt ||
-                    this.UpdatedAt.Equals(input.UpdatedAt)
+                    (this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(input.UpdatedAt))
                 ) && 
                 (
                     this.Addon == input.Addon ||
@@ -177,7 +178,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 hashCode = hashCode * 59 + this.Revoked.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
-                hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                if (this.UpdatedAt != null)
+                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
                 if (this.Addon != null)
                     hashCode = hashCode * 59 + this.Addon.GetHashCode();
                 if (this.OrderItem != null)

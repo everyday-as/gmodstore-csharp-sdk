@@ -37,14 +37,12 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="createdAt">createdAt.</param>
-        /// <param name="updatedAt">updatedAt.</param>
         /// <param name="primaryAuthor">primaryAuthor.</param>
-        public Team(int id = default(int), string name = default(string), DateTime createdAt = default(DateTime), DateTime updatedAt = default(DateTime), TeamUser primaryAuthor = default(TeamUser))
+        public Team(int id = default(int), string name = default(string), DateTime createdAt = default(DateTime), TeamUser primaryAuthor = default(TeamUser))
         {
             this.Id = id;
             this.Name = name;
             this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.PrimaryAuthor = primaryAuthor;
         }
         
@@ -70,7 +68,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; private set; }
 
         /// <summary>
         /// Gets or Sets PrimaryAuthor
