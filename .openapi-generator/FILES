@@ -35,6 +35,9 @@ docs/AddonVersionReleaseType.md
 docs/AddonVersionResponse.md
 docs/AddonVersionsApi.md
 docs/AddonsApi.md
+docs/AdventCalendarApi.md
+docs/AdventCalendarStats.md
+docs/AdventCalendarStatsResponse.md
 docs/BadgeListResponse.md
 docs/BadgeResponse.md
 docs/Error.md
@@ -67,14 +70,17 @@ docs/UserResponse.md
 docs/UserTeamsApi.md
 docs/UsersApi.md
 git_push.sh
-src/Everyday.GmodStore.Sdk.Test/Api/TeamAddonsApiTests.cs
+src/Everyday.GmodStore.Sdk.Test/Api/AdventCalendarApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Everyday.GmodStore.Sdk.Test.csproj
+src/Everyday.GmodStore.Sdk.Test/Model/AdventCalendarStatsResponseTests.cs
+src/Everyday.GmodStore.Sdk.Test/Model/AdventCalendarStatsTests.cs
 src/Everyday.GmodStore.Sdk/Api/AddonCouponsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonPurchasesApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonReviewsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonStatsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonVersionsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonsApi.cs
+src/Everyday.GmodStore.Sdk/Api/AdventCalendarApi.cs
 src/Everyday.GmodStore.Sdk/Api/PermissionGroupsApi.cs
 src/Everyday.GmodStore.Sdk/Api/TeamAddonsApi.cs
 src/Everyday.GmodStore.Sdk/Api/TeamUsersApi.cs
@@ -129,6 +135,8 @@ src/Everyday.GmodStore.Sdk/Model/AddonVersion.cs
 src/Everyday.GmodStore.Sdk/Model/AddonVersionListResponse.cs
 src/Everyday.GmodStore.Sdk/Model/AddonVersionReleaseType.cs
 src/Everyday.GmodStore.Sdk/Model/AddonVersionResponse.cs
+src/Everyday.GmodStore.Sdk/Model/AdventCalendarStats.cs
+src/Everyday.GmodStore.Sdk/Model/AdventCalendarStatsResponse.cs
 src/Everyday.GmodStore.Sdk/Model/BadgeListResponse.cs
 src/Everyday.GmodStore.Sdk/Model/BadgeResponse.cs
 src/Everyday.GmodStore.Sdk/Model/Error.cs
