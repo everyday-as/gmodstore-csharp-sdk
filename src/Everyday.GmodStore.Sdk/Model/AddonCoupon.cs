@@ -43,15 +43,19 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="percent">percent (required).</param>
         /// <param name="maxUses">maxUses (required).</param>
         /// <param name="expiresAt">A future date less than 2 weeks from today (required).</param>
+        /// <param name="boundUserId">boundUserId.</param>
         /// <param name="addon">addon.</param>
-        public AddonCoupon(string code = default(string), decimal percent = default(decimal), int maxUses = default(int), DateTime expiresAt = default(DateTime), Addon addon = default(Addon))
+        /// <param name="boundUser">boundUser.</param>
+        public AddonCoupon(string code = default(string), decimal percent = default(decimal), int maxUses = default(int), DateTime expiresAt = default(DateTime), long boundUserId = default(long), Addon addon = default(Addon), User boundUser = default(User))
         {
             // to ensure "code" is required (not null)
             this.Code = code ?? throw new ArgumentNullException("code is a required property for AddonCoupon and cannot be null");
             this.Percent = percent;
             this.MaxUses = maxUses;
             this.ExpiresAt = expiresAt;
+            this.BoundUserId = boundUserId;
             this.Addon = addon;
+            this.BoundUser = boundUser;
         }
         
         /// <summary>
@@ -86,6 +90,12 @@ namespace Everyday.GmodStore.Sdk.Model
         public DateTime ExpiresAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets BoundUserId
+        /// </summary>
+        [DataMember(Name="bound_user_id", EmitDefaultValue=false)]
+        public long BoundUserId { get; set; }
+
+        /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
@@ -104,6 +114,12 @@ namespace Everyday.GmodStore.Sdk.Model
         public Addon Addon { get; set; }
 
         /// <summary>
+        /// Gets or Sets BoundUser
+        /// </summary>
+        [DataMember(Name="bound_user", EmitDefaultValue=false)]
+        public User BoundUser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,9 +132,11 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("  Percent: ").Append(Percent).Append("\n");
             sb.Append("  MaxUses: ").Append(MaxUses).Append("\n");
             sb.Append("  ExpiresAt: ").Append(ExpiresAt).Append("\n");
+            sb.Append("  BoundUserId: ").Append(BoundUserId).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  Addon: ").Append(Addon).Append("\n");
+            sb.Append("  BoundUser: ").Append(BoundUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,6 +194,10 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.ExpiresAt.Equals(input.ExpiresAt))
                 ) && 
                 (
+                    this.BoundUserId == input.BoundUserId ||
+                    this.BoundUserId.Equals(input.BoundUserId)
+                ) && 
+                (
                     this.CreatedAt == input.CreatedAt ||
                     (this.CreatedAt != null &&
                     this.CreatedAt.Equals(input.CreatedAt))
@@ -189,6 +211,11 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Addon == input.Addon ||
                     (this.Addon != null &&
                     this.Addon.Equals(input.Addon))
+                ) && 
+                (
+                    this.BoundUser == input.BoundUser ||
+                    (this.BoundUser != null &&
+                    this.BoundUser.Equals(input.BoundUser))
                 );
         }
 
@@ -208,12 +235,15 @@ namespace Everyday.GmodStore.Sdk.Model
                 hashCode = hashCode * 59 + this.MaxUses.GetHashCode();
                 if (this.ExpiresAt != null)
                     hashCode = hashCode * 59 + this.ExpiresAt.GetHashCode();
+                hashCode = hashCode * 59 + this.BoundUserId.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
                 if (this.UpdatedAt != null)
                     hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
                 if (this.Addon != null)
                     hashCode = hashCode * 59 + this.Addon.GetHashCode();
+                if (this.BoundUser != null)
+                    hashCode = hashCode * 59 + this.BoundUser.GetHashCode();
                 return hashCode;
             }
         }
