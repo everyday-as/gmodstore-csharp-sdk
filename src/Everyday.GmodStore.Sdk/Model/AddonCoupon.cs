@@ -46,7 +46,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="boundUserId">boundUserId.</param>
         /// <param name="addon">addon.</param>
         /// <param name="boundUser">boundUser.</param>
-        public AddonCoupon(string code = default(string), decimal percent = default(decimal), int maxUses = default(int), DateTime expiresAt = default(DateTime), long boundUserId = default(long), Addon addon = default(Addon), User boundUser = default(User))
+        public AddonCoupon(string code = default(string), decimal percent = default(decimal), int maxUses = default(int), DateTime expiresAt = default(DateTime), long? boundUserId = default(long?), Addon addon = default(Addon), User boundUser = default(User))
         {
             // to ensure "code" is required (not null)
             this.Code = code ?? throw new ArgumentNullException("code is a required property for AddonCoupon and cannot be null");
@@ -92,8 +92,8 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Gets or Sets BoundUserId
         /// </summary>
-        [DataMember(Name="bound_user_id", EmitDefaultValue=false)]
-        public long BoundUserId { get; set; }
+        [DataMember(Name="bound_user_id", EmitDefaultValue=true)]
+        public long? BoundUserId { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
@@ -195,7 +195,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 ) && 
                 (
                     this.BoundUserId == input.BoundUserId ||
-                    this.BoundUserId.Equals(input.BoundUserId)
+                    (this.BoundUserId != null &&
+                    this.BoundUserId.Equals(input.BoundUserId))
                 ) && 
                 (
                     this.CreatedAt == input.CreatedAt ||
@@ -235,7 +236,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 hashCode = hashCode * 59 + this.MaxUses.GetHashCode();
                 if (this.ExpiresAt != null)
                     hashCode = hashCode * 59 + this.ExpiresAt.GetHashCode();
-                hashCode = hashCode * 59 + this.BoundUserId.GetHashCode();
+                if (this.BoundUserId != null)
+                    hashCode = hashCode * 59 + this.BoundUserId.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
                 if (this.UpdatedAt != null)

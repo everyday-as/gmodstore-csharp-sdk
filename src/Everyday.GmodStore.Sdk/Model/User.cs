@@ -157,7 +157,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
-        [DataMember(Name="country_code", EmitDefaultValue=false)]
+        [DataMember(Name="country_code", EmitDefaultValue=true)]
         public string CountryCode { get; set; }
 
         /// <summary>
