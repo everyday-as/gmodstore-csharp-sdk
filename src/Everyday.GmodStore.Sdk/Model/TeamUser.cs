@@ -36,11 +36,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="teamId">teamId.</param>
         /// <param name="primary">primary.</param>
+        /// <param name="percentage">percentage.</param>
         /// <param name="user">user.</param>
-        public TeamUser(int teamId = default(int), bool primary = default(bool), User user = default(User))
+        public TeamUser(int teamId = default(int), bool primary = default(bool), int percentage = default(int), User user = default(User))
         {
             this.TeamId = teamId;
             this.Primary = primary;
+            this.Percentage = percentage;
             this.User = user;
         }
         
@@ -55,6 +57,12 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool Primary { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Percentage
+        /// </summary>
+        [DataMember(Name="percentage", EmitDefaultValue=false)]
+        public int Percentage { get; set; }
 
         /// <summary>
         /// Gets or Sets User
@@ -72,6 +80,7 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("class TeamUser {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
+            sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -116,6 +125,10 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Primary.Equals(input.Primary)
                 ) && 
                 (
+                    this.Percentage == input.Percentage ||
+                    this.Percentage.Equals(input.Percentage)
+                ) && 
+                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
@@ -133,6 +146,7 @@ namespace Everyday.GmodStore.Sdk.Model
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.TeamId.GetHashCode();
                 hashCode = hashCode * 59 + this.Primary.GetHashCode();
+                hashCode = hashCode * 59 + this.Percentage.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 return hashCode;
