@@ -115,7 +115,7 @@ Class | Method | HTTP request | Description
 *AddonsApi* | [**GetAddon**](docs/AddonsApi.md#getaddon) | **GET** /addons/{addon_id} | Fetch a single addon
 *AddonsApi* | [**ListSelfAddons**](docs/AddonsApi.md#listselfaddons) | **GET** /addons | Fetch all the addons that you have access to
 *AdventCalendarApi* | [**GetAdventCalendarStats**](docs/AdventCalendarApi.md#getadventcalendarstats) | **GET** /events/advent-calendar/stats | Fetch statistics relating to the advent calendar event
-*ApiKeyApi* | [**GetCurrentApiKey**](docs/ApiKeyApi.md#getcurrentapikey) | **GET** /me | Get meta information about the current API key
+*CurrentAPIKeyApi* | [**GetCurrentApiKey**](docs/CurrentAPIKeyApi.md#getcurrentapikey) | **GET** /me | Get meta information about the current API key
 *PermissionGroupsApi* | [**ListPermissionGroups**](docs/PermissionGroupsApi.md#listpermissiongroups) | **GET** /permission-groups | Fetches all available permission groups
 *TeamAddonsApi* | [**ListTeamAddons**](docs/TeamAddonsApi.md#listteamaddons) | **GET** /teams/{team_id}/addons | Fetch all the addons in the given team
 *TeamUsersApi* | [**ListTeamUsers**](docs/TeamUsersApi.md#listteamusers) | **GET** /teams/{team_id}/users | Fetch all the users in the given team

@@ -1,10 +1,10 @@
-# Everyday.GmodStore.Sdk.Api.ApiKeyApi
+# Everyday.GmodStore.Sdk.Api.CurrentAPIKeyApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCurrentApiKey**](ApiKeyApi.md#getcurrentapikey) | **GET** /me | Get meta information about the current API key
+[**GetCurrentApiKey**](CurrentAPIKeyApi.md#getcurrentapikey) | **GET** /me | Get meta information about the current API key
 
 
 <a name="getcurrentapikey"></a>
@@ -32,7 +32,7 @@ namespace Example
             // Configure Bearer token for authorization: bearerAuth
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new ApiKeyApi(config);
+            var apiInstance = new CurrentAPIKeyApi(config);
             var with = with_example;  // List<string> | The relations you want to fetch with the `User` (optional) 
 
             try
@@ -43,7 +43,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ApiKeyApi.GetCurrentApiKey: " + e.Message );
+                Debug.Print("Exception when calling CurrentAPIKeyApi.GetCurrentApiKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
