@@ -34,7 +34,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>AddonListResponse</returns>
         AddonListResponse GetCurrentApiKey (List<string> with = default(List<string>));
 
@@ -45,7 +45,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonListResponse</returns>
         ApiResponse<AddonListResponse> GetCurrentApiKeyWithHttpInfo (List<string> with = default(List<string>));
         #endregion Synchronous Operations
@@ -64,7 +64,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>Task of AddonListResponse</returns>
         System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync (List<string> with = default(List<string>));
 
@@ -75,7 +75,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddonListResponse>> GetCurrentApiKeyAsyncWithHttpInfo (List<string> with = default(List<string>));
         #endregion Asynchronous Operations
@@ -202,7 +202,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>AddonListResponse</returns>
         public AddonListResponse GetCurrentApiKey (List<string> with = default(List<string>))
         {
@@ -214,7 +214,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>ApiResponse of AddonListResponse</returns>
         public Everyday.GmodStore.Sdk.Client.ApiResponse< AddonListResponse > GetCurrentApiKeyWithHttpInfo (List<string> with = default(List<string>))
         {
@@ -262,7 +262,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>Task of AddonListResponse</returns>
         public async System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync (List<string> with = default(List<string>))
         {
@@ -275,7 +275,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <returns>Task of ApiResponse (AddonListResponse)</returns>
         public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse>> GetCurrentApiKeyAsyncWithHttpInfo (List<string> with = default(List<string>))
         {
