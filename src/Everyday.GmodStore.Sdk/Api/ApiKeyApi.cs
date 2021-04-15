@@ -24,71 +24,67 @@ namespace Everyday.GmodStore.Sdk.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUserAddonsApiSync : IApiAccessor
+    public interface IApiKeyApiSync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user
+        /// Get meta information about the current API key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse1</returns>
-        AddonListResponse1 ListUserAddons (long userId, List<string> with = default(List<string>));
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>AddonListResponse</returns>
+        AddonListResponse GetCurrentApiKey (List<string> with = default(List<string>));
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user
+        /// Get meta information about the current API key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse1</returns>
-        ApiResponse<AddonListResponse1> ListUserAddonsWithHttpInfo (long userId, List<string> with = default(List<string>));
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>ApiResponse of AddonListResponse</returns>
+        ApiResponse<AddonListResponse> GetCurrentApiKeyWithHttpInfo (List<string> with = default(List<string>));
         #endregion Synchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUserAddonsApiAsync : IApiAccessor
+    public interface IApiKeyApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user
+        /// Get meta information about the current API key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of AddonListResponse1</returns>
-        System.Threading.Tasks.Task<AddonListResponse1> ListUserAddonsAsync (long userId, List<string> with = default(List<string>));
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>Task of AddonListResponse</returns>
+        System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync (List<string> with = default(List<string>));
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user
+        /// Get meta information about the current API key
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonListResponse1>> ListUserAddonsAsyncWithHttpInfo (long userId, List<string> with = default(List<string>));
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonListResponse>> GetCurrentApiKeyAsyncWithHttpInfo (List<string> with = default(List<string>));
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUserAddonsApi : IUserAddonsApiSync, IUserAddonsApiAsync
+    public interface IApiKeyApi : IApiKeyApiSync, IApiKeyApiAsync
     {
 
     }
@@ -96,23 +92,23 @@ namespace Everyday.GmodStore.Sdk.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class UserAddonsApi : IUserAddonsApi
+    public partial class ApiKeyApi : IApiKeyApi
     {
         private Everyday.GmodStore.Sdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAddonsApi"/> class.
+        /// Initializes a new instance of the <see cref="ApiKeyApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UserAddonsApi() : this((string) null)
+        public ApiKeyApi() : this((string) null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAddonsApi"/> class.
+        /// Initializes a new instance of the <see cref="ApiKeyApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UserAddonsApi(String basePath)
+        public ApiKeyApi(String basePath)
         {
             this.Configuration = Everyday.GmodStore.Sdk.Client.Configuration.MergeConfigurations(
                 Everyday.GmodStore.Sdk.Client.GlobalConfiguration.Instance,
@@ -124,12 +120,12 @@ namespace Everyday.GmodStore.Sdk.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAddonsApi"/> class
+        /// Initializes a new instance of the <see cref="ApiKeyApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UserAddonsApi(Everyday.GmodStore.Sdk.Client.Configuration configuration)
+        public ApiKeyApi(Everyday.GmodStore.Sdk.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -143,13 +139,13 @@ namespace Everyday.GmodStore.Sdk.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAddonsApi"/> class
+        /// Initializes a new instance of the <see cref="ApiKeyApi"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public UserAddonsApi(Everyday.GmodStore.Sdk.Client.ISynchronousClient client,Everyday.GmodStore.Sdk.Client.IAsynchronousClient asyncClient, Everyday.GmodStore.Sdk.Client.IReadableConfiguration configuration)
+        public ApiKeyApi(Everyday.GmodStore.Sdk.Client.ISynchronousClient client,Everyday.GmodStore.Sdk.Client.IAsynchronousClient asyncClient, Everyday.GmodStore.Sdk.Client.IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -203,26 +199,24 @@ namespace Everyday.GmodStore.Sdk.Api
         }
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user 
+        /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse1</returns>
-        public AddonListResponse1 ListUserAddons (long userId, List<string> with = default(List<string>))
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>AddonListResponse</returns>
+        public AddonListResponse GetCurrentApiKey (List<string> with = default(List<string>))
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = ListUserAddonsWithHttpInfo(userId, with);
+             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = GetCurrentApiKeyWithHttpInfo(with);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user 
+        /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse1</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse< AddonListResponse1 > ListUserAddonsWithHttpInfo (long userId, List<string> with = default(List<string>))
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>ApiResponse of AddonListResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse< AddonListResponse > GetCurrentApiKeyWithHttpInfo (List<string> with = default(List<string>))
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -240,7 +234,6 @@ namespace Everyday.GmodStore.Sdk.Api
             var localVarAccept = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("user_id", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(userId)); // path parameter
             if (with != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("csv", "with", with));
@@ -254,11 +247,11 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< AddonListResponse1 >("/users/{user_id}/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< AddonListResponse >("/me", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUserAddons", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCurrentApiKey", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -266,27 +259,25 @@ namespace Everyday.GmodStore.Sdk.Api
         }
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user 
+        /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of AddonListResponse1</returns>
-        public async System.Threading.Tasks.Task<AddonListResponse1> ListUserAddonsAsync (long userId, List<string> with = default(List<string>))
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>Task of AddonListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync (List<string> with = default(List<string>))
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = await ListUserAddonsAsyncWithHttpInfo(userId, with);
+             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = await GetCurrentApiKeyAsyncWithHttpInfo(with);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Fetch all the addons authored / co-authored by a user 
+        /// Get meta information about the current API key 
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">Id of the user</param>
-        /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1>> ListUserAddonsAsyncWithHttpInfo (long userId, List<string> with = default(List<string>))
+        /// <param name="with">The relations you want to fetch with the &#x60;User&#x60; (optional)</param>
+        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse>> GetCurrentApiKeyAsyncWithHttpInfo (List<string> with = default(List<string>))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -305,7 +296,6 @@ namespace Everyday.GmodStore.Sdk.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            localVarRequestOptions.PathParameters.Add("user_id", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(userId)); // path parameter
             if (with != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("csv", "with", with));
@@ -320,11 +310,11 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse1>("/users/{user_id}/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse>("/me", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUserAddons", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCurrentApiKey", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

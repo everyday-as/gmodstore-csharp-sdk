@@ -10,6 +10,7 @@ docs/AddonDownload.md
 docs/AddonDownloadResponse.md
 docs/AddonImages.md
 docs/AddonListResponse.md
+docs/AddonListResponse1.md
 docs/AddonPrice.md
 docs/AddonPurchase.md
 docs/AddonPurchaseListResponse.md
@@ -38,6 +39,8 @@ docs/AddonsApi.md
 docs/AdventCalendarApi.md
 docs/AdventCalendarStats.md
 docs/AdventCalendarStatsResponse.md
+docs/ApiKey.md
+docs/ApiKeyApi.md
 docs/BadgeListResponse.md
 docs/BadgeResponse.md
 docs/Error.md
@@ -70,7 +73,10 @@ docs/UserResponse.md
 docs/UserTeamsApi.md
 docs/UsersApi.md
 git_push.sh
+src/Everyday.GmodStore.Sdk.Test/Api/ApiKeyApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Everyday.GmodStore.Sdk.Test.csproj
+src/Everyday.GmodStore.Sdk.Test/Model/AddonListResponse1Tests.cs
+src/Everyday.GmodStore.Sdk.Test/Model/ApiKeyTests.cs
 src/Everyday.GmodStore.Sdk/Api/AddonCouponsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonPurchasesApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonReviewsApi.cs
@@ -78,6 +84,7 @@ src/Everyday.GmodStore.Sdk/Api/AddonStatsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonVersionsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AddonsApi.cs
 src/Everyday.GmodStore.Sdk/Api/AdventCalendarApi.cs
+src/Everyday.GmodStore.Sdk/Api/ApiKeyApi.cs
 src/Everyday.GmodStore.Sdk/Api/PermissionGroupsApi.cs
 src/Everyday.GmodStore.Sdk/Api/TeamAddonsApi.cs
 src/Everyday.GmodStore.Sdk/Api/TeamUsersApi.cs
@@ -112,6 +119,7 @@ src/Everyday.GmodStore.Sdk/Model/AddonDownload.cs
 src/Everyday.GmodStore.Sdk/Model/AddonDownloadResponse.cs
 src/Everyday.GmodStore.Sdk/Model/AddonImages.cs
 src/Everyday.GmodStore.Sdk/Model/AddonListResponse.cs
+src/Everyday.GmodStore.Sdk/Model/AddonListResponse1.cs
 src/Everyday.GmodStore.Sdk/Model/AddonPrice.cs
 src/Everyday.GmodStore.Sdk/Model/AddonPurchase.cs
 src/Everyday.GmodStore.Sdk/Model/AddonPurchaseListResponse.cs
@@ -134,6 +142,7 @@ src/Everyday.GmodStore.Sdk/Model/AddonVersionReleaseType.cs
 src/Everyday.GmodStore.Sdk/Model/AddonVersionResponse.cs
 src/Everyday.GmodStore.Sdk/Model/AdventCalendarStats.cs
 src/Everyday.GmodStore.Sdk/Model/AdventCalendarStatsResponse.cs
+src/Everyday.GmodStore.Sdk/Model/ApiKey.cs
 src/Everyday.GmodStore.Sdk/Model/BadgeListResponse.cs
 src/Everyday.GmodStore.Sdk/Model/BadgeResponse.cs
 src/Everyday.GmodStore.Sdk/Model/Error.cs

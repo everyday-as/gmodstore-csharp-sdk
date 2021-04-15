@@ -1,17 +1,17 @@
-# Everyday.GmodStore.Sdk.Api.UserAddonsApi
+# Everyday.GmodStore.Sdk.Api.ApiKeyApi
 
 All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ListUserAddons**](UserAddonsApi.md#listuseraddons) | **GET** /users/{user_id}/addons | Fetch all the addons authored / co-authored by a user
+[**GetCurrentApiKey**](ApiKeyApi.md#getcurrentapikey) | **GET** /me | Get meta information about the current API key
 
 
-<a name="listuseraddons"></a>
-# **ListUserAddons**
-> AddonListResponse1 ListUserAddons (long userId, List<string> with = null)
+<a name="getcurrentapikey"></a>
+# **GetCurrentApiKey**
+> AddonListResponse GetCurrentApiKey (List<string> with = null)
 
-Fetch all the addons authored / co-authored by a user
+Get meta information about the current API key
 
 ### Example
 ```csharp
@@ -23,7 +23,7 @@ using Everyday.GmodStore.Sdk.Model;
 
 namespace Example
 {
-    public class ListUserAddonsExample
+    public class GetCurrentApiKeyExample
     {
         public static void Main()
         {
@@ -32,19 +32,18 @@ namespace Example
             // Configure Bearer token for authorization: bearerAuth
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new UserAddonsApi(config);
-            var userId = 789;  // long | Id of the user
-            var with = with_example;  // List<string> | The relations you want to fetch with the `Addon` (optional) 
+            var apiInstance = new ApiKeyApi(config);
+            var with = with_example;  // List<string> | The relations you want to fetch with the `User` (optional) 
 
             try
             {
-                // Fetch all the addons authored / co-authored by a user
-                AddonListResponse1 result = apiInstance.ListUserAddons(userId, with);
+                // Get meta information about the current API key
+                AddonListResponse result = apiInstance.GetCurrentApiKey(with);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UserAddonsApi.ListUserAddons: " + e.Message );
+                Debug.Print("Exception when calling ApiKeyApi.GetCurrentApiKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -57,12 +56,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **long**| Id of the user | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
+ **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;User&#x60; | [optional] 
 
 ### Return type
 
-[**AddonListResponse1**](AddonListResponse1.md)
+[**AddonListResponse**](AddonListResponse.md)
 
 ### Authorization
 

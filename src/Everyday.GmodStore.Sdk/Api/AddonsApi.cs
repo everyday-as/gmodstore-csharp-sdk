@@ -58,8 +58,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse</returns>
-        AddonListResponse ListSelfAddons (List<string> with = default(List<string>));
+        /// <returns>AddonListResponse1</returns>
+        AddonListResponse1 ListSelfAddons (List<string> with = default(List<string>));
 
         /// <summary>
         /// Fetch all the addons that you have access to
@@ -69,8 +69,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse</returns>
-        ApiResponse<AddonListResponse> ListSelfAddonsWithHttpInfo (List<string> with = default(List<string>));
+        /// <returns>ApiResponse of AddonListResponse1</returns>
+        ApiResponse<AddonListResponse1> ListSelfAddonsWithHttpInfo (List<string> with = default(List<string>));
         #endregion Synchronous Operations
     }
 
@@ -111,8 +111,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of AddonListResponse</returns>
-        System.Threading.Tasks.Task<AddonListResponse> ListSelfAddonsAsync (List<string> with = default(List<string>));
+        /// <returns>Task of AddonListResponse1</returns>
+        System.Threading.Tasks.Task<AddonListResponse1> ListSelfAddonsAsync (List<string> with = default(List<string>));
 
         /// <summary>
         /// Fetch all the addons that you have access to
@@ -122,8 +122,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonListResponse>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = default(List<string>));
+        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonListResponse1>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = default(List<string>));
         #endregion Asynchronous Operations
     }
 
@@ -378,10 +378,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse</returns>
-        public AddonListResponse ListSelfAddons (List<string> with = default(List<string>))
+        /// <returns>AddonListResponse1</returns>
+        public AddonListResponse1 ListSelfAddons (List<string> with = default(List<string>))
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = ListSelfAddonsWithHttpInfo(with);
+             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = ListSelfAddonsWithHttpInfo(with);
              return localVarResponse.Data;
         }
 
@@ -390,8 +390,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse< AddonListResponse > ListSelfAddonsWithHttpInfo (List<string> with = default(List<string>))
+        /// <returns>ApiResponse of AddonListResponse1</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse< AddonListResponse1 > ListSelfAddonsWithHttpInfo (List<string> with = default(List<string>))
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -422,7 +422,7 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< AddonListResponse >("/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get< AddonListResponse1 >("/addons", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -438,10 +438,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of AddonListResponse</returns>
-        public async System.Threading.Tasks.Task<AddonListResponse> ListSelfAddonsAsync (List<string> with = default(List<string>))
+        /// <returns>Task of AddonListResponse1</returns>
+        public async System.Threading.Tasks.Task<AddonListResponse1> ListSelfAddonsAsync (List<string> with = default(List<string>))
         {
-             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = await ListSelfAddonsAsyncWithHttpInfo(with);
+             Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = await ListSelfAddonsAsyncWithHttpInfo(with);
              return localVarResponse.Data;
 
         }
@@ -451,8 +451,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = default(List<string>))
+        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1>> ListSelfAddonsAsyncWithHttpInfo (List<string> with = default(List<string>))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -485,7 +485,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse>("/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse1>("/addons", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {

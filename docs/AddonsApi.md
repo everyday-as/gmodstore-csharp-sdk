@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="listselfaddons"></a>
 # **ListSelfAddons**
-> AddonListResponse ListSelfAddons (List<string> with = null)
+> AddonListResponse1 ListSelfAddons (List<string> with = null)
 
 Fetch all the addons that you have access to
 
@@ -114,7 +114,7 @@ namespace Example
             try
             {
                 // Fetch all the addons that you have access to
-                AddonListResponse result = apiInstance.ListSelfAddons(with);
+                AddonListResponse1 result = apiInstance.ListSelfAddons(with);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddonListResponse**](AddonListResponse.md)
+[**AddonListResponse1**](AddonListResponse1.md)
 
 ### Authorization
 

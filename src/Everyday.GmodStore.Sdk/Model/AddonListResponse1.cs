@@ -26,16 +26,16 @@ using OpenAPIDateConverter = Everyday.GmodStore.Sdk.Client.OpenAPIDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// AddonListResponse
+    /// AddonListResponse1
     /// </summary>
     [DataContract]
-    public partial class AddonListResponse :  IEquatable<AddonListResponse>, IValidatableObject
+    public partial class AddonListResponse1 :  IEquatable<AddonListResponse1>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AddonListResponse" /> class.
+        /// Initializes a new instance of the <see cref="AddonListResponse1" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public AddonListResponse(ApiKey data = default(ApiKey))
+        public AddonListResponse1(List<Addon> data = default(List<Addon>))
         {
             this.Data = data;
         }
@@ -44,7 +44,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public ApiKey Data { get; set; }
+        public List<Addon> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +53,7 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AddonListResponse {\n");
+            sb.Append("class AddonListResponse1 {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -75,15 +75,15 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AddonListResponse);
+            return this.Equals(input as AddonListResponse1);
         }
 
         /// <summary>
-        /// Returns true if AddonListResponse instances are equal
+        /// Returns true if AddonListResponse1 instances are equal
         /// </summary>
-        /// <param name="input">Instance of AddonListResponse to be compared</param>
+        /// <param name="input">Instance of AddonListResponse1 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AddonListResponse input)
+        public bool Equals(AddonListResponse1 input)
         {
             if (input == null)
                 return false;
@@ -91,8 +91,9 @@ namespace Everyday.GmodStore.Sdk.Model
             return 
                 (
                     this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.Data != null &&
+                    input.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
