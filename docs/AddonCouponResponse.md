@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.AddonCouponResponse
+
 ## Properties
 
 Name | Type | Description | Notes

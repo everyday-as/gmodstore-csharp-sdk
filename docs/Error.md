@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.Error
+
 ## Properties
 
 Name | Type | Description | Notes

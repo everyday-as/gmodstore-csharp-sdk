@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.UserBanListResponse
+
 ## Properties
 
 Name | Type | Description | Notes

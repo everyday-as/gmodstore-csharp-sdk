@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.AdventCalendarStatsResponse
+
 ## Properties
 
 Name | Type | Description | Notes

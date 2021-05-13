@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.AddonVersionResponse
+
 ## Properties
 
 Name | Type | Description | Notes

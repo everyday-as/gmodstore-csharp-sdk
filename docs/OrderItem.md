@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.OrderItem
+
 ## Properties
 
 Name | Type | Description | Notes

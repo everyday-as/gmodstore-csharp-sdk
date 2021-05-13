@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.Money
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.AddonStatsRevenue
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.BadgeListResponse
+
 ## Properties
 
 Name | Type | Description | Notes

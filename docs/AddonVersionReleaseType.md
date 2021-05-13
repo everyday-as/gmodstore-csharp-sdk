@@ -1,5 +1,6 @@
 # Everyday.GmodStore.Sdk.Model.AddonVersionReleaseType
 This can be a value of stable, beta, alpha, private or demo
+
 ## Properties
 
 Name | Type | Description | Notes

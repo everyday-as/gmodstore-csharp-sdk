@@ -1,6 +1,7 @@
 .gitignore
 Everyday.GmodStore.Sdk.sln
 README.md
+appveyor.yml
 docs/Addon.md
 docs/AddonCoupon.md
 docs/AddonCouponListResponse.md
@@ -47,7 +48,6 @@ docs/Error.md
 docs/ErrorResponse.md
 docs/Money.md
 docs/NewAddonPurchase.md
-docs/NewAddonVersion.md
 docs/OrderItem.md
 docs/PermissionGroup.md
 docs/PermissionGroupListResponse.md
@@ -107,7 +107,9 @@ src/Everyday.GmodStore.Sdk/Client/ISynchronousClient.cs
 src/Everyday.GmodStore.Sdk/Client/Multimap.cs
 src/Everyday.GmodStore.Sdk/Client/OpenAPIDateConverter.cs
 src/Everyday.GmodStore.Sdk/Client/RequestOptions.cs
+src/Everyday.GmodStore.Sdk/Client/RetryConfiguration.cs
 src/Everyday.GmodStore.Sdk/Everyday.GmodStore.Sdk.csproj
+src/Everyday.GmodStore.Sdk/Model/AbstractOpenAPISchema.cs
 src/Everyday.GmodStore.Sdk/Model/Addon.cs
 src/Everyday.GmodStore.Sdk/Model/AddonCoupon.cs
 src/Everyday.GmodStore.Sdk/Model/AddonCouponListResponse.cs
@@ -146,7 +148,6 @@ src/Everyday.GmodStore.Sdk/Model/Error.cs
 src/Everyday.GmodStore.Sdk/Model/ErrorResponse.cs
 src/Everyday.GmodStore.Sdk/Model/Money.cs
 src/Everyday.GmodStore.Sdk/Model/NewAddonPurchase.cs
-src/Everyday.GmodStore.Sdk/Model/NewAddonVersion.cs
 src/Everyday.GmodStore.Sdk/Model/OrderItem.cs
 src/Everyday.GmodStore.Sdk/Model/PermissionGroup.cs
 src/Everyday.GmodStore.Sdk/Model/PermissionGroupListResponse.cs

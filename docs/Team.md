@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.Team
+
 ## Properties
 
 Name | Type | Description | Notes

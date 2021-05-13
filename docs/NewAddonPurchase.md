@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.NewAddonPurchase
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.PermissionGroupListResponse
+
 ## Properties
 
 Name | Type | Description | Notes

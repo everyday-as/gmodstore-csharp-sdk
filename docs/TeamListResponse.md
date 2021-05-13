@@ -1,4 +1,5 @@
 # Everyday.GmodStore.Sdk.Model.TeamListResponse
+
 ## Properties
 
 Name | Type | Description | Notes
