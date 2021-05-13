@@ -32,8 +32,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse1</returns>
-        AddonListResponse1 ListUserAddons(long userId, List<string> with = default(List<string>));
+        /// <returns>AddonListResponse</returns>
+        AddonListResponse ListUserAddons(long userId, List<string> with = default(List<string>));
 
         /// <summary>
         /// Fetch all the addons authored / co-authored by a user
@@ -44,8 +44,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse1</returns>
-        ApiResponse<AddonListResponse1> ListUserAddonsWithHttpInfo(long userId, List<string> with = default(List<string>));
+        /// <returns>ApiResponse of AddonListResponse</returns>
+        ApiResponse<AddonListResponse> ListUserAddonsWithHttpInfo(long userId, List<string> with = default(List<string>));
         #endregion Synchronous Operations
     }
 
@@ -65,8 +65,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonListResponse1</returns>
-        System.Threading.Tasks.Task<AddonListResponse1> ListUserAddonsAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AddonListResponse</returns>
+        System.Threading.Tasks.Task<AddonListResponse> ListUserAddonsAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Fetch all the addons authored / co-authored by a user
@@ -78,8 +78,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonListResponse1>> ListUserAddonsWithHttpInfoAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonListResponse>> ListUserAddonsWithHttpInfoAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -206,10 +206,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>AddonListResponse1</returns>
-        public AddonListResponse1 ListUserAddons(long userId, List<string> with = default(List<string>))
+        /// <returns>AddonListResponse</returns>
+        public AddonListResponse ListUserAddons(long userId, List<string> with = default(List<string>))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = ListUserAddonsWithHttpInfo(userId, with);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = ListUserAddonsWithHttpInfo(userId, with);
             return localVarResponse.Data;
         }
 
@@ -219,8 +219,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse1</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> ListUserAddonsWithHttpInfo(long userId, List<string> with = default(List<string>))
+        /// <returns>ApiResponse of AddonListResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> ListUserAddonsWithHttpInfo(long userId, List<string> with = default(List<string>))
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -252,7 +252,7 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AddonListResponse1>("/users/{user_id}/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AddonListResponse>("/users/{user_id}/addons", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -270,10 +270,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonListResponse1</returns>
-        public async System.Threading.Tasks.Task<AddonListResponse1> ListUserAddonsAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AddonListResponse</returns>
+        public async System.Threading.Tasks.Task<AddonListResponse> ListUserAddonsAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1> localVarResponse = await ListUserAddonsWithHttpInfoAsync(userId, with, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = await ListUserAddonsWithHttpInfoAsync(userId, with, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -284,8 +284,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="userId">Id of the user</param>
         /// <param name="with">The relations you want to fetch with the &#x60;Addon&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonListResponse1)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse1>> ListUserAddonsWithHttpInfoAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse>> ListUserAddonsWithHttpInfoAsync(long userId, List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -320,7 +320,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse1>("/users/{user_id}/addons", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse>("/users/{user_id}/addons", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

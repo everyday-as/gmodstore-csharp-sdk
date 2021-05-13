@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getcurrentapikey"></a>
 # **GetCurrentApiKey**
-> AddonListResponse GetCurrentApiKey (List<string> with = null)
+> ApiKeyResponse GetCurrentApiKey (List<string> with = null)
 
 Get meta information about the current API key
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // Get meta information about the current API key
-                AddonListResponse result = apiInstance.GetCurrentApiKey(with);
+                ApiKeyResponse result = apiInstance.GetCurrentApiKey(with);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddonListResponse**](AddonListResponse.md)
+[**ApiKeyResponse**](ApiKeyResponse.md)
 
 ### Authorization
 

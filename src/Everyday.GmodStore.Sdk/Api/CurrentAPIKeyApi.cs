@@ -31,8 +31,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
-        /// <returns>AddonListResponse</returns>
-        AddonListResponse GetCurrentApiKey(List<string> with = default(List<string>));
+        /// <returns>ApiKeyResponse</returns>
+        ApiKeyResponse GetCurrentApiKey(List<string> with = default(List<string>));
 
         /// <summary>
         /// Get meta information about the current API key
@@ -42,8 +42,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse</returns>
-        ApiResponse<AddonListResponse> GetCurrentApiKeyWithHttpInfo(List<string> with = default(List<string>));
+        /// <returns>ApiResponse of ApiKeyResponse</returns>
+        ApiResponse<ApiKeyResponse> GetCurrentApiKeyWithHttpInfo(List<string> with = default(List<string>));
         #endregion Synchronous Operations
     }
 
@@ -62,8 +62,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonListResponse</returns>
-        System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiKeyResponse</returns>
+        System.Threading.Tasks.Task<ApiKeyResponse> GetCurrentApiKeyAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get meta information about the current API key
@@ -74,8 +74,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonListResponse>> GetCurrentApiKeyWithHttpInfoAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ApiKeyResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyResponse>> GetCurrentApiKeyWithHttpInfoAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -201,10 +201,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
-        /// <returns>AddonListResponse</returns>
-        public AddonListResponse GetCurrentApiKey(List<string> with = default(List<string>))
+        /// <returns>ApiKeyResponse</returns>
+        public ApiKeyResponse GetCurrentApiKey(List<string> with = default(List<string>))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = GetCurrentApiKeyWithHttpInfo(with);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<ApiKeyResponse> localVarResponse = GetCurrentApiKeyWithHttpInfo(with);
             return localVarResponse.Data;
         }
 
@@ -213,8 +213,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
-        /// <returns>ApiResponse of AddonListResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> GetCurrentApiKeyWithHttpInfo(List<string> with = default(List<string>))
+        /// <returns>ApiResponse of ApiKeyResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<ApiKeyResponse> GetCurrentApiKeyWithHttpInfo(List<string> with = default(List<string>))
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -245,7 +245,7 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AddonListResponse>("/me", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ApiKeyResponse>("/me", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -262,10 +262,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonListResponse</returns>
-        public async System.Threading.Tasks.Task<AddonListResponse> GetCurrentApiKeyAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiKeyResponse</returns>
+        public async System.Threading.Tasks.Task<ApiKeyResponse> GetCurrentApiKeyAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse> localVarResponse = await GetCurrentApiKeyWithHttpInfoAsync(with, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<ApiKeyResponse> localVarResponse = await GetCurrentApiKeyWithHttpInfoAsync(with, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -275,8 +275,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="with">The relations you want to fetch with the &#x60;ApiKey&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonListResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonListResponse>> GetCurrentApiKeyWithHttpInfoAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ApiKeyResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<ApiKeyResponse>> GetCurrentApiKeyWithHttpInfoAsync(List<string> with = default(List<string>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -310,7 +310,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonListResponse>("/me", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ApiKeyResponse>("/me", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

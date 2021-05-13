@@ -26,16 +26,16 @@ using OpenAPIDateConverter = Everyday.GmodStore.Sdk.Client.OpenAPIDateConverter;
 namespace Everyday.GmodStore.Sdk.Model
 {
     /// <summary>
-    /// AddonListResponse
+    /// ApiKeyResponse
     /// </summary>
-    [DataContract(Name = "AddonListResponse")]
-    public partial class AddonListResponse : IEquatable<AddonListResponse>, IValidatableObject
+    [DataContract(Name = "ApiKeyResponse")]
+    public partial class ApiKeyResponse : IEquatable<ApiKeyResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AddonListResponse" /> class.
+        /// Initializes a new instance of the <see cref="ApiKeyResponse" /> class.
         /// </summary>
         /// <param name="data">data.</param>
-        public AddonListResponse(List<Addon> data = default(List<Addon>))
+        public ApiKeyResponse(ApiKey data = default(ApiKey))
         {
             this.Data = data;
         }
@@ -44,7 +44,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name = "data", EmitDefaultValue = false)]
-        public List<Addon> Data { get; set; }
+        public ApiKey Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +53,7 @@ namespace Everyday.GmodStore.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AddonListResponse {\n");
+            sb.Append("class ApiKeyResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -75,15 +75,15 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AddonListResponse);
+            return this.Equals(input as ApiKeyResponse);
         }
 
         /// <summary>
-        /// Returns true if AddonListResponse instances are equal
+        /// Returns true if ApiKeyResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AddonListResponse to be compared</param>
+        /// <param name="input">Instance of ApiKeyResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AddonListResponse input)
+        public bool Equals(ApiKeyResponse input)
         {
             if (input == null)
                 return false;
@@ -91,9 +91,8 @@ namespace Everyday.GmodStore.Sdk.Model
             return 
                 (
                     this.Data == input.Data ||
-                    this.Data != null &&
-                    input.Data != null &&
-                    this.Data.SequenceEqual(input.Data)
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 

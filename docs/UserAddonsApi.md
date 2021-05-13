@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listuseraddons"></a>
 # **ListUserAddons**
-> AddonListResponse1 ListUserAddons (long userId, List<string> with = null)
+> AddonListResponse ListUserAddons (long userId, List<string> with = null)
 
 Fetch all the addons authored / co-authored by a user
 
@@ -39,7 +39,7 @@ namespace Example
             try
             {
                 // Fetch all the addons authored / co-authored by a user
-                AddonListResponse1 result = apiInstance.ListUserAddons(userId, with);
+                AddonListResponse result = apiInstance.ListUserAddons(userId, with);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddonListResponse1**](AddonListResponse1.md)
+[**AddonListResponse**](AddonListResponse.md)
 
 ### Authorization
 
