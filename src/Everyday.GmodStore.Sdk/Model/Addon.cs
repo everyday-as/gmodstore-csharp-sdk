@@ -44,7 +44,8 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="images">images.</param>
         /// <param name="latestVersion">latestVersion.</param>
         /// <param name="team">team.</param>
-        public Addon(int id = default(int), bool active = default(bool), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team))
+        /// <param name="stats">stats.</param>
+        public Addon(int id = default(int), bool active = default(bool), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team), AddonStats stats = default(AddonStats))
         {
             this.Id = id;
             this.Active = active;
@@ -56,6 +57,7 @@ namespace Everyday.GmodStore.Sdk.Model
             this.Images = images;
             this.LatestVersion = latestVersion;
             this.Team = team;
+            this.Stats = stats;
         }
 
         /// <summary>
@@ -105,6 +107,111 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         [DataMember(Name = "images", EmitDefaultValue = false)]
         public AddonImages Images { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Views
+        /// </summary>
+        [DataMember(Name = "views", EmitDefaultValue = false)]
+        public int Views { get; private set; }
+
+        /// <summary>
+        /// Returns false as Views should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeViews()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets RatingAvg
+        /// </summary>
+        [DataMember(Name = "rating_avg", EmitDefaultValue = false)]
+        public string RatingAvg { get; private set; }
+
+        /// <summary>
+        /// Returns false as RatingAvg should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRatingAvg()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets RatingCount
+        /// </summary>
+        [DataMember(Name = "rating_count", EmitDefaultValue = false)]
+        public int RatingCount { get; private set; }
+
+        /// <summary>
+        /// Returns false as RatingCount should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRatingCount()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets PurchasesCount
+        /// </summary>
+        [DataMember(Name = "purchases_count", EmitDefaultValue = false)]
+        public int PurchasesCount { get; private set; }
+
+        /// <summary>
+        /// Returns false as PurchasesCount should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializePurchasesCount()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets DependentAddon
+        /// </summary>
+        [DataMember(Name = "dependent_addon", EmitDefaultValue = false)]
+        public int DependentAddon { get; private set; }
+
+        /// <summary>
+        /// Returns false as DependentAddon should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeDependentAddon()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets HasDrm
+        /// </summary>
+        [DataMember(Name = "has_drm", EmitDefaultValue = true)]
+        public bool HasDrm { get; private set; }
+
+        /// <summary>
+        /// Returns false as HasDrm should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeHasDrm()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets RequiresChromium
+        /// </summary>
+        [DataMember(Name = "requires_chromium", EmitDefaultValue = true)]
+        public bool RequiresChromium { get; private set; }
+
+        /// <summary>
+        /// Returns false as RequiresChromium should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRequiresChromium()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets Slug
@@ -179,6 +286,12 @@ namespace Everyday.GmodStore.Sdk.Model
         public Team Team { get; set; }
 
         /// <summary>
+        /// Gets or Sets Stats
+        /// </summary>
+        [DataMember(Name = "stats", EmitDefaultValue = false)]
+        public AddonStats Stats { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -194,12 +307,20 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("  Requirements: ").Append(Requirements).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
+            sb.Append("  Views: ").Append(Views).Append("\n");
+            sb.Append("  RatingAvg: ").Append(RatingAvg).Append("\n");
+            sb.Append("  RatingCount: ").Append(RatingCount).Append("\n");
+            sb.Append("  PurchasesCount: ").Append(PurchasesCount).Append("\n");
+            sb.Append("  DependentAddon: ").Append(DependentAddon).Append("\n");
+            sb.Append("  HasDrm: ").Append(HasDrm).Append("\n");
+            sb.Append("  RequiresChromium: ").Append(RequiresChromium).Append("\n");
             sb.Append("  Slug: ").Append(Slug).Append("\n");
             sb.Append("  Route: ").Append(Route).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  LatestVersion: ").Append(LatestVersion).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
+            sb.Append("  Stats: ").Append(Stats).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -274,6 +395,35 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Images.Equals(input.Images))
                 ) && 
                 (
+                    this.Views == input.Views ||
+                    this.Views.Equals(input.Views)
+                ) && 
+                (
+                    this.RatingAvg == input.RatingAvg ||
+                    (this.RatingAvg != null &&
+                    this.RatingAvg.Equals(input.RatingAvg))
+                ) && 
+                (
+                    this.RatingCount == input.RatingCount ||
+                    this.RatingCount.Equals(input.RatingCount)
+                ) && 
+                (
+                    this.PurchasesCount == input.PurchasesCount ||
+                    this.PurchasesCount.Equals(input.PurchasesCount)
+                ) && 
+                (
+                    this.DependentAddon == input.DependentAddon ||
+                    this.DependentAddon.Equals(input.DependentAddon)
+                ) && 
+                (
+                    this.HasDrm == input.HasDrm ||
+                    this.HasDrm.Equals(input.HasDrm)
+                ) && 
+                (
+                    this.RequiresChromium == input.RequiresChromium ||
+                    this.RequiresChromium.Equals(input.RequiresChromium)
+                ) && 
+                (
                     this.Slug == input.Slug ||
                     (this.Slug != null &&
                     this.Slug.Equals(input.Slug))
@@ -302,6 +452,11 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Team == input.Team ||
                     (this.Team != null &&
                     this.Team.Equals(input.Team))
+                ) && 
+                (
+                    this.Stats == input.Stats ||
+                    (this.Stats != null &&
+                    this.Stats.Equals(input.Stats))
                 );
         }
 
@@ -328,6 +483,14 @@ namespace Everyday.GmodStore.Sdk.Model
                     hashCode = hashCode * 59 + this.Price.GetHashCode();
                 if (this.Images != null)
                     hashCode = hashCode * 59 + this.Images.GetHashCode();
+                hashCode = hashCode * 59 + this.Views.GetHashCode();
+                if (this.RatingAvg != null)
+                    hashCode = hashCode * 59 + this.RatingAvg.GetHashCode();
+                hashCode = hashCode * 59 + this.RatingCount.GetHashCode();
+                hashCode = hashCode * 59 + this.PurchasesCount.GetHashCode();
+                hashCode = hashCode * 59 + this.DependentAddon.GetHashCode();
+                hashCode = hashCode * 59 + this.HasDrm.GetHashCode();
+                hashCode = hashCode * 59 + this.RequiresChromium.GetHashCode();
                 if (this.Slug != null)
                     hashCode = hashCode * 59 + this.Slug.GetHashCode();
                 if (this.Route != null)
@@ -340,6 +503,8 @@ namespace Everyday.GmodStore.Sdk.Model
                     hashCode = hashCode * 59 + this.LatestVersion.GetHashCode();
                 if (this.Team != null)
                     hashCode = hashCode * 59 + this.Team.GetHashCode();
+                if (this.Stats != null)
+                    hashCode = hashCode * 59 + this.Stats.GetHashCode();
                 return hashCode;
             }
         }
