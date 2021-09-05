@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int** |  | [optional] 
 **Title** | **string** |  | [optional] 
-**Version** | **string** |  | [optional] 
+**_Version** | **string** |  | [optional] 
 **Body** | **string** |  | [optional] 
 **Rating** | **decimal** |  | [optional] 
 **Addon** | [**Addon**](Addon.md) |  | [optional] 

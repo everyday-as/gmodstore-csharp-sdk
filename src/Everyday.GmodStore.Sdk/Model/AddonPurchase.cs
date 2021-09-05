@@ -71,7 +71,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
@@ -86,7 +85,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets Addon
         /// </summary>

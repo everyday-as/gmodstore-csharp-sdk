@@ -45,7 +45,7 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             this.Id = id;
             this.Title = title;
-            this.Version = version;
+            this._Version = version;
             this.Body = body;
             this.Rating = rating;
             this.Addon = addon;
@@ -65,10 +65,10 @@ namespace Everyday.GmodStore.Sdk.Model
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Version
+        /// Gets or Sets _Version
         /// </summary>
         [DataMember(Name = "version", EmitDefaultValue = false)]
-        public string Version { get; set; }
+        public string _Version { get; set; }
 
         /// <summary>
         /// Gets or Sets Body
@@ -104,7 +104,7 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("class AddonReview {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Rating: ").Append(Rating).Append("\n");
             sb.Append("  Addon: ").Append(Addon).Append("\n");
@@ -153,9 +153,9 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Title.Equals(input.Title))
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    (this.Version != null &&
-                    this.Version.Equals(input.Version))
+                    this._Version == input._Version ||
+                    (this._Version != null &&
+                    this._Version.Equals(input._Version))
                 ) && 
                 (
                     this.Body == input.Body ||
@@ -190,8 +190,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Title != null)
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.Version != null)
-                    hashCode = hashCode * 59 + this.Version.GetHashCode();
+                if (this._Version != null)
+                    hashCode = hashCode * 59 + this._Version.GetHashCode();
                 if (this.Body != null)
                     hashCode = hashCode * 59 + this.Body.GetHashCode();
                 hashCode = hashCode * 59 + this.Rating.GetHashCode();

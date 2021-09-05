@@ -122,7 +122,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets RatingAvg
         /// </summary>
@@ -137,7 +136,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets RatingCount
         /// </summary>
@@ -152,7 +150,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets PurchasesCount
         /// </summary>
@@ -167,7 +164,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets DependentAddon
         /// </summary>
@@ -182,7 +178,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets HasDrm
         /// </summary>
@@ -197,7 +192,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets RequiresChromium
         /// </summary>
@@ -212,7 +206,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets Slug
         /// </summary>
@@ -227,7 +220,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets Route
         /// </summary>
@@ -242,7 +234,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -257,7 +248,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
@@ -272,7 +262,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets LatestVersion
         /// </summary>

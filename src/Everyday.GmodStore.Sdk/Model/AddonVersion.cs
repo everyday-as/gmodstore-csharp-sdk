@@ -73,7 +73,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -101,7 +100,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets FileSize
         /// </summary>
@@ -116,7 +114,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -131,7 +128,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
@@ -146,7 +142,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets Addon
         /// </summary>

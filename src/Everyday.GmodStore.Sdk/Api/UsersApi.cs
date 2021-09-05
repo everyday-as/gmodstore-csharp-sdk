@@ -151,7 +151,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Initializes a new instance of the <see cref="UsersApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsersApi(String basePath)
+        public UsersApi(string basePath)
         {
             this.Configuration = Everyday.GmodStore.Sdk.Client.Configuration.MergeConfigurations(
                 Everyday.GmodStore.Sdk.Client.GlobalConfiguration.Instance,
@@ -214,7 +214,7 @@ namespace Everyday.GmodStore.Sdk.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -263,11 +263,11 @@ namespace Everyday.GmodStore.Sdk.Api
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -284,7 +284,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // authentication (bearerAuth) required
             // bearer authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }
@@ -326,11 +326,11 @@ namespace Everyday.GmodStore.Sdk.Api
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -348,7 +348,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // authentication (bearerAuth) required
             // bearer authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }
@@ -390,11 +390,11 @@ namespace Everyday.GmodStore.Sdk.Api
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -412,7 +412,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // authentication (bearerAuth) required
             // bearer authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }
@@ -456,11 +456,11 @@ namespace Everyday.GmodStore.Sdk.Api
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -479,7 +479,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // authentication (bearerAuth) required
             // bearer authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
             }

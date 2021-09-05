@@ -78,7 +78,6 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             return false;
         }
-
         /// <summary>
         /// Gets or Sets PrimaryAuthor
         /// </summary>
