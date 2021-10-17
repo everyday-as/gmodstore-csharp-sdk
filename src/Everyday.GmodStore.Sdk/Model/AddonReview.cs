@@ -41,7 +41,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="rating">rating.</param>
         /// <param name="addon">addon.</param>
         /// <param name="author">author.</param>
-        public AddonReview(int id = default(int), string title = default(string), string version = default(string), string body = default(string), decimal rating = default(decimal), Addon addon = default(Addon), User author = default(User))
+        public AddonReview(long id = default(long), string title = default(string), string version = default(string), string body = default(string), decimal rating = default(decimal), Addon addon = default(Addon), User author = default(User))
         {
             this.Id = id;
             this.Title = title;
@@ -56,7 +56,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Title

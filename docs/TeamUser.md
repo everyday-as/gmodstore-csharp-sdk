@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TeamId** | **int** |  | [optional] 
+**TeamId** | **long** |  | [optional] 
 **Primary** | **bool** |  | [optional] 
 **Percentage** | **int** |  | [optional] 
 **User** | [**User**](User.md) |  | [optional] 

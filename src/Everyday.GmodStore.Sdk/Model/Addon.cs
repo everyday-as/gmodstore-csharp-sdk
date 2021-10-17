@@ -45,7 +45,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="latestVersion">latestVersion.</param>
         /// <param name="team">team.</param>
         /// <param name="stats">stats.</param>
-        public Addon(int id = default(int), bool active = default(bool), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team), AddonStats stats = default(AddonStats))
+        public Addon(long id = default(long), bool active = default(bool), string name = default(string), string shortDescription = default(string), string description = default(string), List<string> requirements = default(List<string>), AddonPrice price = default(AddonPrice), AddonImages images = default(AddonImages), AddonVersion latestVersion = default(AddonVersion), Team team = default(Team), AddonStats stats = default(AddonStats))
         {
             this.Id = id;
             this.Active = active;
@@ -64,7 +64,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
@@ -168,7 +168,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets DependentAddon
         /// </summary>
         [DataMember(Name = "dependent_addon", EmitDefaultValue = true)]
-        public int? DependentAddon { get; private set; }
+        public long? DependentAddon { get; private set; }
 
         /// <summary>
         /// Returns false as DependentAddon should not be serialized given that it's read-only.

@@ -37,7 +37,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="id">id.</param>
         /// <param name="title">title.</param>
         /// <param name="displayOrder">displayOrder.</param>
-        public PermissionGroup(int id = default(int), string title = default(string), int displayOrder = default(int))
+        public PermissionGroup(long id = default(long), string title = default(string), int displayOrder = default(int))
         {
             this.Id = id;
             this.Title = title;
@@ -48,7 +48,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Title

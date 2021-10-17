@@ -38,7 +38,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="primary">primary.</param>
         /// <param name="percentage">percentage.</param>
         /// <param name="user">user.</param>
-        public TeamUser(int teamId = default(int), bool primary = default(bool), int percentage = default(int), User user = default(User))
+        public TeamUser(long teamId = default(long), bool primary = default(bool), int percentage = default(int), User user = default(User))
         {
             this.TeamId = teamId;
             this.Primary = primary;
@@ -50,7 +50,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets TeamId
         /// </summary>
         [DataMember(Name = "team_id", EmitDefaultValue = false)]
-        public int TeamId { get; set; }
+        public long TeamId { get; set; }
 
         /// <summary>
         /// Gets or Sets Primary

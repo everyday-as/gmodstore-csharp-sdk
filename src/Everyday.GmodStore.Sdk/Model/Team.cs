@@ -38,7 +38,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="name">name.</param>
         /// <param name="createdAt">createdAt.</param>
         /// <param name="primaryAuthor">primaryAuthor.</param>
-        public Team(int id = default(int), string name = default(string), DateTime createdAt = default(DateTime), TeamUser primaryAuthor = default(TeamUser))
+        public Team(long id = default(long), string name = default(string), DateTime createdAt = default(DateTime), TeamUser primaryAuthor = default(TeamUser))
         {
             this.Id = id;
             this.Name = name;
@@ -50,7 +50,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Name

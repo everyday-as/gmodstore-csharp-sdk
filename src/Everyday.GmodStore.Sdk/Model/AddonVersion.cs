@@ -63,7 +63,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; private set; }
+        public long Id { get; private set; }
 
         /// <summary>
         /// Returns false as Id should not be serialized given that it's read-only.

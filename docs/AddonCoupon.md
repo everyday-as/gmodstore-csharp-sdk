@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int** |  | [readonly] 
+**Id** | **long** |  | [readonly] 
 **Code** | **string** |  | 
 **Percent** | **decimal** |  | 
 **MaxUses** | **int** |  | 

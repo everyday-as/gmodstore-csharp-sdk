@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int** |  | [optional] [readonly] 
+**Id** | **long** |  | [optional] [readonly] 
 **Name** | **string** |  | 
 **Changelog** | **string** | You can pass in markdown here | 
 **FileHash** | **string** |  | [optional] [readonly] 
