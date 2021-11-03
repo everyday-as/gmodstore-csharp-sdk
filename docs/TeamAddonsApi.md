@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listteamaddons"></a>
 # **ListTeamAddons**
-> TeamUserListResponse ListTeamAddons (long teamId)
+> TeamAddonListResponse ListTeamAddons (long teamId)
 
 Fetch all the addons in the given team
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // Fetch all the addons in the given team
-                TeamUserListResponse result = apiInstance.ListTeamAddons(teamId);
+                TeamAddonListResponse result = apiInstance.ListTeamAddons(teamId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TeamUserListResponse**](TeamUserListResponse.md)
+[**TeamAddonListResponse**](TeamAddonListResponse.md)
 
 ### Authorization
 

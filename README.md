@@ -188,6 +188,8 @@ Class | Method | HTTP request | Description
  - [Model.PermissionGroup](docs/PermissionGroup.md)
  - [Model.PermissionGroupListResponse](docs/PermissionGroupListResponse.md)
  - [Model.Team](docs/Team.md)
+ - [Model.TeamAddon](docs/TeamAddon.md)
+ - [Model.TeamAddonListResponse](docs/TeamAddonListResponse.md)
  - [Model.TeamListResponse](docs/TeamListResponse.md)
  - [Model.TeamResponse](docs/TeamResponse.md)
  - [Model.TeamUser](docs/TeamUser.md)

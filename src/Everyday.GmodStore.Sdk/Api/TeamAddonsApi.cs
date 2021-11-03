@@ -31,8 +31,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
-        /// <returns>TeamUserListResponse</returns>
-        TeamUserListResponse ListTeamAddons(long teamId);
+        /// <returns>TeamAddonListResponse</returns>
+        TeamAddonListResponse ListTeamAddons(long teamId);
 
         /// <summary>
         /// Fetch all the addons in the given team
@@ -42,8 +42,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
-        /// <returns>ApiResponse of TeamUserListResponse</returns>
-        ApiResponse<TeamUserListResponse> ListTeamAddonsWithHttpInfo(long teamId);
+        /// <returns>ApiResponse of TeamAddonListResponse</returns>
+        ApiResponse<TeamAddonListResponse> ListTeamAddonsWithHttpInfo(long teamId);
         #endregion Synchronous Operations
     }
 
@@ -62,8 +62,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TeamUserListResponse</returns>
-        System.Threading.Tasks.Task<TeamUserListResponse> ListTeamAddonsAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TeamAddonListResponse</returns>
+        System.Threading.Tasks.Task<TeamAddonListResponse> ListTeamAddonsAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Fetch all the addons in the given team
@@ -74,8 +74,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TeamUserListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TeamUserListResponse>> ListTeamAddonsWithHttpInfoAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TeamAddonListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TeamAddonListResponse>> ListTeamAddonsWithHttpInfoAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -201,10 +201,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
-        /// <returns>TeamUserListResponse</returns>
-        public TeamUserListResponse ListTeamAddons(long teamId)
+        /// <returns>TeamAddonListResponse</returns>
+        public TeamAddonListResponse ListTeamAddons(long teamId)
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<TeamUserListResponse> localVarResponse = ListTeamAddonsWithHttpInfo(teamId);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<TeamAddonListResponse> localVarResponse = ListTeamAddonsWithHttpInfo(teamId);
             return localVarResponse.Data;
         }
 
@@ -213,8 +213,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
-        /// <returns>ApiResponse of TeamUserListResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<TeamUserListResponse> ListTeamAddonsWithHttpInfo(long teamId)
+        /// <returns>ApiResponse of TeamAddonListResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<TeamAddonListResponse> ListTeamAddonsWithHttpInfo(long teamId)
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -242,7 +242,7 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<TeamUserListResponse>("/teams/{team_id}/addons", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TeamAddonListResponse>("/teams/{team_id}/addons", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -259,10 +259,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TeamUserListResponse</returns>
-        public async System.Threading.Tasks.Task<TeamUserListResponse> ListTeamAddonsAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TeamAddonListResponse</returns>
+        public async System.Threading.Tasks.Task<TeamAddonListResponse> ListTeamAddonsAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<TeamUserListResponse> localVarResponse = await ListTeamAddonsWithHttpInfoAsync(teamId, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<TeamAddonListResponse> localVarResponse = await ListTeamAddonsWithHttpInfoAsync(teamId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -272,8 +272,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Id of the team</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TeamUserListResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<TeamUserListResponse>> ListTeamAddonsWithHttpInfoAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TeamAddonListResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<TeamAddonListResponse>> ListTeamAddonsWithHttpInfoAsync(long teamId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -304,7 +304,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<TeamUserListResponse>("/teams/{team_id}/addons", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TeamAddonListResponse>("/teams/{team_id}/addons", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
