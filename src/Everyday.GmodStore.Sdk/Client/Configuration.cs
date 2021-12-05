@@ -31,7 +31,7 @@ namespace Everyday.GmodStore.Sdk.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.5.4";
+        public const string Version = "1.6.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -71,7 +71,7 @@ namespace Everyday.GmodStore.Sdk.Client
 
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
-        /// This is the key and value comprising the "secret" for acessing an API.
+        /// This is the key and value comprising the "secret" for accessing an API.
         /// </summary>
         /// <value>The API key.</value>
         private IDictionary<string, string> _apiKey;
@@ -101,7 +101,7 @@ namespace Everyday.GmodStore.Sdk.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = "OpenAPI-Generator/1.5.4/csharp";
+            UserAgent = "OpenAPI-Generator/1.6.0/csharp";
             BasePath = "https://api.gmodstore.com/v2";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -425,7 +425,7 @@ namespace Everyday.GmodStore.Sdk.Client
                 }
                 else
                 {
-                    // use defualt value
+                    // use default value
                     url = url.Replace("{" + variable.Key + "}", (string)serverVariables["default_value"]);
                 }
             }
@@ -446,7 +446,7 @@ namespace Everyday.GmodStore.Sdk.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.2.0\n";
-            report += "    SDK Package Version: 1.5.4\n";
+            report += "    SDK Package Version: 1.6.0\n";
 
             return report;
         }

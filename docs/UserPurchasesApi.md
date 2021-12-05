@@ -34,7 +34,7 @@ namespace Example
 
             var apiInstance = new UserPurchasesApi(config);
             var userId = 789;  // long | Id of the user
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -58,7 +58,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **long**| Id of the user | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 

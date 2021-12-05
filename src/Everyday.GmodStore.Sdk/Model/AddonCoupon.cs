@@ -49,7 +49,10 @@ namespace Everyday.GmodStore.Sdk.Model
         public AddonCoupon(string code = default(string), decimal percent = default(decimal), int maxUses = default(int), DateTime expiresAt = default(DateTime), long? boundUserId = default(long?), Addon addon = default(Addon), User boundUser = default(User))
         {
             // to ensure "code" is required (not null)
-            this.Code = code ?? throw new ArgumentNullException("code is a required property for AddonCoupon and cannot be null");
+            if (code == null) {
+                throw new ArgumentNullException("code is a required property for AddonCoupon and cannot be null");
+            }
+            this.Code = code;
             this.Percent = percent;
             this.MaxUses = maxUses;
             this.ExpiresAt = expiresAt;
@@ -279,7 +282,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // Id (long) minimum
             if(this.Id < (long)1)

@@ -52,9 +52,15 @@ namespace Everyday.GmodStore.Sdk.Model
         public AddonVersion(string name = default(string), string changelog = default(string), AddonVersionReleaseType? releaseType = default(AddonVersionReleaseType?), Addon addon = default(Addon))
         {
             // to ensure "name" is required (not null)
-            this.Name = name ?? throw new ArgumentNullException("name is a required property for AddonVersion and cannot be null");
+            if (name == null) {
+                throw new ArgumentNullException("name is a required property for AddonVersion and cannot be null");
+            }
+            this.Name = name;
             // to ensure "changelog" is required (not null)
-            this.Changelog = changelog ?? throw new ArgumentNullException("changelog is a required property for AddonVersion and cannot be null");
+            if (changelog == null) {
+                throw new ArgumentNullException("changelog is a required property for AddonVersion and cannot be null");
+            }
+            this.Changelog = changelog;
             this.ReleaseType = releaseType;
             this.Addon = addon;
         }
@@ -276,7 +282,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             // Name (string) maxLength
             if(this.Name != null && this.Name.Length > 80)

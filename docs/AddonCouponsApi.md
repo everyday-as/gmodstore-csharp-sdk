@@ -39,7 +39,7 @@ namespace Example
             var apiInstance = new AddonCouponsApi(config);
             var addonId = 789;  // long | Id of the addon
             var addonCoupon = new AddonCoupon(); // AddonCoupon | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **addonCoupon** | [**AddonCoupon**](AddonCoupon.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -192,7 +192,7 @@ namespace Example
             var apiInstance = new AddonCouponsApi(config);
             var addonId = 789;  // long | Id of the addon
             var couponId = 789;  // long | Id of the coupon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **couponId** | **long**| Id of the coupon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -269,7 +269,7 @@ namespace Example
 
             var apiInstance = new AddonCouponsApi(config);
             var addonId = 789;  // long | Id of the addon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -293,7 +293,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 
@@ -347,7 +347,7 @@ namespace Example
             var addonId = 789;  // long | Id of the addon
             var couponId = 789;  // long | Id of the coupon
             var addonCoupon = new AddonCoupon(); // AddonCoupon | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonCoupon` (optional) 
 
             try
             {
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
  **addonId** | **long**| Id of the addon | 
  **couponId** | **long**| Id of the coupon | 
  **addonCoupon** | [**AddonCoupon**](AddonCoupon.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonCoupon&#x60; | [optional] 
 
 ### Return type
 

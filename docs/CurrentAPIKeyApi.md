@@ -33,7 +33,7 @@ namespace Example
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new CurrentAPIKeyApi(config);
-            var with = with_example;  // List<string> | The relations you want to fetch with the `ApiKey` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `ApiKey` (optional) 
 
             try
             {
@@ -56,7 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;ApiKey&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;ApiKey&#x60; | [optional] 
 
 ### Return type
 

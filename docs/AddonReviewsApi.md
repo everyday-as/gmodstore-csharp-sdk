@@ -36,7 +36,7 @@ namespace Example
             var apiInstance = new AddonReviewsApi(config);
             var addonId = 789;  // long | Id of the addon
             var reviewId = 789;  // long | Id of the review
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonReview` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonReview` (optional) 
 
             try
             {
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **reviewId** | **long**| Id of the review | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonReview&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonReview&#x60; | [optional] 
 
 ### Return type
 
@@ -113,7 +113,7 @@ namespace Example
 
             var apiInstance = new AddonReviewsApi(config);
             var addonId = 789;  // long | Id of the addon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonReview` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonReview` (optional) 
 
             try
             {
@@ -137,7 +137,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonReview&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonReview&#x60; | [optional] 
 
 ### Return type
 

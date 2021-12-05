@@ -38,7 +38,7 @@ namespace Example
             var apiInstance = new AddonPurchasesApi(config);
             var addonId = 789;  // long | Id of the addon
             var newAddonPurchase = new NewAddonPurchase(); // NewAddonPurchase | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **newAddonPurchase** | [**NewAddonPurchase**](NewAddonPurchase.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -116,7 +116,7 @@ namespace Example
             var apiInstance = new AddonPurchasesApi(config);
             var addonId = 789;  // long | Id of the addon
             var userId = 789;  // long | Id of the user
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **userId** | **long**| Id of the user | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -193,7 +193,7 @@ namespace Example
 
             var apiInstance = new AddonPurchasesApi(config);
             var addonId = 789;  // long | Id of the addon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -217,7 +217,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 
@@ -271,7 +271,7 @@ namespace Example
             var addonId = 789;  // long | Id of the addon
             var userId = 789;  // long | Id of the user
             var addonPurchase = new AddonPurchase(); // AddonPurchase | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonPurchase` (optional) 
 
             try
             {
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
  **addonId** | **long**| Id of the addon | 
  **userId** | **long**| Id of the user | 
  **addonPurchase** | [**AddonPurchase**](AddonPurchase.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonPurchase&#x60; | [optional] 
 
 ### Return type
 

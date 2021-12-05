@@ -43,7 +43,10 @@ namespace Everyday.GmodStore.Sdk.Model
         public UserBadge(string badge = default(string))
         {
             // to ensure "badge" is required (not null)
-            this.Badge = badge ?? throw new ArgumentNullException("badge is a required property for UserBadge and cannot be null");
+            if (badge == null) {
+                throw new ArgumentNullException("badge is a required property for UserBadge and cannot be null");
+            }
+            this.Badge = badge;
         }
 
         /// <summary>
@@ -122,7 +125,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -35,7 +35,7 @@ namespace Example
 
             var apiInstance = new AddonsApi(config);
             var addonId = 789;  // long | Id of the addon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `Addon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -59,7 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 
@@ -110,7 +110,7 @@ namespace Example
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new AddonsApi(config);
-            var with = with_example;  // List<string> | The relations you want to fetch with the `Addon` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Addon` (optional) 
 
             try
             {
@@ -133,7 +133,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Addon&#x60; | [optional] 
 
 ### Return type
 

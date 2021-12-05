@@ -39,7 +39,7 @@ namespace Example
             var apiInstance = new AddonVersionsApi(config);
             var addonId = 789;  // long | Id of the addon
             var newAddonVersion = new NewAddonVersion(); // NewAddonVersion | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **newAddonVersion** | [**NewAddonVersion**](NewAddonVersion.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -193,7 +193,7 @@ namespace Example
             var apiInstance = new AddonVersionsApi(config);
             var addonId = 789;  // long | Id of the addon
             var versionId = 789;  // long | Id of the version
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
  **versionId** | **long**| Id of the version | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -270,7 +270,7 @@ namespace Example
 
             var apiInstance = new AddonVersionsApi(config);
             var addonId = 789;  // long | Id of the addon
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -294,7 +294,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addonId** | **long**| Id of the addon | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
@@ -348,7 +348,7 @@ namespace Example
             var addonId = 789;  // long | Id of the addon
             var versionId = 789;  // long | Id of the version
             var addonVersion = new AddonVersion(); // AddonVersion | 
-            var with = with_example;  // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `AddonVersion` (optional) 
 
             try
             {
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
  **addonId** | **long**| Id of the addon | 
  **versionId** | **long**| Id of the version | 
  **addonVersion** | [**AddonVersion**](AddonVersion.md)|  | 
- **with** | **List&lt;string&gt;**| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;AddonVersion&#x60; | [optional] 
 
 ### Return type
 
