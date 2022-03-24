@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getaddonstats"></a>
 # **GetAddonStats**
-> AddonStatsListResponse GetAddonStats (long addonId)
+> AddonStatsResponse GetAddonStats (long addonId)
 
 Fetch all the stats for an addon
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // Fetch all the stats for an addon
-                AddonStatsListResponse result = apiInstance.GetAddonStats(addonId);
+                AddonStatsResponse result = apiInstance.GetAddonStats(addonId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddonStatsListResponse**](AddonStatsListResponse.md)
+[**AddonStatsResponse**](AddonStatsResponse.md)
 
 ### Authorization
 

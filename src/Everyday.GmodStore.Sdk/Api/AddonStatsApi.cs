@@ -31,8 +31,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>AddonStatsListResponse</returns>
-        AddonStatsListResponse GetAddonStats(long addonId);
+        /// <returns>AddonStatsResponse</returns>
+        AddonStatsResponse GetAddonStats(long addonId);
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -42,8 +42,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>ApiResponse of AddonStatsListResponse</returns>
-        ApiResponse<AddonStatsListResponse> GetAddonStatsWithHttpInfo(long addonId);
+        /// <returns>ApiResponse of AddonStatsResponse</returns>
+        ApiResponse<AddonStatsResponse> GetAddonStatsWithHttpInfo(long addonId);
         #endregion Synchronous Operations
     }
 
@@ -62,8 +62,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonStatsListResponse</returns>
-        System.Threading.Tasks.Task<AddonStatsListResponse> GetAddonStatsAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AddonStatsResponse</returns>
+        System.Threading.Tasks.Task<AddonStatsResponse> GetAddonStatsAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Fetch all the stats for an addon
@@ -74,8 +74,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonStatsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddonStatsListResponse>> GetAddonStatsWithHttpInfoAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AddonStatsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddonStatsResponse>> GetAddonStatsWithHttpInfoAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -201,10 +201,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>AddonStatsListResponse</returns>
-        public AddonStatsListResponse GetAddonStats(long addonId)
+        /// <returns>AddonStatsResponse</returns>
+        public AddonStatsResponse GetAddonStats(long addonId)
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsListResponse> localVarResponse = GetAddonStatsWithHttpInfo(addonId);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsResponse> localVarResponse = GetAddonStatsWithHttpInfo(addonId);
             return localVarResponse.Data;
         }
 
@@ -213,8 +213,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
-        /// <returns>ApiResponse of AddonStatsListResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsListResponse> GetAddonStatsWithHttpInfo(long addonId)
+        /// <returns>ApiResponse of AddonStatsResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsResponse> GetAddonStatsWithHttpInfo(long addonId)
         {
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
 
@@ -242,7 +242,7 @@ namespace Everyday.GmodStore.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AddonStatsListResponse>("/addons/{addon_id}/stats", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<AddonStatsResponse>("/addons/{addon_id}/stats", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -259,10 +259,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AddonStatsListResponse</returns>
-        public async System.Threading.Tasks.Task<AddonStatsListResponse> GetAddonStatsAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AddonStatsResponse</returns>
+        public async System.Threading.Tasks.Task<AddonStatsResponse> GetAddonStatsAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsListResponse> localVarResponse = await GetAddonStatsWithHttpInfoAsync(addonId, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsResponse> localVarResponse = await GetAddonStatsWithHttpInfoAsync(addonId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -272,8 +272,8 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addonId">Id of the addon</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AddonStatsListResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsListResponse>> GetAddonStatsWithHttpInfoAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AddonStatsResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<AddonStatsResponse>> GetAddonStatsWithHttpInfoAsync(long addonId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
@@ -304,7 +304,7 @@ namespace Everyday.GmodStore.Sdk.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonStatsListResponse>("/addons/{addon_id}/stats", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AddonStatsResponse>("/addons/{addon_id}/stats", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
