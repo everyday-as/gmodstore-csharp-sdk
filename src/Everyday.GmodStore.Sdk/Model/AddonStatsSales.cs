@@ -35,9 +35,11 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Initializes a new instance of the <see cref="AddonStatsSales" /> class.
         /// </summary>
         /// <param name="current">current.</param>
-        public AddonStatsSales(AddonStatsSalesCurrent current = default(AddonStatsSalesCurrent))
+        /// <param name="total">total.</param>
+        public AddonStatsSales(AddonStatsSalesCurrent current = default(AddonStatsSalesCurrent), string total = default(string))
         {
             this.Current = current;
+            this.Total = total;
         }
 
         /// <summary>
@@ -45,6 +47,12 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         [DataMember(Name = "current", EmitDefaultValue = false)]
         public AddonStatsSalesCurrent Current { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name = "total", EmitDefaultValue = false)]
+        public string Total { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,6 +63,7 @@ namespace Everyday.GmodStore.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class AddonStatsSales {\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
+            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +102,11 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Current == input.Current ||
                     (this.Current != null &&
                     this.Current.Equals(input.Current))
+                ) && 
+                (
+                    this.Total == input.Total ||
+                    (this.Total != null &&
+                    this.Total.Equals(input.Total))
                 );
         }
 
@@ -107,6 +121,8 @@ namespace Everyday.GmodStore.Sdk.Model
                 int hashCode = 41;
                 if (this.Current != null)
                     hashCode = hashCode * 59 + this.Current.GetHashCode();
+                if (this.Total != null)
+                    hashCode = hashCode * 59 + this.Total.GetHashCode();
                 return hashCode;
             }
         }

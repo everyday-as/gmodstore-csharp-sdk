@@ -36,10 +36,12 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="current">current.</param>
         /// <param name="previous">previous.</param>
-        public AddonStatsViews(AddonStatsViewsCurrent current = default(AddonStatsViewsCurrent), AddonStatsViewsCurrent previous = default(AddonStatsViewsCurrent))
+        /// <param name="total">total.</param>
+        public AddonStatsViews(AddonStatsViewsCurrent current = default(AddonStatsViewsCurrent), AddonStatsViewsCurrent previous = default(AddonStatsViewsCurrent), string total = default(string))
         {
             this.Current = current;
             this.Previous = previous;
+            this.Total = total;
         }
 
         /// <summary>
@@ -55,6 +57,12 @@ namespace Everyday.GmodStore.Sdk.Model
         public AddonStatsViewsCurrent Previous { get; set; }
 
         /// <summary>
+        /// Gets or Sets Total
+        /// </summary>
+        [DataMember(Name = "total", EmitDefaultValue = false)]
+        public string Total { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,6 +72,7 @@ namespace Everyday.GmodStore.Sdk.Model
             sb.Append("class AddonStatsViews {\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("  Previous: ").Append(Previous).Append("\n");
+            sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +116,11 @@ namespace Everyday.GmodStore.Sdk.Model
                     this.Previous == input.Previous ||
                     (this.Previous != null &&
                     this.Previous.Equals(input.Previous))
+                ) && 
+                (
+                    this.Total == input.Total ||
+                    (this.Total != null &&
+                    this.Total.Equals(input.Total))
                 );
         }
 
@@ -123,6 +137,8 @@ namespace Everyday.GmodStore.Sdk.Model
                     hashCode = hashCode * 59 + this.Current.GetHashCode();
                 if (this.Previous != null)
                     hashCode = hashCode * 59 + this.Previous.GetHashCode();
+                if (this.Total != null)
+                    hashCode = hashCode * 59 + this.Total.GetHashCode();
                 return hashCode;
             }
         }

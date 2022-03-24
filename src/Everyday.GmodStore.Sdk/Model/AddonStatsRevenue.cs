@@ -36,12 +36,10 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="current">current.</param>
         /// <param name="previous">previous.</param>
-        /// <param name="total">total.</param>
-        public AddonStatsRevenue(AddonStatsRevenueCurrent current = default(AddonStatsRevenueCurrent), AddonStatsRevenueCurrent previous = default(AddonStatsRevenueCurrent), Money total = default(Money))
+        public AddonStatsRevenue(AddonStatsRevenueCurrent current = default(AddonStatsRevenueCurrent), AddonStatsRevenueCurrent previous = default(AddonStatsRevenueCurrent))
         {
             this.Current = current;
             this.Previous = previous;
-            this.Total = total;
         }
 
         /// <summary>
@@ -60,8 +58,16 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name = "total", EmitDefaultValue = false)]
-        public Money Total { get; set; }
+        public string Total { get; private set; }
 
+        /// <summary>
+        /// Returns false as Total should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTotal()
+        {
+            return false;
+        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

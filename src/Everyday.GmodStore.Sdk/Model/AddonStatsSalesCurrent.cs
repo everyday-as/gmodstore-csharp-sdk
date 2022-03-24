@@ -37,7 +37,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <param name="day">day.</param>
         /// <param name="week">week.</param>
         /// <param name="month">month.</param>
-        public AddonStatsSalesCurrent(int day = default(int), int week = default(int), int month = default(int))
+        public AddonStatsSalesCurrent(string day = default(string), string week = default(string), string month = default(string))
         {
             this.Day = day;
             this.Week = week;
@@ -48,19 +48,19 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Day
         /// </summary>
         [DataMember(Name = "day", EmitDefaultValue = false)]
-        public int Day { get; set; }
+        public string Day { get; set; }
 
         /// <summary>
         /// Gets or Sets Week
         /// </summary>
         [DataMember(Name = "week", EmitDefaultValue = false)]
-        public int Week { get; set; }
+        public string Week { get; set; }
 
         /// <summary>
         /// Gets or Sets Month
         /// </summary>
         [DataMember(Name = "month", EmitDefaultValue = false)]
-        public int Month { get; set; }
+        public string Month { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,15 +109,18 @@ namespace Everyday.GmodStore.Sdk.Model
             return 
                 (
                     this.Day == input.Day ||
-                    this.Day.Equals(input.Day)
+                    (this.Day != null &&
+                    this.Day.Equals(input.Day))
                 ) && 
                 (
                     this.Week == input.Week ||
-                    this.Week.Equals(input.Week)
+                    (this.Week != null &&
+                    this.Week.Equals(input.Week))
                 ) && 
                 (
                     this.Month == input.Month ||
-                    this.Month.Equals(input.Month)
+                    (this.Month != null &&
+                    this.Month.Equals(input.Month))
                 );
         }
 
@@ -130,9 +133,12 @@ namespace Everyday.GmodStore.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Day.GetHashCode();
-                hashCode = hashCode * 59 + this.Week.GetHashCode();
-                hashCode = hashCode * 59 + this.Month.GetHashCode();
+                if (this.Day != null)
+                    hashCode = hashCode * 59 + this.Day.GetHashCode();
+                if (this.Week != null)
+                    hashCode = hashCode * 59 + this.Week.GetHashCode();
+                if (this.Month != null)
+                    hashCode = hashCode * 59 + this.Month.GetHashCode();
                 return hashCode;
             }
         }

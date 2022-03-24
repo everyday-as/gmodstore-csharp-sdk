@@ -34,26 +34,39 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddonStatsRevenueCurrent" /> class.
         /// </summary>
-        /// <param name="day">day.</param>
-        /// <param name="month">month.</param>
-        public AddonStatsRevenueCurrent(Money day = default(Money), Money month = default(Money))
+        [JsonConstructorAttribute]
+        public AddonStatsRevenueCurrent()
         {
-            this.Day = day;
-            this.Month = month;
         }
 
         /// <summary>
         /// Gets or Sets Day
         /// </summary>
         [DataMember(Name = "day", EmitDefaultValue = false)]
-        public Money Day { get; set; }
+        public string Day { get; private set; }
 
+        /// <summary>
+        /// Returns false as Day should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeDay()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Month
         /// </summary>
         [DataMember(Name = "month", EmitDefaultValue = false)]
-        public Money Month { get; set; }
+        public string Month { get; private set; }
 
+        /// <summary>
+        /// Returns false as Month should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeMonth()
+        {
+            return false;
+        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

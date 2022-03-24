@@ -36,7 +36,7 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         /// <param name="day">day.</param>
         /// <param name="month">month.</param>
-        public AddonStatsViewsCurrent(int day = default(int), int month = default(int))
+        public AddonStatsViewsCurrent(string day = default(string), string month = default(string))
         {
             this.Day = day;
             this.Month = month;
@@ -46,13 +46,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Gets or Sets Day
         /// </summary>
         [DataMember(Name = "day", EmitDefaultValue = false)]
-        public int Day { get; set; }
+        public string Day { get; set; }
 
         /// <summary>
         /// Gets or Sets Month
         /// </summary>
         [DataMember(Name = "month", EmitDefaultValue = false)]
-        public int Month { get; set; }
+        public string Month { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -100,11 +100,13 @@ namespace Everyday.GmodStore.Sdk.Model
             return 
                 (
                     this.Day == input.Day ||
-                    this.Day.Equals(input.Day)
+                    (this.Day != null &&
+                    this.Day.Equals(input.Day))
                 ) && 
                 (
                     this.Month == input.Month ||
-                    this.Month.Equals(input.Month)
+                    (this.Month != null &&
+                    this.Month.Equals(input.Month))
                 );
         }
 
@@ -117,8 +119,10 @@ namespace Everyday.GmodStore.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Day.GetHashCode();
-                hashCode = hashCode * 59 + this.Month.GetHashCode();
+                if (this.Day != null)
+                    hashCode = hashCode * 59 + this.Day.GetHashCode();
+                if (this.Month != null)
+                    hashCode = hashCode * 59 + this.Month.GetHashCode();
                 return hashCode;
             }
         }
