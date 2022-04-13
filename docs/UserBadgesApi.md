@@ -1,19 +1,19 @@
 # Everyday.GmodStore.Sdk.Api.UserBadgesApi
 
-All URIs are relative to *https://api.gmodstore.com/v2*
+All URIs are relative to *https://www.gmodstore.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateUserBadge**](UserBadgesApi.md#createuserbadge) | **POST** /users/{user_id}/badges | Give a user a badge
-[**DeleteUserBadge**](UserBadgesApi.md#deleteuserbadge) | **DELETE** /users/{user_id}/badges/{badge_id} | Destroy a users&#39;s badge
-[**ListUserBadges**](UserBadgesApi.md#listuserbadges) | **GET** /users/{user_id}/badges | Fetch all the badges a user has
+[**CreateUserBadge**](UserBadgesApi.md#createuserbadge) | **POST** /api/v3/users/{user}/badges | Attach a badge to a user
+[**DeleteUserBadge**](UserBadgesApi.md#deleteuserbadge) | **DELETE** /api/v3/users/{user}/badges/{badge} | Detach a badge from a user
+[**ListUserBadges**](UserBadgesApi.md#listuserbadges) | **GET** /api/v3/users/{user}/badges | List all the specified user&#39;s badges
 
 
 <a name="createuserbadge"></a>
 # **CreateUserBadge**
-> BadgeResponse CreateUserBadge (long userId, UserBadge userBadge)
+> CreateUserBadgeResponse CreateUserBadge (string user, NewUserBadgePayload newUserBadgePayload = null)
 
-Give a user a badge
+Attach a badge to a user
 
 ### Example
 ```csharp
@@ -30,18 +30,18 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.gmodstore.com/v2";
-            // Configure Bearer token for authorization: bearerAuth
+            config.BasePath = "https://www.gmodstore.com";
+            // Configure Bearer token for authorization: PersonalAccessToken
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new UserBadgesApi(config);
-            var userId = 789;  // long | Id of the user
-            var userBadge = new UserBadge(); // UserBadge | 
+            var user = user_example;  // string | 
+            var newUserBadgePayload = new NewUserBadgePayload(); // NewUserBadgePayload |  (optional) 
 
             try
             {
-                // Give a user a badge
-                BadgeResponse result = apiInstance.CreateUserBadge(userId, userBadge);
+                // Attach a badge to a user
+                CreateUserBadgeResponse result = apiInstance.CreateUserBadge(user, newUserBadgePayload);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,16 +59,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **long**| Id of the user | 
- **userBadge** | [**UserBadge**](UserBadge.md)|  | 
+ **user** | **string**|  | 
+ **newUserBadgePayload** | [**NewUserBadgePayload**](NewUserBadgePayload.md)|  | [optional] 
 
 ### Return type
 
-[**BadgeResponse**](BadgeResponse.md)
+[**CreateUserBadgeResponse**](CreateUserBadgeResponse.md)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[PersonalAccessToken](../README.md#PersonalAccessToken)
 
 ### HTTP request headers
 
@@ -79,17 +79,19 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
-| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
-| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **201** | Successful response containing the newly created user badge |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **400** | Improperly formatted request passed |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | The passed bearer token is missing or invalid |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **403** | The passed bearer token does not have the right scopes |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **404** | The requested resource does not exist |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="deleteuserbadge"></a>
 # **DeleteUserBadge**
-> void DeleteUserBadge (long userId, string badgeId)
+> DeleteUserBadgeResponse DeleteUserBadge (string user, string badge)
 
-Destroy a users's badge
+Detach a badge from a user
 
 ### Example
 ```csharp
@@ -106,18 +108,19 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.gmodstore.com/v2";
-            // Configure Bearer token for authorization: bearerAuth
+            config.BasePath = "https://www.gmodstore.com";
+            // Configure Bearer token for authorization: PersonalAccessToken
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new UserBadgesApi(config);
-            var userId = 789;  // long | Id of the user
-            var badgeId = badgeId_example;  // string | Id of the badge
+            var user = user_example;  // string | 
+            var badge = badge_example;  // string | 
 
             try
             {
-                // Destroy a users's badge
-                apiInstance.DeleteUserBadge(userId, badgeId);
+                // Detach a badge from a user
+                DeleteUserBadgeResponse result = apiInstance.DeleteUserBadge(user, badge);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -134,16 +137,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **long**| Id of the user | 
- **badgeId** | **string**| Id of the badge | 
+ **user** | **string**|  | 
+ **badge** | **string**|  | 
 
 ### Return type
 
-void (empty response body)
+[**DeleteUserBadgeResponse**](DeleteUserBadgeResponse.md)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[PersonalAccessToken](../README.md#PersonalAccessToken)
 
 ### HTTP request headers
 
@@ -154,16 +157,19 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
-| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **200** | Successful response containing the user badge that was just deleted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **400** | Improperly formatted request passed |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | The passed bearer token is missing or invalid |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **403** | The passed bearer token does not have the right scopes |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **404** | The requested resource does not exist |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listuserbadges"></a>
 # **ListUserBadges**
-> BadgeListResponse ListUserBadges (long userId)
+> Object ListUserBadges (string user, int? perPage = null, string cursor = null)
 
-Fetch all the badges a user has
+List all the specified user's badges
 
 ### Example
 ```csharp
@@ -180,17 +186,19 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.gmodstore.com/v2";
-            // Configure Bearer token for authorization: bearerAuth
+            config.BasePath = "https://www.gmodstore.com";
+            // Configure Bearer token for authorization: PersonalAccessToken
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new UserBadgesApi(config);
-            var userId = 789;  // long | Id of the user
+            var user = user_example;  // string | 
+            var perPage = 56;  // int? |  (optional)  (default to 24)
+            var cursor = cursor_example;  // string | The cursor from which to return paginated results starting after (optional) 
 
             try
             {
-                // Fetch all the badges a user has
-                BadgeListResponse result = apiInstance.ListUserBadges(userId);
+                // List all the specified user's badges
+                Object result = apiInstance.ListUserBadges(user, perPage, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -208,15 +216,17 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **long**| Id of the user | 
+ **user** | **string**|  | 
+ **perPage** | **int?**|  | [optional] [default to 24]
+ **cursor** | **string**| The cursor from which to return paginated results starting after | [optional] 
 
 ### Return type
 
-[**BadgeListResponse**](BadgeListResponse.md)
+**Object**
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[PersonalAccessToken](../README.md#PersonalAccessToken)
 
 ### HTTP request headers
 
@@ -227,9 +237,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
-| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
-| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **200** | Successful response containing a list of user badges |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **400** | Improperly formatted request passed |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | The passed bearer token is missing or invalid |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **403** | The passed bearer token does not have the right scopes |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **404** | The requested resource does not exist |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,17 +1,17 @@
 # Everyday.GmodStore.Sdk.Api.UserBansApi
 
-All URIs are relative to *https://api.gmodstore.com/v2*
+All URIs are relative to *https://www.gmodstore.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ListUserBans**](UserBansApi.md#listuserbans) | **GET** /users/{user_id}/bans | Fetch all active bans associated with this user
+[**ListUserBans**](UserBansApi.md#listuserbans) | **GET** /api/v3/users/{user}/bans | List all the specified user&#39;s bans
 
 
 <a name="listuserbans"></a>
 # **ListUserBans**
-> UserBanListResponse ListUserBans (long userId)
+> Object ListUserBans (string user, int? perPage = null, string cursor = null, UserBanFilter filter = null)
 
-Fetch all active bans associated with this user
+List all the specified user's bans
 
 ### Example
 ```csharp
@@ -28,17 +28,20 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.gmodstore.com/v2";
-            // Configure Bearer token for authorization: bearerAuth
+            config.BasePath = "https://www.gmodstore.com";
+            // Configure Bearer token for authorization: PersonalAccessToken
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new UserBansApi(config);
-            var userId = 789;  // long | Id of the user
+            var user = user_example;  // string | 
+            var perPage = 56;  // int? |  (optional)  (default to 24)
+            var cursor = cursor_example;  // string | The cursor from which to return paginated results starting after (optional) 
+            var filter = new UserBanFilter(); // UserBanFilter | Filter the results (optional) 
 
             try
             {
-                // Fetch all active bans associated with this user
-                UserBanListResponse result = apiInstance.ListUserBans(userId);
+                // List all the specified user's bans
+                Object result = apiInstance.ListUserBans(user, perPage, cursor, filter);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -56,15 +59,18 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **long**| Id of the user | 
+ **user** | **string**|  | 
+ **perPage** | **int?**|  | [optional] [default to 24]
+ **cursor** | **string**| The cursor from which to return paginated results starting after | [optional] 
+ **filter** | [**UserBanFilter**](UserBanFilter.md)| Filter the results | [optional] 
 
 ### Return type
 
-[**UserBanListResponse**](UserBanListResponse.md)
+**Object**
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[PersonalAccessToken](../README.md#PersonalAccessToken)
 
 ### HTTP request headers
 
@@ -75,9 +81,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
-| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
-| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **200** | Successful response containing a list of user bans |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **400** | Improperly formatted request passed |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | The passed bearer token is missing or invalid |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **403** | The passed bearer token does not have the right scopes |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **404** | The requested resource does not exist |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

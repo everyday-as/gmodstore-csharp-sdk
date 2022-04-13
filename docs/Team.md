@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **long** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**CreatedAt** | **DateTime** |  | [optional] 
-**UpdatedAt** | **DateTime** |  | [optional] [readonly] 
-**PrimaryAuthor** | [**TeamUser**](TeamUser.md) |  | [optional] 
+**Id** | **Guid** |  | 
+**Name** | **string** |  | 
+**Description** | **string** |  | 
+**Settings** | **string** |  | [optional] 
+**CreatedAt** | **DateTime** |  | 
+**UpdatedAt** | **DateTime** |  | 
+**ProductsCount** | **long** |  | 
+**UsersCount** | **long** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

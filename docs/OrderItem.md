@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Guid** |  | [optional] 
-**Price** | [**Money**](Money.md) |  | [optional] 
-**ReversedAt** | **DateTime** |  | [optional] 
+**Id** | **Guid** |  | 
+**Price** | [**Money**](Money.md) |  | 
+**ReversedAt** | **DateTime** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
