@@ -11,7 +11,6 @@ docs/CreateProductPurchaseResponse.md
 docs/CreateProductVersionResponse.md
 docs/CreateTeamResponse.md
 docs/CreateUserBadgeResponse.md
-docs/DefaultApi.md
 docs/DeletePermissionGroupResponse.md
 docs/DeleteProductCouponResponse.md
 docs/DeleteProductVersionResponse.md
@@ -95,7 +94,6 @@ docs/UserTeamsApi.md
 docs/UsersApi.md
 docs/ValidationErrors.md
 git_push.sh
-src/Everyday.GmodStore.Sdk.Test/Api/DefaultApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Api/PermissionGroupsApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Api/PersonalAccessTokensApiTests.cs
 src/Everyday.GmodStore.Sdk.Test/Api/ProductCouponsApiTests.cs
@@ -188,7 +186,6 @@ src/Everyday.GmodStore.Sdk.Test/Model/UserBanTests.cs
 src/Everyday.GmodStore.Sdk.Test/Model/UserFilterTests.cs
 src/Everyday.GmodStore.Sdk.Test/Model/UserTests.cs
 src/Everyday.GmodStore.Sdk.Test/Model/ValidationErrorsTests.cs
-src/Everyday.GmodStore.Sdk/Api/DefaultApi.cs
 src/Everyday.GmodStore.Sdk/Api/PermissionGroupsApi.cs
 src/Everyday.GmodStore.Sdk/Api/PersonalAccessTokensApi.cs
 src/Everyday.GmodStore.Sdk/Api/ProductCouponsApi.cs

@@ -53,6 +53,26 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <returns>ApiResponse of CreateProductVersionResponse</returns>
         ApiResponse<CreateProductVersionResponse> CreateProductVersionWithHttpInfo(string product, string name, string changelog, System.IO.Stream file, string releaseType);
         /// <summary>
+        /// Delete the specified version for a product
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <returns>DeleteProductVersionResponse</returns>
+        DeleteProductVersionResponse DeleteProductVersion(string product, string version);
+
+        /// <summary>
+        /// Delete the specified version for a product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <returns>ApiResponse of DeleteProductVersionResponse</returns>
+        ApiResponse<DeleteProductVersionResponse> DeleteProductVersionWithHttpInfo(string product, string version);
+        /// <summary>
         /// Get a one time use url for downloading a product
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -180,6 +200,31 @@ namespace Everyday.GmodStore.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateProductVersionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateProductVersionResponse>> CreateProductVersionWithHttpInfoAsync(string product, string name, string changelog, System.IO.Stream file, string releaseType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Delete the specified version for a product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeleteProductVersionResponse</returns>
+        System.Threading.Tasks.Task<DeleteProductVersionResponse> DeleteProductVersionAsync(string product, string version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Delete the specified version for a product
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeleteProductVersionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteProductVersionResponse>> DeleteProductVersionWithHttpInfoAsync(string product, string version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get a one time use url for downloading a product
         /// </summary>
@@ -587,6 +632,147 @@ namespace Everyday.GmodStore.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateProductVersion", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete the specified version for a product 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <returns>DeleteProductVersionResponse</returns>
+        public DeleteProductVersionResponse DeleteProductVersion(string product, string version)
+        {
+            Everyday.GmodStore.Sdk.Client.ApiResponse<DeleteProductVersionResponse> localVarResponse = DeleteProductVersionWithHttpInfo(product, version);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete the specified version for a product 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <returns>ApiResponse of DeleteProductVersionResponse</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<DeleteProductVersionResponse> DeleteProductVersionWithHttpInfo(string product, string version)
+        {
+            // verify the required parameter 'product' is set
+            if (product == null)
+                throw new Everyday.GmodStore.Sdk.Client.ApiException(400, "Missing required parameter 'product' when calling ProductVersionsApi->DeleteProductVersion");
+
+            // verify the required parameter 'version' is set
+            if (version == null)
+                throw new Everyday.GmodStore.Sdk.Client.ApiException(400, "Missing required parameter 'version' when calling ProductVersionsApi->DeleteProductVersion");
+
+            Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("product", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(product)); // path parameter
+            localVarRequestOptions.PathParameters.Add("version", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(version)); // path parameter
+
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<DeleteProductVersionResponse>("/api/v3/products/{product}/versions/{version}", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteProductVersion", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete the specified version for a product 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeleteProductVersionResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteProductVersionResponse> DeleteProductVersionAsync(string product, string version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Everyday.GmodStore.Sdk.Client.ApiResponse<DeleteProductVersionResponse> localVarResponse = await DeleteProductVersionWithHttpInfoAsync(product, version, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete the specified version for a product 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="product"></param>
+        /// <param name="version"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeleteProductVersionResponse)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<DeleteProductVersionResponse>> DeleteProductVersionWithHttpInfoAsync(string product, string version, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'product' is set
+            if (product == null)
+                throw new Everyday.GmodStore.Sdk.Client.ApiException(400, "Missing required parameter 'product' when calling ProductVersionsApi->DeleteProductVersion");
+
+            // verify the required parameter 'version' is set
+            if (version == null)
+                throw new Everyday.GmodStore.Sdk.Client.ApiException(400, "Missing required parameter 'version' when calling ProductVersionsApi->DeleteProductVersion");
+
+
+            Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("product", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(product)); // path parameter
+            localVarRequestOptions.PathParameters.Add("version", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(version)); // path parameter
+
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DeleteProductVersionResponse>("/api/v3/products/{product}/versions/{version}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteProductVersion", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

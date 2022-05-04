@@ -71,6 +71,19 @@ namespace Everyday.GmodStore.Sdk.Test.Api
         }
 
         /// <summary>
+        /// Test DeleteProductVersion
+        /// </summary>
+        [Fact]
+        public void DeleteProductVersionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string product = null;
+            //string version = null;
+            //var response = instance.DeleteProductVersion(product, version);
+            //Assert.IsType<DeleteProductVersionResponse>(response);
+        }
+
+        /// <summary>
         /// Test GetProductDownloadToken
         /// </summary>
         [Fact]
