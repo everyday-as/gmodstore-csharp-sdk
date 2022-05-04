@@ -1,10 +1,10 @@
-# Everyday.GmodStore.Sdk.Model.GetMeResponse
+# Everyday.GmodStore.Sdk.Model.UserFilter
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | [**Me**](Me.md) |  | 
+**SteamId** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

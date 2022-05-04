@@ -34,17 +34,26 @@ namespace Everyday.GmodStore.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMeResponse" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        public GetMeResponse(GetMeResponse  = default(GetMeResponse))
+        [JsonConstructorAttribute]
+        protected GetMeResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetMeResponse" /> class.
+        /// </summary>
+        /// <param name="data">data (required).</param>
+        public GetMeResponse(Me data = default(Me))
         {
-            this. = ;
+            // to ensure "data" is required (not null)
+            if (data == null) {
+                throw new ArgumentNullException("data is a required property for GetMeResponse and cannot be null");
+            }
+            this.Data = data;
         }
 
         /// <summary>
-        /// Gets or Sets 
+        /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name = "", EmitDefaultValue = false)]
-        public GetMeResponse  { get; set; }
+        [DataMember(Name = "data", IsRequired = true, EmitDefaultValue = false)]
+        public Me Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +63,7 @@ namespace Everyday.GmodStore.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GetMeResponse {\n");
-            sb.Append("  : ").Append().Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,9 +99,9 @@ namespace Everyday.GmodStore.Sdk.Model
 
             return 
                 (
-                    this. == input. ||
-                    (this. != null &&
-                    this..Equals(input.))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -105,8 +114,8 @@ namespace Everyday.GmodStore.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this. != null)
-                    hashCode = hashCode * 59 + this..GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

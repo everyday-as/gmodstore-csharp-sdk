@@ -57,12 +57,12 @@ namespace Everyday.GmodStore.Sdk.Test.Model
 
 
         /// <summary>
-        /// Test the property ''
+        /// Test the property 'Data'
         /// </summary>
         [Fact]
-        public void Test()
+        public void DataTest()
         {
-            // TODO unit test for the property ''
+            // TODO unit test for the property 'Data'
         }
 
     }

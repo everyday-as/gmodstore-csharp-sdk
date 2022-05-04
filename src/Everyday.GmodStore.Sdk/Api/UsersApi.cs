@@ -47,8 +47,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>GetUserResponse</returns>
-        GetUserResponse GetUser(string user);
+        GetUserResponse GetUser(string user, UserFilter filter = default(UserFilter));
 
         /// <summary>
         /// Fetch the specified user
@@ -58,15 +59,17 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>ApiResponse of GetUserResponse</returns>
-        ApiResponse<GetUserResponse> GetUserWithHttpInfo(string user);
+        ApiResponse<GetUserResponse> GetUserWithHttpInfo(string user, UserFilter filter = default(UserFilter));
         /// <summary>
         /// Fetch a batch of users by id
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>GetUsersResponse</returns>
-        GetUsersResponse GetUsers(List<Guid> ids);
+        GetUsersResponse GetUsers(List<Guid> ids, UserFilter filter = default(UserFilter));
 
         /// <summary>
         /// Fetch a batch of users by id
@@ -76,8 +79,31 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>ApiResponse of GetUsersResponse</returns>
-        ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(List<Guid> ids);
+        ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(List<Guid> ids, UserFilter filter = default(UserFilter));
+        /// <summary>
+        /// List all users
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <returns>Object</returns>
+        Object ListUsers(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter));
+
+        /// <summary>
+        /// List all users
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ListUsersWithHttpInfo(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter));
         #endregion Synchronous Operations
     }
 
@@ -116,9 +142,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUserResponse</returns>
-        System.Threading.Tasks.Task<GetUserResponse> GetUserAsync(string user, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetUserResponse> GetUserAsync(string user, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Fetch the specified user
@@ -128,9 +155,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserResponse>> GetUserWithHttpInfoAsync(string user, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetUserResponse>> GetUserWithHttpInfoAsync(string user, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Fetch a batch of users by id
         /// </summary>
@@ -139,9 +167,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUsersResponse</returns>
-        System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(List<Guid> ids, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(List<Guid> ids, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Fetch a batch of users by id
@@ -151,9 +180,37 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </remarks>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUsersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(List<Guid> ids, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(List<Guid> ids, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List all users
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ListUsersAsync(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List all users
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ListUsersWithHttpInfoAsync(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -309,6 +366,12 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetMeResponse>("/api/v3/me", localVarRequestOptions, this.Configuration);
@@ -361,6 +424,12 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
 
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
 
             // make the HTTP request
 
@@ -380,10 +449,11 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>GetUserResponse</returns>
-        public GetUserResponse GetUser(string user)
+        public GetUserResponse GetUser(string user, UserFilter filter = default(UserFilter))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> localVarResponse = GetUserWithHttpInfo(user);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> localVarResponse = GetUserWithHttpInfo(user, filter);
             return localVarResponse.Data;
         }
 
@@ -392,8 +462,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>ApiResponse of GetUserResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> GetUserWithHttpInfo(string user)
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> GetUserWithHttpInfo(string user, UserFilter filter = default(UserFilter))
         {
             // verify the required parameter 'user' is set
             if (user == null)
@@ -416,6 +487,10 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("user", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(user)); // path parameter
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
 
             // authentication (PersonalAccessToken) required
             // bearer authentication required
@@ -441,11 +516,12 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUserResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserResponse> GetUserAsync(string user, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetUserResponse> GetUserAsync(string user, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> localVarResponse = await GetUserWithHttpInfoAsync(user, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse> localVarResponse = await GetUserWithHttpInfoAsync(user, filter, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -454,9 +530,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="user"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUserResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse>> GetUserWithHttpInfoAsync(string user, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<GetUserResponse>> GetUserWithHttpInfoAsync(string user, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'user' is set
             if (user == null)
@@ -481,6 +558,10 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("user", Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToString(user)); // path parameter
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
 
             // authentication (PersonalAccessToken) required
             // bearer authentication required
@@ -507,10 +588,11 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>GetUsersResponse</returns>
-        public GetUsersResponse GetUsers(List<Guid> ids)
+        public GetUsersResponse GetUsers(List<Guid> ids, UserFilter filter = default(UserFilter))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> localVarResponse = GetUsersWithHttpInfo(ids);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> localVarResponse = GetUsersWithHttpInfo(ids, filter);
             return localVarResponse.Data;
         }
 
@@ -519,8 +601,9 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <returns>ApiResponse of GetUsersResponse</returns>
-        public Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(List<Guid> ids)
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> GetUsersWithHttpInfo(List<Guid> ids, UserFilter filter = default(UserFilter))
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -543,6 +626,10 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "ids[]", ids));
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
 
             // authentication (PersonalAccessToken) required
             // bearer authentication required
@@ -568,11 +655,12 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUsersResponse</returns>
-        public async System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(List<Guid> ids, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetUsersResponse> GetUsersAsync(List<Guid> ids, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> localVarResponse = await GetUsersWithHttpInfoAsync(ids, cancellationToken).ConfigureAwait(false);
+            Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse> localVarResponse = await GetUsersWithHttpInfoAsync(ids, filter, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -581,9 +669,10 @@ namespace Everyday.GmodStore.Sdk.Api
         /// </summary>
         /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
+        /// <param name="filter">Filter the results (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUsersResponse)</returns>
-        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(List<Guid> ids, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<GetUsersResponse>> GetUsersWithHttpInfoAsync(List<Guid> ids, UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -608,6 +697,10 @@ namespace Everyday.GmodStore.Sdk.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "ids[]", ids));
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
 
             // authentication (PersonalAccessToken) required
             // bearer authentication required
@@ -623,6 +716,155 @@ namespace Everyday.GmodStore.Sdk.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetUsers", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List all users 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <returns>Object</returns>
+        public Object ListUsers(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter))
+        {
+            Everyday.GmodStore.Sdk.Client.ApiResponse<Object> localVarResponse = ListUsersWithHttpInfo(perPage, cursor, filter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List all users 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public Everyday.GmodStore.Sdk.Client.ApiResponse<Object> ListUsersWithHttpInfo(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter))
+        {
+            Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (perPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "perPage", perPage));
+            }
+            if (cursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
+            }
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
+
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<Object>("/api/v3/users", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUsers", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List all users 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ListUsersAsync(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Everyday.GmodStore.Sdk.Client.ApiResponse<Object> localVarResponse = await ListUsersWithHttpInfoAsync(perPage, cursor, filter, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List all users 
+        /// </summary>
+        /// <exception cref="Everyday.GmodStore.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="perPage"> (optional, default to 24)</param>
+        /// <param name="cursor">The cursor from which to return paginated results starting after (optional)</param>
+        /// <param name="filter">Filter the results (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<Everyday.GmodStore.Sdk.Client.ApiResponse<Object>> ListUsersWithHttpInfoAsync(int? perPage = default(int?), string cursor = default(string), UserFilter filter = default(UserFilter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Everyday.GmodStore.Sdk.Client.RequestOptions localVarRequestOptions = new Everyday.GmodStore.Sdk.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Everyday.GmodStore.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (perPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "perPage", perPage));
+            }
+            if (cursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
+            }
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Everyday.GmodStore.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
+
+            // authentication (PersonalAccessToken) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/api/v3/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUsers", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

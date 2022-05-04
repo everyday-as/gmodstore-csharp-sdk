@@ -64,6 +64,22 @@ namespace Everyday.GmodStore.Sdk.Test.Model
         {
             // TODO unit test for the property 'Revoked'
         }
+        /// <summary>
+        /// Test the property 'UserId'
+        /// </summary>
+        [Fact]
+        public void UserIdTest()
+        {
+            // TODO unit test for the property 'UserId'
+        }
+        /// <summary>
+        /// Test the property 'ProductId'
+        /// </summary>
+        [Fact]
+        public void ProductIdTest()
+        {
+            // TODO unit test for the property 'ProductId'
+        }
 
     }
 

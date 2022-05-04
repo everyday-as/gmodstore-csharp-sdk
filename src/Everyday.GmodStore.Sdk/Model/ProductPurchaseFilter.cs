@@ -35,9 +35,13 @@ namespace Everyday.GmodStore.Sdk.Model
         /// Initializes a new instance of the <see cref="ProductPurchaseFilter" /> class.
         /// </summary>
         /// <param name="revoked">revoked.</param>
-        public ProductPurchaseFilter(bool revoked = default(bool))
+        /// <param name="userId">userId.</param>
+        /// <param name="productId">productId.</param>
+        public ProductPurchaseFilter(bool revoked = default(bool), Guid userId = default(Guid), Guid productId = default(Guid))
         {
             this.Revoked = revoked;
+            this.UserId = userId;
+            this.ProductId = productId;
         }
 
         /// <summary>
@@ -45,6 +49,18 @@ namespace Everyday.GmodStore.Sdk.Model
         /// </summary>
         [DataMember(Name = "revoked", EmitDefaultValue = true)]
         public bool Revoked { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        [DataMember(Name = "userId", EmitDefaultValue = false)]
+        public Guid UserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProductId
+        /// </summary>
+        [DataMember(Name = "productId", EmitDefaultValue = false)]
+        public Guid ProductId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,6 +71,8 @@ namespace Everyday.GmodStore.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ProductPurchaseFilter {\n");
             sb.Append("  Revoked: ").Append(Revoked).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +110,16 @@ namespace Everyday.GmodStore.Sdk.Model
                 (
                     this.Revoked == input.Revoked ||
                     this.Revoked.Equals(input.Revoked)
+                ) && 
+                (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
+                ) && 
+                (
+                    this.ProductId == input.ProductId ||
+                    (this.ProductId != null &&
+                    this.ProductId.Equals(input.ProductId))
                 );
         }
 
@@ -105,6 +133,10 @@ namespace Everyday.GmodStore.Sdk.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Revoked.GetHashCode();
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.ProductId != null)
+                    hashCode = hashCode * 59 + this.ProductId.GetHashCode();
                 return hashCode;
             }
         }

@@ -50,136 +50,148 @@ namespace Everyday.GmodStore.Sdk.Model
             PermissionGroupswrite = 2,
 
             /// <summary>
+            /// Enum PersonalAccessTokensread for value: personal-access-tokens:read
+            /// </summary>
+            [EnumMember(Value = "personal-access-tokens:read")]
+            PersonalAccessTokensread = 3,
+
+            /// <summary>
+            /// Enum PersonalAccessTokenswrite for value: personal-access-tokens:write
+            /// </summary>
+            [EnumMember(Value = "personal-access-tokens:write")]
+            PersonalAccessTokenswrite = 4,
+
+            /// <summary>
             /// Enum Teamsread for value: teams:read
             /// </summary>
             [EnumMember(Value = "teams:read")]
-            Teamsread = 3,
+            Teamsread = 5,
 
             /// <summary>
             /// Enum Teamswrite for value: teams:write
             /// </summary>
             [EnumMember(Value = "teams:write")]
-            Teamswrite = 4,
+            Teamswrite = 6,
 
             /// <summary>
             /// Enum TeamUsersread for value: team-users:read
             /// </summary>
             [EnumMember(Value = "team-users:read")]
-            TeamUsersread = 5,
+            TeamUsersread = 7,
 
             /// <summary>
             /// Enum TeamUserswrite for value: team-users:write
             /// </summary>
             [EnumMember(Value = "team-users:write")]
-            TeamUserswrite = 6,
+            TeamUserswrite = 8,
 
             /// <summary>
             /// Enum Productsread for value: products:read
             /// </summary>
             [EnumMember(Value = "products:read")]
-            Productsread = 7,
+            Productsread = 9,
 
             /// <summary>
             /// Enum Productswrite for value: products:write
             /// </summary>
             [EnumMember(Value = "products:write")]
-            Productswrite = 8,
+            Productswrite = 10,
 
             /// <summary>
             /// Enum ProductCouponsread for value: product-coupons:read
             /// </summary>
             [EnumMember(Value = "product-coupons:read")]
-            ProductCouponsread = 9,
+            ProductCouponsread = 11,
 
             /// <summary>
             /// Enum ProductCouponswrite for value: product-coupons:write
             /// </summary>
             [EnumMember(Value = "product-coupons:write")]
-            ProductCouponswrite = 10,
+            ProductCouponswrite = 12,
 
             /// <summary>
             /// Enum ProductPurchasesread for value: product-purchases:read
             /// </summary>
             [EnumMember(Value = "product-purchases:read")]
-            ProductPurchasesread = 11,
+            ProductPurchasesread = 13,
 
             /// <summary>
             /// Enum ProductPurchaseswrite for value: product-purchases:write
             /// </summary>
             [EnumMember(Value = "product-purchases:write")]
-            ProductPurchaseswrite = 12,
+            ProductPurchaseswrite = 14,
 
             /// <summary>
             /// Enum ProductReviewsread for value: product-reviews:read
             /// </summary>
             [EnumMember(Value = "product-reviews:read")]
-            ProductReviewsread = 13,
+            ProductReviewsread = 15,
 
             /// <summary>
             /// Enum ProductReviewswrite for value: product-reviews:write
             /// </summary>
             [EnumMember(Value = "product-reviews:write")]
-            ProductReviewswrite = 14,
+            ProductReviewswrite = 16,
 
             /// <summary>
             /// Enum ProductVersionsread for value: product-versions:read
             /// </summary>
             [EnumMember(Value = "product-versions:read")]
-            ProductVersionsread = 15,
+            ProductVersionsread = 17,
 
             /// <summary>
             /// Enum ProductVersionswrite for value: product-versions:write
             /// </summary>
             [EnumMember(Value = "product-versions:write")]
-            ProductVersionswrite = 16,
+            ProductVersionswrite = 18,
 
             /// <summary>
             /// Enum ProductVersionsdownload for value: product-versions:download
             /// </summary>
             [EnumMember(Value = "product-versions:download")]
-            ProductVersionsdownload = 17,
+            ProductVersionsdownload = 19,
 
             /// <summary>
             /// Enum Usersread for value: users:read
             /// </summary>
             [EnumMember(Value = "users:read")]
-            Usersread = 18,
+            Usersread = 20,
 
             /// <summary>
             /// Enum Userswrite for value: users:write
             /// </summary>
             [EnumMember(Value = "users:write")]
-            Userswrite = 19,
+            Userswrite = 21,
 
             /// <summary>
             /// Enum UserBadgesread for value: user-badges:read
             /// </summary>
             [EnumMember(Value = "user-badges:read")]
-            UserBadgesread = 20,
+            UserBadgesread = 22,
 
             /// <summary>
             /// Enum UserBadgeswrite for value: user-badges:write
             /// </summary>
             [EnumMember(Value = "user-badges:write")]
-            UserBadgeswrite = 21,
+            UserBadgeswrite = 23,
 
             /// <summary>
             /// Enum UserBansread for value: user-bans:read
             /// </summary>
             [EnumMember(Value = "user-bans:read")]
-            UserBansread = 22,
+            UserBansread = 24,
 
             /// <summary>
             /// Enum UserPurchasesread for value: user-purchases:read
             /// </summary>
             [EnumMember(Value = "user-purchases:read")]
-            UserPurchasesread = 23,
+            UserPurchasesread = 25,
 
             /// <summary>
             /// Enum Star for value: *
             /// </summary>
             [EnumMember(Value = "*")]
-            Star = 24
+            Star = 26
 
         }
 

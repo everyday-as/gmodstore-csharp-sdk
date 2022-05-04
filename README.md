@@ -162,6 +162,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**GetMe**](docs/UsersApi.md#getme) | **GET** /api/v3/me | Fetch the current authenticated user and their access token
 *UsersApi* | [**GetUser**](docs/UsersApi.md#getuser) | **GET** /api/v3/users/{user} | Fetch the specified user
 *UsersApi* | [**GetUsers**](docs/UsersApi.md#getusers) | **GET** /api/v3/users/batch | Fetch a batch of users by id
+*UsersApi* | [**ListUsers**](docs/UsersApi.md#listusers) | **GET** /api/v3/users | List all users
 
 
 <a name="documentation-for-models"></a>
@@ -225,6 +226,7 @@ Class | Method | HTTP request | Description
  - [Model.ProductVersionFilter](docs/ProductVersionFilter.md)
  - [Model.Team](docs/Team.md)
  - [Model.TeamUser](docs/TeamUser.md)
+ - [Model.TwoFactorNonce](docs/TwoFactorNonce.md)
  - [Model.UpdatePermissionGroupPayload](docs/UpdatePermissionGroupPayload.md)
  - [Model.UpdatePermissionGroupResponse](docs/UpdatePermissionGroupResponse.md)
  - [Model.UpdatePersonalAccessTokenResponse](docs/UpdatePersonalAccessTokenResponse.md)
@@ -240,6 +242,7 @@ Class | Method | HTTP request | Description
  - [Model.UserBadge](docs/UserBadge.md)
  - [Model.UserBan](docs/UserBan.md)
  - [Model.UserBanFilter](docs/UserBanFilter.md)
+ - [Model.UserFilter](docs/UserFilter.md)
  - [Model.ValidationErrors](docs/ValidationErrors.md)
 
 
