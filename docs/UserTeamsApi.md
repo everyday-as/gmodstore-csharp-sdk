@@ -1,17 +1,17 @@
 # Everyday.GmodStore.Sdk.Api.UserTeamsApi
 
-All URIs are relative to *https://www.gmodstore.com*
+All URIs are relative to *https://api.gmodstore.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ListUserTeams**](UserTeamsApi.md#listuserteams) | **GET** /api/v3/users/{user}/teams | List all the specified user&#39;s teams
+[**ListUserTeams**](UserTeamsApi.md#listuserteams) | **GET** /users/{user_id}/teams | Fetch all the teams of a user
 
 
 <a name="listuserteams"></a>
 # **ListUserTeams**
-> Object ListUserTeams (string user, int? perPage = null, string cursor = null)
+> TeamListResponse ListUserTeams (long userId, List<string> with = null)
 
-List all the specified user's teams
+Fetch all the teams of a user
 
 ### Example
 ```csharp
@@ -28,19 +28,18 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://www.gmodstore.com";
-            // Configure Bearer token for authorization: PersonalAccessToken
+            config.BasePath = "https://api.gmodstore.com/v2";
+            // Configure Bearer token for authorization: bearerAuth
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new UserTeamsApi(config);
-            var user = user_example;  // string | 
-            var perPage = 56;  // int? |  (optional)  (default to 24)
-            var cursor = cursor_example;  // string | The cursor from which to return paginated results starting after (optional) 
+            var userId = 789;  // long | Id of the user
+            var with = new List<string>(); // List<string> | The relations you want to fetch with the `Team` (optional) 
 
             try
             {
-                // List all the specified user's teams
-                Object result = apiInstance.ListUserTeams(user, perPage, cursor);
+                // Fetch all the teams of a user
+                TeamListResponse result = apiInstance.ListUserTeams(userId, with);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,17 +57,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **string**|  | 
- **perPage** | **int?**|  | [optional] [default to 24]
- **cursor** | **string**| The cursor from which to return paginated results starting after | [optional] 
+ **userId** | **long**| Id of the user | 
+ **with** | [**List&lt;string&gt;**](string.md)| The relations you want to fetch with the &#x60;Team&#x60; | [optional] 
 
 ### Return type
 
-**Object**
+[**TeamListResponse**](TeamListResponse.md)
 
 ### Authorization
 
-[PersonalAccessToken](../README.md#PersonalAccessToken)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -79,11 +77,9 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful response containing a list of teams |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **400** | Improperly formatted request passed |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **401** | The passed bearer token is missing or invalid |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **403** | The passed bearer token does not have the right scopes |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **404** | The requested resource does not exist |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **200** | Successfully processed the request. |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
+| **429** | Too many requests |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset - The UNIX timestamp at which your rate limit quota will reset. <br>  |
+| **0** | Something went wrong |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
